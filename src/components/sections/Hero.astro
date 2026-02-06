@@ -18,12 +18,15 @@ import Button from '../ui/Button.astro';
         </Button>
       </div>
 
-      <!-- Right column: screenshot placeholder -->
+      <!-- Right column: product screenshot -->
       <div class="hero-screenshot">
         <div class="screenshot-frame">
-          <div class="screenshot-placeholder">
-            Screenshot volgt
-          </div>
+          <img
+            src="/rondo-club-screenshot.png"
+            alt="Rondo Club dashboard met ledenlijst en teamoverzicht"
+            class="screenshot-img"
+            loading="eager"
+          />
         </div>
       </div>
     </div>
@@ -113,9 +116,9 @@ import Button from '../ui/Button.astro';
     overflow: hidden;
   }
 
-  .screenshot-placeholder {
-    color: #9CA3AF;
-    font-size: 1.125rem;
-    font-weight: 500;
+  .screenshot-img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
   }
 </style>
