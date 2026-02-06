@@ -84,7 +84,7 @@ Plans:
 **Plans**: 1 plan
 
 Plans:
-- [ ] 04-01: SEO, analytics, and production audit
+- [ ] 04-01-PLAN.md — SEO meta tags, Plausible analytics, accessibility, and production polish
 
 ## Progress
 
