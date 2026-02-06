@@ -1,0 +1,121 @@
+---
+import Button from '../ui/Button.astro';
+---
+
+<section class="hero-section">
+  <div class="hero-container">
+    <div class="hero-grid">
+      <!-- Left column: headline, subline, CTA -->
+      <div class="hero-content">
+        <h1 class="hero-headline">
+          Klaar met verspreide ledengegevens?
+        </h1>
+        <p class="hero-subline">
+          Rondo houdt ledendata, teams en planning overal synchroon — automatisch gekoppeld aan Sportlink.
+        </p>
+        <Button variant="primary" href="#product">
+          Bekijk wat Rondo doet
+        </Button>
+      </div>
+
+      <!-- Right column: screenshot placeholder -->
+      <div class="hero-screenshot">
+        <div class="screenshot-frame">
+          <div class="screenshot-placeholder">
+            Screenshot volgt
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<style>
+  .hero-section {
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+    padding: 5rem 0;
+  }
+
+  .hero-container {
+    max-width: 80rem;
+    margin: 0 auto;
+    padding: 0 1rem;
+    width: 100%;
+  }
+
+  .hero-grid {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 3rem;
+    align-items: center;
+  }
+
+  @media (min-width: 1024px) {
+    .hero-grid {
+      grid-template-columns: 1fr 1fr;
+    }
+  }
+
+  .hero-content {
+    display: flex;
+    flex-direction: column;
+  }
+
+  .hero-headline {
+    font-size: 2.25rem;
+    font-weight: 700;
+    color: white;
+    margin-bottom: 1.5rem;
+    line-height: 1.1;
+  }
+
+  @media (min-width: 640px) {
+    .hero-headline {
+      font-size: 3rem;
+    }
+  }
+
+  @media (min-width: 1024px) {
+    .hero-headline {
+      font-size: 3.75rem;
+    }
+  }
+
+  .hero-subline {
+    font-size: 1.125rem;
+    color: #D1D5DB;
+    margin-bottom: 2rem;
+    line-height: 1.6;
+  }
+
+  @media (min-width: 1024px) {
+    .hero-subline {
+      font-size: 1.25rem;
+    }
+  }
+
+  .hero-screenshot {
+    width: 100%;
+  }
+
+  .screenshot-frame {
+    border-radius: 1rem;
+    box-shadow:
+      0 25px 50px -12px rgba(0, 0, 0, 0.5),
+      0 0 0 1px rgba(255, 255, 255, 0.1);
+    background: rgba(255, 255, 255, 0.03);
+    aspect-ratio: 16/10;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    overflow: hidden;
+  }
+
+  .screenshot-placeholder {
+    color: #9CA3AF;
+    font-size: 1.125rem;
+    font-weight: 500;
+  }
+</style>
