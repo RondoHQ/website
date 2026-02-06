@@ -1,0 +1,60 @@
+---
+const currentYear = new Date().getFullYear();
+---
+
+<footer class="footer">
+  <div class="footer-container">
+    <p class="copyright">
+      &copy; {currentYear} Rondo. Alle rechten voorbehouden.
+    </p>
+    <div class="legal-links">
+      <a href="#" class="legal-link">Privacybeleid</a>
+      <a href="#" class="legal-link">Voorwaarden</a>
+    </div>
+  </div>
+</footer>
+
+<style>
+  .footer {
+    padding: 2rem 0;
+    border-top: 1px solid rgba(255, 255, 255, 0.1);
+  }
+
+  .footer-container {
+    max-width: 80rem;
+    margin: 0 auto;
+    padding: 0 1rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    gap: 1rem;
+  }
+
+  @media (min-width: 768px) {
+    .footer-container {
+      flex-direction: row;
+    }
+  }
+
+  .copyright {
+    color: #9CA3AF;
+    font-size: 0.875rem;
+  }
+
+  .legal-links {
+    display: flex;
+    gap: 1.5rem;
+  }
+
+  .legal-link {
+    color: #9CA3AF;
+    font-size: 0.875rem;
+    text-decoration: none;
+    transition: color 0.2s ease-in-out;
+  }
+
+  .legal-link:hover {
+    color: white;
+  }
+</style>
