@@ -1,0 +1,158 @@
+---
+import GlassPanel from '../ui/GlassPanel.astro';
+import Input from '../ui/Input.astro';
+import Textarea from '../ui/Textarea.astro';
+import Button from '../ui/Button.astro';
+---
+
+<section id="contact" class="py-20 px-4">
+  <div class="max-w-2xl mx-auto">
+    <GlassPanel class="p-8 md:p-12">
+      <h2 class="text-3xl md:text-4xl font-bold text-white mb-2">Interesse?</h2>
+      <p class="text-gray-300 mb-8">Vul het formulier in en we nemen zo snel mogelijk contact met je op.</p>
+
+      <form id="contact-form" method="POST" action="/api/contact" novalidate>
+        <Input
+          label="Naam"
+          name="name"
+          type="text"
+          required={true}
+          placeholder="Jouw naam"
+          class="mb-4"
+        />
+
+        <Input
+          label="E-mailadres"
+          name="email"
+          type="email"
+          required={true}
+          placeholder="jouw@email.nl"
+          class="mb-4"
+        />
+
+        <Input
+          label="Clubnaam"
+          name="club_name"
+          type="text"
+          required={true}
+          placeholder="Naam van je sportclub"
+          class="mb-4"
+        />
+
+        <Input
+          label="Aantal leden"
+          name="member_count"
+          type="text"
+          placeholder="Bijvoorbeeld: 200-500"
+          class="mb-4"
+        />
+
+        <Textarea
+          label="Bericht"
+          name="message"
+          placeholder="Waar kunnen we je mee helpen?"
+          rows={4}
+          class="mb-6"
+        />
+
+        <div style="position:absolute;left:-9999px;width:1px;height:1px;overflow:hidden" aria-hidden="true">
+          <input type="text" name="website" tabindex="-1" autocomplete="off" />
+        </div>
+
+        <div id="form-message" role="status" aria-live="polite" class="mb-4 hidden"></div>
+
+        <Button type="submit" variant="primary" class="w-full md:w-auto">
+          Verstuur bericht
+        </Button>
+      </form>
+    </GlassPanel>
+  </div>
+</section>
+
+<script>
+const form = document.getElementById('contact-form') as HTMLFormElement | null;
+const messageDiv = document.getElementById('form-message');
+const submitButton = form?.querySelector('button[type="submit"]') as HTMLButtonElement | undefined;
+
+form?.addEventListener('submit', async (e) => {
+  e.preventDefault();
+
+  // Get original button text
+  const originalText = submitButton?.textContent || '';
+  if (submitButton) {
+    submitButton.disabled = true;
+    submitButton.textContent = 'Versturen...';
+  }
+  messageDiv?.classList.add('hidden');
+
+  // Client-side validation
+  const formData = new FormData(form);
+  const name = formData.get('name')?.toString().trim() || '';
+  const email = formData.get('email')?.toString().trim() || '';
+  const clubName = formData.get('club_name')?.toString().trim() || '';
+
+  if (!name || !email || !clubName) {
+    showMessage('Vul alle verplichte velden in (naam, e-mail, clubnaam).', true);
+    resetButton();
+    return;
+  }
+
+  const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+  if (!emailRegex.test(email)) {
+    showMessage('Vul een geldig e-mailadres in.', true);
+    resetButton();
+    return;
+  }
+
+  try {
+    const response = await fetch('/api/contact', {
+      method: 'POST',
+      body: formData
+    });
+
+    const result = await response.json();
+
+    if (response.ok && result.success) {
+      showMessage(result.message || 'Bedankt! We nemen zo snel mogelijk contact op.', false);
+      form.reset();
+    } else {
+      showMessage(result.error || 'Er ging iets mis. Probeer het opnieuw.', true);
+    }
+  } catch (err) {
+    showMessage('Er ging iets mis. Probeer het later opnieuw.', true);
+  } finally {
+    resetButton();
+  }
+
+  function showMessage(text: string, isError: boolean): void {
+    if (!messageDiv) return;
+    messageDiv.textContent = text;
+    messageDiv.classList.remove('hidden');
+    if (isError) {
+      messageDiv.className = 'mb-4 p-4 rounded-lg border text-sm form-message-error';
+    } else {
+      messageDiv.className = 'mb-4 p-4 rounded-lg border text-sm form-message-success';
+    }
+  }
+
+  function resetButton(): void {
+    if (submitButton) {
+      submitButton.disabled = false;
+      submitButton.textContent = originalText;
+    }
+  }
+});
+</script>
+
+<style>
+.form-message-success {
+  background: rgba(34, 197, 94, 0.15);
+  border-color: rgba(34, 197, 94, 0.4);
+  color: rgb(187, 247, 208);
+}
+.form-message-error {
+  background: rgba(239, 68, 68, 0.15);
+  border-color: rgba(239, 68, 68, 0.4);
+  color: rgb(254, 202, 202);
+}
+</style>
