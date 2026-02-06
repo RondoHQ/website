@@ -1,0 +1,82 @@
+---
+interface Props {
+  label: string;
+  name: string;
+  type?: 'text' | 'email' | 'password' | 'tel' | 'url' | 'number' | 'date' | 'time';
+  placeholder?: string;
+  required?: boolean;
+  class?: string;
+}
+
+const {
+  label,
+  name,
+  type = 'text',
+  placeholder,
+  required = false,
+  class: className = ''
+} = Astro.props;
+---
+
+<div class={`input-wrapper ${className}`}>
+  <label for={name} class="text-sm font-medium text-gray-300 mb-1 block">
+    {label}
+  </label>
+  <input
+    type={type}
+    id={name}
+    name={name}
+    placeholder={placeholder}
+    required={required}
+    class="input-field"
+  />
+</div>
+
+<style>
+  .input-field {
+    width: 100%;
+    background: rgba(255, 255, 255, 0.05);
+    backdrop-filter: blur(10px);
+    -webkit-backdrop-filter: blur(10px);
+    border: 1px solid rgba(255, 255, 255, 0.15);
+    border-radius: 0.5rem;
+    padding: 0.75rem 1rem;
+    color: white;
+    font-size: 1rem;
+    transition: all 0.2s ease;
+    outline: none;
+  }
+
+  .input-field::placeholder {
+    color: rgb(107, 114, 128);
+  }
+
+  .input-field:focus {
+    border-color: #22D3EE;
+    box-shadow: 0 0 0 3px rgba(34, 211, 238, 0.2);
+  }
+
+  /* Mobile: reduce blur for better performance */
+  @media (max-width: 768px) {
+    .input-field {
+      backdrop-filter: blur(6px);
+      -webkit-backdrop-filter: blur(6px);
+    }
+  }
+
+  /* Accessibility: remove blur for users who prefer reduced transparency */
+  @media (prefers-reduced-transparency: reduce) {
+    .input-field {
+      backdrop-filter: none;
+      -webkit-backdrop-filter: none;
+      background: rgba(255, 255, 255, 0.15);
+    }
+  }
+
+  /* Fallback for browsers that don't support backdrop-filter */
+  @supports not (backdrop-filter: blur(10px)) {
+    .input-field {
+      background: rgba(255, 255, 255, 0.15);
+    }
+  }
+</style>
