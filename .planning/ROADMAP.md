@@ -68,7 +68,7 @@ Plans:
 **Plans**: 1 plan
 
 Plans:
-- [ ] 03-01: Contact form with server-side handling
+- [ ] 03-01-PLAN.md — Contact form frontend, server-side API endpoint, Resend email integration
 
 ### Phase 4: SEO & Production Polish
 **Goal**: Optimize site for search engines, add analytics, verify performance and accessibility meet production standards
