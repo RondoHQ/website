@@ -1,0 +1,14 @@
+@import "tailwindcss";
+
+@theme {
+  --color-electric-cyan: #22D3EE;
+  --color-bright-cobalt: #3B82F6;
+  --color-deep-midnight: #1E3A8A;
+  --color-obsidian: #0F172A;
+}
+
+body {
+  font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
