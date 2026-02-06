@@ -5,23 +5,23 @@
 See: .planning/PROJECT.md (updated 2026-02-06)
 
 **Core value:** Clearly communicate what Rondo does and make it effortless for sports clubs to get in touch
-**Current focus:** Phase 2 complete — ready for Phase 3
+**Current focus:** Phase 3 complete — ready for Phase 4
 
 ## Current Position
 
-Phase: 2 of 4 (Landing Page Sections) — COMPLETE
-Plan: 2 of 2 in current phase
+Phase: 3 of 4 (Contact Form & Integration) — COMPLETE
+Plan: 1 of 1 in current phase
 Status: Phase complete, verified
-Last activity: 2026-02-06 — Completed 02-02-PLAN.md (Product Story, Diagram, Pricing)
+Last activity: 2026-02-06 — Completed 03-01-PLAN.md (Contact Form, API Endpoint, Resend)
 
-Progress: [████████░░] 50%
+Progress: [█████████░] 83%
 
 ## Performance Metrics
 
 **Velocity:**
-- Total plans completed: 4
-- Average duration: 2.5 min
-- Total execution time: ~0.17 hours
+- Total plans completed: 5
+- Average duration: 2.7 min
+- Total execution time: ~0.22 hours
 
 **By Phase:**
 
@@ -29,9 +29,10 @@ Progress: [████████░░] 50%
 |-------|-------|-------|----------|
 | 01 | 2 | ~5m 22s | ~2m 41s |
 | 02 | 2 | ~5m | ~2m 30s |
+| 03 | 1 | ~3m | ~3m |
 
 **Recent Trend:**
-- Last 5 plans: ~2m 30s average
+- Last 5 plans: ~2m 40s average
 - Trend: Consistent
 
 *Updated after each plan completion*
@@ -54,6 +55,9 @@ Progress: [████████░░] 50%
 - VOG scenario card instead of team change — user feedback
 - Nikki as contributiedata source in integration diagram — user feedback
 - Rondo Sync styled same as Rondo Club (primary cyan) in diagram — user feedback
+- Resend for email delivery — simple API, Cloudflare Workers compatible
+- Honeypot over reCAPTCHA — privacy-friendly, no third-party dependency
+- Progressive enhancement forms — works without JS, enhanced with async submit
 
 ### Pending Todos
 
@@ -69,6 +73,6 @@ None.
 ## Session Continuity
 
 Last session: 2026-02-06
-Stopped at: Phase 2 execution complete, verified
+Stopped at: Phase 3 execution complete, verified
 Resume file: None
-Next: Plan Phase 3 (Contact Form & Integration)
+Next: Plan Phase 4 (SEO & Production Polish)

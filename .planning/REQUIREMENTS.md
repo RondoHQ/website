@@ -24,7 +24,7 @@
 
 ### Contact
 
-- [ ] **CONT-01**: Contact form with fields: name, email, club name, member count (optional), message (optional)
+- [x] **CONT-01**: Contact form with fields: name, email, club name, member count (optional), message (optional)
 
 ### Design
 
@@ -89,7 +89,7 @@
 | PROD-02 | Phase 2 | Complete |
 | PROD-03 | Phase 2 | Complete |
 | PRIC-01 | Phase 2 | Complete |
-| CONT-01 | Phase 3 | Pending |
+| CONT-01 | Phase 3 | Complete |
 | DSGN-01 | Phase 1 | Complete |
 | DSGN-02 | Phase 1 | Complete |
 | DSGN-03 | Phase 1 | Complete |
