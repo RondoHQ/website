@@ -49,12 +49,11 @@ Plans:
   7. Visitor sees integration diagram showing how Rondo Club, Rondo Sync, Sportlink, Laposta, and FreeScout connect
   8. Visitor sees transparent pricing (€250/year minimum + €0.50/member/year) with example calculation
   9. All content displays in Dutch throughout the site
-**Plans**: 2-3 plans
+**Plans**: 2 plans
 
 Plans:
-- [ ] 02-01: Hero and header sections with Dutch content
-- [ ] 02-02: Product sections and integration diagram
-- [ ] 02-03: Pricing section (may be combined with 02-02 if simple)
+- [ ] 02-01-PLAN.md — Hero section, sticky glass header, footer, and page skeleton with Dutch content
+- [ ] 02-02-PLAN.md — Product story, integration diagram, and pricing section
 
 ### Phase 3: Contact Form & Integration
 **Goal**: Enable clubs to express interest and capture leads via contact form
@@ -95,6 +94,6 @@ Phases execute in numeric order: 1 → 2 → 3 → 4
 | Phase | Plans Complete | Status | Completed |
 |-------|----------------|--------|-----------|
 | 1. Foundation & Design System | 2/2 | Complete | 2026-02-06 |
-| 2. Landing Page Sections | 0/3 | Not started | - |
+| 2. Landing Page Sections | 0/2 | Not started | - |
 | 3. Contact Form & Integration | 0/1 | Not started | - |
 | 4. SEO & Production Polish | 0/1 | Not started | - |
