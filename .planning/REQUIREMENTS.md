@@ -90,11 +90,11 @@
 | PROD-03 | Phase 2 | Pending |
 | PRIC-01 | Phase 2 | Pending |
 | CONT-01 | Phase 3 | Pending |
-| DSGN-01 | Phase 1 | Pending |
-| DSGN-02 | Phase 1 | Pending |
-| DSGN-03 | Phase 1 | Pending |
-| DSGN-04 | Phase 1 | Pending |
-| TECH-01 | Phase 1 | Pending |
+| DSGN-01 | Phase 1 | Complete |
+| DSGN-02 | Phase 1 | Complete |
+| DSGN-03 | Phase 1 | Complete |
+| DSGN-04 | Phase 1 | Complete |
+| TECH-01 | Phase 1 | Complete |
 | TECH-02 | Phase 4 | Pending |
 | TECH-03 | Phase 4 | Pending |
 | TECH-04 | Phase 4 | Pending |
