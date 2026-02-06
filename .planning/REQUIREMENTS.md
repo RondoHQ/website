@@ -81,30 +81,30 @@
 
 | Requirement | Phase | Status |
 |-------------|-------|--------|
-| HERO-01 | Phase ? | Pending |
-| HERO-02 | Phase ? | Pending |
-| HERO-03 | Phase ? | Pending |
-| HERO-04 | Phase ? | Pending |
-| PROD-01 | Phase ? | Pending |
-| PROD-02 | Phase ? | Pending |
-| PROD-03 | Phase ? | Pending |
-| PRIC-01 | Phase ? | Pending |
-| CONT-01 | Phase ? | Pending |
-| DSGN-01 | Phase ? | Pending |
-| DSGN-02 | Phase ? | Pending |
-| DSGN-03 | Phase ? | Pending |
-| DSGN-04 | Phase ? | Pending |
-| TECH-01 | Phase ? | Pending |
-| TECH-02 | Phase ? | Pending |
-| TECH-03 | Phase ? | Pending |
-| TECH-04 | Phase ? | Pending |
-| TECH-05 | Phase ? | Pending |
+| HERO-01 | Phase 2 | Pending |
+| HERO-02 | Phase 2 | Pending |
+| HERO-03 | Phase 2 | Pending |
+| HERO-04 | Phase 2 | Pending |
+| PROD-01 | Phase 2 | Pending |
+| PROD-02 | Phase 2 | Pending |
+| PROD-03 | Phase 2 | Pending |
+| PRIC-01 | Phase 2 | Pending |
+| CONT-01 | Phase 3 | Pending |
+| DSGN-01 | Phase 1 | Pending |
+| DSGN-02 | Phase 1 | Pending |
+| DSGN-03 | Phase 1 | Pending |
+| DSGN-04 | Phase 1 | Pending |
+| TECH-01 | Phase 1 | Pending |
+| TECH-02 | Phase 4 | Pending |
+| TECH-03 | Phase 4 | Pending |
+| TECH-04 | Phase 4 | Pending |
+| TECH-05 | Phase 2 | Pending |
 
 **Coverage:**
 - v1 requirements: 18 total
-- Mapped to phases: 0
-- Unmapped: 18
+- Mapped to phases: 18
+- Unmapped: 0
 
 ---
 *Requirements defined: 2026-02-06*
-*Last updated: 2026-02-06 after initial definition*
+*Last updated: 2026-02-06 after roadmap creation*
