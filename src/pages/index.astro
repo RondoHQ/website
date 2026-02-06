@@ -1,39 +1,120 @@
 ---
 import BaseLayout from '../layouts/BaseLayout.astro';
+import Button from '../components/ui/Button.astro';
+import Card from '../components/ui/Card.astro';
+import GlassPanel from '../components/ui/GlassPanel.astro';
+import Input from '../components/ui/Input.astro';
 ---
+
 <BaseLayout
-  title="Rondo - Sportclub Management Platform"
-  description="Modern management platform for sports clubs"
+  title="Rondo - Design System"
+  description="Component showcase for Rondo design system"
 >
-  <main class="container mx-auto px-4 py-16">
-    <div class="max-w-4xl mx-auto text-center space-y-8">
-      <h1 class="text-5xl md:text-6xl font-bold">
-        Rondo
+  <main class="max-w-5xl mx-auto px-4 py-12 md:py-20">
+
+    <!-- Header -->
+    <div class="text-center mb-12">
+      <h1 class="text-5xl md:text-6xl font-bold text-white mb-4">
+        Rondo Design System
       </h1>
-
-      <p class="text-2xl md:text-3xl text-electric-cyan font-semibold">
-        Sportclub Management Platform
+      <p class="text-2xl text-electric-cyan font-semibold">
+        Glass morphism component library
       </p>
+    </div>
 
-      <p class="text-xl text-bright-cobalt">
-        Modern beheer voor moderne sportverenigingen
-      </p>
-
-      <div class="mt-12 p-8 bg-deep-midnight rounded-lg">
-        <p class="text-lg">
-          Een complete oplossing voor ledenadministratie, teams en planning.
-        </p>
+    <!-- Buttons Section -->
+    <section>
+      <h2 class="text-2xl font-bold text-white mb-6">Buttons</h2>
+      <div class="flex flex-wrap gap-4">
+        <Button variant="primary">Contact opnemen</Button>
+        <Button variant="secondary">Meer informatie</Button>
+        <Button variant="glass">Bekijk demo</Button>
       </div>
+    </section>
 
-      <div class="mt-8 text-sm text-gray-400">
-        <p>Design system verification: All theme colors active</p>
-        <div class="flex gap-4 justify-center mt-4">
-          <div class="w-12 h-12 bg-electric-cyan rounded"></div>
-          <div class="w-12 h-12 bg-bright-cobalt rounded"></div>
-          <div class="w-12 h-12 bg-deep-midnight rounded"></div>
-          <div class="w-12 h-12 bg-obsidian border border-white rounded"></div>
+    <!-- Cards Section -->
+    <section class="mt-12">
+      <h2 class="text-2xl font-bold text-white mb-6">Cards</h2>
+      <div class="grid md:grid-cols-2 gap-6">
+        <Card title="Rondo Club">
+          <p class="text-gray-300">
+            Een complete oplossing voor ledenadministratie. Beheer leden, teams en planning vanuit één overzichtelijk platform.
+            Perfect voor sportverenigingen die hun administratie willen moderniseren.
+          </p>
+        </Card>
+        <Card title="Rondo Sync">
+          <p class="text-gray-300">
+            Automatische synchronisatie van ledengegevens tussen Sportlink Club, je website en e-mailmarketing tools.
+            Altijd actuele gegevens zonder handmatig werk.
+          </p>
+        </Card>
+      </div>
+    </section>
+
+    <!-- Glass Panel Section -->
+    <section class="mt-12">
+      <h2 class="text-2xl font-bold text-white mb-6">Glass Panel</h2>
+      <GlassPanel class="p-8">
+        <p class="text-white text-lg">
+          Dit is een glass morphism panel met een transparant effect en achtergrond blur.
+          Het geeft een moderne, premium uitstraling aan de interface en werkt goed op donkere achtergronden.
+          Het effect past zich automatisch aan op mobiele apparaten en voor gebruikers die reduced transparency prefereren.
+        </p>
+      </GlassPanel>
+    </section>
+
+    <!-- Form Section -->
+    <section class="mt-12">
+      <h2 class="text-2xl font-bold text-white mb-6">Form Input</h2>
+      <GlassPanel class="p-8 max-w-2xl">
+        <form class="space-y-4">
+          <Input
+            label="Naam"
+            name="name"
+            placeholder="Jouw naam"
+            required
+          />
+          <Input
+            label="E-mail"
+            name="email"
+            type="email"
+            placeholder="naam@sportclub.nl"
+            required
+          />
+          <Input
+            label="Sportclub"
+            name="club"
+            placeholder="Naam van je sportclub"
+          />
+          <div class="pt-4">
+            <Button variant="primary" type="submit">Verstuur</Button>
+          </div>
+        </form>
+      </GlassPanel>
+    </section>
+
+    <!-- Color Palette Section -->
+    <section class="mt-12">
+      <h2 class="text-2xl font-bold text-white mb-6">Color Palette</h2>
+      <div class="flex flex-wrap gap-8">
+        <div class="text-center">
+          <div class="w-16 h-16 bg-electric-cyan rounded-lg mb-2"></div>
+          <p class="text-sm text-gray-300">Electric Cyan</p>
+        </div>
+        <div class="text-center">
+          <div class="w-16 h-16 bg-bright-cobalt rounded-lg mb-2"></div>
+          <p class="text-sm text-gray-300">Bright Cobalt</p>
+        </div>
+        <div class="text-center">
+          <div class="w-16 h-16 bg-deep-midnight rounded-lg mb-2"></div>
+          <p class="text-sm text-gray-300">Deep Midnight</p>
+        </div>
+        <div class="text-center">
+          <div class="w-16 h-16 bg-obsidian border border-white rounded-lg mb-2"></div>
+          <p class="text-sm text-gray-300">Obsidian</p>
         </div>
       </div>
-    </div>
+    </section>
+
   </main>
 </BaseLayout>
