@@ -29,11 +29,11 @@ Decimal phases appear between their surrounding integers in numeric order.
   3. Glass morphism UI components (Button, Card, Input) render with accessible contrast on dark background
   4. Site layout adapts correctly on mobile, tablet, and desktop viewports
   5. Electric cyan (#22D3EE) and bright cobalt (#3B82F6) accent colors display correctly against obsidian (#0F172A) background
-**Plans**: 1-2 plans
+**Plans**: 2 plans
 
 Plans:
-- [ ] 01-01: Project setup and deployment pipeline
-- [ ] 01-02: Glass morphism UI component library (if component complexity warrants separate plan)
+- [ ] 01-01-PLAN.md — Astro project setup with Tailwind CSS 4, base layout, theme colors
+- [ ] 01-02-PLAN.md — Glass morphism UI component library (Button, Card, GlassPanel, Input)
 
 ### Phase 2: Landing Page Sections
 **Goal**: Deliver complete static landing page with Dutch-first content addressing multiple stakeholder personas
