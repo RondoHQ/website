@@ -1,0 +1,50 @@
+---
+import Card from '../ui/Card.astro';
+---
+
+<section id="product" class="py-20">
+  <div class="max-w-7xl mx-auto px-4">
+    <!-- Section Header -->
+    <div class="text-center mb-16">
+      <h2 class="text-4xl md:text-5xl font-bold text-white mb-4">
+        Eén systeem voor al je ledendata
+      </h2>
+      <p class="text-xl text-gray-300 max-w-3xl mx-auto">
+        Geen versnipperde Excel-bestanden meer, geen handmatig kopiëren tussen systemen. Met Rondo heeft iedereen altijd de juiste informatie, overal.
+      </p>
+    </div>
+
+    <!-- Scenario Cards -->
+    <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
+      <!-- Scenario 1: New Member -->
+      <Card title="Een nieuw lid meldt zich aan">
+        <p class="text-gray-400 mb-3">
+          Normaal update je Sportlink, dan handmatig je mailinglijsten, dan je eigen administratie...
+        </p>
+        <p class="text-gray-300">
+          <span class="text-electric-cyan font-semibold">Met Rondo:</span> Sportlink-data stroomt automatisch naar je website, mailinglijsten (Laposta), en helpdesk (FreeScout). Iedereen ziet dezelfde informatie.
+        </p>
+      </Card>
+
+      <!-- Scenario 2: Team Change -->
+      <Card title="Een speler wisselt van team">
+        <p class="text-gray-400 mb-3">
+          De trainer moet het doorgeven aan de administratie, die meerdere systemen bijwerkt, en informatie raakt verloren of verouderd.
+        </p>
+        <p class="text-gray-300">
+          <span class="text-electric-cyan font-semibold">Met Rondo:</span> Pas het één keer aan in Rondo Club. Teamlijsten, roosters en communicatiegroepen werken automatisch bij.
+        </p>
+      </Card>
+
+      <!-- Scenario 3: Mailing -->
+      <Card title="Het bestuur wil een mailing sturen">
+        <p class="text-gray-400 mb-3">
+          Exporteren uit Sportlink, checken op bounced e-mails, importeren in mailingtool, hopen dat de lijst actueel is.
+        </p>
+        <p class="text-gray-300">
+          <span class="text-electric-cyan font-semibold">Met Rondo:</span> Mailinglijsten in Laposta zijn altijd actueel. Selecteer een team of groep en verstuur — geen exports, geen imports, geen verouderde adressen.
+        </p>
+      </Card>
+    </div>
+  </div>
+</section>

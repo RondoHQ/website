@@ -1,0 +1,150 @@
+---
+// Integration diagram showing how Rondo connects all systems
+---
+
+<section id="integratie" class="py-20">
+  <div class="max-w-5xl mx-auto px-4">
+    <!-- Section Header -->
+    <div class="text-center mb-12">
+      <h2 class="text-4xl md:text-5xl font-bold text-white mb-4">
+        Hoe alles samenwerkt
+      </h2>
+      <p class="text-xl text-gray-300">
+        Rondo verbindt je systemen zodat data overal klopt
+      </p>
+    </div>
+
+    <!-- SVG Diagram -->
+    <div class="diagram-container">
+      <svg
+        viewBox="0 0 800 500"
+        class="w-full h-auto max-w-3xl mx-auto"
+        role="img"
+        aria-label="Integration diagram showing data flow between systems"
+      >
+        <defs>
+          <!-- Arrow marker -->
+          <marker
+            id="arrowhead"
+            markerWidth="10"
+            markerHeight="10"
+            refX="9"
+            refY="3"
+            orient="auto"
+          >
+            <polygon points="0 0, 10 3, 0 6" class="diagram-arrow-marker" />
+          </marker>
+        </defs>
+
+        <!-- Nodes -->
+        <!-- Sportlink Club (top) -->
+        <rect x="320" y="30" width="160" height="80" rx="8" class="diagram-node" />
+        <text x="400" y="75" class="diagram-text">Sportlink Club</text>
+
+        <!-- Rondo Sync (left-center) -->
+        <rect x="80" y="210" width="160" height="80" rx="8" class="diagram-node" />
+        <text x="160" y="255" class="diagram-text">Rondo Sync</text>
+
+        <!-- Rondo Club (center) - primary node -->
+        <rect x="320" y="210" width="160" height="80" rx="8" class="diagram-node-primary" />
+        <text x="400" y="255" class="diagram-text">Rondo Club</text>
+
+        <!-- Laposta (bottom-left) -->
+        <rect x="80" y="390" width="160" height="80" rx="8" class="diagram-node" />
+        <text x="160" y="435" class="diagram-text">Laposta</text>
+
+        <!-- FreeScout (bottom-right) -->
+        <rect x="560" y="390" width="160" height="80" rx="8" class="diagram-node" />
+        <text x="640" y="435" class="diagram-text">FreeScout</text>
+
+        <!-- Arrows -->
+        <!-- Sportlink → Rondo Sync -->
+        <path
+          d="M 360 110 L 200 210"
+          class="diagram-arrow"
+          marker-end="url(#arrowhead)"
+        />
+        <text x="260" y="150" class="diagram-label">ledendata</text>
+
+        <!-- Rondo Sync → Rondo Club -->
+        <path
+          d="M 240 250 L 320 250"
+          class="diagram-arrow"
+          marker-end="url(#arrowhead)"
+        />
+        <text x="260" y="240" class="diagram-label">import</text>
+
+        <!-- Rondo Sync → Laposta -->
+        <path
+          d="M 160 290 L 160 390"
+          class="diagram-arrow"
+          marker-end="url(#arrowhead)"
+        />
+        <text x="170" y="345" class="diagram-label">mailinglijsten</text>
+
+        <!-- Rondo Sync → FreeScout -->
+        <path
+          d="M 240 270 L 560 410"
+          class="diagram-arrow"
+          marker-end="url(#arrowhead)"
+        />
+        <text x="380" y="340" class="diagram-label">contacten</text>
+      </svg>
+    </div>
+  </div>
+</section>
+
+<style>
+  .diagram-container {
+    background: rgba(255, 255, 255, 0.02);
+    border-radius: 1rem;
+    padding: 2rem;
+  }
+
+  .diagram-node {
+    fill: rgba(255, 255, 255, 0.05);
+    stroke: rgba(255, 255, 255, 0.2);
+    stroke-width: 2;
+  }
+
+  .diagram-node-primary {
+    fill: rgba(34, 211, 238, 0.1);
+    stroke: #22D3EE;
+    stroke-width: 2;
+  }
+
+  .diagram-text {
+    fill: white;
+    font-size: 16px;
+    font-weight: 600;
+    text-anchor: middle;
+    dominant-baseline: middle;
+  }
+
+  .diagram-label {
+    fill: rgba(255, 255, 255, 0.7);
+    font-size: 12px;
+    text-anchor: middle;
+  }
+
+  .diagram-arrow {
+    stroke: #22D3EE;
+    stroke-width: 2;
+    fill: none;
+  }
+
+  .diagram-arrow-marker {
+    fill: #22D3EE;
+  }
+
+  /* Mobile: slightly smaller text */
+  @media (max-width: 768px) {
+    .diagram-text {
+      font-size: 14px;
+    }
+
+    .diagram-label {
+      font-size: 10px;
+    }
+  }
+</style>
