@@ -13,7 +13,7 @@ This roadmap delivers a modern SaaS landing page for Rondo — a four-phase jour
 Decimal phases appear between their surrounding integers in numeric order.
 
 - [x] **Phase 1: Foundation & Design System** - Astro project setup, glass morphism UI library, Cloudflare deployment
-- [ ] **Phase 2: Landing Page Sections** - Hero, products, pricing sections with Dutch content
+- [x] **Phase 2: Landing Page Sections** - Hero, products, pricing sections with Dutch content
 - [ ] **Phase 3: Contact Form & Integration** - Lead capture form with server-side handling
 - [ ] **Phase 4: SEO & Production Polish** - Meta tags, analytics, performance audit, launch
 
@@ -52,8 +52,8 @@ Plans:
 **Plans**: 2 plans
 
 Plans:
-- [ ] 02-01-PLAN.md — Hero section, sticky glass header, footer, and page skeleton with Dutch content
-- [ ] 02-02-PLAN.md — Product story, integration diagram, and pricing section
+- [x] 02-01-PLAN.md — Hero section, sticky glass header, footer, and page skeleton with Dutch content (completed 2026-02-06)
+- [x] 02-02-PLAN.md — Product story, integration diagram, and pricing section (completed 2026-02-06)
 
 ### Phase 3: Contact Form & Integration
 **Goal**: Enable clubs to express interest and capture leads via contact form
@@ -94,6 +94,6 @@ Phases execute in numeric order: 1 → 2 → 3 → 4
 | Phase | Plans Complete | Status | Completed |
 |-------|----------------|--------|-----------|
 | 1. Foundation & Design System | 2/2 | Complete | 2026-02-06 |
-| 2. Landing Page Sections | 0/2 | Not started | - |
+| 2. Landing Page Sections | 2/2 | Complete | 2026-02-06 |
 | 3. Contact Form & Integration | 0/1 | Not started | - |
 | 4. SEO & Production Polish | 0/1 | Not started | - |

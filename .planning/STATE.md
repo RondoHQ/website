@@ -5,32 +5,33 @@
 See: .planning/PROJECT.md (updated 2026-02-06)
 
 **Core value:** Clearly communicate what Rondo does and make it effortless for sports clubs to get in touch
-**Current focus:** Phase 1 complete — ready for Phase 2
+**Current focus:** Phase 2 complete — ready for Phase 3
 
 ## Current Position
 
-Phase: 1 of 4 (Foundation & Design System) — COMPLETE
+Phase: 2 of 4 (Landing Page Sections) — COMPLETE
 Plan: 2 of 2 in current phase
-Status: Phase complete, pending verification
-Last activity: 2026-02-06 — Completed 01-02-PLAN.md (Glass Morphism UI Components)
+Status: Phase complete, verified
+Last activity: 2026-02-06 — Completed 02-02-PLAN.md (Product Story, Diagram, Pricing)
 
-Progress: [██░░░░░░░░] 20%
+Progress: [████████░░] 50%
 
 ## Performance Metrics
 
 **Velocity:**
-- Total plans completed: 2
-- Average duration: 2.7 min
-- Total execution time: 0.09 hours
+- Total plans completed: 4
+- Average duration: 2.5 min
+- Total execution time: ~0.17 hours
 
 **By Phase:**
 
 | Phase | Plans | Total | Avg/Plan |
 |-------|-------|-------|----------|
 | 01 | 2 | ~5m 22s | ~2m 41s |
+| 02 | 2 | ~5m | ~2m 30s |
 
 **Recent Trend:**
-- Last 5 plans: 2m 22s, ~3m
+- Last 5 plans: ~2m 30s average
 - Trend: Consistent
 
 *Updated after each plan completion*
@@ -49,6 +50,10 @@ Progress: [██░░░░░░░░] 20%
 - Scoped styles for glass morphism — vendor prefixes and media queries best kept per-component
 - Pure white text on glass surfaces — WCAG 4.5:1 contrast compliance
 - 6px mobile blur vs 10px desktop — performance optimization
+- Unified product story with scenarios, not separate Club vs Sync sections
+- VOG scenario card instead of team change — user feedback
+- Nikki as contributiedata source in integration diagram — user feedback
+- Rondo Sync styled same as Rondo Club (primary cyan) in diagram — user feedback
 
 ### Pending Todos
 
@@ -59,10 +64,11 @@ None.
 - ✓ RESOLVED: Rondo logo provided by user, saved to public/rondo-logo.png
 - ✓ RESOLVED: Glass morphism accessibility established with contrast standards + prefers-reduced-transparency
 - ✓ RESOLVED: Node 22 pinned via .nvmrc
+- ✓ RESOLVED: Product screenshot provided by user, saved to public/rondo-club-screenshot.png
 
 ## Session Continuity
 
 Last session: 2026-02-06
-Stopped at: Phase 1 execution complete, awaiting verification
+Stopped at: Phase 2 execution complete, verified
 Resume file: None
-Next: Verify Phase 1, then plan Phase 2
+Next: Plan Phase 3 (Contact Form & Integration)

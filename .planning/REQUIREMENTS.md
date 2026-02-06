@@ -7,20 +7,20 @@
 
 ### Hero & Brand
 
-- [ ] **HERO-01**: Landing page has an outcome-focused Dutch headline (<8 words) with supporting subline
-- [ ] **HERO-02**: Hero section includes a real product visual/screenshot of Rondo Club
-- [ ] **HERO-03**: Primary CTA button visible above the fold
-- [ ] **HERO-04**: Header with Rondo logo and simple navigation
+- [x] **HERO-01**: Landing page has an outcome-focused Dutch headline (<8 words) with supporting subline
+- [x] **HERO-02**: Hero section includes a real product visual/screenshot of Rondo Club
+- [x] **HERO-03**: Primary CTA button visible above the fold
+- [x] **HERO-04**: Header with Rondo logo and simple navigation
 
 ### Products
 
-- [ ] **PROD-01**: Dedicated section explaining Rondo Club — people, teams, and dates management
-- [ ] **PROD-02**: Dedicated section explaining Rondo Sync — automated data sync from Sportlink
-- [ ] **PROD-03**: Integration diagram showing how Club, Sync, Sportlink, Laposta, and FreeScout connect
+- [x] **PROD-01**: Dedicated section explaining Rondo Club — people, teams, and dates management
+- [x] **PROD-02**: Dedicated section explaining Rondo Sync — automated data sync from Sportlink
+- [x] **PROD-03**: Integration diagram showing how Club, Sync, Sportlink, Laposta, and FreeScout connect
 
 ### Pricing
 
-- [ ] **PRIC-01**: Pricing section displaying the formula: minimum €250/jaar + €0,50 per lid per jaar with example calculation
+- [x] **PRIC-01**: Pricing section displaying the formula: minimum €250/jaar + €0,50 per lid per jaar with example calculation
 
 ### Contact
 
@@ -39,7 +39,7 @@
 - [ ] **TECH-02**: Deployed to Cloudflare Pages
 - [ ] **TECH-03**: SEO meta tags (title, description, OpenGraph) for social sharing
 - [ ] **TECH-04**: Plausible analytics integration
-- [ ] **TECH-05**: Dutch language throughout
+- [x] **TECH-05**: Dutch language throughout
 
 ## v2 Requirements
 
@@ -81,14 +81,14 @@
 
 | Requirement | Phase | Status |
 |-------------|-------|--------|
-| HERO-01 | Phase 2 | Pending |
-| HERO-02 | Phase 2 | Pending |
-| HERO-03 | Phase 2 | Pending |
-| HERO-04 | Phase 2 | Pending |
-| PROD-01 | Phase 2 | Pending |
-| PROD-02 | Phase 2 | Pending |
-| PROD-03 | Phase 2 | Pending |
-| PRIC-01 | Phase 2 | Pending |
+| HERO-01 | Phase 2 | Complete |
+| HERO-02 | Phase 2 | Complete |
+| HERO-03 | Phase 2 | Complete |
+| HERO-04 | Phase 2 | Complete |
+| PROD-01 | Phase 2 | Complete |
+| PROD-02 | Phase 2 | Complete |
+| PROD-03 | Phase 2 | Complete |
+| PRIC-01 | Phase 2 | Complete |
 | CONT-01 | Phase 3 | Pending |
 | DSGN-01 | Phase 1 | Complete |
 | DSGN-02 | Phase 1 | Complete |
@@ -98,7 +98,7 @@
 | TECH-02 | Phase 4 | Pending |
 | TECH-03 | Phase 4 | Pending |
 | TECH-04 | Phase 4 | Pending |
-| TECH-05 | Phase 2 | Pending |
+| TECH-05 | Phase 2 | Complete |
 
 **Coverage:**
 - v1 requirements: 18 total
