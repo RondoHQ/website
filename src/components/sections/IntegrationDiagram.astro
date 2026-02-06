@@ -37,15 +37,19 @@
         </defs>
 
         <!-- Nodes -->
-        <!-- Sportlink Club (top) -->
-        <rect x="320" y="30" width="160" height="80" rx="8" class="diagram-node" />
-        <text x="400" y="75" class="diagram-text">Sportlink Club</text>
+        <!-- Sportlink Club (top-left) -->
+        <rect x="80" y="30" width="160" height="80" rx="8" class="diagram-node" />
+        <text x="160" y="75" class="diagram-text">Sportlink Club</text>
 
-        <!-- Rondo Sync (left-center) -->
-        <rect x="80" y="210" width="160" height="80" rx="8" class="diagram-node" />
+        <!-- Nikki (top-right) -->
+        <rect x="560" y="30" width="160" height="80" rx="8" class="diagram-node" />
+        <text x="640" y="75" class="diagram-text">Nikki</text>
+
+        <!-- Rondo Sync (center-left) - primary node -->
+        <rect x="80" y="210" width="160" height="80" rx="8" class="diagram-node-primary" />
         <text x="160" y="255" class="diagram-text">Rondo Sync</text>
 
-        <!-- Rondo Club (center) - primary node -->
+        <!-- Rondo Club (center-right) - primary node -->
         <rect x="320" y="210" width="160" height="80" rx="8" class="diagram-node-primary" />
         <text x="400" y="255" class="diagram-text">Rondo Club</text>
 
@@ -60,11 +64,19 @@
         <!-- Arrows -->
         <!-- Sportlink → Rondo Sync -->
         <path
-          d="M 360 110 L 200 210"
+          d="M 160 110 L 160 210"
           class="diagram-arrow"
           marker-end="url(#arrowhead)"
         />
-        <text x="260" y="150" class="diagram-label">ledendata</text>
+        <text x="170" y="165" class="diagram-label">ledendata</text>
+
+        <!-- Nikki → Rondo Club -->
+        <path
+          d="M 640 110 L 440 210"
+          class="diagram-arrow"
+          marker-end="url(#arrowhead)"
+        />
+        <text x="560" y="155" class="diagram-label">VOG-status</text>
 
         <!-- Rondo Sync → Rondo Club -->
         <path
@@ -72,7 +84,6 @@
           class="diagram-arrow"
           marker-end="url(#arrowhead)"
         />
-        <text x="260" y="240" class="diagram-label">import</text>
 
         <!-- Rondo Sync → Laposta -->
         <path
