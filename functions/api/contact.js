@@ -97,7 +97,7 @@ export async function onRequestPost(context) {
     const resend = new Resend(env.RESEND_API_KEY);
 
     const { error } = await resend.emails.send({
-      from: env.FROM_EMAIL,
+      from: `rondo.club <${env.FROM_EMAIL}>`,
       to: env.RECIPIENT_EMAIL,
       subject: `Rondo contactformulier: ${data.club_name}`,
       text: emailBody,
@@ -123,7 +123,7 @@ export async function onRequestPost(context) {
   } catch (err) {
     console.error('Form submission error:', err?.message || err);
     return new Response(
-      JSON.stringify({ error: 'Er ging iets mis. Probeer het later opnieuw.', debug: err?.message }),
+      JSON.stringify({ error: 'Er ging iets mis. Probeer het later opnieuw.' }),
       { status: 500, headers: corsHeaders }
     );
   }
