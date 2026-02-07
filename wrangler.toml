@@ -1,5 +1,4 @@
 name = "rondo-club"
-account_id = "c53e64d218c83cb220b523a637ffd079"
 pages_build_output_dir = "dist"
 compatibility_date = "2024-12-01"
 compatibility_flags = ["nodejs_compat"]
