@@ -1,5 +1,8 @@
 ---
 import '../styles/global.css';
+import { SEO } from 'astro-seo';
+import { siteMetadata } from '../data/siteMetadata';
+import { organizationSchema, softwareApplicationSchema } from '../data/structuredData';
 
 interface Props {
   title?: string;
@@ -7,8 +10,8 @@ interface Props {
 }
 
 const {
-  title = 'Rondo - Sportclub Management Platform',
-  description = 'Modern management platform for sports clubs'
+  title = siteMetadata.title,
+  description = siteMetadata.description
 } = Astro.props;
 ---
 <!DOCTYPE html>
@@ -16,10 +19,51 @@ const {
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta name="description" content={description}>
-  <title>{title}</title>
+  <SEO
+    title={title}
+    description={description}
+    canonical={siteMetadata.url}
+    openGraph={{
+      basic: {
+        title: title,
+        type: "website",
+        image: siteMetadata.ogImage,
+        url: siteMetadata.url
+      },
+      optional: {
+        locale: siteMetadata.locale,
+        siteName: siteMetadata.siteName
+      }
+    }}
+    twitter={{
+      card: "summary_large_image"
+    }}
+  />
+  <script type="application/ld+json" is:inline set:html={JSON.stringify(organizationSchema)} />
+  <script type="application/ld+json" is:inline set:html={JSON.stringify(softwareApplicationSchema)} />
+  <script defer data-domain="rondo.club" src="https://plausible.io/js/script.js" is:inline></script>
+  <script is:inline>window.plausible = window.plausible || function() { (window.plausible.q = window.plausible.q || []).push(arguments) }</script>
 </head>
 <body class="min-h-screen bg-obsidian text-white antialiased">
+  <a href="#main-content" class="skip-link">Spring naar hoofdinhoud</a>
   <slot />
 </body>
 </html>
+
+<style>
+.skip-link {
+  position: absolute;
+  top: -40px;
+  left: 0;
+  background: #22D3EE;
+  color: #0F172A;
+  padding: 8px 16px;
+  text-decoration: none;
+  font-weight: 600;
+  z-index: 100;
+  transition: top 0.2s;
+}
+.skip-link:focus {
+  top: 0;
+}
+</style>

@@ -113,6 +113,13 @@ form?.addEventListener('submit', async (e) => {
     const result = await response.json();
 
     if (response.ok && result.success) {
+      // Track contact form conversion
+      (window as any).plausible('ContactFormSubmit', {
+        props: {
+          clubName: clubName,
+          memberRange: formData.get('member_count')?.toString() || 'not-specified'
+        }
+      });
       showMessage(result.message || 'Bedankt! We nemen zo snel mogelijk contact op.', false);
       form.reset();
     } else {
