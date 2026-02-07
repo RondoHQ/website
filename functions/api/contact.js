@@ -123,7 +123,7 @@ export async function onRequestPost(context) {
   } catch (err) {
     console.error('Form submission error:', err?.message || err);
     return new Response(
-      JSON.stringify({ error: 'Er ging iets mis. Probeer het later opnieuw.' }),
+      JSON.stringify({ error: 'Er ging iets mis. Probeer het later opnieuw.', debug: err?.message }),
       { status: 500, headers: corsHeaders }
     );
   }
