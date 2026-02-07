@@ -15,6 +15,7 @@ import Card from '../ui/Card.astro';
     </div>
 
     <!-- Scenario Cards -->
+    <!-- Top row: 3 cards -->
     <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
       <!-- Scenario 1: New Member -->
       <Card title="Een nieuw lid meldt zich aan">
@@ -22,7 +23,7 @@ import Card from '../ui/Card.astro';
           Normaal update je Sportlink, dan handmatig je mailinglijsten, dan je eigen administratie...
         </p>
         <p class="text-gray-300">
-          <span class="text-electric-cyan font-semibold">Met Rondo:</span> Sportlink-data stroomt automatisch naar je website, mailinglijsten (Laposta), en helpdesk (FreeScout). Iedereen ziet dezelfde informatie.
+          <span class="text-electric-cyan font-semibold">Met Rondo:</span> Sportlink-data stroomt automatisch naar Rondo Club, mailinglijsten (Laposta), en helpdesk (FreeScout). Iedereen ziet dezelfde informatie.
         </p>
       </Card>
 
@@ -36,13 +37,36 @@ import Card from '../ui/Card.astro';
         </p>
       </Card>
 
-      <!-- Scenario 3: Mailing -->
-      <Card title="Het bestuur wil een mailing sturen">
+      <!-- Scenario 3: Family -->
+      <Card title="Ouders met meerdere kinderen?">
+        <p class="text-gray-400 mb-3">
+          Sportlink kent geen gezinsrelaties. Dus korting voor een tweede kind? Dat zoek je zelf uit, handmatig, elk seizoen opnieuw.
+        </p>
+        <p class="text-gray-300">
+          <span class="text-electric-cyan font-semibold">Met Rondo:</span> Rondo Club herkent gezinnen automatisch. Omdat Rondo het herkent, kun je er je contributieregels op aanpassen — zonder handwerk.
+        </p>
+      </Card>
+    </div>
+
+    <!-- Bottom row: 2 cards, centered -->
+    <div class="grid grid-cols-1 md:grid-cols-2 gap-6 mt-6 max-w-[calc(66.666%+0.75rem)] mx-auto">
+      <!-- Scenario 4: Mailing -->
+      <Card title="Je wil een mailing sturen">
         <p class="text-gray-400 mb-3">
           Exporteren uit Sportlink, checken op bounced e-mails, importeren in mailingtool, hopen dat de lijst actueel is.
         </p>
         <p class="text-gray-300">
           <span class="text-electric-cyan font-semibold">Met Rondo:</span> Mailinglijsten in Laposta zijn altijd actueel. Selecteer een team of groep en verstuur — geen exports, geen imports, geen verouderde adressen.
+        </p>
+      </Card>
+
+      <!-- Scenario 5: Access Control -->
+      <Card title="Niet iedereen hoeft alles te zien">
+        <p class="text-gray-400 mb-3">
+          Je hebt een vrijwilliger die de VOGs regelt. Moet die van iedereen alles kunnen zien? Of alleen van de mensen waar hij een VOG voor moet regelen?
+        </p>
+        <p class="text-gray-300">
+          <span class="text-electric-cyan font-semibold">Met Rondo:</span> Iedereen toegang tot wat ze moeten zien, en niet meer. Veilig, overzichtelijk, en zonder gedoe.
         </p>
       </Card>
     </div>
