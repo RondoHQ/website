@@ -58,6 +58,14 @@ export const faqSchema: WithContext<FAQPage> = {
     },
     {
       "@type": "Question",
+      "name": "Is Rondo open source?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Ja! Zowel Rondo Club als Rondo Sync zijn open source. Je kunt alles zelf hosten als je dat wilt. Ons betaalde aanbod is voor clubs die geen gedoe willen met servers, updates en onderhoud — wij regelen dat voor je."
+      }
+    },
+    {
+      "@type": "Question",
       "name": "Heb je Nikki nodig?",
       "acceptedAnswer": {
         "@type": "Answer",
