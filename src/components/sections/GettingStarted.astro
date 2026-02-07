@@ -1,0 +1,185 @@
+---
+// Getting started: 5-step onboarding process
+const steps = [
+  {
+    number: 1,
+    title: "Neem contact op",
+    text: "Vertel ons over je club en wat je nodig hebt. We denken graag mee over welke koppelingen voor jullie zinvol zijn."
+  },
+  {
+    number: 2,
+    title: "We tekenen",
+    text: "We sturen je een overeenkomst en bewerkersovereenkomst. Duidelijke afspraken, geen kleine lettertjes."
+  },
+  {
+    number: 3,
+    title: "Deel je logins",
+    text: "We hebben een login nodig op de systemen die je wilt koppelen, zoals Sportlink Club. Deze gegevens vragen we altijd op via een beveiligde verbinding."
+  },
+  {
+    number: 4,
+    title: "Wij richten in",
+    text: "We zetten jullie Rondo-omgeving op, koppelen Sportlink, en configureren de gewenste integraties. Jullie hoeven niets te installeren."
+  },
+  {
+    number: 5,
+    title: "Jullie data draait",
+    text: "Vanaf dag één synchroniseert Rondo automatisch. Jullie ledendata is overal up-to-date, zonder handwerk."
+  }
+];
+---
+
+<section class="getting-started">
+  <div class="getting-started-container">
+    <div class="section-header">
+      <h2 class="section-heading gradient-text">Hoe begin je?</h2>
+      <p class="section-subheading">
+        In vijf stappen draait jouw club op Rondo
+      </p>
+    </div>
+
+    <!-- Desktop: unified grid -->
+    <div class="steps-desktop">
+      <div class="steps-grid">
+        {steps.map((step) => (
+          <div class="step">
+            <div class="step-number">{step.number}</div>
+            <h3>{step.title}</h3>
+            <p>{step.text}</p>
+          </div>
+        ))}
+      </div>
+    </div>
+
+    <!-- Mobile: vertical list -->
+    <div class="steps-mobile">
+      {steps.map((step) => (
+        <div class="step-mobile">
+          <div class="step-number">{step.number}</div>
+          <div class="step-mobile-content">
+            <h3>{step.title}</h3>
+            <p>{step.text}</p>
+          </div>
+        </div>
+      ))}
+    </div>
+  </div>
+</section>
+
+<style>
+  .getting-started {
+    padding: 2.5rem 1rem 5rem;
+    background: linear-gradient(180deg, #FFFFFF 0%, #F0FDFA 50%, #FFFFFF 100%);
+  }
+
+  .getting-started-container {
+    max-width: 80rem;
+    margin: 0 auto;
+  }
+
+  .section-header {
+    text-align: center;
+    margin-bottom: 3rem;
+  }
+
+  .section-heading {
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 700;
+    font-size: 2.5rem;
+    margin-bottom: 1rem;
+  }
+
+  .section-subheading {
+    font-size: 1.25rem;
+    color: #64748B;
+  }
+
+  /* Desktop layout */
+  .steps-desktop {
+    display: block;
+  }
+
+  .steps-mobile {
+    display: none;
+  }
+
+  .steps-grid {
+    display: grid;
+    grid-template-columns: repeat(5, 1fr);
+    gap: 2rem;
+    position: relative;
+  }
+
+  .steps-grid::before {
+    content: '';
+    position: absolute;
+    top: 1.5rem;
+    left: 1.5rem;
+    right: 1.5rem;
+    border-top: 2px dashed rgba(37, 99, 235, 0.25);
+  }
+
+  .step-number {
+    width: 3rem;
+    height: 3rem;
+    border-radius: 50%;
+    background: linear-gradient(135deg, #0891B2, #2563EB);
+    color: white;
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 700;
+    font-size: 1.25rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-shrink: 0;
+    position: relative;
+    z-index: 1;
+    box-shadow: 0 4px 12px rgba(8, 145, 178, 0.3);
+  }
+
+  .step {
+    text-align: left;
+  }
+
+  .step h3 {
+    font-weight: 700;
+    margin-top: 1rem;
+    margin-bottom: 0.5rem;
+  }
+
+  .step p {
+    color: #475569;
+    font-size: 0.9375rem;
+    line-height: 1.6;
+  }
+
+  /* Mobile layout */
+  @media (max-width: 768px) {
+    .steps-desktop {
+      display: none;
+    }
+
+    .steps-mobile {
+      display: flex;
+      flex-direction: column;
+      gap: 1.5rem;
+    }
+
+    .step-mobile {
+      display: flex;
+      gap: 1.25rem;
+      align-items: flex-start;
+    }
+
+    .step-mobile-content h3 {
+      font-weight: 700;
+      margin-bottom: 0.25rem;
+    }
+
+    .step-mobile-content p {
+      color: #475569;
+      font-size: 0.9375rem;
+      line-height: 1.6;
+    }
+  }
+</style>

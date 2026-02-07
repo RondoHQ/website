@@ -66,6 +66,14 @@ export const faqSchema: WithContext<FAQPage> = {
     },
     {
       "@type": "Question",
+      "name": "Mijn club gebruikt een ander e-mailsysteem, kan dat ook?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Ja, natuurlijk! Rondo is flexibel en kan in principe met elk e-mailsysteem gekoppeld worden. De koppeling moet dan wel gebouwd worden — neem contact op en we bespreken de mogelijkheden."
+      }
+    },
+    {
+      "@type": "Question",
       "name": "Heb je Nikki nodig?",
       "acceptedAnswer": {
         "@type": "Answer",

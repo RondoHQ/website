@@ -5,11 +5,11 @@ import Textarea from '../ui/Textarea.astro';
 import Button from '../ui/Button.astro';
 ---
 
-<section id="contact" class="py-20 px-4">
+<section id="contact" class="py-20 px-4 contact-section">
   <div class="max-w-2xl mx-auto">
     <GlassPanel class="p-8 md:p-12">
       <h2 class="text-3xl md:text-4xl font-bold text-white mb-2">Interesse?</h2>
-      <p class="text-gray-300 mb-8">Vul het formulier in en we nemen zo snel mogelijk contact met je op.</p>
+      <p class="text-slate-300 mb-8">Vul het formulier in en we nemen zo snel mogelijk contact met je op.</p>
 
       <form id="contact-form" method="POST" action="/api/contact" novalidate>
         <Input
@@ -153,13 +153,51 @@ form?.addEventListener('submit', async (e) => {
 
 <style>
 .form-message-success {
-  background: rgba(34, 197, 94, 0.15);
-  border-color: rgba(34, 197, 94, 0.4);
-  color: rgb(187, 247, 208);
+  background: rgba(34, 197, 94, 0.1);
+  border-color: rgba(34, 197, 94, 0.3);
+  color: #166534;
 }
 .form-message-error {
-  background: rgba(239, 68, 68, 0.15);
-  border-color: rgba(239, 68, 68, 0.4);
-  color: rgb(254, 202, 202);
+  background: rgba(239, 68, 68, 0.1);
+  border-color: rgba(239, 68, 68, 0.3);
+  color: #FCA5A5;
+}
+
+.contact-section {
+  background: #0F172A;
+}
+
+/* Override GlassPanel in dark context */
+.contact-section :global(.glass-panel) {
+  background: rgba(255, 255, 255, 0.05);
+  border-color: rgba(255, 255, 255, 0.1);
+}
+
+/* Override input/textarea labels */
+.contact-section :global(label) {
+  color: #CBD5E1 !important;
+}
+
+/* Override input/textarea fields */
+.contact-section :global(.input-field),
+.contact-section :global(.textarea-field) {
+  background: rgba(255, 255, 255, 0.08);
+  border-color: rgba(255, 255, 255, 0.15);
+  color: #F1F5F9;
+}
+
+.contact-section :global(.input-field)::placeholder,
+.contact-section :global(.textarea-field)::placeholder {
+  color: #64748B;
+}
+
+.contact-section :global(.input-field):focus,
+.contact-section :global(.textarea-field):focus {
+  border-color: #22D3EE;
+  box-shadow: 0 0 0 3px rgba(34, 211, 238, 0.15);
+}
+
+.form-message-success {
+  color: #86EFAC;
 }
 </style>

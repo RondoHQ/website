@@ -1,8 +1,9 @@
 @import "tailwindcss";
 
 @theme {
-  --color-electric-cyan: #22D3EE;
-  --color-bright-cobalt: #3B82F6;
+  --color-electric-cyan: #0891B2;
+  --color-electric-cyan-light: #22D3EE;
+  --color-bright-cobalt: #2563EB;
   --color-deep-midnight: #1E3A8A;
   --color-obsidian: #0F172A;
 }
@@ -17,6 +18,36 @@ section[id] {
 
 h1, h2, h3, h4, h5, h6 {
   font-family: 'Montserrat', system-ui, sans-serif;
+}
+
+h3 {
+  font-size: 1.5rem;
+  background: linear-gradient(135deg, #06B6D4 0%, #1D4ED8 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+}
+
+.pricing-hero h3 {
+  background: none;
+  -webkit-background-clip: unset;
+  -webkit-text-fill-color: white;
+  background-clip: unset;
+}
+
+.gradient-text {
+  background: linear-gradient(135deg, #06B6D4 0%, #1D4ED8 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+  padding-bottom: 0.1em;
+  -webkit-box-decoration-break: clone;
+  box-decoration-break: clone;
+}
+
+a:not([class]) {
+  text-decoration: underline;
+  text-underline-offset: 2px;
 }
 
 body {

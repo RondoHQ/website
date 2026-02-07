@@ -10,48 +10,48 @@ const examples = [
 ];
 ---
 
-<section id="prijzen" class="py-20">
+<section id="prijzen" class="py-20 pricing-section">
   <div class="max-w-7xl mx-auto px-4">
     <!-- Section Header -->
     <div class="text-center mb-12">
-      <h2 class="text-4xl md:text-5xl font-bold text-white mb-4">
+      <h2 class="text-4xl md:text-5xl font-bold gradient-text mb-4">
         Transparante prijzen
       </h2>
-      <p class="text-xl text-gray-300">
+      <p class="text-xl text-slate-600">
         Alles inbegrepen, geen verrassingen
       </p>
     </div>
 
     <!-- Pricing Formula -->
-    <Card class="max-w-2xl mx-auto mb-12">
+    <div class="pricing-hero max-w-2xl mx-auto mb-12 p-8 md:p-10 rounded-2xl">
       <h3 class="text-2xl font-semibold text-white mb-4 text-center">
         Eén formule voor alles
       </h3>
       <div class="text-center space-y-2">
         <p class="text-3xl">
-          <span class="text-electric-cyan font-bold">€250 per jaar</span>
-          <span class="text-gray-300"> basis</span>
+          <span class="text-white font-bold">€250 per jaar</span>
+          <span class="text-cyan-100"> basis</span>
         </p>
-        <p class="text-2xl text-gray-300">
-          <span class="text-electric-cyan font-bold">+ €0,50</span> per lid per jaar
+        <p class="text-2xl text-cyan-100">
+          <span class="text-white font-bold">+ €0,50</span> per lid per jaar
         </p>
       </div>
-      <p class="text-sm text-gray-400 text-center mt-6">
+      <p class="text-sm text-cyan-200 text-center mt-6">
         Inclusief Rondo Club, Rondo Sync, hosting en support
       </p>
-    </Card>
+    </div>
 
     <!-- Pricing Examples -->
     <div class="grid grid-cols-1 md:grid-cols-3 gap-6 mb-12">
       {examples.map((example) => (
         <Card class="text-center">
-          <p class="text-3xl font-bold text-white mb-2">
+          <p class="text-3xl font-bold text-slate-800 mb-2">
             {example.members} leden
           </p>
           <p class="text-2xl font-semibold text-electric-cyan mb-4">
             €{example.price}/jaar
           </p>
-          <p class="text-sm text-gray-400">
+          <p class="text-sm text-slate-500">
             €250 + ({example.members} × €0,50)
           </p>
         </Card>
@@ -63,9 +63,16 @@ const examples = [
       <Button variant="primary" href="#contact">
         Neem contact op
       </Button>
-      <p class="text-sm text-gray-400 mt-6">
-        Rondo is <a href="https://github.com/rondohq" target="_blank" rel="noopener" class="text-electric-cyan hover:text-white transition-colors underline underline-offset-2">open source</a> — je kunt alles ook zelf hosten. Je betaalt voor hosting, beheer en support.
+      <p class="text-sm text-slate-500 mt-6">
+        Rondo is <a href="https://github.com/rondohq" target="_blank" rel="noopener" class="text-electric-cyan hover:text-slate-900 transition-colors underline underline-offset-2">open source</a> — je kunt alles ook zelf hosten. Je betaalt voor hosting, beheer en support.
       </p>
     </div>
   </div>
 </section>
+
+<style>
+  .pricing-hero {
+    background: linear-gradient(135deg, #0891B2 0%, #2563EB 100%);
+    box-shadow: 0 10px 40px rgba(8, 145, 178, 0.3), 0 4px 16px rgba(37, 99, 235, 0.2);
+  }
+</style>

@@ -1,0 +1,160 @@
+---
+// Origin story: why Rondo was built, from personal experience at AWC
+---
+
+<section class="origin-section">
+  <div class="origin-container">
+    <div class="origin-content">
+      <div class="origin-text">
+        <h2 class="origin-heading gradient-text">Waarom ik Rondo bouwde</h2>
+        <div class="origin-body">
+          <p>
+            Als secretaris bij voetbalvereniging <a href="https://www.svawc.nl" target="_blank" rel="noopener">AWC</a> in Wijchen liep ik tegen precies deze problemen aan. Ledendata verspreid over Sportlink, Excel-bestanden en e-maillijsten. VOG administratie was een continue uitdaging. Handmatig exporteren en importeren voor elke mailing. Geen overzicht van gezinnen voor de contributieregeling.
+          </p>
+          <p>
+            Als ervaren developer en internet ondernemer dacht ik: dit moet beter kunnen. Dus bouwde ik Rondo — eerst voor AWC, nu beschikbaar voor elke sportvereniging die dezelfde frustraties herkent. AWC gebruikt Rondo dagelijks, en dat is de beste test die er is.
+          </p>
+          <p>
+            Ik wil geen geld verdienen aan sportclubs. Ik vind het belangrijk dat sporten betaalbaar is en blijft en dat verenigingen zich makkelijk goed kunnen organiseren. Daarom is Rondo open source beschikbaar en bieden we het aan voor clubs die willen dat wij het voor hen beheren.
+          </p>
+        </div>
+      </div>
+      <div class="origin-sidebar">
+        <div class="origin-photo">
+          <img src="/joost-de-valk.jpg" alt="Joost de Valk" class="photo" />
+          <span class="photo-name">Joost de Valk</span>
+          <span class="photo-role">Bedenker en CEO van Rondo</span>
+        </div>
+        <div class="origin-club">
+          <span class="club-label">Secretaris bij</span>
+          <a href="https://www.svawc.nl" target="_blank" rel="noopener">
+            <img src="/awc-logo.svg" alt="AWC Wijchen" class="club-logo" />
+          </a>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<style>
+  .origin-section {
+    padding: 2.5rem 1rem 5rem;
+    background: linear-gradient(180deg, #FFFFFF 0%, #F0FDFA 50%, #FFFFFF 100%);
+  }
+
+  .origin-container {
+    max-width: 56rem;
+    margin: 0 auto;
+  }
+
+  .origin-content {
+    display: flex;
+    align-items: center;
+    gap: 3rem;
+  }
+
+  .origin-text {
+    flex: 1;
+  }
+
+  .origin-heading {
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 700;
+    font-size: 2rem;
+    margin-bottom: 1.5rem;
+  }
+
+  .origin-body p {
+    color: #475569;
+    font-size: 1.125rem;
+    line-height: 1.8;
+    margin-bottom: 1rem;
+  }
+
+  .origin-body a {
+    color: #0891B2;
+    text-decoration: underline;
+    text-underline-offset: 2px;
+    transition: color 0.2s ease-in-out;
+  }
+
+  .origin-body a:hover {
+    color: #1E293B;
+  }
+
+  .origin-sidebar {
+    flex-shrink: 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 1.5rem;
+  }
+
+  .origin-photo {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 0.75rem;
+  }
+
+  .photo {
+    width: 10rem;
+    height: 10rem;
+    border-radius: 50%;
+    object-fit: cover;
+    border: 3px solid transparent;
+    background-image: linear-gradient(white, white), linear-gradient(135deg, #0891B2, #2563EB);
+    background-origin: border-box;
+    background-clip: content-box, border-box;
+  }
+
+  .photo-name {
+    color: #1E293B;
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 700;
+    font-size: 0.9375rem;
+  }
+
+  .photo-role {
+    color: #64748B;
+    font-size: 0.8125rem;
+  }
+
+  .origin-club {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 0.5rem;
+  }
+
+  .club-label {
+    color: #64748B;
+    font-size: 0.8125rem;
+  }
+
+  .club-logo {
+    width: 6rem;
+    height: auto;
+  }
+
+  @media (max-width: 768px) {
+    .origin-content {
+      flex-direction: column;
+      gap: 2rem;
+    }
+
+    .origin-sidebar {
+      flex-direction: row;
+      gap: 2rem;
+    }
+
+    .photo {
+      width: 6rem;
+      height: 6rem;
+    }
+
+    .club-logo {
+      width: 5rem;
+    }
+  }
+</style>

@@ -1,6 +1,6 @@
 export const siteMetadata = {
   title: "Rondo — Ledenadministratie voor sportverenigingen",
-  description: "Rondo is dé ledenadministratie voor sportverenigingen. Beheer leden, teams en planning op één plek, automatisch gesynchroniseerd met Sportlink Club.",
+  description: "Niemand weet welke ledenlijst de juiste is. Met Rondo stroomt ledendata automatisch van Sportlink naar overal waar je het nodig hebt.",
   url: "https://rondo.club",
   ogImage: "https://rondo.club/og-image.png",
   locale: "nl_NL",

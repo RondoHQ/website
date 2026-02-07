@@ -3,15 +3,17 @@ import Button from '../ui/Button.astro';
 ---
 
 <section class="hero-section">
+  <div class="hero-blob hero-blob-1" aria-hidden="true"></div>
+  <div class="hero-blob hero-blob-2" aria-hidden="true"></div>
   <div class="hero-container">
     <div class="hero-grid">
       <!-- Left column: headline, subline, CTA -->
       <div class="hero-content">
-        <h1 class="hero-headline">
-          Klaar met verspreide ledengegevens?
+        <h1 class="hero-headline gradient-text">
+          Niemand weet welke ledenlijst de juiste is
         </h1>
         <p class="hero-subline">
-          Rondo houdt ledendata, teams en communicatie overal synchroon — automatisch gekoppeld aan Sportlink.
+          Met Rondo hoeft dat niet meer. Ledendata stroomt automatisch van Sportlink naar overal waar je het nodig hebt.
         </p>
         <Button variant="primary" href="#product">
           Bekijk wat Rondo doet
@@ -72,6 +74,33 @@ import Button from '../ui/Button.astro';
     display: flex;
     align-items: center;
     padding: 5rem 0 4rem;
+    position: relative;
+    overflow: hidden;
+    background: linear-gradient(180deg, #F8FFFE 0%, #FFFFFF 100%);
+  }
+
+  .hero-blob {
+    position: absolute;
+    border-radius: 50%;
+    filter: blur(80px);
+    opacity: 0.4;
+    pointer-events: none;
+  }
+
+  .hero-blob-1 {
+    width: 600px;
+    height: 600px;
+    background: radial-gradient(circle, #22D3EE 0%, transparent 70%);
+    top: -200px;
+    left: -100px;
+  }
+
+  .hero-blob-2 {
+    width: 500px;
+    height: 500px;
+    background: radial-gradient(circle, #818CF8 0%, transparent 70%);
+    top: -100px;
+    right: -150px;
   }
 
   .hero-container {
@@ -79,6 +108,8 @@ import Button from '../ui/Button.astro';
     margin: 0 auto;
     padding: 0 1rem;
     width: 100%;
+    position: relative;
+    z-index: 1;
   }
 
   .hero-grid {
@@ -102,7 +133,6 @@ import Button from '../ui/Button.astro';
   .hero-headline {
     font-size: 2.25rem;
     font-weight: 700;
-    color: white;
     margin-bottom: 1.5rem;
     line-height: 1.1;
   }
@@ -121,7 +151,7 @@ import Button from '../ui/Button.astro';
 
   .hero-subline {
     font-size: 1.125rem;
-    color: #D1D5DB;
+    color: #475569;
     margin-bottom: 2rem;
     line-height: 1.6;
   }
@@ -141,9 +171,9 @@ import Button from '../ui/Button.astro';
     padding: 0;
     border-radius: 1rem;
     box-shadow:
-      0 25px 50px -12px rgba(0, 0, 0, 0.5),
-      0 0 0 1px rgba(255, 255, 255, 0.1);
-    background: rgba(255, 255, 255, 0.03);
+      0 25px 50px -12px rgba(0, 0, 0, 0.15),
+      0 0 0 1px rgba(0, 0, 0, 0.08);
+    background: #F8FAFC;
     overflow: hidden;
     cursor: zoom-in;
     transition: transform 0.2s ease, box-shadow 0.2s ease;
@@ -152,8 +182,8 @@ import Button from '../ui/Button.astro';
   .screenshot-frame:hover {
     transform: scale(1.02);
     box-shadow:
-      0 30px 60px -15px rgba(0, 0, 0, 0.6),
-      0 0 0 1px rgba(255, 255, 255, 0.15);
+      0 30px 60px -15px rgba(0, 0, 0, 0.2),
+      0 0 0 1px rgba(0, 0, 0, 0.1);
   }
 
   .screenshot-img {
@@ -191,8 +221,8 @@ import Button from '../ui/Button.astro';
     position: absolute;
     top: 1.5rem;
     right: 1.5rem;
-    background: rgba(255, 255, 255, 0.1);
-    border: 1px solid rgba(255, 255, 255, 0.2);
+    background: rgba(255, 255, 255, 0.2);
+    border: 1px solid rgba(255, 255, 255, 0.3);
     color: white;
     font-size: 1.5rem;
     width: 2.5rem;
@@ -206,6 +236,6 @@ import Button from '../ui/Button.astro';
   }
 
   .lightbox-close:hover {
-    background: rgba(255, 255, 255, 0.2);
+    background: rgba(255, 255, 255, 0.4);
   }
 </style>
