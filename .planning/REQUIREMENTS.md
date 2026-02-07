@@ -28,17 +28,17 @@
 
 ### Design
 
-- [ ] **DSGN-01**: Soft glass morphism aesthetic with electric cyan (#22D3EE) and bright cobalt (#3B82F6) accents
-- [ ] **DSGN-02**: Dark obsidian background (#0F172A) with subtle texture
-- [ ] **DSGN-03**: Deep midnight blue (#1E3A8A) for shadows and depth
-- [ ] **DSGN-04**: Responsive mobile-first design
+- [x] **DSGN-01**: Soft glass morphism aesthetic with electric cyan (#22D3EE) and bright cobalt (#3B82F6) accents
+- [x] **DSGN-02**: Dark obsidian background (#0F172A) with subtle texture
+- [x] **DSGN-03**: Deep midnight blue (#1E3A8A) for shadows and depth
+- [x] **DSGN-04**: Responsive mobile-first design
 
 ### Technical
 
-- [ ] **TECH-01**: Built with Astro 5.17+ and Tailwind CSS 4
-- [ ] **TECH-02**: Deployed to Cloudflare Pages
-- [ ] **TECH-03**: SEO meta tags (title, description, OpenGraph) for social sharing
-- [ ] **TECH-04**: Plausible analytics integration
+- [x] **TECH-01**: Built with Astro 5.17+ and Tailwind CSS 4
+- [x] **TECH-02**: Deployed to Cloudflare Pages
+- [x] **TECH-03**: SEO meta tags (title, description, OpenGraph) for social sharing
+- [x] **TECH-04**: Plausible analytics integration
 - [x] **TECH-05**: Dutch language throughout
 
 ## v2 Requirements
@@ -95,9 +95,9 @@
 | DSGN-03 | Phase 1 | Complete |
 | DSGN-04 | Phase 1 | Complete |
 | TECH-01 | Phase 1 | Complete |
-| TECH-02 | Phase 4 | Pending |
-| TECH-03 | Phase 4 | Pending |
-| TECH-04 | Phase 4 | Pending |
+| TECH-02 | Phase 4 | Complete |
+| TECH-03 | Phase 4 | Complete |
+| TECH-04 | Phase 4 | Complete |
 | TECH-05 | Phase 2 | Complete |
 
 **Coverage:**
