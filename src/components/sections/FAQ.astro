@@ -1,0 +1,99 @@
+---
+const faqs = [
+  {
+    question: "Wat is FreeScout?",
+    answer: '<a href="https://freescout.net/" target="_blank" rel="noopener">FreeScout</a> is een open-source helpdesksysteem voor e-mail. Het is ideaal voor clubs omdat meerdere mensen toegang kunnen hebben tot dezelfde inbox — zo gaat er geen bericht verloren, ook als iemand op vakantie is.'
+  },
+  {
+    question: "Bieden jullie ook FreeScout hosting aan?",
+    answer: 'Nee, op dit moment nog niet, maar we kunnen je wel in contact brengen met een partij die dat wél doet.'
+  },
+  {
+    question: "Waarom gebruiken jullie Laposta?",
+    answer: '<a href="https://laposta.nl/" target="_blank" rel="noopener">Laposta</a> is gratis tot 2.000 e-mailadressen in je lijsten en 12.000 e-mails per maand. Voor de meeste sportverenigingen is dat ruim voldoende, en de koppeling met Rondo zorgt dat je lijsten altijd up-to-date zijn.'
+  },
+  {
+    question: "Heb je Nikki nodig?",
+    answer: 'Nee, <a href="https://www.nikki.nl/" target="_blank" rel="noopener">Nikki</a> is niet verplicht. Rondo werkt prima zonder. Sterker nog, we zijn aan het overwegen om ons eigen contributiesysteem te bouwen zodat je helemaal geen externe tool meer nodig hebt, omdat de koppeling tussen Nikki en Sportlink verre van foutloos is.'
+  }
+];
+---
+
+<section id="faq" class="py-20">
+  <div class="max-w-3xl mx-auto px-4">
+    <div class="text-center mb-12">
+      <h2 class="text-4xl md:text-5xl font-bold text-white mb-4">
+        Veelgestelde vragen
+      </h2>
+    </div>
+
+    <div class="faq-list">
+      {faqs.map((faq) => (
+        <details class="faq-item">
+          <summary class="faq-question">{faq.question}</summary>
+          <p class="faq-answer" set:html={faq.answer} />
+        </details>
+      ))}
+    </div>
+  </div>
+</section>
+
+<style>
+  .faq-list {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+  }
+
+  .faq-item {
+    background: rgba(255, 255, 255, 0.03);
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    border-radius: 0.75rem;
+    overflow: hidden;
+  }
+
+  .faq-question {
+    padding: 1.25rem 1.5rem;
+    color: white;
+    font-weight: 600;
+    font-size: 1.125rem;
+    cursor: pointer;
+    list-style: none;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 1rem;
+  }
+
+  .faq-question::-webkit-details-marker {
+    display: none;
+  }
+
+  .faq-question::after {
+    content: "+";
+    font-size: 1.5rem;
+    color: #22D3EE;
+    flex-shrink: 0;
+    transition: transform 0.2s ease;
+  }
+
+  .faq-item[open] .faq-question::after {
+    content: "-";
+  }
+
+  .faq-answer {
+    padding: 0 1.5rem 1.25rem;
+    color: #D1D5DB;
+    line-height: 1.6;
+  }
+
+  .faq-answer :global(a) {
+    color: #22D3EE;
+    text-decoration: underline;
+    text-underline-offset: 2px;
+  }
+
+  .faq-answer :global(a:hover) {
+    color: white;
+  }
+</style>

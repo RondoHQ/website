@@ -2,7 +2,7 @@
 import '../styles/global.css';
 import { SEO } from 'astro-seo';
 import { siteMetadata } from '../data/siteMetadata';
-import { organizationSchema, softwareApplicationSchema } from '../data/structuredData';
+import { organizationSchema, softwareApplicationSchema, faqSchema } from '../data/structuredData';
 
 interface Props {
   title?: string;
@@ -41,6 +41,7 @@ const {
   />
   <script type="application/ld+json" is:inline set:html={JSON.stringify(organizationSchema)} />
   <script type="application/ld+json" is:inline set:html={JSON.stringify(softwareApplicationSchema)} />
+  <script type="application/ld+json" is:inline set:html={JSON.stringify(faqSchema)} />
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@600;700;800&display=swap" rel="stylesheet">
