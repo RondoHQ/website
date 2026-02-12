@@ -15,9 +15,17 @@ import Button from '../ui/Button.astro';
         <p class="hero-subline">
           Met Rondo hoeft dat niet meer. Ledendata stroomt automatisch van Sportlink naar overal waar je het nodig hebt.
         </p>
-        <Button variant="primary" href="#product">
-          Bekijk wat Rondo doet
-        </Button>
+        <div class="hero-cta-group">
+          <Button variant="primary" href="#product">
+            Bekijk wat Rondo doet
+          </Button>
+          <Button variant="outline" href="https://demo.rondo.club" class="demo-btn">
+            Probeer de demo
+          </Button>
+        </div>
+        <p class="demo-hint">
+          Inloggen met gebruikersnaam <strong>demo</strong> en wachtwoord <strong>demo</strong>
+        </p>
       </div>
 
       <!-- Right column: product screenshot -->
@@ -160,6 +168,24 @@ import Button from '../ui/Button.astro';
     .hero-subline {
       font-size: 1.25rem;
     }
+  }
+
+  .hero-cta-group {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 1rem;
+    align-items: center;
+  }
+
+  .demo-hint {
+    font-size: 0.8125rem;
+    color: #94A3B8;
+    margin-top: 0.75rem;
+  }
+
+  .demo-hint strong {
+    color: #64748B;
+    font-weight: 600;
   }
 
   .hero-screenshot {
