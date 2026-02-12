@@ -12,7 +12,7 @@ See: .planning/PROJECT.md (updated 2026-02-06)
 Phase: 4 of 4 (SEO & Production Polish) — COMPLETE
 Plan: 1 of 1 in current phase
 Status: Phase complete, pending verification
-Last activity: 2026-02-12 - Completed quick task 1: Add demo CTA button to hero section linking to demo.rondo.club
+Last activity: 2026-02-12 - Completed quick task 2: Add screenshots to scenario cards feature
 
 Progress: [██████████] 100%
 
@@ -79,10 +79,11 @@ None.
 | # | Description | Date | Commit | Directory |
 |---|-------------|------|--------|-----------|
 | 1 | Add demo CTA button to hero section linking to demo.rondo.club | 2026-02-12 | 13d9f80 | [1-add-demo-cta-button-to-hero-section-link](./quick/1-add-demo-cta-button-to-hero-section-link/) |
+| 2 | Add screenshots to scenario cards feature (3 commits: fce0322, 62460ac, 67ce1fd) | 2026-02-12 | 67ce1fd | [2-add-screenshots-to-scenario-cards-featur](./quick/2-add-screenshots-to-scenario-cards-featur/) |
 
 ## Session Continuity
 
-Last session: 2026-02-07
-Stopped at: Phase 4 execution complete, pending verification
+Last session: 2026-02-12
+Stopped at: Completed quick task 2 - screenshots integrated throughout website
 Resume file: None
 Next: Verify phase 4, then milestone complete
