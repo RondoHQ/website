@@ -1,0 +1,302 @@
+---
+// Feature Gallery with categorized screenshots
+---
+
+<section id="features" class="py-20 bg-slate-50">
+  <div class="max-w-7xl mx-auto px-4">
+    <!-- Section Header -->
+    <div class="text-center mb-12">
+      <h2 class="text-4xl md:text-5xl font-bold gradient-text mb-4">
+        Rondo in beeld
+      </h2>
+      <p class="text-xl text-slate-600 max-w-3xl mx-auto">
+        Bekijk hoe Rondo Club eruitziet. Klik op een scherm om te vergroten.
+      </p>
+    </div>
+
+    <!-- Category Tabs -->
+    <div class="tab-bar-wrapper">
+      <div class="tab-bar">
+        <button class="tab-button active" data-category="leden" type="button">Leden</button>
+        <button class="tab-button" data-category="contributie" type="button">Contributie</button>
+        <button class="tab-button" data-category="vog" type="button">VOG</button>
+        <button class="tab-button" data-category="teams" type="button">Teams</button>
+        <button class="tab-button" data-category="commissies" type="button">Commissies</button>
+        <button class="tab-button" data-category="tuchtzaken" type="button">Tuchtzaken</button>
+      </div>
+    </div>
+
+    <!-- Screenshot Grids by Category -->
+    <div class="mt-8">
+      <!-- Leden Category -->
+      <div class="screenshot-grid" data-category="leden">
+        <button class="screenshot-item" data-screenshot="/screenshot-leden-lijst.png" type="button">
+          <img src="/screenshot-leden-lijst.png" alt="Ledenlijst met zoeken en filteren" loading="lazy" />
+          <p class="screenshot-caption">Ledenlijst met zoeken en filteren</p>
+        </button>
+        <button class="screenshot-item" data-screenshot="/screenshot-persoons-detail-scherm.png" type="button">
+          <img src="/screenshot-persoons-detail-scherm.png" alt="Compleet persoonsprofiel" loading="lazy" />
+          <p class="screenshot-caption">Compleet persoonsprofiel</p>
+        </button>
+      </div>
+
+      <!-- Contributie Category -->
+      <div class="screenshot-grid" data-category="contributie" style="display: none;">
+        <button class="screenshot-item" data-screenshot="/screenshot-contributie-overzicht.png" type="button">
+          <img src="/screenshot-contributie-overzicht.png" alt="Contributie-overzicht per seizoen" loading="lazy" />
+          <p class="screenshot-caption">Contributie-overzicht per seizoen</p>
+        </button>
+        <button class="screenshot-item" data-screenshot="/screenshot-contributie-per-lid.png" type="button">
+          <img src="/screenshot-contributie-per-lid.png" alt="Contributie per lid met gezinskorting" loading="lazy" />
+          <p class="screenshot-caption">Contributie per lid met gezinskorting</p>
+        </button>
+      </div>
+
+      <!-- VOG Category -->
+      <div class="screenshot-grid" data-category="vog" style="display: none;">
+        <button class="screenshot-item" data-screenshot="/screenshot-vog-overzicht.png" type="button">
+          <img src="/screenshot-vog-overzicht.png" alt="VOG-overzicht met statusbadges" loading="lazy" />
+          <p class="screenshot-caption">VOG-overzicht met statusbadges</p>
+        </button>
+        <button class="screenshot-item" data-screenshot="/screenshot-vog-acties.png" type="button">
+          <img src="/screenshot-vog-acties.png" alt="VOG-acties en herinneringen" loading="lazy" />
+          <p class="screenshot-caption">VOG-acties en herinneringen</p>
+        </button>
+      </div>
+
+      <!-- Teams Category -->
+      <div class="screenshot-grid" data-category="teams" style="display: none;">
+        <button class="screenshot-item" data-screenshot="/screenshot-teams-overzicht.png" type="button">
+          <img src="/screenshot-teams-overzicht.png" alt="Alle teams in een overzicht" loading="lazy" />
+          <p class="screenshot-caption">Alle teams in een overzicht</p>
+        </button>
+        <button class="screenshot-item" data-screenshot="/screenshot-team-detail.png" type="button">
+          <img src="/screenshot-team-detail.png" alt="Team detail met spelers en begeleiders" loading="lazy" />
+          <p class="screenshot-caption">Team detail met spelers en begeleiders</p>
+        </button>
+      </div>
+
+      <!-- Commissies Category -->
+      <div class="screenshot-grid" data-category="commissies" style="display: none;">
+        <button class="screenshot-item" data-screenshot="/screenshot-commissie-overzicht.png" type="button">
+          <img src="/screenshot-commissie-overzicht.png" alt="Commissies en werkgroepen" loading="lazy" />
+          <p class="screenshot-caption">Commissies en werkgroepen</p>
+        </button>
+        <button class="screenshot-item" data-screenshot="/screenshot-commissie-detail.png" type="button">
+          <img src="/screenshot-commissie-detail.png" alt="Commissie samenstelling en rollen" loading="lazy" />
+          <p class="screenshot-caption">Commissie samenstelling en rollen</p>
+        </button>
+      </div>
+
+      <!-- Tuchtzaken Category -->
+      <div class="screenshot-grid" data-category="tuchtzaken" style="display: none;">
+        <button class="screenshot-item" data-screenshot="/screenshot-tuchtzaken.png" type="button">
+          <img src="/screenshot-tuchtzaken.png" alt="Tuchtzaken overzicht" loading="lazy" />
+          <p class="screenshot-caption">Tuchtzaken overzicht</p>
+        </button>
+        <button class="screenshot-item" data-screenshot="/screenshot-persoons-detail-scherm-tucht.png" type="button">
+          <img src="/screenshot-persoons-detail-scherm-tucht.png" alt="Tuchtzaak detail bij persoon" loading="lazy" />
+          <p class="screenshot-caption">Tuchtzaak detail bij persoon</p>
+        </button>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- Lightbox for feature gallery screenshots -->
+<div class="fg-lightbox" id="fg-lightbox" role="dialog" aria-label="Screenshot vergroot" aria-modal="true">
+  <button class="fg-lightbox-close" id="fg-lightbox-close" type="button" aria-label="Sluiten">&times;</button>
+  <img
+    src=""
+    alt=""
+    class="fg-lightbox-img"
+    id="fg-lightbox-img"
+  />
+</div>
+
+<script>
+  // Tab switching
+  const tabButtons = document.querySelectorAll('.tab-button');
+  const screenshotGrids = document.querySelectorAll<HTMLElement>('.screenshot-grid');
+
+  tabButtons.forEach(button => {
+    button.addEventListener('click', () => {
+      const category = button.getAttribute('data-category');
+
+      // Update active tab
+      tabButtons.forEach(btn => btn.classList.remove('active'));
+      button.classList.add('active');
+
+      // Show matching category, hide others
+      screenshotGrids.forEach(grid => {
+        if (grid.getAttribute('data-category') === category) {
+          grid.style.display = 'grid';
+        } else {
+          grid.style.display = 'none';
+        }
+      });
+    });
+  });
+
+  // Lightbox functionality
+  const screenshotItems = document.querySelectorAll('.screenshot-item');
+  const lightbox = document.getElementById('fg-lightbox');
+  const lightboxImg = document.getElementById('fg-lightbox-img') as HTMLImageElement;
+  const closeBtn = document.getElementById('fg-lightbox-close');
+
+  screenshotItems.forEach(item => {
+    item.addEventListener('click', () => {
+      const screenshotSrc = item.getAttribute('data-screenshot');
+      const screenshotAlt = item.querySelector('img')?.getAttribute('alt') || '';
+      if (screenshotSrc && lightboxImg) {
+        lightboxImg.src = screenshotSrc;
+        lightboxImg.alt = screenshotAlt;
+        lightbox?.classList.add('active');
+        document.body.style.overflow = 'hidden';
+      }
+    });
+  });
+
+  function closeLightbox() {
+    lightbox?.classList.remove('active');
+    document.body.style.overflow = '';
+  }
+
+  closeBtn?.addEventListener('click', closeLightbox);
+  lightbox?.addEventListener('click', (e) => {
+    if (e.target === lightbox) closeLightbox();
+  });
+  document.addEventListener('keydown', (e) => {
+    if (e.key === 'Escape' && lightbox?.classList.contains('active')) closeLightbox();
+  });
+</script>
+
+<style>
+  .tab-bar-wrapper {
+    overflow-x: auto;
+    -webkit-overflow-scrolling: touch;
+    margin-bottom: 2rem;
+  }
+
+  .tab-bar {
+    display: flex;
+    gap: 0.5rem;
+    padding-bottom: 2px;
+    min-width: min-content;
+  }
+
+  .tab-button {
+    padding: 0.5rem 1rem;
+    border-radius: 9999px;
+    font-weight: 600;
+    font-size: 0.875rem;
+    white-space: nowrap;
+    border: none;
+    cursor: pointer;
+    transition: all 0.2s;
+    background: #F1F5F9;
+    color: #475569;
+  }
+
+  .tab-button:hover {
+    background: #E2E8F0;
+  }
+
+  .tab-button.active {
+    background: #0891B2;
+    color: white;
+  }
+
+  .screenshot-grid {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 1.5rem;
+  }
+
+  @media (min-width: 768px) {
+    .screenshot-grid {
+      grid-template-columns: repeat(2, 1fr);
+    }
+  }
+
+  .screenshot-item {
+    border: none;
+    padding: 0;
+    border-radius: 1rem;
+    overflow: hidden;
+    cursor: zoom-in;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+    transition: transform 0.2s ease, box-shadow 0.2s ease;
+    background: white;
+    display: block;
+    width: 100%;
+  }
+
+  .screenshot-item:hover {
+    transform: scale(1.02);
+    box-shadow: 0 8px 24px rgba(0, 0, 0, 0.15);
+  }
+
+  .screenshot-item img {
+    width: 100%;
+    height: auto;
+    display: block;
+    border-radius: 1rem 1rem 0 0;
+  }
+
+  .screenshot-caption {
+    font-size: 0.875rem;
+    color: #64748B;
+    margin-top: 0.5rem;
+    margin-bottom: 0.5rem;
+    text-align: center;
+    padding: 0 1rem;
+  }
+
+  .fg-lightbox {
+    display: none;
+    position: fixed;
+    inset: 0;
+    z-index: 100;
+    background: rgba(0, 0, 0, 0.85);
+    backdrop-filter: blur(8px);
+    -webkit-backdrop-filter: blur(8px);
+    align-items: center;
+    justify-content: center;
+    padding: 2rem;
+    cursor: zoom-out;
+  }
+
+  .fg-lightbox.active {
+    display: flex;
+  }
+
+  .fg-lightbox-img {
+    max-width: 90vw;
+    max-height: 90vh;
+    border-radius: 0.75rem;
+    box-shadow: 0 25px 80px rgba(0, 0, 0, 0.5);
+  }
+
+  .fg-lightbox-close {
+    position: absolute;
+    top: 1.5rem;
+    right: 1.5rem;
+    background: rgba(255, 255, 255, 0.2);
+    border: 1px solid rgba(255, 255, 255, 0.3);
+    color: white;
+    font-size: 1.5rem;
+    width: 2.5rem;
+    height: 2.5rem;
+    border-radius: 50%;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: background 0.2s;
+  }
+
+  .fg-lightbox-close:hover {
+    background: rgba(255, 255, 255, 0.4);
+  }
+</style>
