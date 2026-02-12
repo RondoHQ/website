@@ -32,12 +32,49 @@ import Button from '../ui/Button.astro';
       <div class="hero-screenshot">
         <button class="screenshot-frame" id="screenshot-trigger" type="button" aria-label="Vergroot screenshot">
           <img
-            src="/rondo-club-screenshot.png"
-            alt="Rondo Club dashboard met ledenlijst en teamoverzicht"
-            class="screenshot-img"
+            src="/screenshot-leden-lijst.png"
+            alt="Rondo Club ledenlijst"
+            class="hero-slide active"
+            data-index="0"
             loading="eager"
           />
+          <img
+            src="/screenshot-vog-overzicht.png"
+            alt="VOG tracking overzicht"
+            class="hero-slide"
+            data-index="1"
+            loading="lazy"
+          />
+          <img
+            src="/screenshot-contributie-overzicht.png"
+            alt="Contributie overzicht"
+            class="hero-slide"
+            data-index="2"
+            loading="lazy"
+          />
+          <img
+            src="/screenshot-teams-overzicht.png"
+            alt="Teams overzicht"
+            class="hero-slide"
+            data-index="3"
+            loading="lazy"
+          />
+          <img
+            src="/screenshot-commissie-overzicht.png"
+            alt="Commissies overzicht"
+            class="hero-slide"
+            data-index="4"
+            loading="lazy"
+          />
         </button>
+        <!-- Dot indicators -->
+        <div class="hero-dots">
+          <button class="hero-dot active" data-index="0" type="button" aria-label="Ga naar slide 1"></button>
+          <button class="hero-dot" data-index="1" type="button" aria-label="Ga naar slide 2"></button>
+          <button class="hero-dot" data-index="2" type="button" aria-label="Ga naar slide 3"></button>
+          <button class="hero-dot" data-index="3" type="button" aria-label="Ga naar slide 4"></button>
+          <button class="hero-dot" data-index="4" type="button" aria-label="Ga naar slide 5"></button>
+        </div>
       </div>
     </div>
   </div>
@@ -47,18 +84,83 @@ import Button from '../ui/Button.astro';
 <div class="lightbox" id="lightbox" role="dialog" aria-label="Screenshot vergroot" aria-modal="true">
   <button class="lightbox-close" id="lightbox-close" type="button" aria-label="Sluiten">&times;</button>
   <img
-    src="/rondo-club-screenshot.png"
-    alt="Rondo Club dashboard met ledenlijst en teamoverzicht"
+    src=""
+    alt=""
     class="lightbox-img"
+    id="lightbox-img"
   />
 </div>
 
 <script>
   const trigger = document.getElementById('screenshot-trigger');
   const lightbox = document.getElementById('lightbox');
+  const lightboxImg = document.getElementById('lightbox-img') as HTMLImageElement;
   const closeBtn = document.getElementById('lightbox-close');
+  const slides = document.querySelectorAll<HTMLImageElement>('.hero-slide');
+  const dots = document.querySelectorAll('.hero-dot');
+  const heroScreenshot = document.querySelector('.hero-screenshot');
 
+  let currentIndex = 0;
+  let rotationInterval: ReturnType<typeof setInterval> | null = null;
+  const prefersReducedMotion = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+
+  function showSlide(index: number) {
+    slides.forEach((slide, i) => {
+      if (i === index) {
+        slide.classList.add('active');
+      } else {
+        slide.classList.remove('active');
+      }
+    });
+    dots.forEach((dot, i) => {
+      if (i === index) {
+        dot.classList.add('active');
+      } else {
+        dot.classList.remove('active');
+      }
+    });
+    currentIndex = index;
+  }
+
+  function nextSlide() {
+    const next = (currentIndex + 1) % slides.length;
+    showSlide(next);
+  }
+
+  function startRotation() {
+    if (!prefersReducedMotion) {
+      rotationInterval = setInterval(nextSlide, 4000);
+    }
+  }
+
+  function stopRotation() {
+    if (rotationInterval) {
+      clearInterval(rotationInterval);
+      rotationInterval = null;
+    }
+  }
+
+  // Dot click handlers
+  dots.forEach((dot, index) => {
+    dot.addEventListener('click', (e) => {
+      e.stopPropagation(); // Prevent triggering screenshot-frame click
+      showSlide(index);
+      stopRotation();
+      startRotation(); // Reset timer
+    });
+  });
+
+  // Pause on hover
+  heroScreenshot?.addEventListener('mouseenter', stopRotation);
+  heroScreenshot?.addEventListener('mouseleave', startRotation);
+
+  // Lightbox
   trigger?.addEventListener('click', () => {
+    const currentSlide = slides[currentIndex];
+    if (lightboxImg && currentSlide) {
+      lightboxImg.src = currentSlide.src;
+      lightboxImg.alt = currentSlide.alt;
+    }
     lightbox?.classList.add('active');
     document.body.style.overflow = 'hidden';
   });
@@ -75,6 +177,9 @@ import Button from '../ui/Button.astro';
   document.addEventListener('keydown', (e) => {
     if (e.key === 'Escape' && lightbox?.classList.contains('active')) closeLightbox();
   });
+
+  // Start rotation
+  startRotation();
 </script>
 
 <style>
@@ -203,6 +308,8 @@ import Button from '../ui/Button.astro';
     overflow: hidden;
     cursor: zoom-in;
     transition: transform 0.2s ease, box-shadow 0.2s ease;
+    position: relative;
+    aspect-ratio: 16 / 10;
   }
 
   .screenshot-frame:hover {
@@ -212,10 +319,41 @@ import Button from '../ui/Button.astro';
       0 0 0 1px rgba(0, 0, 0, 0.1);
   }
 
-  .screenshot-img {
+  .hero-slide {
+    position: absolute;
+    inset: 0;
     width: 100%;
-    height: auto;
+    height: 100%;
+    object-fit: cover;
+    opacity: 0;
+    transition: opacity 0.6s ease;
     display: block;
+  }
+
+  .hero-slide.active {
+    opacity: 1;
+  }
+
+  .hero-dots {
+    display: flex;
+    justify-content: center;
+    gap: 0.5rem;
+    margin-top: 1rem;
+  }
+
+  .hero-dot {
+    width: 8px;
+    height: 8px;
+    border-radius: 50%;
+    border: none;
+    padding: 0;
+    cursor: pointer;
+    background: #CBD5E1;
+    transition: background 0.2s;
+  }
+
+  .hero-dot.active {
+    background: #0891B2;
   }
 
   .lightbox {
