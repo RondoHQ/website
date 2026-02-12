@@ -12,7 +12,7 @@ See: .planning/PROJECT.md (updated 2026-02-06)
 Phase: 4 of 4 (SEO & Production Polish) — COMPLETE
 Plan: 1 of 1 in current phase
 Status: Phase complete, pending verification
-Last activity: 2026-02-07 — Completed 04-01-PLAN.md (SEO, Analytics, Accessibility, Production Polish)
+Last activity: 2026-02-12 - Completed quick task 1: Add demo CTA button to hero section linking to demo.rondo.club
 
 Progress: [██████████] 100%
 
@@ -73,6 +73,12 @@ None.
 - ✓ RESOLVED: Glass morphism accessibility established with contrast standards + prefers-reduced-transparency
 - ✓ RESOLVED: Node 22 pinned via .nvmrc
 - ✓ RESOLVED: Product screenshot provided by user, saved to public/rondo-club-screenshot.png
+
+### Quick Tasks Completed
+
+| # | Description | Date | Commit | Directory |
+|---|-------------|------|--------|-----------|
+| 1 | Add demo CTA button to hero section linking to demo.rondo.club | 2026-02-12 | 13d9f80 | [1-add-demo-cta-button-to-hero-section-link](./quick/1-add-demo-cta-button-to-hero-section-link/) |
 
 ## Session Continuity
 
