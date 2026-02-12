@@ -25,6 +25,9 @@ import Card from '../ui/Card.astro';
         <p class="text-slate-600">
           <span class="text-electric-cyan font-semibold">Met Rondo:</span> zodra je het lid goedkeurt in Sportlink, stroomt alles automatisch door naar Rondo Club, mailinglijsten (Laposta), en helpdesk (FreeScout). Bij uitschrijving precies zo.
         </p>
+        <button class="card-screenshot-trigger" data-screenshot="/screenshot-persoons-detail-scherm.png" type="button" aria-label="Vergroot screenshot">
+          <img src="/screenshot-persoons-detail-scherm.png" alt="Rondo Club persoonsdetail scherm" loading="lazy" />
+        </button>
       </Card>
 
       <!-- Scenario 2: VOG -->
@@ -35,6 +38,9 @@ import Card from '../ui/Card.astro';
         <p class="text-slate-600">
           <span class="text-electric-cyan font-semibold">Met Rondo:</span> Per persoon direct zichtbaar of er een geldige VOG is. Verlopen? Automatisch een herinnering. Altijd compliant, zonder gedoe.
         </p>
+        <button class="card-screenshot-trigger" data-screenshot="/screenshot-vog-overzicht.png" type="button" aria-label="Vergroot screenshot">
+          <img src="/screenshot-vog-overzicht.png" alt="VOG overzicht met statusbadges" loading="lazy" />
+        </button>
       </Card>
 
       <!-- Scenario 3: Family -->
@@ -45,6 +51,9 @@ import Card from '../ui/Card.astro';
         <p class="text-slate-600">
           <span class="text-electric-cyan font-semibold">Met Rondo:</span> Rondo Club herkent gezinnen automatisch. Omdat Rondo het herkent, kun je er je contributieregels op aanpassen — zonder handwerk.
         </p>
+        <button class="card-screenshot-trigger" data-screenshot="/screenshot-contributie-per-lid.png" type="button" aria-label="Vergroot screenshot">
+          <img src="/screenshot-contributie-per-lid.png" alt="Contributie per lid met gezinskorting" loading="lazy" />
+        </button>
       </Card>
     </div>
 
@@ -58,6 +67,9 @@ import Card from '../ui/Card.astro';
         <p class="text-slate-600">
           <span class="text-electric-cyan font-semibold">Met Rondo:</span> Mailinglijsten in Laposta zijn altijd actueel. Selecteer een team of groep en verstuur — geen exports, geen imports, geen verouderde adressen.
         </p>
+        <button class="card-screenshot-trigger" data-screenshot="/screenshot-team-detail.png" type="button" aria-label="Vergroot screenshot">
+          <img src="/screenshot-team-detail.png" alt="Team detail met ledengroepen" loading="lazy" />
+        </button>
       </Card>
 
       <!-- Scenario 5: Access Control -->
@@ -68,7 +80,129 @@ import Card from '../ui/Card.astro';
         <p class="text-slate-600">
           <span class="text-electric-cyan font-semibold">Met Rondo:</span> Iedereen toegang tot wat ze moeten zien, en niet meer. Veilig, overzichtelijk, en zonder gedoe.
         </p>
+        <button class="card-screenshot-trigger" data-screenshot="/screenshot-commissie-detail.png" type="button" aria-label="Vergroot screenshot">
+          <img src="/screenshot-commissie-detail.png" alt="Commissie detail met toegangsbeheer" loading="lazy" />
+        </button>
       </Card>
     </div>
   </div>
 </section>
+
+<!-- Lightbox for card screenshots -->
+<div class="ps-lightbox" id="ps-lightbox" role="dialog" aria-label="Screenshot vergroot" aria-modal="true">
+  <button class="ps-lightbox-close" id="ps-lightbox-close" type="button" aria-label="Sluiten">&times;</button>
+  <img
+    src=""
+    alt=""
+    class="ps-lightbox-img"
+    id="ps-lightbox-img"
+  />
+</div>
+
+<script>
+  const triggers = document.querySelectorAll('.card-screenshot-trigger');
+  const lightbox = document.getElementById('ps-lightbox');
+  const lightboxImg = document.getElementById('ps-lightbox-img') as HTMLImageElement;
+  const closeBtn = document.getElementById('ps-lightbox-close');
+
+  triggers.forEach(trigger => {
+    trigger.addEventListener('click', () => {
+      const screenshotSrc = trigger.getAttribute('data-screenshot');
+      const screenshotAlt = trigger.querySelector('img')?.getAttribute('alt') || '';
+      if (screenshotSrc && lightboxImg) {
+        lightboxImg.src = screenshotSrc;
+        lightboxImg.alt = screenshotAlt;
+        lightbox?.classList.add('active');
+        document.body.style.overflow = 'hidden';
+      }
+    });
+  });
+
+  function closeLightbox() {
+    lightbox?.classList.remove('active');
+    document.body.style.overflow = '';
+  }
+
+  closeBtn?.addEventListener('click', closeLightbox);
+  lightbox?.addEventListener('click', (e) => {
+    if (e.target === lightbox) closeLightbox();
+  });
+  document.addEventListener('keydown', (e) => {
+    if (e.key === 'Escape' && lightbox?.classList.contains('active')) closeLightbox();
+  });
+</script>
+
+<style>
+  .card-screenshot-trigger {
+    border: none;
+    padding: 0;
+    width: 100%;
+    border-radius: 0.5rem;
+    overflow: hidden;
+    cursor: zoom-in;
+    margin-top: 1rem;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+    transition: transform 0.2s ease, box-shadow 0.2s ease;
+    display: block;
+    background: #F8FAFC;
+  }
+
+  .card-screenshot-trigger:hover {
+    transform: scale(1.02);
+    box-shadow: 0 8px 24px rgba(0, 0, 0, 0.15);
+  }
+
+  .card-screenshot-trigger img {
+    width: 100%;
+    height: auto;
+    display: block;
+    border-radius: 0.5rem;
+  }
+
+  .ps-lightbox {
+    display: none;
+    position: fixed;
+    inset: 0;
+    z-index: 100;
+    background: rgba(0, 0, 0, 0.85);
+    backdrop-filter: blur(8px);
+    -webkit-backdrop-filter: blur(8px);
+    align-items: center;
+    justify-content: center;
+    padding: 2rem;
+    cursor: zoom-out;
+  }
+
+  .ps-lightbox.active {
+    display: flex;
+  }
+
+  .ps-lightbox-img {
+    max-width: 90vw;
+    max-height: 90vh;
+    border-radius: 0.75rem;
+    box-shadow: 0 25px 80px rgba(0, 0, 0, 0.5);
+  }
+
+  .ps-lightbox-close {
+    position: absolute;
+    top: 1.5rem;
+    right: 1.5rem;
+    background: rgba(255, 255, 255, 0.2);
+    border: 1px solid rgba(255, 255, 255, 0.3);
+    color: white;
+    font-size: 1.5rem;
+    width: 2.5rem;
+    height: 2.5rem;
+    border-radius: 50%;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: background 0.2s;
+  }
+
+  .ps-lightbox-close:hover {
+    background: rgba(255, 255, 255, 0.4);
+  }
+</style>
