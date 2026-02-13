@@ -32,35 +32,41 @@ import Button from '../ui/Button.astro';
       <div class="hero-screenshot">
         <button class="screenshot-frame" id="screenshot-trigger" type="button" aria-label="Vergroot screenshot">
           <img
-            src="/screenshot-leden-lijst.webp"
+            src="/screenshot-leden-lijst-thumb.webp"
+            data-full="/screenshot-leden-lijst.webp"
             alt="Rondo Club ledenlijst"
             class="hero-slide active"
             data-index="0"
             loading="eager"
+            fetchpriority="high"
           />
           <img
-            src="/screenshot-vog-overzicht.webp"
+            src="/screenshot-vog-overzicht-thumb.webp"
+            data-full="/screenshot-vog-overzicht.webp"
             alt="VOG tracking overzicht"
             class="hero-slide"
             data-index="1"
             loading="lazy"
           />
           <img
-            src="/screenshot-contributie-overzicht.webp"
+            src="/screenshot-contributie-overzicht-thumb.webp"
+            data-full="/screenshot-contributie-overzicht.webp"
             alt="Contributie overzicht"
             class="hero-slide"
             data-index="2"
             loading="lazy"
           />
           <img
-            src="/screenshot-teams-overzicht.webp"
+            src="/screenshot-teams-overzicht-thumb.webp"
+            data-full="/screenshot-teams-overzicht.webp"
             alt="Teams overzicht"
             class="hero-slide"
             data-index="3"
             loading="lazy"
           />
           <img
-            src="/screenshot-commissie-overzicht.webp"
+            src="/screenshot-commissie-overzicht-thumb.webp"
+            data-full="/screenshot-commissie-overzicht.webp"
             alt="Commissies overzicht"
             class="hero-slide"
             data-index="4"
@@ -158,7 +164,7 @@ import Button from '../ui/Button.astro';
   trigger?.addEventListener('click', () => {
     const currentSlide = slides[currentIndex];
     if (lightboxImg && currentSlide) {
-      lightboxImg.src = currentSlide.src;
+      lightboxImg.src = currentSlide.dataset.full || currentSlide.src;
       lightboxImg.alt = currentSlide.alt;
     }
     lightbox?.classList.add('active');
