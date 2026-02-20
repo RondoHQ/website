@@ -1,5 +1,3 @@
-import { Resend } from 'resend';
-
 // CORS preflight handler
 export async function onRequestOptions() {
   return new Response(null, {
@@ -26,13 +24,37 @@ export async function onRequestPost(context) {
     // Parse form data
     const formData = await request.formData();
 
-    // Honeypot check — bots fill this, humans don't see it
+    // --- Spam protection ---
+
+    // 1. Honeypot: bots fill this, humans don't see it
     if (formData.get('website')) {
-      // Return 200 to not tip off bots, but don't send email
       return new Response(
         JSON.stringify({ success: true, message: 'Bedankt voor je bericht!' }),
         { status: 200, headers: corsHeaders }
       );
+    }
+
+    // 2. Timing check: submissions faster than 3 seconds are likely bots
+    const timestamp = parseInt(formData.get('_t') || '0', 10);
+    if (timestamp && (Date.now() - timestamp) < 3000) {
+      return new Response(
+        JSON.stringify({ success: true, message: 'Bedankt voor je bericht!' }),
+        { status: 200, headers: corsHeaders }
+      );
+    }
+
+    // 3. Rate limiting via Cloudflare KV (if bound)
+    if (env.RATE_LIMIT) {
+      const ip = request.headers.get('CF-Connecting-IP') || 'unknown';
+      const key = `contact:${ip}`;
+      const attempts = parseInt(await env.RATE_LIMIT.get(key) || '0', 10);
+      if (attempts >= 5) {
+        return new Response(
+          JSON.stringify({ error: 'Te veel berichten verstuurd. Probeer het later opnieuw.' }),
+          { status: 429, headers: corsHeaders }
+        );
+      }
+      await env.RATE_LIMIT.put(key, String(attempts + 1), { expirationTtl: 3600 });
     }
 
     // Extract and trim fields
@@ -93,19 +115,25 @@ export async function onRequestPost(context) {
 
     const emailBody = lines.join('\n');
 
-    // Send via Resend
-    const resend = new Resend(env.RESEND_API_KEY);
-
-    const { error } = await resend.emails.send({
-      from: `rondo.club <${env.FROM_EMAIL}>`,
-      to: env.RECIPIENT_EMAIL,
-      subject: `Rondo contactformulier: ${data.club_name}`,
-      text: emailBody,
-      reply_to: data.email
+    // Send via Lettermint
+    const response = await fetch('https://api.lettermint.co/v1/send', {
+      method: 'POST',
+      headers: {
+        'Content-Type': 'application/json',
+        'x-lettermint-token': env.LETTERMINT_API_KEY
+      },
+      body: JSON.stringify({
+        from: env.FROM_EMAIL,
+        to: [env.RECIPIENT_EMAIL],
+        subject: `Rondo contactformulier: ${data.club_name}`,
+        text: emailBody,
+        reply_to: [data.email]
+      })
     });
 
-    if (error) {
-      console.error('Resend API error:', JSON.stringify(error));
+    if (!response.ok) {
+      const error = await response.text();
+      console.error('Lettermint API error:', error);
       return new Response(
         JSON.stringify({ error: 'Er ging iets mis bij het verzenden. Probeer het later opnieuw.' }),
         { status: 500, headers: corsHeaders }

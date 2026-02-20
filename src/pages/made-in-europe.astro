@@ -1,0 +1,223 @@
+---
+import BaseLayout from '../layouts/BaseLayout.astro';
+import Header from '../components/layout/Header.astro';
+import Footer from '../components/sections/Footer.astro';
+---
+
+<BaseLayout title="Made in Europe — Rondo" description="Rondo is volledig gebouwd en gehost in Europa. Ontdek welke diensten we gebruiken en waarom dat belangrijk is.">
+  <Header />
+  <main class="europe-page">
+    <div class="container">
+      <div class="badge-hero">
+        <span class="eu-flag">🇪🇺</span>
+        <h1>Made in Europe</h1>
+        <p class="subtitle">
+          Rondo is volledig gebouwd, gehost en beheerd in Europa. Jouw clubdata verlaat nooit de EU.
+        </p>
+      </div>
+
+      <section class="why-section">
+        <h2>Waarom dat belangrijk is</h2>
+        <p>
+          Sportclubs beheren persoonlijke gegevens van leden: namen, adressen, financiële gegevens en meer. Door uitsluitend Europese diensten te gebruiken valt alle dataverwerking onder de AVG/GDPR, zonder afhankelijkheid van buitenlandse wetgeving zoals de US CLOUD Act.
+        </p>
+        <p>
+          Dat betekent: geen data die onverwacht bij Amerikaanse techbedrijven terechtkomt, en volledige controle over waar jullie ledenadministratie staat.
+        </p>
+      </section>
+
+      <section class="services-section">
+        <h2>Diensten die we gebruiken</h2>
+        <div class="services-grid">
+          <div class="service-card">
+            <div class="service-header">
+              <span class="service-flag">🇳🇱</span>
+              <h3>Mollie</h3>
+            </div>
+            <p class="service-role">Betalingen</p>
+            <p class="service-desc">Nederlandse betaalprovider voor iDEAL, creditcard en andere betaalmethodes. Gereguleerd door De Nederlandsche Bank.</p>
+            <a href="https://mollie.com" target="_blank" rel="noopener" class="service-link">mollie.com</a>
+          </div>
+
+          <div class="service-card">
+            <div class="service-header">
+              <span class="service-flag">🇳🇱</span>
+              <h3>Lettermint</h3>
+            </div>
+            <p class="service-role">Transactionele e-mail</p>
+            <p class="service-desc">Europese e-maildienst voor factuurmails, herinneringen en notificaties. Data blijft volledig binnen de EU.</p>
+            <a href="https://lettermint.co" target="_blank" rel="noopener" class="service-link">lettermint.co</a>
+          </div>
+
+          <div class="service-card">
+            <div class="service-header">
+              <span class="service-flag">🇪🇸</span>
+              <h3>SiteGround</h3>
+            </div>
+            <p class="service-role">Hosting</p>
+            <p class="service-desc">Europese hostingprovider met datacenters in onder andere Nederland en Duitsland. Hoofdkantoor in Spanje.</p>
+            <a href="https://siteground.com" target="_blank" rel="noopener" class="service-link">siteground.com</a>
+          </div>
+
+          <div class="service-card">
+            <div class="service-header">
+              <span class="service-flag">🇱🇹</span>
+              <h3>Hostinger</h3>
+            </div>
+            <p class="service-role">Hosting</p>
+            <p class="service-desc">Litouwse hostingprovider met Europese datacenters. Gebruikt voor aanvullende hosting en domeinnaamregistratie.</p>
+            <a href="https://hostinger.com" target="_blank" rel="noopener" class="service-link">hostinger.com</a>
+          </div>
+
+          <div class="service-card">
+            <div class="service-header">
+              <span class="service-flag">🇳🇱</span>
+              <h3>Laposta</h3>
+            </div>
+            <p class="service-role">E-mailmarketing</p>
+            <p class="service-desc">Nederlandse e-mailmarketingdienst voor nieuwsbrieven en mailinglijsten. Gratis tot 2.000 adressen. Ledenlijsten worden automatisch gesynchroniseerd vanuit Rondo.</p>
+            <a href="https://laposta.nl" target="_blank" rel="noopener" class="service-link">laposta.nl</a>
+          </div>
+        </div>
+      </section>
+
+      <section class="code-section">
+        <h2>Open source</h2>
+        <p>
+          Rondo is volledig open source. Je kunt de broncode inzien, controleren en bijdragen op <a href="https://github.com/rondohq" target="_blank" rel="noopener">GitHub</a>. Transparantie is geen marketingpraatje: het is hoe we werken.
+        </p>
+      </section>
+    </div>
+  </main>
+  <Footer />
+</BaseLayout>
+
+<style>
+  .europe-page {
+    padding: 6rem 1rem 4rem;
+  }
+
+  .container {
+    max-width: 48rem;
+    margin: 0 auto;
+    padding: 0 1.5rem;
+  }
+
+  .badge-hero {
+    text-align: center;
+    margin-bottom: 4rem;
+  }
+
+  .eu-flag {
+    font-size: 6.25rem;
+    display: block;
+    margin-bottom: 0.25rem;
+    line-height: 1;
+  }
+
+  h1 {
+    font-family: 'Montserrat', sans-serif;
+    font-size: 2.5rem;
+    font-weight: 700;
+    color: #1E293B;
+    margin: 0 0 1rem;
+  }
+
+  .subtitle {
+    font-size: 1.25rem;
+    color: #64748B;
+    max-width: 32rem;
+    margin: 0 auto;
+    line-height: 1.6;
+  }
+
+  h2 {
+    font-family: 'Montserrat', sans-serif;
+    font-size: 1.5rem;
+    font-weight: 700;
+    color: #0E7490;
+    margin: 0 0 1rem;
+  }
+
+  section {
+    margin-bottom: 3rem;
+  }
+
+  p {
+    line-height: 1.7;
+    color: #475569;
+    margin: 0 0 1rem;
+  }
+
+  .services-grid {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 1rem;
+    margin-top: 1.5rem;
+  }
+
+  @media (min-width: 640px) {
+    .services-grid {
+      grid-template-columns: 1fr 1fr;
+    }
+  }
+
+  .service-card {
+    background: #F8FAFC;
+    border: 1px solid #E2E8F0;
+    border-radius: 0.75rem;
+    padding: 1.5rem;
+  }
+
+  .service-header {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    margin-bottom: 0.25rem;
+  }
+
+  .service-flag {
+    font-size: 1.25rem;
+  }
+
+  h3 {
+    font-size: 1.125rem;
+    font-weight: 600;
+    color: #1E293B;
+    margin: 0;
+  }
+
+  .service-role {
+    font-size: 0.8125rem;
+    color: #64748B;
+    margin: 0 0 0.75rem;
+    text-transform: uppercase;
+    letter-spacing: 0.05em;
+  }
+
+  .service-desc {
+    font-size: 0.875rem;
+    margin: 0 0 0.75rem;
+  }
+
+  .service-link {
+    font-size: 0.875rem;
+    color: #0E7490;
+    text-decoration: underline;
+    text-underline-offset: 2px;
+  }
+
+  .service-link:hover {
+    color: #1E293B;
+  }
+
+  a {
+    color: #0E7490;
+    text-decoration: underline;
+    text-underline-offset: 2px;
+  }
+
+  a:hover {
+    color: #1E293B;
+  }
+</style>

@@ -55,9 +55,13 @@ import Button from '../ui/Button.astro';
           class="mb-6"
         />
 
+        <!-- Honeypot -->
         <div style="position:absolute;left:-9999px;width:1px;height:1px;overflow:hidden" aria-hidden="true">
           <input type="text" name="website" tabindex="-1" autocomplete="off" />
         </div>
+
+        <!-- Timestamp for speed check -->
+        <input type="hidden" name="_t" id="form-timestamp" value="" />
 
         <div id="form-message" role="status" aria-live="polite" class="mb-4 hidden"></div>
 
@@ -73,6 +77,10 @@ import Button from '../ui/Button.astro';
 const form = document.getElementById('contact-form') as HTMLFormElement | null;
 const messageDiv = document.getElementById('form-message');
 const submitButton = form?.querySelector('button[type="submit"]') as HTMLButtonElement | undefined;
+const timestampField = document.getElementById('form-timestamp') as HTMLInputElement | null;
+
+// Set timestamp on load so backend can check submission speed
+if (timestampField) timestampField.value = String(Date.now());
 
 form?.addEventListener('submit', async (e) => {
   e.preventDefault();
