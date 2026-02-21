@@ -1,54 +1,29 @@
 ---
+import type { Lang } from '../../i18n/utils';
+import { getLangFromUrl } from '../../i18n/utils';
+import { t } from '../../i18n/translations';
+
+interface Props { lang?: Lang; }
+const lang = Astro.props.lang || getLangFromUrl(Astro.url);
+
 const faqs = [
-  {
-    question: "Wat is FreeScout?",
-    answer: '<a href="https://freescout.net/" target="_blank" rel="noopener">FreeScout</a> is een open-source helpdesksysteem voor e-mail. Het is ideaal voor clubs omdat meerdere mensen toegang kunnen hebben tot dezelfde inbox — zo gaat er geen bericht verloren, ook als iemand op vakantie is.'
-  },
-  {
-    question: "Bieden jullie ook FreeScout hosting aan?",
-    answer: 'Nee, op dit moment nog niet, maar we kunnen je wel in contact brengen met een partij die dat wél doet.'
-  },
-  {
-    question: "Waarom gebruiken jullie Laposta?",
-    answer: '<a href="https://laposta.nl/" target="_blank" rel="noopener">Laposta</a> is gratis tot 2.000 e-mailadressen in je lijsten en 12.000 e-mails per maand. Voor de meeste sportverenigingen is dat ruim voldoende, en de koppeling met Rondo zorgt dat je lijsten altijd up-to-date zijn.'
-  },
-  {
-    question: "Is Rondo open source?",
-    answer: 'Ja! Zowel <a href="https://github.com/rondohq" target="_blank" rel="noopener">Rondo Club als Rondo Sync</a> zijn open source. Je kunt alles zelf hosten als je dat wilt. Ons betaalde aanbod is voor clubs die geen gedoe willen met servers, updates en onderhoud — wij regelen dat voor je.'
-  },
-  {
-    question: "Mijn club gebruikt een ander e-mailsysteem, kan dat ook?",
-    answer: 'Ja, natuurlijk! Rondo is flexibel en kan in principe met elk e-mailsysteem gekoppeld worden. De koppeling moet dan wel gebouwd worden — <a href="#contact">neem contact op</a> en we bespreken de mogelijkheden.'
-  },
-  {
-    question: "Heb je Nikki nodig?",
-    answer: 'Nee, <a href="https://www.nikki.nl/" target="_blank" rel="noopener">Nikki</a> is niet verplicht. Rondo heeft een eigen contributiesysteem met automatische facturatie, iDEAL-betalingen en termijnregelingen. Je kunt Nikki nog steeds gebruiken als je wilt, maar het hoeft niet meer.'
-  },
-  {
-    question: "Wat als we willen stoppen met Rondo?",
-    answer: 'Dan kan dat. Je zegt op voor 1 juli en het contract loopt af op 1 augustus. Na opzegging heb je 30 dagen om al je data te exporteren. Je data is en blijft altijd van jou — zie onze <a href="/voorwaarden">algemene voorwaarden</a>.'
-  },
-  {
-    question: "Van wie is onze ledendata?",
-    answer: 'Van jullie. Altijd. Wij gebruiken je data nooit voor eigen doeleinden en verstrekken die niet aan derden. Je kunt op elk moment een volledige export opvragen. Dit staat ook zwart op wit in onze <a href="/voorwaarden">voorwaarden</a> en de bewerkersovereenkomst die we samen tekenen.'
-  },
-  {
-    question: "Wat als Rondo stopt of de ontwikkelaar wegvalt?",
-    answer: 'Rondo is volledig <a href="https://github.com/rondohq" target="_blank" rel="noopener">open source</a>. De code is vrij beschikbaar, dus jullie (of een andere partij) kunnen het altijd zelf blijven draaien. Daarnaast blijft je data altijd van jou en kun je die exporteren. Je bent nooit afhankelijk van één persoon of bedrijf.'
-  },
-  {
-    question: "Waar wordt onze data opgeslagen?",
-    answer: 'Op Europese servers, in overeenstemming met de AVG. Alle diensten die we gebruiken zijn Europees. We sluiten een bewerkersovereenkomst en nemen passende technische maatregelen om je data te beschermen. Meer details staan op onze <a href="/made-in-europe">Made in Europe</a>-pagina, in ons <a href="/privacybeleid">privacybeleid</a> en onze <a href="/voorwaarden">voorwaarden</a>.'
-  }
+  { question: t('faq.q1', lang), answer: t('faq.a1', lang) },
+  { question: t('faq.q2', lang), answer: t('faq.a2', lang) },
+  { question: t('faq.q3', lang), answer: t('faq.a3', lang) },
+  { question: t('faq.q4', lang), answer: t('faq.a4', lang) },
+  { question: t('faq.q5', lang), answer: t('faq.a5', lang) },
+  { question: t('faq.q6', lang), answer: t('faq.a6', lang) },
+  { question: t('faq.q7', lang), answer: t('faq.a7', lang) },
+  { question: t('faq.q8', lang), answer: t('faq.a8', lang) },
+  { question: t('faq.q9', lang), answer: t('faq.a9', lang) },
+  { question: t('faq.q10', lang), answer: t('faq.a10', lang) },
 ];
 ---
 
 <section id="faq" class="py-20 faq-section">
   <div class="max-w-3xl mx-auto px-4">
     <div class="text-center mb-12">
-      <h2 class="text-4xl md:text-5xl font-bold gradient-text mb-4">
-        Veelgestelde vragen
-      </h2>
+      <h2 class="text-4xl md:text-5xl font-bold gradient-text mb-4">{t('faq.heading', lang)}</h2>
     </div>
 
     <div class="faq-list">
@@ -63,65 +38,14 @@ const faqs = [
 </section>
 
 <style>
-  .faq-section {
-    background: linear-gradient(180deg, #FFFFFF 0%, #F0FDFA 50%, #FFFFFF 100%);
-  }
-
-  .faq-list {
-    display: flex;
-    flex-direction: column;
-    gap: 1rem;
-  }
-
-  .faq-item {
-    background: rgba(0, 0, 0, 0.01);
-    border: 1px solid rgba(0, 0, 0, 0.08);
-    border-radius: 0.75rem;
-    overflow: hidden;
-  }
-
-  .faq-question {
-    padding: 1.25rem 1.5rem;
-    color: #1E293B;
-    font-weight: 700;
-    font-size: 1.125rem;
-    cursor: pointer;
-    list-style: none;
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    gap: 1rem;
-  }
-
-  .faq-question::-webkit-details-marker {
-    display: none;
-  }
-
-  .faq-question::after {
-    content: "+";
-    font-size: 1.5rem;
-    color: #0E7490;
-    flex-shrink: 0;
-    transition: transform 0.2s ease;
-  }
-
-  .faq-item[open] .faq-question::after {
-    content: "-";
-  }
-
-  .faq-answer {
-    padding: 0 1.5rem 1.25rem;
-    color: #475569;
-    line-height: 1.6;
-  }
-
-  .faq-answer :global(a) {
-    color: #0E7490;
-    text-decoration: underline;
-    text-underline-offset: 2px;
-  }
-
-  .faq-answer :global(a:hover) {
-    color: #1E293B;
-  }
+  .faq-section { background: linear-gradient(180deg, #FFFFFF 0%, #F0FDFA 50%, #FFFFFF 100%); }
+  .faq-list { display: flex; flex-direction: column; gap: 1rem; }
+  .faq-item { background: rgba(0, 0, 0, 0.01); border: 1px solid rgba(0, 0, 0, 0.08); border-radius: 0.75rem; overflow: hidden; }
+  .faq-question { padding: 1.25rem 1.5rem; color: #1E293B; font-weight: 700; font-size: 1.125rem; cursor: pointer; list-style: none; display: flex; align-items: center; justify-content: space-between; gap: 1rem; }
+  .faq-question::-webkit-details-marker { display: none; }
+  .faq-question::after { content: "+"; font-size: 1.5rem; color: #0E7490; flex-shrink: 0; transition: transform 0.2s ease; }
+  .faq-item[open] .faq-question::after { content: "-"; }
+  .faq-answer { padding: 0 1.5rem 1.25rem; color: #475569; line-height: 1.6; }
+  .faq-answer :global(a) { color: #0E7490; text-decoration: underline; text-underline-offset: 2px; }
+  .faq-answer :global(a:hover) { color: #1E293B; }
 </style>

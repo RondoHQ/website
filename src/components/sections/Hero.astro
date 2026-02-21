@@ -1,5 +1,11 @@
 ---
 import Button from '../ui/Button.astro';
+import type { Lang } from '../../i18n/utils';
+import { getLangFromUrl } from '../../i18n/utils';
+import { t } from '../../i18n/translations';
+
+interface Props { lang?: Lang; }
+const lang = Astro.props.lang || getLangFromUrl(Astro.url);
 ---
 
 <section class="hero-section">
@@ -7,94 +13,36 @@ import Button from '../ui/Button.astro';
   <div class="hero-blob hero-blob-2" aria-hidden="true"></div>
   <div class="hero-container">
     <div class="hero-grid">
-      <!-- Left column: headline, subline, CTA -->
       <div class="hero-content">
         <h1 class="hero-headline gradient-text">
-          Niemand weet welke ledenlijst de juiste is
+          {t('hero.headline', lang)}
         </h1>
         <p class="hero-subline">
-          Met Rondo hoeft dat niet meer. Ledendata, contributie en facturatie in één systeem, automatisch gesynchroniseerd met Sportlink.
+          {t('hero.subline', lang)}
         </p>
         <div class="hero-cta-group">
           <Button variant="primary" href="#product">
-            Bekijk wat Rondo doet
+            {t('hero.cta.product', lang)}
           </Button>
           <Button variant="outline" href="https://demo.rondo.club" class="demo-btn">
-            Probeer de demo
+            {t('hero.cta.demo', lang)}
           </Button>
         </div>
-        <p class="demo-hint">
-          Inloggen met gebruikersnaam <strong>demo</strong> en wachtwoord <strong>demo</strong>
-        </p>
+        <p class="demo-hint" set:html={t('hero.demo.hint', lang)} />
       </div>
 
-      <!-- Right column: product screenshot -->
       <div class="hero-screenshot">
-        <button class="screenshot-frame" id="screenshot-trigger" type="button" aria-label="Vergroot screenshot">
-          <img
-            src="/screenshot-leden-lijst-small.webp"
-            srcset="/screenshot-leden-lijst-small.webp 480w, /screenshot-leden-lijst-thumb.webp 960w, /screenshot-leden-lijst.webp 1920w"
-            sizes="(max-width: 768px) 400px, (max-width: 1024px) 50vw, 640px"
-            data-full="/screenshot-leden-lijst.webp"
-            alt="Rondo Club ledenlijst"
-            class="hero-slide active"
-            data-index="0"
-            width="480" height="267"
-            loading="eager"
-            fetchpriority="high"
-          />
-          <img
-            src="/screenshot-vog-overzicht-small.webp"
-            srcset="/screenshot-vog-overzicht-small.webp 480w, /screenshot-vog-overzicht-thumb.webp 960w, /screenshot-vog-overzicht.webp 1920w"
-            sizes="(max-width: 768px) 400px, (max-width: 1024px) 50vw, 640px"
-            data-full="/screenshot-vog-overzicht.webp"
-            alt="VOG tracking overzicht"
-            class="hero-slide"
-            data-index="1"
-            width="480" height="268"
-            loading="lazy"
-          />
-          <img
-            src="/screenshot-contributie-overzicht-small.webp"
-            srcset="/screenshot-contributie-overzicht-small.webp 480w, /screenshot-contributie-overzicht-thumb.webp 960w, /screenshot-contributie-overzicht.webp 1920w"
-            sizes="(max-width: 768px) 400px, (max-width: 1024px) 50vw, 640px"
-            data-full="/screenshot-contributie-overzicht.webp"
-            alt="Contributie overzicht"
-            class="hero-slide"
-            data-index="2"
-            width="480" height="268"
-            loading="lazy"
-          />
-          <img
-            src="/screenshot-teams-overzicht-small.webp"
-            srcset="/screenshot-teams-overzicht-small.webp 480w, /screenshot-teams-overzicht-thumb.webp 960w, /screenshot-teams-overzicht.webp 1920w"
-            sizes="(max-width: 768px) 400px, (max-width: 1024px) 50vw, 640px"
-            data-full="/screenshot-teams-overzicht.webp"
-            alt="Teams overzicht"
-            class="hero-slide"
-            data-index="3"
-            width="480" height="268"
-            loading="lazy"
-          />
-          <img
-            src="/screenshot-commissie-overzicht-small.webp"
-            srcset="/screenshot-commissie-overzicht-small.webp 480w, /screenshot-commissie-overzicht-thumb.webp 960w, /screenshot-commissie-overzicht.webp 1920w"
-            sizes="(max-width: 768px) 400px, (max-width: 1024px) 50vw, 640px"
-            data-full="/screenshot-commissie-overzicht.webp"
-            alt="Commissies overzicht"
-            class="hero-slide"
-            data-index="4"
-            width="480" height="268"
-            loading="lazy"
-          />
+        <button class="screenshot-frame" id="screenshot-trigger" type="button" aria-label={lang === 'en' ? 'Enlarge screenshot' : 'Vergroot screenshot'}>
+          <img src="/screenshot-leden-lijst-small.webp" srcset="/screenshot-leden-lijst-small.webp 480w, /screenshot-leden-lijst-thumb.webp 960w, /screenshot-leden-lijst.webp 1920w" sizes="(max-width: 768px) 400px, (max-width: 1024px) 50vw, 640px" data-full="/screenshot-leden-lijst.webp" alt="Rondo Club" class="hero-slide active" data-index="0" width="480" height="267" loading="eager" fetchpriority="high" />
+          <img src="/screenshot-vog-overzicht-small.webp" srcset="/screenshot-vog-overzicht-small.webp 480w, /screenshot-vog-overzicht-thumb.webp 960w, /screenshot-vog-overzicht.webp 1920w" sizes="(max-width: 768px) 400px, (max-width: 1024px) 50vw, 640px" data-full="/screenshot-vog-overzicht.webp" alt="VOG tracking" class="hero-slide" data-index="1" width="480" height="268" loading="lazy" />
+          <img src="/screenshot-contributie-overzicht-small.webp" srcset="/screenshot-contributie-overzicht-small.webp 480w, /screenshot-contributie-overzicht-thumb.webp 960w, /screenshot-contributie-overzicht.webp 1920w" sizes="(max-width: 768px) 400px, (max-width: 1024px) 50vw, 640px" data-full="/screenshot-contributie-overzicht.webp" alt={lang === 'en' ? 'Dues overview' : 'Contributie overzicht'} class="hero-slide" data-index="2" width="480" height="268" loading="lazy" />
+          <img src="/screenshot-teams-overzicht-small.webp" srcset="/screenshot-teams-overzicht-small.webp 480w, /screenshot-teams-overzicht-thumb.webp 960w, /screenshot-teams-overzicht.webp 1920w" sizes="(max-width: 768px) 400px, (max-width: 1024px) 50vw, 640px" data-full="/screenshot-teams-overzicht.webp" alt={lang === 'en' ? 'Teams overview' : 'Teams overzicht'} class="hero-slide" data-index="3" width="480" height="268" loading="lazy" />
+          <img src="/screenshot-commissie-overzicht-small.webp" srcset="/screenshot-commissie-overzicht-small.webp 480w, /screenshot-commissie-overzicht-thumb.webp 960w, /screenshot-commissie-overzicht.webp 1920w" sizes="(max-width: 768px) 400px, (max-width: 1024px) 50vw, 640px" data-full="/screenshot-commissie-overzicht.webp" alt={lang === 'en' ? 'Committees overview' : 'Commissies overzicht'} class="hero-slide" data-index="4" width="480" height="268" loading="lazy" />
         </button>
-        <!-- Dot indicators -->
         <div class="hero-dots">
-          <button class="hero-dot active" data-index="0" type="button" aria-label="Ga naar slide 1"></button>
-          <button class="hero-dot" data-index="1" type="button" aria-label="Ga naar slide 2"></button>
-          <button class="hero-dot" data-index="2" type="button" aria-label="Ga naar slide 3"></button>
-          <button class="hero-dot" data-index="3" type="button" aria-label="Ga naar slide 4"></button>
-          <button class="hero-dot" data-index="4" type="button" aria-label="Ga naar slide 5"></button>
+          {[0,1,2,3,4].map(i => (
+            <button class:list={['hero-dot', { active: i === 0 }]} data-index={i} type="button" aria-label={`${lang === 'en' ? 'Go to slide' : 'Ga naar slide'} ${i + 1}`}></button>
+          ))}
         </div>
       </div>
     </div>
@@ -102,14 +50,9 @@ import Button from '../ui/Button.astro';
 </section>
 
 <!-- Lightbox overlay -->
-<div class="lightbox" id="lightbox" role="dialog" aria-label="Screenshot vergroot" aria-modal="true">
-  <button class="lightbox-close" id="lightbox-close" type="button" aria-label="Sluiten">&times;</button>
-  <img
-    src=""
-    alt=""
-    class="lightbox-img"
-    id="lightbox-img"
-  />
+<div class="lightbox" id="lightbox" role="dialog" aria-label={lang === 'en' ? 'Enlarged screenshot' : 'Screenshot vergroot'} aria-modal="true">
+  <button class="lightbox-close" id="lightbox-close" type="button" aria-label={lang === 'en' ? 'Close' : 'Sluiten'}>&times;</button>
+  <img src="" alt="" class="lightbox-img" id="lightbox-img" />
 </div>
 
 <script>
@@ -127,25 +70,16 @@ import Button from '../ui/Button.astro';
 
   function showSlide(index: number) {
     slides.forEach((slide, i) => {
-      if (i === index) {
-        slide.classList.add('active');
-      } else {
-        slide.classList.remove('active');
-      }
+      slide.classList.toggle('active', i === index);
     });
     dots.forEach((dot, i) => {
-      if (i === index) {
-        dot.classList.add('active');
-      } else {
-        dot.classList.remove('active');
-      }
+      dot.classList.toggle('active', i === index);
     });
     currentIndex = index;
   }
 
   function nextSlide() {
-    const next = (currentIndex + 1) % slides.length;
-    showSlide(next);
+    showSlide((currentIndex + 1) % slides.length);
   }
 
   function startRotation() {
@@ -161,21 +95,18 @@ import Button from '../ui/Button.astro';
     }
   }
 
-  // Dot click handlers
   dots.forEach((dot, index) => {
     dot.addEventListener('click', (e) => {
-      e.stopPropagation(); // Prevent triggering screenshot-frame click
+      e.stopPropagation();
       showSlide(index);
       stopRotation();
-      startRotation(); // Reset timer
+      startRotation();
     });
   });
 
-  // Pause on hover
   heroScreenshot?.addEventListener('mouseenter', stopRotation);
   heroScreenshot?.addEventListener('mouseleave', startRotation);
 
-  // Lightbox
   trigger?.addEventListener('click', () => {
     const currentSlide = slides[currentIndex];
     if (lightboxImg && currentSlide) {
@@ -199,7 +130,6 @@ import Button from '../ui/Button.astro';
     if (e.key === 'Escape' && lightbox?.classList.contains('active')) closeLightbox();
   });
 
-  // Start rotation
   startRotation();
 </script>
 
@@ -254,15 +184,10 @@ import Button from '../ui/Button.astro';
   }
 
   @media (min-width: 1024px) {
-    .hero-grid {
-      grid-template-columns: 1fr 1fr;
-    }
+    .hero-grid { grid-template-columns: 1fr 1fr; }
   }
 
-  .hero-content {
-    display: flex;
-    flex-direction: column;
-  }
+  .hero-content { display: flex; flex-direction: column; }
 
   .hero-headline {
     font-size: 2.25rem;
@@ -271,17 +196,8 @@ import Button from '../ui/Button.astro';
     line-height: 1.1;
   }
 
-  @media (min-width: 640px) {
-    .hero-headline {
-      font-size: 3rem;
-    }
-  }
-
-  @media (min-width: 1024px) {
-    .hero-headline {
-      font-size: 3.75rem;
-    }
-  }
+  @media (min-width: 640px) { .hero-headline { font-size: 3rem; } }
+  @media (min-width: 1024px) { .hero-headline { font-size: 3.75rem; } }
 
   .hero-subline {
     font-size: 1.125rem;
@@ -290,11 +206,7 @@ import Button from '../ui/Button.astro';
     line-height: 1.6;
   }
 
-  @media (min-width: 1024px) {
-    .hero-subline {
-      font-size: 1.25rem;
-    }
-  }
+  @media (min-width: 1024px) { .hero-subline { font-size: 1.25rem; } }
 
   .hero-cta-group {
     display: flex;
@@ -309,14 +221,12 @@ import Button from '../ui/Button.astro';
     margin-top: 0.75rem;
   }
 
-  .demo-hint strong {
+  .demo-hint :global(strong) {
     color: #64748B;
     font-weight: 600;
   }
 
-  .hero-screenshot {
-    width: 100%;
-  }
+  .hero-screenshot { width: 100%; }
 
   .screenshot-frame {
     display: block;
@@ -324,9 +234,7 @@ import Button from '../ui/Button.astro';
     border: none;
     padding: 0;
     border-radius: 1rem;
-    box-shadow:
-      0 25px 50px -12px rgba(0, 0, 0, 0.15),
-      0 0 0 1px rgba(0, 0, 0, 0.08);
+    box-shadow: 0 25px 50px -12px rgba(0, 0, 0, 0.15), 0 0 0 1px rgba(0, 0, 0, 0.08);
     background: #F8FAFC;
     overflow: hidden;
     cursor: zoom-in;
@@ -337,9 +245,7 @@ import Button from '../ui/Button.astro';
 
   .screenshot-frame:hover {
     transform: scale(1.02);
-    box-shadow:
-      0 30px 60px -15px rgba(0, 0, 0, 0.2),
-      0 0 0 1px rgba(0, 0, 0, 0.1);
+    box-shadow: 0 30px 60px -15px rgba(0, 0, 0, 0.2), 0 0 0 1px rgba(0, 0, 0, 0.1);
   }
 
   .hero-slide {
@@ -353,9 +259,7 @@ import Button from '../ui/Button.astro';
     display: block;
   }
 
-  .hero-slide.active {
-    opacity: 1;
-  }
+  .hero-slide.active { opacity: 1; }
 
   .hero-dots {
     display: flex;
@@ -376,9 +280,7 @@ import Button from '../ui/Button.astro';
     transition: background-color 0.2s;
   }
 
-  .hero-dot.active {
-    background-color: #0E7490;
-  }
+  .hero-dot.active { background-color: #0E7490; }
 
   .lightbox {
     display: none;
@@ -394,9 +296,7 @@ import Button from '../ui/Button.astro';
     cursor: zoom-out;
   }
 
-  .lightbox.active {
-    display: flex;
-  }
+  .lightbox.active { display: flex; }
 
   .lightbox-img {
     max-width: 90vw;
@@ -423,7 +323,5 @@ import Button from '../ui/Button.astro';
     transition: background 0.2s;
   }
 
-  .lightbox-close:hover {
-    background: rgba(255, 255, 255, 0.4);
-  }
+  .lightbox-close:hover { background: rgba(255, 255, 255, 0.4); }
 </style>

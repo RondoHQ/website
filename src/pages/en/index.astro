@@ -1,0 +1,37 @@
+---
+import BaseLayout from '../../layouts/BaseLayout.astro';
+import Header from '../../components/layout/Header.astro';
+import Hero from '../../components/sections/Hero.astro';
+import ProductStory from '../../components/sections/ProductStory.astro';
+import InvoicingHighlight from '../../components/sections/InvoicingHighlight.astro';
+import FeatureGallery from '../../components/sections/FeatureGallery.astro';
+import Origin from '../../components/sections/Origin.astro';
+import IntegrationDiagram from '../../components/sections/IntegrationDiagram.astro';
+import GettingStarted from '../../components/sections/GettingStarted.astro';
+import Pricing from '../../components/sections/Pricing.astro';
+import BusinessCase from '../../components/sections/BusinessCase.astro';
+import Support from '../../components/sections/Support.astro';
+import FAQ from '../../components/sections/FAQ.astro';
+import ContactForm from '../../components/sections/ContactForm.astro';
+import Footer from '../../components/sections/Footer.astro';
+
+const lang = 'en' as const;
+---
+<BaseLayout lang={lang}>
+  <Header lang={lang} />
+  <main id="main-content">
+    <Hero lang={lang} />
+    <ProductStory lang={lang} />
+    <InvoicingHighlight lang={lang} />
+    <FeatureGallery lang={lang} />
+    <Origin lang={lang} />
+    <IntegrationDiagram lang={lang} />
+    <GettingStarted lang={lang} />
+    <Pricing lang={lang} />
+    <BusinessCase lang={lang} />
+    <Support lang={lang} />
+    <FAQ lang={lang} />
+    <ContactForm lang={lang} />
+  </main>
+  <Footer lang={lang} />
+</BaseLayout>

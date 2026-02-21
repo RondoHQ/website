@@ -5,6 +5,13 @@ import robotsTxt from 'astro-robots-txt';
 
 export default defineConfig({
   site: 'https://rondo.club',
+  i18n: {
+    defaultLocale: 'nl',
+    locales: ['nl', 'en'],
+    routing: {
+      prefixDefaultLocale: false,
+    },
+  },
   build: {
     inlineStylesheets: 'always'
   },

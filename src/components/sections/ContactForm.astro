@@ -3,54 +3,60 @@ import GlassPanel from '../ui/GlassPanel.astro';
 import Input from '../ui/Input.astro';
 import Textarea from '../ui/Textarea.astro';
 import Button from '../ui/Button.astro';
+import type { Lang } from '../../i18n/utils';
+import { getLangFromUrl } from '../../i18n/utils';
+import { t } from '../../i18n/translations';
+
+interface Props { lang?: Lang; }
+const lang = Astro.props.lang || getLangFromUrl(Astro.url);
 ---
 
 <section id="contact" class="py-20 px-4 contact-section">
   <div class="max-w-2xl mx-auto">
     <GlassPanel class="p-8 md:p-12">
-      <h2 class="text-3xl md:text-4xl font-bold text-white mb-2">Interesse?</h2>
-      <p class="text-slate-300 mb-8">Vul het formulier in en we nemen zo snel mogelijk contact met je op.</p>
+      <h2 class="text-3xl md:text-4xl font-bold text-white mb-2">{t('contact.heading', lang)}</h2>
+      <p class="text-slate-300 mb-8">{t('contact.subheading', lang)}</p>
 
-      <form id="contact-form" method="POST" action="/api/contact" novalidate>
+      <form id="contact-form" method="POST" action="/api/contact" novalidate data-lang={lang}>
         <Input
-          label="Naam"
+          label={t('contact.name', lang)}
           name="name"
           type="text"
           required={true}
-          placeholder="Jouw naam"
+          placeholder={t('contact.name.placeholder', lang)}
           class="mb-4"
         />
 
         <Input
-          label="E-mailadres"
+          label={t('contact.email', lang)}
           name="email"
           type="email"
           required={true}
-          placeholder="jouw@email.nl"
+          placeholder={t('contact.email.placeholder', lang)}
           class="mb-4"
         />
 
         <Input
-          label="Clubnaam"
+          label={t('contact.club', lang)}
           name="club_name"
           type="text"
           required={true}
-          placeholder="Naam van je sportclub"
+          placeholder={t('contact.club.placeholder', lang)}
           class="mb-4"
         />
 
         <Input
-          label="Aantal leden"
+          label={t('contact.members', lang)}
           name="member_count"
           type="text"
-          placeholder="Bijvoorbeeld: 200-500"
+          placeholder={t('contact.members.placeholder', lang)}
           class="mb-4"
         />
 
         <Textarea
-          label="Bericht"
+          label={t('contact.message', lang)}
           name="message"
-          placeholder="Waar kunnen we je mee helpen?"
+          placeholder={t('contact.message.placeholder', lang)}
           rows={4}
           class="mb-6"
         />
@@ -66,7 +72,7 @@ import Button from '../ui/Button.astro';
         <div id="form-message" role="status" aria-live="polite" class="mb-4 hidden"></div>
 
         <Button type="submit" variant="primary" class="w-full md:w-auto">
-          Verstuur bericht
+          {t('contact.submit', lang)}
         </Button>
       </form>
     </GlassPanel>
@@ -78,36 +84,45 @@ const form = document.getElementById('contact-form') as HTMLFormElement | null;
 const messageDiv = document.getElementById('form-message');
 const submitButton = form?.querySelector('button[type="submit"]') as HTMLButtonElement | undefined;
 const timestampField = document.getElementById('form-timestamp') as HTMLInputElement | null;
+const formLang = form?.dataset.lang || 'nl';
 
-// Set timestamp on load so backend can check submission speed
+const msgs: Record<string, Record<string, string>> = {
+  sending: { nl: 'Versturen...', en: 'Sending...' },
+  success: { nl: 'Bedankt! We nemen zo snel mogelijk contact op.', en: "Thanks! We'll get back to you as soon as possible." },
+  error: { nl: 'Er ging iets mis. Probeer het opnieuw.', en: 'Something went wrong. Please try again.' },
+  errorRetry: { nl: 'Er ging iets mis. Probeer het later opnieuw.', en: 'Something went wrong. Please try again later.' },
+  validation: { nl: 'Vul alle verplichte velden in (naam, e-mail, clubnaam).', en: 'Please fill in all required fields (name, email, club name).' },
+  validEmail: { nl: 'Vul een geldig e-mailadres in.', en: 'Please enter a valid email address.' },
+};
+
+function msg(key: string): string { return msgs[key]?.[formLang] || msgs[key]?.['nl'] || ''; }
+
 if (timestampField) timestampField.value = String(Date.now());
 
 form?.addEventListener('submit', async (e) => {
   e.preventDefault();
 
-  // Get original button text
   const originalText = submitButton?.textContent || '';
   if (submitButton) {
     submitButton.disabled = true;
-    submitButton.textContent = 'Versturen...';
+    submitButton.textContent = msg('sending');
   }
   messageDiv?.classList.add('hidden');
 
-  // Client-side validation
   const formData = new FormData(form);
   const name = formData.get('name')?.toString().trim() || '';
   const email = formData.get('email')?.toString().trim() || '';
   const clubName = formData.get('club_name')?.toString().trim() || '';
 
   if (!name || !email || !clubName) {
-    showMessage('Vul alle verplichte velden in (naam, e-mail, clubnaam).', true);
+    showMessage(msg('validation'), true);
     resetButton();
     return;
   }
 
   const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
   if (!emailRegex.test(email)) {
-    showMessage('Vul een geldig e-mailadres in.', true);
+    showMessage(msg('validEmail'), true);
     resetButton();
     return;
   }
@@ -121,20 +136,19 @@ form?.addEventListener('submit', async (e) => {
     const result = await response.json();
 
     if (response.ok && result.success) {
-      // Track contact form conversion
       (window as any).plausible('ContactFormSubmit', {
         props: {
           clubName: clubName,
           memberRange: formData.get('member_count')?.toString() || 'not-specified'
         }
       });
-      showMessage(result.message || 'Bedankt! We nemen zo snel mogelijk contact op.', false);
+      showMessage(result.message || msg('success'), false);
       form.reset();
     } else {
-      showMessage(result.error || 'Er ging iets mis. Probeer het opnieuw.', true);
+      showMessage(result.error || msg('error'), true);
     }
   } catch (err) {
-    showMessage('Er ging iets mis. Probeer het later opnieuw.', true);
+    showMessage(msg('errorRetry'), true);
   } finally {
     resetButton();
   }
@@ -175,18 +189,15 @@ form?.addEventListener('submit', async (e) => {
   background: #0F172A;
 }
 
-/* Override GlassPanel in dark context */
 .contact-section :global(.glass-panel) {
   background: rgba(255, 255, 255, 0.05);
   border-color: rgba(255, 255, 255, 0.1);
 }
 
-/* Override input/textarea labels */
 .contact-section :global(label) {
   color: #CBD5E1 !important;
 }
 
-/* Override input/textarea fields */
 .contact-section :global(.input-field),
 .contact-section :global(.textarea-field) {
   background: rgba(255, 255, 255, 0.08);

@@ -1,87 +1,74 @@
 ---
 import Card from '../ui/Card.astro';
+import type { Lang } from '../../i18n/utils';
+import { getLangFromUrl } from '../../i18n/utils';
+import { t } from '../../i18n/translations';
+
+interface Props { lang?: Lang; }
+const lang = Astro.props.lang || getLangFromUrl(Astro.url);
 ---
 
 <section id="product" class="py-20">
   <div class="max-w-7xl mx-auto px-4">
-    <!-- Section Header -->
     <div class="text-center mb-16">
       <h2 class="text-4xl md:text-5xl font-bold gradient-text mb-4">
-        Eén systeem voor secretaris én penningmeester
+        {t('product.heading', lang)}
       </h2>
       <p class="text-xl text-slate-600 max-w-3xl mx-auto">
-        Ledenadministratie, contributie, facturatie en betalingen. Geen versnipperde Excel-bestanden, geen handmatig kopiëren tussen systemen. Met Rondo heeft iedereen altijd de juiste informatie.
+        {t('product.subheading', lang)}
       </p>
     </div>
 
-    <!-- Scenario Cards -->
-    <!-- Top row: 3 cards -->
     <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
-      <!-- Scenario 1: New Member -->
-      <Card title="Een nieuw lid...">
-        <p class="text-slate-500 mb-3">
-          Iemand meldt zich aan, de data komt in Sportlink. Dan begint het handwerk: mailinglijsten bijwerken, ouders toevoegen, overzichten voor teamleiders aanpassen. Bij uitschrijving: andersom, en ook nog checken of de contributie betaald is.
-        </p>
+      <Card title={t('product.card1.title', lang)}>
+        <p class="text-slate-500 mb-3">{t('product.card1.problem', lang)}</p>
         <p class="text-slate-600">
-          <span class="text-electric-cyan font-semibold">Met Rondo:</span> zodra je het lid goedkeurt in Sportlink, stroomt alles automatisch door naar Rondo Club, mailinglijsten (Laposta), en helpdesk (FreeScout). Bij uitschrijving precies zo.
+          <span class="text-electric-cyan font-semibold">{t('product.withRondo', lang)}</span> {t('product.card1.solution', lang)}
         </p>
-        <button class="card-screenshot-trigger" data-screenshot="/screenshot-persoons-detail-scherm.webp" type="button" aria-label="Vergroot screenshot">
-          <img src="/screenshot-persoons-detail-scherm-small.webp" srcset="/screenshot-persoons-detail-scherm-small.webp 480w, /screenshot-persoons-detail-scherm-thumb.webp 960w, /screenshot-persoons-detail-scherm.webp 1920w" sizes="(max-width: 768px) 380px, 280px" width="480" height="268" alt="Rondo Club persoonsdetail scherm" loading="lazy" />
+        <button class="card-screenshot-trigger" data-screenshot="/screenshot-persoons-detail-scherm.webp" type="button" aria-label={lang === 'en' ? 'Enlarge screenshot' : 'Vergroot screenshot'}>
+          <img src="/screenshot-persoons-detail-scherm-small.webp" srcset="/screenshot-persoons-detail-scherm-small.webp 480w, /screenshot-persoons-detail-scherm-thumb.webp 960w, /screenshot-persoons-detail-scherm.webp 1920w" sizes="(max-width: 768px) 380px, 280px" width="480" height="268" alt={t('gallery.caption.personDetail', lang)} loading="lazy" />
         </button>
       </Card>
 
-      <!-- Scenario 2: VOG -->
-      <Card title="Wie heeft er al een VOG?">
-        <p class="text-slate-500 mb-3">
-          Welke vrijwilligers hebben een geldige Verklaring Omtrent het Gedrag? Je zoekt in e-mails, vraagt rond, en hoopt dat de administratie klopt.
-        </p>
+      <Card title={t('product.card2.title', lang)}>
+        <p class="text-slate-500 mb-3">{t('product.card2.problem', lang)}</p>
         <p class="text-slate-600">
-          <span class="text-electric-cyan font-semibold">Met Rondo:</span> Per persoon direct zichtbaar of er een geldige VOG is. Verlopen? Automatisch een herinnering. Altijd compliant, zonder gedoe.
+          <span class="text-electric-cyan font-semibold">{t('product.withRondo', lang)}</span> {t('product.card2.solution', lang)}
         </p>
-        <button class="card-screenshot-trigger" data-screenshot="/screenshot-vog-overzicht.webp" type="button" aria-label="Vergroot screenshot">
-          <img src="/screenshot-vog-overzicht-small.webp" srcset="/screenshot-vog-overzicht-small.webp 480w, /screenshot-vog-overzicht-thumb.webp 960w, /screenshot-vog-overzicht.webp 1920w" sizes="(max-width: 768px) 380px, 280px" width="480" height="268" alt="VOG overzicht met statusbadges" loading="lazy" />
+        <button class="card-screenshot-trigger" data-screenshot="/screenshot-vog-overzicht.webp" type="button" aria-label={lang === 'en' ? 'Enlarge screenshot' : 'Vergroot screenshot'}>
+          <img src="/screenshot-vog-overzicht-small.webp" srcset="/screenshot-vog-overzicht-small.webp 480w, /screenshot-vog-overzicht-thumb.webp 960w, /screenshot-vog-overzicht.webp 1920w" sizes="(max-width: 768px) 380px, 280px" width="480" height="268" alt={t('gallery.caption.vogOverview', lang)} loading="lazy" />
         </button>
       </Card>
 
-      <!-- Scenario 3: Family -->
-      <Card title="Ouders met meerdere kinderen?">
-        <p class="text-slate-500 mb-3">
-          In Sportlink zijn ouders alleen een veld bij een kind, geen aparte personen. Gezinsrelaties bestaan niet. Korting voor een tweede kind? Dat zoek je zelf uit, handmatig, elk seizoen opnieuw.
-        </p>
+      <Card title={t('product.card3.title', lang)}>
+        <p class="text-slate-500 mb-3">{t('product.card3.problem', lang)}</p>
         <p class="text-slate-600">
-          <span class="text-electric-cyan font-semibold">Met Rondo:</span> Rondo Club herkent gezinnen automatisch. Omdat Rondo het herkent, kun je er je contributieregels op aanpassen — zonder handwerk.
+          <span class="text-electric-cyan font-semibold">{t('product.withRondo', lang)}</span> {t('product.card3.solution', lang)}
         </p>
-        <button class="card-screenshot-trigger" data-screenshot="/screenshot-contributie-regels.webp" type="button" aria-label="Vergroot screenshot">
-          <img src="/screenshot-contributie-regels-small.webp" srcset="/screenshot-contributie-regels-small.webp 480w, /screenshot-contributie-regels-thumb.webp 960w, /screenshot-contributie-regels.webp 1920w" sizes="(max-width: 768px) 380px, 280px" width="480" height="267" alt="Contributieregels met familiekorting" loading="lazy" />
+        <button class="card-screenshot-trigger" data-screenshot="/screenshot-contributie-regels.webp" type="button" aria-label={lang === 'en' ? 'Enlarge screenshot' : 'Vergroot screenshot'}>
+          <img src="/screenshot-contributie-regels-small.webp" srcset="/screenshot-contributie-regels-small.webp 480w, /screenshot-contributie-regels-thumb.webp 960w, /screenshot-contributie-regels.webp 1920w" sizes="(max-width: 768px) 380px, 280px" width="480" height="267" alt={t('gallery.caption.duesRules', lang)} loading="lazy" />
         </button>
       </Card>
     </div>
 
-    <!-- Bottom row: 2 cards, centered -->
     <div class="grid grid-cols-1 md:grid-cols-2 gap-6 mt-6 md:max-w-[calc(66.666%+0.75rem)] md:mx-auto">
-      <!-- Scenario 4: Mailing -->
-      <Card title="Je wil een mailing sturen">
-        <p class="text-slate-500 mb-3">
-          Exporteren uit Sportlink, checken op bounced e-mails, importeren in mailingtool, hopen dat de lijst actueel is.
-        </p>
+      <Card title={t('product.card4.title', lang)}>
+        <p class="text-slate-500 mb-3">{t('product.card4.problem', lang)}</p>
         <p class="text-slate-600">
-          <span class="text-electric-cyan font-semibold">Met Rondo:</span> Mailinglijsten in Laposta zijn altijd actueel. Selecteer een team of groep en verstuur — geen exports, geen imports, geen verouderde adressen.
+          <span class="text-electric-cyan font-semibold">{t('product.withRondo', lang)}</span> {t('product.card4.solution', lang)}
         </p>
-        <button class="card-screenshot-trigger" data-screenshot="/screenshot-team-detail.webp" type="button" aria-label="Vergroot screenshot">
-          <img src="/screenshot-team-detail-small.webp" srcset="/screenshot-team-detail-small.webp 480w, /screenshot-team-detail-thumb.webp 960w, /screenshot-team-detail.webp 1920w" sizes="(max-width: 768px) 380px, 380px" width="480" height="268" alt="Team detail met ledengroepen" loading="lazy" />
+        <button class="card-screenshot-trigger" data-screenshot="/screenshot-team-detail.webp" type="button" aria-label={lang === 'en' ? 'Enlarge screenshot' : 'Vergroot screenshot'}>
+          <img src="/screenshot-team-detail-small.webp" srcset="/screenshot-team-detail-small.webp 480w, /screenshot-team-detail-thumb.webp 960w, /screenshot-team-detail.webp 1920w" sizes="(max-width: 768px) 380px, 380px" width="480" height="268" alt={t('gallery.caption.teamDetail', lang)} loading="lazy" />
         </button>
       </Card>
 
-      <!-- Scenario 5: Access Control -->
-      <Card title="Niet iedereen hoeft alles te zien">
-        <p class="text-slate-500 mb-3">
-          Je hebt een vrijwilliger die de VOGs regelt. Moet die van iedereen alles kunnen zien? Of alleen van de mensen waar hij een VOG voor moet regelen?
-        </p>
+      <Card title={t('product.card5.title', lang)}>
+        <p class="text-slate-500 mb-3">{t('product.card5.problem', lang)}</p>
         <p class="text-slate-600">
-          <span class="text-electric-cyan font-semibold">Met Rondo:</span> Iedereen toegang tot wat ze moeten zien, en niet meer. Veilig, overzichtelijk, en zonder gedoe.
+          <span class="text-electric-cyan font-semibold">{t('product.withRondo', lang)}</span> {t('product.card5.solution', lang)}
         </p>
-        <button class="card-screenshot-trigger" data-screenshot="/screenshot-commissie-detail.webp" type="button" aria-label="Vergroot screenshot">
-          <img src="/screenshot-commissie-detail-small.webp" srcset="/screenshot-commissie-detail-small.webp 480w, /screenshot-commissie-detail-thumb.webp 960w, /screenshot-commissie-detail.webp 1920w" sizes="(max-width: 768px) 380px, 380px" width="480" height="268" alt="Commissie detail met toegangsbeheer" loading="lazy" />
+        <button class="card-screenshot-trigger" data-screenshot="/screenshot-commissie-detail.webp" type="button" aria-label={lang === 'en' ? 'Enlarge screenshot' : 'Vergroot screenshot'}>
+          <img src="/screenshot-commissie-detail-small.webp" srcset="/screenshot-commissie-detail-small.webp 480w, /screenshot-commissie-detail-thumb.webp 960w, /screenshot-commissie-detail.webp 1920w" sizes="(max-width: 768px) 380px, 380px" width="480" height="268" alt={t('gallery.caption.committeeDetail', lang)} loading="lazy" />
         </button>
       </Card>
     </div>
@@ -89,14 +76,9 @@ import Card from '../ui/Card.astro';
 </section>
 
 <!-- Lightbox for card screenshots -->
-<div class="ps-lightbox" id="ps-lightbox" role="dialog" aria-label="Screenshot vergroot" aria-modal="true">
-  <button class="ps-lightbox-close" id="ps-lightbox-close" type="button" aria-label="Sluiten">&times;</button>
-  <img
-    src=""
-    alt=""
-    class="ps-lightbox-img"
-    id="ps-lightbox-img"
-  />
+<div class="ps-lightbox" id="ps-lightbox" role="dialog" aria-label={lang === 'en' ? 'Enlarged screenshot' : 'Screenshot vergroot'} aria-modal="true">
+  <button class="ps-lightbox-close" id="ps-lightbox-close" type="button" aria-label={lang === 'en' ? 'Close' : 'Sluiten'}>&times;</button>
+  <img src="" alt="" class="ps-lightbox-img" id="ps-lightbox-img" />
 </div>
 
 <script>
@@ -173,9 +155,7 @@ import Card from '../ui/Card.astro';
     cursor: zoom-out;
   }
 
-  .ps-lightbox.active {
-    display: flex;
-  }
+  .ps-lightbox.active { display: flex; }
 
   .ps-lightbox-img {
     max-width: 90vw;
@@ -202,7 +182,5 @@ import Card from '../ui/Card.astro';
     transition: background 0.2s;
   }
 
-  .ps-lightbox-close:hover {
-    background: rgba(255, 255, 255, 0.4);
-  }
+  .ps-lightbox-close:hover { background: rgba(255, 255, 255, 0.4); }
 </style>

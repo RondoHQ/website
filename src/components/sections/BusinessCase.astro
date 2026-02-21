@@ -1,16 +1,18 @@
 ---
 import Card from '../ui/Card.astro';
+import type { Lang } from '../../i18n/utils';
+import { getLangFromUrl } from '../../i18n/utils';
+import { t } from '../../i18n/translations';
+
+interface Props { lang?: Lang; }
+const lang = Astro.props.lang || getLangFromUrl(Astro.url);
 ---
 
 <section class="py-20">
   <div class="max-w-7xl mx-auto px-4">
     <div class="text-center mb-12">
-      <h2 class="text-4xl md:text-5xl font-bold gradient-text mb-4">
-        Wat het je club oplevert
-      </h2>
-      <p class="text-xl text-slate-600">
-        De argumenten voor je bestuursvergadering
-      </p>
+      <h2 class="text-4xl md:text-5xl font-bold gradient-text mb-4">{t('business.heading', lang)}</h2>
+      <p class="text-xl text-slate-600">{t('business.subheading', lang)}</p>
     </div>
 
     <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
@@ -20,10 +22,8 @@ import Card from '../ui/Card.astro';
             <path stroke-linecap="round" stroke-linejoin="round" d="M12 6v6h4.5m4.5 0a9 9 0 1 1-18 0 9 9 0 0 1 18 0Z" />
           </svg>
         </div>
-        <h3 class="font-semibold mb-2">100+ uur per jaar bespaard</h3>
-        <p class="text-slate-600">
-          Geen handmatig exporteren, importeren en bijwerken meer. Ledendata synchroniseert automatisch naar al je systemen. Die uren kan je besteden aan je club.
-        </p>
+        <h3 class="font-semibold mb-2">{t('business.time.title', lang)}</h3>
+        <p class="text-slate-600">{t('business.time.text', lang)}</p>
       </Card>
 
       <Card>
@@ -32,10 +32,8 @@ import Card from '../ui/Card.astro';
             <path stroke-linecap="round" stroke-linejoin="round" d="M9 12.75 11.25 15 15 9.75m-3-7.036A11.959 11.959 0 0 1 3.598 6 11.99 11.99 0 0 0 3 9.749c0 5.592 3.824 10.29 9 11.623 5.176-1.332 9-6.03 9-11.622 0-1.31-.21-2.571-.598-3.751h-.152c-3.196 0-6.1-1.248-8.25-3.285Z" />
           </svg>
         </div>
-        <h3 class="font-semibold mb-2">AVG-proof ledenadministratie</h3>
-        <p class="text-slate-600">
-          Geen spreadsheets met persoonsgegevens op persoonlijke laptops meer. Eén beveiligd systeem met toegangsrechten per vrijwilliger. Inclusief bewerkersovereenkomst.
-        </p>
+        <h3 class="font-semibold mb-2">{t('business.gdpr.title', lang)}</h3>
+        <p class="text-slate-600">{t('business.gdpr.text', lang)}</p>
       </Card>
 
       <Card>
@@ -44,96 +42,47 @@ import Card from '../ui/Card.astro';
             <path stroke-linecap="round" stroke-linejoin="round" d="M7.5 21 3 16.5m0 0L7.5 12M3 16.5h13.5m0-13.5L21 7.5m0 0L16.5 12M21 7.5H7.5" />
           </svg>
         </div>
-        <h3 class="font-semibold mb-2">Soepele bestuurswissel</h3>
-        <p class="text-slate-600">
-          Als de secretaris stopt, hoeft de opvolger geen map met Excel-bestanden te ontcijferen. Alles staat in Rondo, gedocumenteerd en klaar voor overdracht.
-        </p>
+        <h3 class="font-semibold mb-2">{t('business.handover.title', lang)}</h3>
+        <p class="text-slate-600">{t('business.handover.text', lang)}</p>
       </Card>
     </div>
 
-    <!-- Trust bar: key terms surfaced for board members -->
     <div class="trust-bar">
       <div class="trust-item">
         <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="trust-icon">
           <path stroke-linecap="round" stroke-linejoin="round" d="M20.25 6.375c0 2.278-3.694 4.125-8.25 4.125S3.75 8.653 3.75 6.375m16.5 0c0-2.278-3.694-4.125-8.25-4.125S3.75 4.097 3.75 6.375m16.5 0v11.25c0 2.278-3.694 4.125-8.25 4.125s-8.25-1.847-8.25-4.125V6.375m16.5 0v3.75m-16.5-3.75v3.75m16.5 0v3.75C20.25 16.153 16.556 18 12 18s-8.25-1.847-8.25-4.125v-3.75m16.5 0c0 2.278-3.694 4.125-8.25 4.125s-8.25-1.847-8.25-4.125" />
         </svg>
-        <span>Je data blijft altijd van jou</span>
+        <span>{t('business.trust.data', lang)}</span>
       </div>
       <div class="trust-item">
         <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="trust-icon">
           <path stroke-linecap="round" stroke-linejoin="round" d="M12 21a9.004 9.004 0 0 0 8.716-6.747M12 21a9.004 9.004 0 0 1-8.716-6.747M12 21c2.485 0 4.5-4.03 4.5-9S14.485 3 12 3m0 18c-2.485 0-4.5-4.03-4.5-9S9.515 3 12 3m0 0a8.997 8.997 0 0 1 7.843 4.582M12 3a8.997 8.997 0 0 0-7.843 4.582m15.686 0A11.953 11.953 0 0 1 12 10.5c-2.998 0-5.74-1.1-7.843-2.918m15.686 0A8.959 8.959 0 0 1 21 12c0 .778-.099 1.533-.284 2.253m0 0A17.919 17.919 0 0 1 12 16.5c-3.162 0-6.133-.815-8.716-2.247m0 0A9.015 9.015 0 0 1 3 12c0-1.605.42-3.113 1.157-4.418" />
         </svg>
-        <span>Europese servers</span>
+        <span>{t('business.trust.eu', lang)}</span>
       </div>
       <div class="trust-item">
         <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="trust-icon">
           <path stroke-linecap="round" stroke-linejoin="round" d="M14.25 9.75 16.5 12l-2.25 2.25m-4.5 0L7.5 12l2.25-2.25M6 20.25h12A2.25 2.25 0 0 0 20.25 18V6A2.25 2.25 0 0 0 18 3.75H6A2.25 2.25 0 0 0 3.75 6v12A2.25 2.25 0 0 0 6 20.25Z" />
         </svg>
-        <span>Open source, geen lock-in</span>
+        <span>{t('business.trust.opensource', lang)}</span>
       </div>
       <div class="trust-item">
         <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="trust-icon">
           <path stroke-linecap="round" stroke-linejoin="round" d="M9 12.75 11.25 15 15 9.75M21 12a9 9 0 1 1-18 0 9 9 0 0 1 18 0Z" />
         </svg>
-        <span>99% uptime</span>
+        <span>{t('business.trust.uptime', lang)}</span>
       </div>
     </div>
-    <p class="trust-link">
-      Lees onze <a href="/voorwaarden">algemene voorwaarden</a> en ons <a href="/privacybeleid">privacybeleid</a> voor alle details.
-    </p>
+    <p class="trust-link" set:html={t('business.trust.link', lang)} />
   </div>
 </section>
 
 <style>
-  .case-icon-svg {
-    width: 2rem;
-    height: 2rem;
-    color: #0891B2;
-  }
-
-  .trust-bar {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: center;
-    gap: 1.5rem 2.5rem;
-    margin-top: 3rem;
-    padding: 1.5rem 2rem;
-    background: rgba(8, 145, 178, 0.04);
-    border: 1px solid rgba(8, 145, 178, 0.12);
-    border-radius: 0.75rem;
-  }
-
-  .trust-item {
-    display: flex;
-    align-items: center;
-    gap: 0.5rem;
-    color: #334155;
-    font-size: 0.9375rem;
-    font-weight: 500;
-  }
-
-  .trust-icon {
-    width: 1.25rem;
-    height: 1.25rem;
-    color: #0891B2;
-    flex-shrink: 0;
-  }
-
-  .trust-link {
-    text-align: center;
-    margin-top: 1rem;
-    font-size: 0.875rem;
-    color: #64748B;
-  }
-
-  .trust-link a {
-    color: #0E7490;
-    text-decoration: underline;
-    text-underline-offset: 2px;
-    transition: color 0.2s ease-in-out;
-  }
-
-  .trust-link a:hover {
-    color: #1E293B;
-  }
+  .case-icon-svg { width: 2rem; height: 2rem; color: #0891B2; }
+  .trust-bar { display: flex; flex-wrap: wrap; justify-content: center; gap: 1.5rem 2.5rem; margin-top: 3rem; padding: 1.5rem 2rem; background: rgba(8, 145, 178, 0.04); border: 1px solid rgba(8, 145, 178, 0.12); border-radius: 0.75rem; }
+  .trust-item { display: flex; align-items: center; gap: 0.5rem; color: #334155; font-size: 0.9375rem; font-weight: 500; }
+  .trust-icon { width: 1.25rem; height: 1.25rem; color: #0891B2; flex-shrink: 0; }
+  .trust-link { text-align: center; margin-top: 1rem; font-size: 0.875rem; color: #64748B; }
+  .trust-link :global(a) { color: #0E7490; text-decoration: underline; text-underline-offset: 2px; transition: color 0.2s ease-in-out; }
+  .trust-link :global(a:hover) { color: #1E293B; }
 </style>

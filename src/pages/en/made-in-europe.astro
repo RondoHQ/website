@@ -1,0 +1,158 @@
+---
+import BaseLayout from '../../layouts/BaseLayout.astro';
+import Header from '../../components/layout/Header.astro';
+import Footer from '../../components/sections/Footer.astro';
+import { t } from '../../i18n/translations';
+
+const lang = 'en' as const;
+---
+
+<BaseLayout lang={lang} title={t('europe.title', lang)} description={t('europe.description', lang)}>
+  <Header lang={lang} />
+  <main class="europe-page">
+    <div class="container">
+      <div class="badge-hero">
+        <span class="eu-flag">🇪🇺</span>
+        <h1>{t('europe.heading', lang)}</h1>
+        <p class="subtitle">{t('europe.subtitle', lang)}</p>
+      </div>
+
+      <section class="why-section">
+        <h2>{t('europe.why.heading', lang)}</h2>
+        <p>{t('europe.why.p1', lang)}</p>
+        <p>{t('europe.why.p2', lang)}</p>
+      </section>
+
+      <section class="services-section">
+        <h2>{t('europe.services.heading', lang)}</h2>
+        <div class="services-grid">
+          <div class="service-card">
+            <div class="service-header">
+              <span class="service-flag">🇳🇱</span>
+              <h3>Mollie</h3>
+            </div>
+            <p class="service-role">{t('europe.mollie.role', lang)}</p>
+            <p class="service-desc">{t('europe.mollie.desc', lang)}</p>
+            <a href="https://mollie.com" target="_blank" rel="noopener" class="service-link">mollie.com</a>
+          </div>
+
+          <div class="service-card">
+            <div class="service-header">
+              <span class="service-flag">🇳🇱</span>
+              <h3>Lettermint</h3>
+            </div>
+            <p class="service-role">{t('europe.lettermint.role', lang)}</p>
+            <p class="service-desc">{t('europe.lettermint.desc', lang)}</p>
+            <a href="https://lettermint.co" target="_blank" rel="noopener" class="service-link">lettermint.co</a>
+          </div>
+
+          <div class="service-card">
+            <div class="service-header">
+              <span class="service-flag">🇳🇱</span>
+              <h3>Rabobank</h3>
+            </div>
+            <p class="service-role">{t('europe.rabobank.role', lang)}</p>
+            <p class="service-desc">{t('europe.rabobank.desc', lang)}</p>
+            <a href="https://rabobank.nl" target="_blank" rel="noopener" class="service-link">rabobank.nl</a>
+          </div>
+
+          <div class="service-card">
+            <div class="service-header">
+              <span class="service-flag">🇳🇱</span>
+              <h3>Sportlink</h3>
+            </div>
+            <p class="service-role">{t('europe.sportlink.role', lang)}</p>
+            <p class="service-desc">{t('europe.sportlink.desc', lang)}</p>
+            <a href="https://sportlink.com" target="_blank" rel="noopener" class="service-link">sportlink.com</a>
+          </div>
+
+          <div class="service-card">
+            <div class="service-header">
+              <span class="service-flag">🇳🇱</span>
+              <h3>Nikki</h3>
+            </div>
+            <p class="service-role">{t('europe.nikki.role', lang)}</p>
+            <p class="service-desc">{t('europe.nikki.desc', lang)}</p>
+            <a href="https://nikki.nl" target="_blank" rel="noopener" class="service-link">nikki.nl</a>
+          </div>
+
+          <div class="service-card">
+            <div class="service-header">
+              <span class="service-flag">🇳🇱</span>
+              <h3>Laposta</h3>
+            </div>
+            <p class="service-role">{t('europe.laposta.role', lang)}</p>
+            <p class="service-desc">{t('europe.laposta.desc', lang)}</p>
+            <a href="https://laposta.nl" target="_blank" rel="noopener" class="service-link">laposta.nl</a>
+          </div>
+        </div>
+      </section>
+
+      <section class="services-section">
+        <h2>{t('europe.hosting.heading', lang)}</h2>
+        <p>{t('europe.hosting.intro', lang)}</p>
+        <div class="services-grid">
+          <div class="service-card">
+            <div class="service-header">
+              <span class="service-flag">🇪🇸</span>
+              <h3>SiteGround</h3>
+            </div>
+            <p class="service-role">{t('europe.siteground.role', lang)}</p>
+            <p class="service-desc">{t('europe.siteground.desc', lang)}</p>
+            <a href="https://siteground.com" target="_blank" rel="noopener" class="service-link">siteground.com</a>
+          </div>
+
+          <div class="service-card">
+            <div class="service-header">
+              <span class="service-flag">🇱🇹</span>
+              <h3>Hostinger</h3>
+            </div>
+            <p class="service-role">{t('europe.hostinger.role', lang)}</p>
+            <p class="service-desc">{t('europe.hostinger.desc', lang)}</p>
+            <a href="https://hostinger.com" target="_blank" rel="noopener" class="service-link">hostinger.com</a>
+          </div>
+
+          <div class="service-card">
+            <div class="service-header">
+              <span class="service-flag">🇳🇱</span>
+              <h3>Yourhosting</h3>
+            </div>
+            <p class="service-role">{t('europe.yourhosting.role', lang)}</p>
+            <p class="service-desc">{t('europe.yourhosting.desc', lang)}</p>
+            <a href="https://yourhosting.nl" target="_blank" rel="noopener" class="service-link">yourhosting.nl</a>
+          </div>
+        </div>
+      </section>
+
+      <section class="code-section">
+        <h2>{t('europe.opensource.heading', lang)}</h2>
+        <p set:html={t('europe.opensource.text', lang)} />
+      </section>
+    </div>
+  </main>
+  <Footer lang={lang} />
+</BaseLayout>
+
+<style>
+  .europe-page { padding: 6rem 1rem 4rem; }
+  .container { max-width: 48rem; margin: 0 auto; padding: 0 1.5rem; }
+  .badge-hero { text-align: center; margin-bottom: 4rem; }
+  .eu-flag { font-size: 6.25rem; display: block; margin-bottom: 0.25rem; line-height: 1; }
+  h1 { font-family: 'Montserrat', sans-serif; font-size: 2.5rem; font-weight: 700; color: #1E293B; margin: 0 0 1rem; }
+  .subtitle { font-size: 1.25rem; color: #64748B; max-width: 32rem; margin: 0 auto; line-height: 1.6; }
+  h2 { font-family: 'Montserrat', sans-serif; font-size: 1.5rem; font-weight: 700; color: #0E7490; margin: 0 0 1rem; }
+  section { margin-bottom: 3rem; }
+  p { line-height: 1.7; color: #475569; margin: 0 0 1rem; }
+  .services-grid { display: grid; grid-template-columns: 1fr; gap: 1rem; margin-top: 1.5rem; }
+  @media (min-width: 640px) { .services-grid { grid-template-columns: 1fr 1fr; } }
+  .service-card { background: #F8FAFC; border: 1px solid #E2E8F0; border-radius: 0.75rem; padding: 1.5rem; }
+  .service-header { display: flex; align-items: center; gap: 0.5rem; margin-bottom: 0.25rem; }
+  .service-flag { font-size: 1.25rem; }
+  h3 { font-size: 1.125rem; font-weight: 600; color: #1E293B; margin: 0; }
+  .service-role { font-size: 0.8125rem; color: #64748B; margin: 0 0 0.75rem; text-transform: uppercase; letter-spacing: 0.05em; }
+  .service-desc { font-size: 0.875rem; margin: 0 0 0.75rem; }
+  .service-link { font-size: 0.875rem; color: #0E7490; text-decoration: underline; text-underline-offset: 2px; }
+  .service-link:hover { color: #1E293B; }
+  a { color: #0E7490; text-decoration: underline; text-underline-offset: 2px; }
+  a:hover { color: #1E293B; }
+</style>

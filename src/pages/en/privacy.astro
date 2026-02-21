@@ -1,0 +1,153 @@
+---
+import BaseLayout from '../../layouts/BaseLayout.astro';
+import Header from '../../components/layout/Header.astro';
+import Footer from '../../components/sections/Footer.astro';
+import { t } from '../../i18n/translations';
+
+const lang = 'en' as const;
+---
+<BaseLayout lang={lang} title={t('privacy.title', lang)} description={t('privacy.description', lang)}>
+  <Header lang={lang} />
+  <main id="main-content" class="privacy-page">
+    <div class="content">
+      <h1>Privacy Policy</h1>
+      <p class="last-updated">Last updated: 7 February 2026</p>
+
+      <h2>1. Who are we?</h2>
+      <p>
+        This website (<a href="https://rondo.club">rondo.club</a>) is managed by:
+      </p>
+      <address>
+        <strong>Emilia Projects BV</strong><br>
+        Emilia van Nassaustraat 20<br>
+        6602 GW Wijchen<br>
+        The Netherlands<br>
+        Chamber of Commerce: 89067959
+      </address>
+
+      <h2>2. What data do we collect?</h2>
+
+      <h3>Contact form</h3>
+      <p>
+        When you fill out the contact form on our website, we collect the following data:
+      </p>
+      <ul>
+        <li>Name (required)</li>
+        <li>Email address (required)</li>
+        <li>Club name (required)</li>
+        <li>Number of members (optional)</li>
+        <li>Message (optional)</li>
+      </ul>
+      <p>
+        This data is used exclusively to answer your enquiry and potentially establish a business relationship.
+      </p>
+
+      <h3>Website visits</h3>
+      <p>
+        We use <a href="https://plausible.io" target="_blank" rel="noopener">Plausible Analytics</a> for website visit insights. Plausible is a privacy-friendly alternative to Google Analytics. No cookies are placed, no personal data is collected and all data is processed in aggregate. Plausible complies with the GDPR without requiring consent via a cookie banner.
+      </p>
+
+      <h3>When using Rondo</h3>
+      <p>
+        If we host Rondo for your club, we naturally also process data of your members. This includes names, contact details and membership information. For this processing we sign a separate data processing agreement with your club, in which the arrangements for handling this data are laid down. This data is of course hosted on European servers.
+      </p>
+
+      <h2>3. Legal basis</h2>
+      <p>
+        The processing of your data via the contact form is based on our <strong>legitimate interest</strong> (Article 6(1)(f) GDPR): answering your enquiry and maintaining business contact. You can object to this at any time.
+      </p>
+
+      <h2>4. Retention period</h2>
+      <p>
+        We retain your data as long as a business relationship exists or as long as necessary to handle your enquiry. You can request deletion of your data at any time.
+      </p>
+
+      <h2>5. Third parties</h2>
+      <p>
+        We do not share your data with third parties for marketing purposes. We do use the following service providers:
+      </p>
+      <table>
+        <thead>
+          <tr>
+            <th>Service</th>
+            <th>Purpose</th>
+            <th>Location</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td><a href="https://www.cloudflare.com/privacypolicy/" target="_blank" rel="noopener">Cloudflare</a></td>
+            <td>Website hosting and security</td>
+            <td>US (EU-US Data Privacy Framework)</td>
+          </tr>
+          <tr>
+            <td><a href="https://resend.com/legal/privacy-policy" target="_blank" rel="noopener">Resend</a></td>
+            <td>Email delivery after contact form submission</td>
+            <td>US (EU-US Data Privacy Framework)</td>
+          </tr>
+          <tr>
+            <td><a href="https://plausible.io/data-policy" target="_blank" rel="noopener">Plausible</a></td>
+            <td>Privacy-friendly website analytics</td>
+            <td>EU</td>
+          </tr>
+        </tbody>
+      </table>
+
+      <p>
+        Rondo is fully built and hosted in Europe. More about our European approach and the services we use can be found on our <a href="/en/made-in-europe">Made in Europe</a> page.
+      </p>
+
+      <h2>6. Cookies</h2>
+      <p>
+        This website does not place any cookies.
+      </p>
+
+      <h2>7. Your rights</h2>
+      <p>
+        Under the GDPR you have the following rights regarding your personal data:
+      </p>
+      <ul>
+        <li><strong>Access</strong> — you may request which data we hold about you.</li>
+        <li><strong>Rectification</strong> — you may have incorrect data corrected.</li>
+        <li><strong>Erasure</strong> — you may request deletion of your data.</li>
+        <li><strong>Restriction</strong> — you may request restriction of processing.</li>
+        <li><strong>Portability</strong> — you may request your data in a structured format.</li>
+        <li><strong>Objection</strong> — you may object to the processing of your data.</li>
+      </ul>
+      <p>
+        To exercise any of these rights, contact us via the <a href="/en/#contact">contact form</a> on our website.
+      </p>
+
+      <h2>8. Filing a complaint</h2>
+      <p>
+        Do you have a complaint about how we handle your data? Please contact us first so we can resolve it. You also have the right to file a complaint with the <a href="https://autoriteitpersoonsgegevens.nl" target="_blank" rel="noopener">Dutch Data Protection Authority (Autoriteit Persoonsgegevens)</a>.
+      </p>
+
+      <h2>9. Changes</h2>
+      <p>
+        We may update this privacy policy from time to time. The most recent version is always available on this page. In case of significant changes, we will clearly indicate this.
+      </p>
+    </div>
+  </main>
+  <Footer lang={lang} />
+</BaseLayout>
+
+<style>
+  .privacy-page { padding: 6rem 1rem 4rem; }
+  .content { max-width: 48rem; margin: 0 auto; line-height: 1.75; }
+  h1 { font-family: 'Montserrat', sans-serif; font-weight: 700; font-size: 2.5rem; margin-bottom: 0.5rem; }
+  .last-updated { color: #64748B; font-size: 0.875rem; margin-bottom: 3rem; }
+  h2 { font-family: 'Montserrat', sans-serif; font-weight: 700; font-size: 1.5rem; margin-top: 2.5rem; margin-bottom: 1rem; color: #0E7490; }
+  h3 { font-family: 'Montserrat', sans-serif; font-weight: 700; font-size: 1.125rem; margin-top: 1.5rem; margin-bottom: 0.75rem; }
+  p { margin-bottom: 1rem; color: #475569; }
+  address { font-style: normal; color: #475569; margin-bottom: 1rem; padding: 1rem 1.5rem; background: #F8FAFC; border-radius: 0.5rem; border: 1px solid #E2E8F0; }
+  ul { margin-bottom: 1rem; padding-left: 1.5rem; color: #475569; list-style-type: disc; }
+  li { margin-bottom: 0.5rem; }
+  li::marker { color: #0E7490; }
+  a { color: #0E7490; text-decoration: underline; text-underline-offset: 2px; transition: color 0.2s ease-in-out; }
+  a:hover { color: #1E293B; }
+  table { width: 100%; border-collapse: collapse; margin-bottom: 1rem; font-size: 0.9375rem; }
+  th { text-align: left; padding: 0.75rem 1rem; background: #F8FAFC; color: #1E293B; font-weight: 700; border-bottom: 1px solid #E2E8F0; }
+  td { padding: 0.75rem 1rem; color: #475569; border-bottom: 1px solid #E2E8F0; }
+  @media (max-width: 640px) { h1 { font-size: 2rem; } table { font-size: 0.8125rem; } th, td { padding: 0.5rem; } }
+</style>

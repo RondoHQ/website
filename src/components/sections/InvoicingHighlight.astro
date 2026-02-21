@@ -1,52 +1,59 @@
 ---
+import type { Lang } from '../../i18n/utils';
+import { getLangFromUrl } from '../../i18n/utils';
+import { t } from '../../i18n/translations';
+
+interface Props { lang?: Lang; }
+const lang = Astro.props.lang || getLangFromUrl(Astro.url);
+const prefix = lang === 'en' ? '/en' : '';
 ---
 
 <section id="facturatie" class="py-20 bg-gradient-to-b from-white to-slate-50">
   <div class="max-w-6xl mx-auto px-4">
     <div class="text-center mb-10">
       <h2 class="text-4xl md:text-5xl font-bold gradient-text mb-4">
-        Facturatie & Betalingen — volledig geregeld
+        {t('invoicing.heading', lang)}
       </h2>
       <p class="text-xl text-slate-600 max-w-3xl mx-auto">
-        Contributie en tuchtzaken: van factuur tot betaling, zonder handwerk.
+        {t('invoicing.subheading', lang)}
       </p>
     </div>
 
     <div class="grid grid-cols-1 lg:grid-cols-2 gap-8 items-start">
       <div class="rounded-2xl bg-white border border-slate-200 p-8 shadow-sm">
-        <h3 class="text-2xl font-semibold text-slate-900 mb-4">Contributie</h3>
+        <h3 class="text-2xl font-semibold text-slate-900 mb-4">{t('invoicing.dues.title', lang)}</h3>
         <ul class="space-y-3 text-slate-700">
-          <li><strong>Contributieregels per team en categorie</strong><br />Met automatische pro-rata en familiekorting.</li>
-          <li><strong>Bulk facturatie</strong><br />Factureer alle leden in één keer, met één klik.</li>
-          <li><strong>Termijnbetalingen</strong><br />Leden kiezen zelf voor betaling in 3 of 8 termijnen via een persoonlijke betaalpagina.</li>
-          <li><strong>Automatische herinneringen</strong><br />Na 14 en 21 dagen krijgen leden een herinnering. De tweede gaat ook naar de penningmeester.</li>
-          <li><strong>Gepersonaliseerde e-mails</strong><br />Aparte templates voor contributie en tuchtzaken, met voornaam en clubstijl.</li>
+          <li><strong>{t('invoicing.dues.rules', lang)}</strong><br />{t('invoicing.dues.rules.desc', lang)}</li>
+          <li><strong>{t('invoicing.dues.bulk', lang)}</strong><br />{t('invoicing.dues.bulk.desc', lang)}</li>
+          <li><strong>{t('invoicing.dues.installments', lang)}</strong><br />{t('invoicing.dues.installments.desc', lang)}</li>
+          <li><strong>{t('invoicing.dues.reminders', lang)}</strong><br />{t('invoicing.dues.reminders.desc', lang)}</li>
+          <li><strong>{t('invoicing.dues.emails', lang)}</strong><br />{t('invoicing.dues.emails.desc', lang)}</li>
         </ul>
       </div>
 
       <div class="rounded-2xl bg-white border border-slate-200 p-8 shadow-sm">
-        <h3 class="text-2xl font-semibold text-slate-900 mb-4">Tuchtzaken</h3>
+        <h3 class="text-2xl font-semibold text-slate-900 mb-4">{t('invoicing.disciplinary.title', lang)}</h3>
         <ul class="space-y-3 text-slate-700">
-          <li><strong>Factuur direct gekoppeld aan de tuchtzaak</strong><br />Geen dubbel werk, geen knip-en-plak.</li>
-          <li><strong>Administratiekosten automatisch toevoegen</strong><br />Instelbaar in je financiële instellingen.</li>
+          <li><strong>{t('invoicing.disciplinary.linked', lang)}</strong><br />{t('invoicing.disciplinary.linked.desc', lang)}</li>
+          <li><strong>{t('invoicing.disciplinary.admin', lang)}</strong><br />{t('invoicing.disciplinary.admin.desc', lang)}</li>
         </ul>
 
-        <h3 class="text-2xl font-semibold text-slate-900 mb-4 mt-8">Beide</h3>
+        <h3 class="text-2xl font-semibold text-slate-900 mb-4 mt-8">{t('invoicing.both.title', lang)}</h3>
         <ul class="space-y-3 text-slate-700">
-          <li><strong>Betalen via iDEAL (Wero)</strong><br />Veilig en vertrouwd, rechtstreeks via de bank.</li>
-          <li><strong>Automatische betaalstatus</strong><br />Bij betaling wordt de factuurstatus automatisch bijgewerkt.</li>
-          <li><strong>Professionele PDF-facturen</strong><br />Met QR-code, kortingsregels en duidelijke betaallink.</li>
-          <li><strong>Volledige controle</strong><br />Versturen, opnieuw versturen, markeren als betaald, PDF downloaden en historie inzien.</li>
+          <li><strong>{t('invoicing.both.ideal', lang)}</strong><br />{t('invoicing.both.ideal.desc', lang)}</li>
+          <li><strong>{t('invoicing.both.status', lang)}</strong><br />{t('invoicing.both.status.desc', lang)}</li>
+          <li><strong>{t('invoicing.both.pdf', lang)}</strong><br />{t('invoicing.both.pdf.desc', lang)}</li>
+          <li><strong>{t('invoicing.both.control', lang)}</strong><br />{t('invoicing.both.control.desc', lang)}</li>
         </ul>
       </div>
     </div>
 
     <div class="text-center mt-10">
       <p class="text-lg text-slate-600 mb-6">
-        Geen Nikki meer nodig. Minder handmatig werk, minder fouten en sneller duidelijkheid over openstaande bedragen.
+        {t('invoicing.noNikki', lang)}
       </p>
       <a href="#contact" class="inline-flex items-center justify-center rounded-xl bg-electric-cyan px-7 py-3 text-white font-semibold hover:opacity-90 transition-opacity">
-        Plan een demo
+        {t('invoicing.cta', lang)}
       </a>
     </div>
   </div>

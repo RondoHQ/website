@@ -1,8 +1,13 @@
 ---
 import Card from '../ui/Card.astro';
 import Button from '../ui/Button.astro';
+import type { Lang } from '../../i18n/utils';
+import { getLangFromUrl } from '../../i18n/utils';
+import { t } from '../../i18n/translations';
 
-// Pricing examples based on club size
+interface Props { lang?: Lang; }
+const lang = Astro.props.lang || getLangFromUrl(Astro.url);
+
 const examples = [
   { members: 250, price: 375 },
   { members: 500, price: 500 },
@@ -12,47 +17,34 @@ const examples = [
 
 <section id="prijzen" class="py-20 pricing-section">
   <div class="max-w-7xl mx-auto px-4">
-    <!-- Section Header -->
     <div class="text-center mb-12">
-      <h2 class="text-4xl md:text-5xl font-bold gradient-text mb-4">
-        Transparante prijzen
-      </h2>
-      <p class="text-xl text-slate-600">
-        Alles inbegrepen, geen verrassingen
-      </p>
+      <h2 class="text-4xl md:text-5xl font-bold gradient-text mb-4">{t('pricing.heading', lang)}</h2>
+      <p class="text-xl text-slate-600">{t('pricing.subheading', lang)}</p>
     </div>
 
-    <!-- Pricing Formula -->
     <div class="pricing-hero max-w-2xl mx-auto mb-12 p-8 md:p-10 rounded-2xl">
-      <h3 class="text-2xl font-semibold text-white mb-4 text-center">
-        Eén formule voor alles
-      </h3>
+      <h3 class="text-2xl font-semibold text-white mb-4 text-center">{t('pricing.formula', lang)}</h3>
       <div class="text-center space-y-2">
         <p class="text-3xl">
-          <span class="text-white font-bold">€250 per jaar</span>
-          <span class="text-cyan-100"> basis</span>
+          <span class="text-white font-bold">{t('pricing.base', lang)}</span>
+          <span class="text-cyan-100"> {t('pricing.baseSuffix', lang)}</span>
         </p>
         <p class="text-2xl text-cyan-100">
-          <span class="text-white font-bold">+ €0,50</span> per lid per jaar
+          <span class="text-white font-bold">{t('pricing.perMember', lang)}</span> {t('pricing.perMemberSuffix', lang)}
         </p>
       </div>
-      <p class="text-sm text-cyan-200 text-center mt-6">
-        Inclusief Rondo Club, Rondo Sync, hosting en support
-      </p>
-      <p class="text-xs text-cyan-300 text-center mt-2 opacity-70">
-        Jaarlijkse facturatie, ledental op peildatum 1 september. Prijzen excl. btw.
-      </p>
+      <p class="text-sm text-cyan-200 text-center mt-6">{t('pricing.includes', lang)}</p>
+      <p class="text-xs text-cyan-300 text-center mt-2 opacity-70">{t('pricing.note', lang)}</p>
     </div>
 
-    <!-- Pricing Examples -->
     <div class="grid grid-cols-1 md:grid-cols-3 gap-6 mb-12">
       {examples.map((example) => (
         <Card class="text-center">
           <p class="text-3xl font-bold text-slate-800 mb-2">
-            {example.members} leden
+            {example.members} {t('pricing.members', lang)}
           </p>
           <p class="text-2xl font-semibold text-electric-cyan mb-4">
-            €{example.price}/jaar
+            €{example.price}{t('pricing.perYear', lang)}
           </p>
           <p class="text-sm text-slate-500">
             €250 + ({example.members} × €0,50)
@@ -61,14 +53,9 @@ const examples = [
       ))}
     </div>
 
-    <!-- CTA -->
     <div class="text-center">
-      <Button variant="primary" href="#contact">
-        Neem contact op
-      </Button>
-      <p class="text-sm text-slate-500 mt-6">
-        Rondo is <a href="https://github.com/rondohq" target="_blank" rel="noopener" class="text-electric-cyan hover:text-slate-900 transition-colors underline underline-offset-2">open source</a> — je kunt alles ook zelf hosten. Je betaalt voor hosting, beheer en support. Geen vendor lock-in: je data is altijd van jou, en de software is vrij beschikbaar.
-      </p>
+      <Button variant="primary" href="#contact">{t('pricing.cta', lang)}</Button>
+      <p class="text-sm text-slate-500 mt-6" set:html={t('pricing.openSource', lang)} />
     </div>
   </div>
 </section>

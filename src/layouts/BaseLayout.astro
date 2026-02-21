@@ -1,21 +1,30 @@
 ---
 import '../styles/global.css';
 import { SEO } from 'astro-seo';
-import { siteMetadata } from '../data/siteMetadata';
+import { getLocalizedMetadata } from '../data/siteMetadata';
 import { organizationSchema, softwareApplicationSchema, faqSchema } from '../data/structuredData';
+import type { Lang } from '../i18n/utils';
+import { getLangFromUrl, getAlternatePaths } from '../i18n/utils';
+import { t } from '../i18n/translations';
 
 interface Props {
   title?: string;
   description?: string;
+  lang?: Lang;
 }
 
+const detectedLang = getLangFromUrl(Astro.url);
+const lang = Astro.props.lang || detectedLang;
+const meta = getLocalizedMetadata(lang);
 const {
-  title = siteMetadata.title,
-  description = siteMetadata.description
+  title = meta.title,
+  description = meta.description
 } = Astro.props;
+
+const paths = getAlternatePaths(Astro.url.pathname);
 ---
 <!DOCTYPE html>
-<html lang="nl">
+<html lang={lang}>
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -26,20 +35,23 @@ const {
   <meta name="theme-color" content="#FFFFFF">
   <link rel="preload" as="font" href="/fonts/montserrat-700-latin.woff2" type="font/woff2" crossorigin>
   <link rel="preconnect" href="https://plausible.io">
+  <link rel="alternate" hreflang="nl" href={`https://rondo.club${paths.nl}`} />
+  <link rel="alternate" hreflang="en" href={`https://rondo.club${paths.en}`} />
+  <link rel="alternate" hreflang="x-default" href={`https://rondo.club${paths.nl}`} />
   <SEO
     title={title}
     description={description}
-    canonical={siteMetadata.url}
+    canonical={`https://rondo.club${Astro.url.pathname}`}
     openGraph={{
       basic: {
         title: title,
         type: "website",
-        image: siteMetadata.ogImage,
-        url: siteMetadata.url
+        image: meta.ogImage,
+        url: meta.url
       },
       optional: {
-        locale: siteMetadata.locale,
-        siteName: siteMetadata.siteName
+        locale: meta.locale,
+        siteName: meta.siteName
       }
     }}
     twitter={{
@@ -71,7 +83,7 @@ const {
   <script is:inline>window.plausible = window.plausible || function() { (window.plausible.q = window.plausible.q || []).push(arguments) }</script>
 </head>
 <body class="min-h-screen bg-white text-slate-800 antialiased">
-  <a href="#main-content" class="skip-link">Spring naar hoofdinhoud</a>
+  <a href="#main-content" class="skip-link">{t('skip', lang)}</a>
   <slot />
 </body>
 </html>
