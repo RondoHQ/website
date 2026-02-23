@@ -78,11 +78,55 @@ const lang = Astro.props.lang || getLangFromUrl(Astro.url);
 </section>
 
 <style>
-  .case-icon-svg { width: 2rem; height: 2rem; color: #0891B2; }
-  .trust-bar { display: flex; flex-wrap: wrap; justify-content: center; gap: 1.5rem 2.5rem; margin-top: 3rem; padding: 1.5rem 2rem; background: rgba(8, 145, 178, 0.04); border: 1px solid rgba(8, 145, 178, 0.12); border-radius: 0.75rem; }
-  .trust-item { display: flex; align-items: center; gap: 0.5rem; color: #334155; font-size: 0.9375rem; font-weight: 500; }
-  .trust-icon { width: 1.25rem; height: 1.25rem; color: #0891B2; flex-shrink: 0; }
-  .trust-link { text-align: center; margin-top: 1rem; font-size: 0.875rem; color: #64748B; }
-  .trust-link :global(a) { color: #0E7490; text-decoration: underline; text-underline-offset: 2px; transition: color 0.2s ease-in-out; }
-  .trust-link :global(a:hover) { color: #1E293B; }
+  .case-icon-svg {
+    width: 2rem;
+    height: 2rem;
+    color: #29A09C;
+  }
+
+  .trust-bar {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 1.5rem 2.5rem;
+    margin-top: 3rem;
+    padding: 1.5rem 2rem;
+    background: rgba(8, 145, 178, 0.04);
+    border: 1px solid rgba(8, 145, 178, 0.12);
+    border-radius: 0.75rem;
+  }
+
+  .trust-item {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    color: #334155;
+    font-size: 0.9375rem;
+    font-weight: 500;
+  }
+
+  .trust-icon {
+    width: 1.25rem;
+    height: 1.25rem;
+    color: #29A09C;
+    flex-shrink: 0;
+  }
+
+  .trust-link {
+    text-align: center;
+    margin-top: 1rem;
+    font-size: 0.875rem;
+    color: #64748B;
+  }
+
+  .trust-link a {
+    color: #00908B;
+    text-decoration: underline;
+    text-underline-offset: 2px;
+    transition: color 0.2s ease-in-out;
+  }
+
+  .trust-link a:hover {
+    color: #001B60;
+  }
 </style>

@@ -152,20 +152,131 @@ const lang = Astro.props.lang || getLangFromUrl(Astro.url);
 </script>
 
 <style>
-  .tab-bar-wrapper { overflow-x: auto; -webkit-overflow-scrolling: touch; margin-bottom: 2rem; }
-  .tab-bar { display: flex; gap: 0.5rem; padding-bottom: 2px; min-width: min-content; }
-  .tab-button { padding: 0.5rem 1rem; border-radius: 9999px; font-weight: 600; font-size: 0.875rem; white-space: nowrap; border: none; cursor: pointer; transition: all 0.2s; background: #F1F5F9; color: #475569; }
-  .tab-button:hover { background: #E2E8F0; }
-  .tab-button.active { background: #0E7490; color: white; }
-  .screenshot-grid { display: grid; grid-template-columns: 1fr; gap: 1.5rem; }
-  @media (min-width: 768px) { .screenshot-grid { grid-template-columns: repeat(2, 1fr); } }
-  .screenshot-item { border: none; padding: 0; border-radius: 1rem; overflow: hidden; cursor: zoom-in; box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1); transition: transform 0.2s ease, box-shadow 0.2s ease; background: white; display: block; width: 100%; }
-  .screenshot-item:hover { transform: scale(1.02); box-shadow: 0 8px 24px rgba(0, 0, 0, 0.15); }
-  .screenshot-item img { width: 100%; height: auto; display: block; border-radius: 1rem 1rem 0 0; }
-  .screenshot-caption { font-size: 0.875rem; color: #64748B; margin-top: 0.5rem; margin-bottom: 0.5rem; text-align: center; padding: 0 1rem; }
-  .fg-lightbox { display: none; position: fixed; inset: 0; z-index: 100; background: rgba(0, 0, 0, 0.85); backdrop-filter: blur(8px); -webkit-backdrop-filter: blur(8px); align-items: center; justify-content: center; padding: 2rem; cursor: zoom-out; }
-  .fg-lightbox.active { display: flex; }
-  .fg-lightbox-img { max-width: 90vw; max-height: 90vh; border-radius: 0.75rem; box-shadow: 0 25px 80px rgba(0, 0, 0, 0.5); }
-  .fg-lightbox-close { position: absolute; top: 1.5rem; right: 1.5rem; background: rgba(255, 255, 255, 0.2); border: 1px solid rgba(255, 255, 255, 0.3); color: white; font-size: 1.5rem; width: 2.5rem; height: 2.5rem; border-radius: 50%; cursor: pointer; display: flex; align-items: center; justify-content: center; transition: background 0.2s; }
-  .fg-lightbox-close:hover { background: rgba(255, 255, 255, 0.4); }
+  .tab-bar-wrapper {
+    overflow-x: auto;
+    -webkit-overflow-scrolling: touch;
+    margin-bottom: 2rem;
+  }
+
+  .tab-bar {
+    display: flex;
+    gap: 0.5rem;
+    padding-bottom: 2px;
+    min-width: min-content;
+  }
+
+  .tab-button {
+    padding: 0.5rem 1rem;
+    border-radius: 9999px;
+    font-weight: 600;
+    font-size: 0.875rem;
+    white-space: nowrap;
+    border: none;
+    cursor: pointer;
+    transition: all 0.2s;
+    background: #EDF4F8;
+    color: #475569;
+  }
+
+  .tab-button:hover {
+    background: #D8E3EE;
+  }
+
+  .tab-button.active {
+    background: #00908B;
+    color: white;
+  }
+
+  .screenshot-grid {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 1.5rem;
+  }
+
+  @media (min-width: 768px) {
+    .screenshot-grid {
+      grid-template-columns: repeat(2, 1fr);
+    }
+  }
+
+  .screenshot-item {
+    border: none;
+    padding: 0;
+    border-radius: 1rem;
+    overflow: hidden;
+    cursor: zoom-in;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+    transition: transform 0.2s ease, box-shadow 0.2s ease;
+    background: white;
+    display: block;
+    width: 100%;
+  }
+
+  .screenshot-item:hover {
+    transform: scale(1.02);
+    box-shadow: 0 8px 24px rgba(0, 0, 0, 0.15);
+  }
+
+  .screenshot-item img {
+    width: 100%;
+    height: auto;
+    display: block;
+    border-radius: 1rem 1rem 0 0;
+  }
+
+  .screenshot-caption {
+    font-size: 0.875rem;
+    color: #64748B;
+    margin-top: 0.5rem;
+    margin-bottom: 0.5rem;
+    text-align: center;
+    padding: 0 1rem;
+  }
+
+  .fg-lightbox {
+    display: none;
+    position: fixed;
+    inset: 0;
+    z-index: 100;
+    background: rgba(0, 0, 0, 0.85);
+    backdrop-filter: blur(8px);
+    -webkit-backdrop-filter: blur(8px);
+    align-items: center;
+    justify-content: center;
+    padding: 2rem;
+    cursor: zoom-out;
+  }
+
+  .fg-lightbox.active {
+    display: flex;
+  }
+
+  .fg-lightbox-img {
+    max-width: 90vw;
+    max-height: 90vh;
+    border-radius: 0.75rem;
+    box-shadow: 0 25px 80px rgba(0, 0, 0, 0.5);
+  }
+
+  .fg-lightbox-close {
+    position: absolute;
+    top: 1.5rem;
+    right: 1.5rem;
+    background: rgba(255, 255, 255, 0.2);
+    border: 1px solid rgba(255, 255, 255, 0.3);
+    color: white;
+    font-size: 1.5rem;
+    width: 2.5rem;
+    height: 2.5rem;
+    border-radius: 50%;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: background 0.2s;
+  }
+
+  .fg-lightbox-close:hover {
+    background: rgba(255, 255, 255, 0.4);
+  }
 </style>

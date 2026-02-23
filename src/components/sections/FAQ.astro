@@ -38,14 +38,65 @@ const faqs = [
 </section>
 
 <style>
-  .faq-section { background: linear-gradient(180deg, #FFFFFF 0%, #F0FDFA 50%, #FFFFFF 100%); }
-  .faq-list { display: flex; flex-direction: column; gap: 1rem; }
-  .faq-item { background: rgba(0, 0, 0, 0.01); border: 1px solid rgba(0, 0, 0, 0.08); border-radius: 0.75rem; overflow: hidden; }
-  .faq-question { padding: 1.25rem 1.5rem; color: #1E293B; font-weight: 700; font-size: 1.125rem; cursor: pointer; list-style: none; display: flex; align-items: center; justify-content: space-between; gap: 1rem; }
-  .faq-question::-webkit-details-marker { display: none; }
-  .faq-question::after { content: "+"; font-size: 1.5rem; color: #0E7490; flex-shrink: 0; transition: transform 0.2s ease; }
-  .faq-item[open] .faq-question::after { content: "-"; }
-  .faq-answer { padding: 0 1.5rem 1.25rem; color: #475569; line-height: 1.6; }
-  .faq-answer :global(a) { color: #0E7490; text-decoration: underline; text-underline-offset: 2px; }
-  .faq-answer :global(a:hover) { color: #1E293B; }
+  .faq-section {
+    background: linear-gradient(180deg, #FFFFFF 0%, #ECF8F6 50%, #FFFFFF 100%);
+  }
+
+  .faq-list {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+  }
+
+  .faq-item {
+    background: rgba(0, 0, 0, 0.01);
+    border: 1px solid rgba(0, 0, 0, 0.08);
+    border-radius: 0.75rem;
+    overflow: hidden;
+  }
+
+  .faq-question {
+    padding: 1.25rem 1.5rem;
+    color: #001B60;
+    font-weight: 700;
+    font-size: 1.125rem;
+    cursor: pointer;
+    list-style: none;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 1rem;
+  }
+
+  .faq-question::-webkit-details-marker {
+    display: none;
+  }
+
+  .faq-question::after {
+    content: "+";
+    font-size: 1.5rem;
+    color: #00908B;
+    flex-shrink: 0;
+    transition: transform 0.2s ease;
+  }
+
+  .faq-item[open] .faq-question::after {
+    content: "-";
+  }
+
+  .faq-answer {
+    padding: 0 1.5rem 1.25rem;
+    color: #475569;
+    line-height: 1.6;
+  }
+
+  .faq-answer :global(a) {
+    color: #00908B;
+    text-decoration: underline;
+    text-underline-offset: 2px;
+  }
+
+  .faq-answer :global(a:hover) {
+    color: #001B60;
+  }
 </style>

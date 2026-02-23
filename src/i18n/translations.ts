@@ -140,7 +140,7 @@ const translations = {
     nl: 'Geen Nikki meer nodig. Minder handmatig werk, minder fouten en sneller duidelijkheid over openstaande bedragen.',
     en: 'No more need for Nikki. Less manual work, fewer errors and faster clarity on outstanding amounts.',
   },
-  'invoicing.cta': { nl: 'Plan een demo', en: 'Schedule a demo' },
+  'invoicing.cta': { nl: 'Bekijk de demo', en: 'Look at the demo' },
 
   // ─── FeatureGallery ───
   'gallery.heading': { nl: 'Rondo in beeld', en: 'Rondo in action' },

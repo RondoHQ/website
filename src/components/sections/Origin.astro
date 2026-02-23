@@ -36,22 +36,106 @@ const lang = Astro.props.lang || getLangFromUrl(Astro.url);
 </section>
 
 <style>
-  .origin-section { padding: 2.5rem 1rem 5rem; background: linear-gradient(180deg, #FFFFFF 0%, #F0FDFA 50%, #FFFFFF 100%); }
-  .origin-container { max-width: 56rem; margin: 0 auto; }
-  .origin-content { display: flex; align-items: center; gap: 3rem; }
-  .origin-text { flex: 1; }
-  .origin-heading { font-family: 'Montserrat', sans-serif; font-weight: 700; font-size: 2rem; margin-bottom: 1.5rem; }
-  .origin-body p { color: #475569; font-size: 1.125rem; line-height: 1.8; margin-bottom: 1rem; }
-  .origin-body :global(a) { color: #0E7490; text-decoration: underline; text-underline-offset: 2px; transition: color 0.2s ease-in-out; }
-  .origin-body :global(a:hover) { color: #1E293B; }
-  .origin-sidebar { flex-shrink: 0; display: flex; flex-direction: column; align-items: center; gap: 1.5rem; }
-  .origin-photo { display: flex; flex-direction: column; align-items: center; gap: 0.75rem; }
-  .photo { width: 10rem; height: 10rem; border-radius: 50%; object-fit: cover; border: 3px solid transparent; background-image: linear-gradient(white, white), linear-gradient(135deg, #0891B2, #2563EB); background-origin: border-box; background-clip: content-box, border-box; }
-  .photo-name { color: #1E293B; font-family: 'Montserrat', sans-serif; font-weight: 700; font-size: 0.9375rem; }
-  .photo-role { color: #64748B; font-size: 0.8125rem; }
-  .origin-club { display: flex; flex-direction: column; align-items: center; gap: 0.5rem; }
-  .club-label { color: #64748B; font-size: 0.8125rem; }
-  .club-logo { width: 6rem; height: auto; }
+  .origin-section {
+    padding: 2.5rem 1rem 5rem;
+    background: linear-gradient(180deg, #FFFFFF 0%, #ECF8F6 50%, #FFFFFF 100%);
+  }
+
+  .origin-container {
+    max-width: 56rem;
+    margin: 0 auto;
+  }
+
+  .origin-content {
+    display: flex;
+    align-items: center;
+    gap: 3rem;
+  }
+
+  .origin-text {
+    flex: 1;
+  }
+
+  .origin-heading {
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 700;
+    font-size: 2rem;
+    margin-bottom: 1.5rem;
+  }
+
+  .origin-body p {
+    color: #475569;
+    font-size: 1.125rem;
+    line-height: 1.8;
+    margin-bottom: 1rem;
+  }
+
+  .origin-body a {
+    color: #00908B;
+    text-decoration: underline;
+    text-underline-offset: 2px;
+    transition: color 0.2s ease-in-out;
+  }
+
+  .origin-body a:hover {
+    color: #001B60;
+  }
+
+  .origin-sidebar {
+    flex-shrink: 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 1.5rem;
+  }
+
+  .origin-photo {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 0.75rem;
+  }
+
+  .photo {
+    width: 10rem;
+    height: 10rem;
+    border-radius: 50%;
+    object-fit: cover;
+    border: 3px solid transparent;
+    background-image: linear-gradient(white, white), linear-gradient(135deg, #29A09C, #602D91);
+    background-origin: border-box;
+    background-clip: content-box, border-box;
+  }
+
+  .photo-name {
+    color: #001B60;
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 700;
+    font-size: 0.9375rem;
+  }
+
+  .photo-role {
+    color: #64748B;
+    font-size: 0.8125rem;
+  }
+
+  .origin-club {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 0.5rem;
+  }
+
+  .club-label {
+    color: #64748B;
+    font-size: 0.8125rem;
+  }
+
+  .club-logo {
+    width: 6rem;
+    height: auto;
+  }
+
   @media (max-width: 768px) {
     .origin-content { flex-direction: column; gap: 2rem; }
     .origin-sidebar { flex-direction: row; gap: 2rem; }

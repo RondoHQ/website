@@ -5,10 +5,9 @@ import { t } from '../../i18n/translations';
 
 interface Props { lang?: Lang; }
 const lang = Astro.props.lang || getLangFromUrl(Astro.url);
-const prefix = lang === 'en' ? '/en' : '';
 ---
 
-<section id="facturatie" class="py-20 bg-gradient-to-b from-white to-slate-50">
+<section id="facturatie" class="invoicing-section py-20 bg-gradient-to-b from-white to-slate-50">
   <div class="max-w-6xl mx-auto px-4">
     <div class="text-center mb-10">
       <h2 class="text-4xl md:text-5xl font-bold gradient-text mb-4">
@@ -52,9 +51,39 @@ const prefix = lang === 'en' ? '/en' : '';
       <p class="text-lg text-slate-600 mb-6">
         {t('invoicing.noNikki', lang)}
       </p>
-      <a href="#contact" class="inline-flex items-center justify-center rounded-xl bg-electric-cyan px-7 py-3 text-white font-semibold hover:opacity-90 transition-opacity">
+      <a href="https://demo.rondo.club" class="invoicing-demo-btn inline-flex items-center justify-center rounded-xl px-7 py-3 text-white font-semibold transition-all duration-200">
         {t('invoicing.cta', lang)}
       </a>
+      <p class="invoicing-demo-hint mt-3 text-sm text-slate-500" set:html={t('hero.demo.hint', lang)} />
     </div>
   </div>
 </section>
+
+<style>
+  .invoicing-section .invoicing-demo-btn {
+    background: linear-gradient(135deg, #29A09C, #602D91);
+    box-shadow: 0 10px 24px rgba(0, 27, 96, 0.18), 0 4px 12px rgba(96, 45, 145, 0.16);
+  }
+
+  .invoicing-section .invoicing-demo-btn:hover {
+    background: linear-gradient(135deg, #00908B, #602D91);
+    transform: translateY(-2px);
+    box-shadow: 0 14px 28px rgba(0, 27, 96, 0.2), 0 6px 14px rgba(96, 45, 145, 0.2);
+  }
+
+  .invoicing-section .invoicing-demo-hint {
+    color: #64748B;
+  }
+
+  .invoicing-section .invoicing-demo-hint :global(strong) {
+    display: inline-block;
+    margin: 0 0.2rem;
+    padding: 0.12rem 0.5rem;
+    border-radius: 9999px;
+    border: 1px solid #D8E3EE;
+    background: #EDF4F8;
+    color: #001B60;
+    font-weight: 700;
+    letter-spacing: 0.01em;
+  }
+</style>

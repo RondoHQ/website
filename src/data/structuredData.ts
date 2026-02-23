@@ -5,7 +5,7 @@ export const organizationSchema: WithContext<Organization> = {
   "@type": "Organization",
   "name": "Rondo",
   "url": "https://rondo.club",
-  "logo": "https://rondo.club/rondo-logo.png",
+  "logo": "https://rondo.club/rondo-logo.svg",
   "description": "Ledenadministratie voor sportverenigingen met automatische Sportlink synchronisatie"
 };
 

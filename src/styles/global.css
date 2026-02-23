@@ -1,11 +1,11 @@
 @import "tailwindcss";
 
 @theme {
-  --color-electric-cyan: #0E7490;
-  --color-electric-cyan-light: #22D3EE;
-  --color-bright-cobalt: #2563EB;
-  --color-deep-midnight: #1E3A8A;
-  --color-obsidian: #0F172A;
+  --color-electric-cyan: #00908B;
+  --color-electric-cyan-light: #6ABAB8;
+  --color-bright-cobalt: #602D91;
+  --color-deep-midnight: #001B60;
+  --color-obsidian: #001B60;
 }
 
 html {
@@ -22,7 +22,7 @@ h1, h2, h3, h4, h5, h6 {
 
 h3 {
   font-size: 1.5rem;
-  background: linear-gradient(135deg, #06B6D4 0%, #1D4ED8 100%);
+  background: linear-gradient(135deg, #00908B 0%, #602D91 100%);
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
   background-clip: text;
@@ -36,7 +36,7 @@ h3 {
 }
 
 .gradient-text {
-  background: linear-gradient(135deg, #06B6D4 0%, #1D4ED8 100%);
+  background: linear-gradient(135deg, #00908B 0%, #602D91 100%);
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
   background-clip: text;

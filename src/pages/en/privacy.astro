@@ -133,21 +133,21 @@ const lang = 'en' as const;
 </BaseLayout>
 
 <style>
-  .privacy-page { padding: 6rem 1rem 4rem; }
-  .content { max-width: 48rem; margin: 0 auto; line-height: 1.75; }
-  h1 { font-family: 'Montserrat', sans-serif; font-weight: 700; font-size: 2.5rem; margin-bottom: 0.5rem; }
+  .privacy-page { padding: 6rem 1rem 4rem; background: linear-gradient(180deg, #FFFFFF 0%, #ECF8F6 50%, #FFFFFF 100%); }
+  .content { max-width: 48rem; margin: 0 auto; line-height: 1.75; background: #FFFFFF; border: 1px solid #D8E3EE; border-radius: 1rem; padding: 2rem; }
+  h1 { font-family: 'Montserrat', sans-serif; font-weight: 700; font-size: 2.5rem; margin-bottom: 0.5rem; background: linear-gradient(135deg, #00908B 0%, #602D91 100%); -webkit-background-clip: text; -webkit-text-fill-color: transparent; background-clip: text; }
   .last-updated { color: #64748B; font-size: 0.875rem; margin-bottom: 3rem; }
-  h2 { font-family: 'Montserrat', sans-serif; font-weight: 700; font-size: 1.5rem; margin-top: 2.5rem; margin-bottom: 1rem; color: #0E7490; }
-  h3 { font-family: 'Montserrat', sans-serif; font-weight: 700; font-size: 1.125rem; margin-top: 1.5rem; margin-bottom: 0.75rem; }
+  h2 { font-family: 'Montserrat', sans-serif; font-weight: 700; font-size: 1.5rem; margin-top: 2.5rem; margin-bottom: 1rem; background: linear-gradient(135deg, #00908B 0%, #602D91 100%); -webkit-background-clip: text; -webkit-text-fill-color: transparent; background-clip: text; }
+  h3 { font-family: 'Montserrat', sans-serif; font-weight: 700; font-size: 1.125rem; margin-top: 1.5rem; margin-bottom: 0.75rem; color: #001B60; background: none; -webkit-text-fill-color: initial; }
   p { margin-bottom: 1rem; color: #475569; }
-  address { font-style: normal; color: #475569; margin-bottom: 1rem; padding: 1rem 1.5rem; background: #F8FAFC; border-radius: 0.5rem; border: 1px solid #E2E8F0; }
+  address { font-style: normal; color: #475569; margin-bottom: 1rem; padding: 1rem 1.5rem; background: #F2F7FA; border-radius: 0.5rem; border: 1px solid #D8E3EE; }
   ul { margin-bottom: 1rem; padding-left: 1.5rem; color: #475569; list-style-type: disc; }
   li { margin-bottom: 0.5rem; }
-  li::marker { color: #0E7490; }
-  a { color: #0E7490; text-decoration: underline; text-underline-offset: 2px; transition: color 0.2s ease-in-out; }
-  a:hover { color: #1E293B; }
+  li::marker { color: #00908B; }
+  a { color: #00908B; text-decoration: underline; text-underline-offset: 2px; transition: color 0.2s ease-in-out; }
+  a:hover { color: #001B60; }
   table { width: 100%; border-collapse: collapse; margin-bottom: 1rem; font-size: 0.9375rem; }
-  th { text-align: left; padding: 0.75rem 1rem; background: #F8FAFC; color: #1E293B; font-weight: 700; border-bottom: 1px solid #E2E8F0; }
-  td { padding: 0.75rem 1rem; color: #475569; border-bottom: 1px solid #E2E8F0; }
+  th { text-align: left; padding: 0.75rem 1rem; background: #F2F7FA; color: #001B60; font-weight: 700; border-bottom: 1px solid #D8E3EE; }
+  td { padding: 0.75rem 1rem; color: #475569; border-bottom: 1px solid #D8E3EE; }
   @media (max-width: 640px) { h1 { font-size: 2rem; } table { font-size: 0.8125rem; } th, td { padding: 0.5rem; } }
 </style>

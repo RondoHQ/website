@@ -16,6 +16,12 @@
 /rondo-logo*.webp
   Cache-Control: public, max-age=2592000
 
+/rondo-logo.svg
+  Cache-Control: public, max-age=2592000
+
+/rondo-logo.webp
+  Cache-Control: public, max-age=2592000
+
 /og-image.png
   Cache-Control: public, max-age=2592000
 

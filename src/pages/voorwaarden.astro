@@ -99,6 +99,7 @@ import Footer from '../components/sections/Footer.astro';
       <p>
         Op deze voorwaarden en de Overeenkomst is Nederlands recht van toepassing. Geschillen worden voorgelegd aan de bevoegde rechter in het arrondissement Gelderland.
       </p>
+
     </div>
   </main>
   <Footer />
@@ -107,12 +108,17 @@ import Footer from '../components/sections/Footer.astro';
 <style>
   .terms-page {
     padding: 6rem 1rem 4rem;
+    background: linear-gradient(180deg, #FFFFFF 0%, #ECF8F6 50%, #FFFFFF 100%);
   }
 
   .content {
     max-width: 48rem;
     margin: 0 auto;
     line-height: 1.75;
+    background: #FFFFFF;
+    border: 1px solid #D8E3EE;
+    border-radius: 1rem;
+    padding: 2rem;
   }
 
   h1 {
@@ -120,6 +126,10 @@ import Footer from '../components/sections/Footer.astro';
     font-weight: 700;
     font-size: 2.5rem;
     margin-bottom: 0.5rem;
+    background: linear-gradient(135deg, #00908B 0%, #602D91 100%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
   }
 
   .last-updated {
@@ -134,7 +144,10 @@ import Footer from '../components/sections/Footer.astro';
     font-size: 1.5rem;
     margin-top: 2.5rem;
     margin-bottom: 1rem;
-    color: #0E7490;
+    background: linear-gradient(135deg, #00908B 0%, #602D91 100%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
   }
 
   p {
@@ -154,18 +167,18 @@ import Footer from '../components/sections/Footer.astro';
   }
 
   li::marker {
-    color: #0E7490;
+    color: #00908B;
   }
 
   a {
-    color: #0E7490;
+    color: #00908B;
     text-decoration: underline;
     text-underline-offset: 2px;
     transition: color 0.2s ease-in-out;
   }
 
   a:hover {
-    color: #1E293B;
+    color: #001B60;
   }
 
   @media (max-width: 640px) {
@@ -173,4 +186,5 @@ import Footer from '../components/sections/Footer.astro';
       font-size: 2rem;
     }
   }
+
 </style>
