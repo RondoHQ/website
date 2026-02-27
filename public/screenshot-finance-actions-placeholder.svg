@@ -1,0 +1,16 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1600" height="900" viewBox="0 0 1600 900" fill="none">
+  <rect width="1600" height="900" fill="#001B60"/>
+  <rect x="70" y="70" width="1460" height="760" rx="24" fill="#FFFFFF"/>
+  <rect x="120" y="130" width="1360" height="90" rx="14" fill="#EDF4F8"/>
+  <rect x="120" y="260" width="980" height="500" rx="14" fill="#F8FBFF" stroke="#D8E3EE" stroke-width="2"/>
+  <rect x="1130" y="260" width="350" height="240" rx="14" fill="#F8FBFF" stroke="#D8E3EE" stroke-width="2"/>
+  <rect x="1130" y="520" width="350" height="240" rx="14" fill="#F8FBFF" stroke="#D8E3EE" stroke-width="2"/>
+  <rect x="160" y="320" width="860" height="44" rx="10" fill="#E6ECFF"/>
+  <rect x="160" y="384" width="860" height="44" rx="10" fill="#DDF3F2"/>
+  <rect x="160" y="448" width="860" height="44" rx="10" fill="#F2E4FA"/>
+  <rect x="160" y="512" width="860" height="44" rx="10" fill="#E6ECFF"/>
+  <rect x="160" y="576" width="860" height="44" rx="10" fill="#DDF3F2"/>
+  <rect x="160" y="640" width="860" height="44" rx="10" fill="#F2E4FA"/>
+  <text x="800" y="430" text-anchor="middle" fill="#001B60" font-family="Montserrat, Arial, sans-serif" font-size="42" font-weight="700">Finance Actions Screenshot Placeholder</text>
+  <text x="800" y="480" text-anchor="middle" fill="#334155" font-family="Montserrat, Arial, sans-serif" font-size="26">Replace with outstanding invoices and follow-up actions screen</text>
+</svg>

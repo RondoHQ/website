@@ -1,0 +1,15 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1600" height="900" viewBox="0 0 1600 900" fill="none">
+  <rect width="1600" height="900" fill="#001B60"/>
+  <rect x="90" y="90" width="1420" height="720" rx="32" fill="#F3ECFA"/>
+  <rect x="560" y="130" width="480" height="640" rx="46" fill="#111827"/>
+  <rect x="590" y="190" width="420" height="520" rx="30" fill="#FFFFFF"/>
+  <rect x="640" y="250" width="320" height="180" rx="20" fill="#001B60"/>
+  <path d="M650 285C720 270 760 350 840 330C905 315 920 350 955 365" stroke="#9C298C" stroke-width="20" stroke-linecap="round"/>
+  <path d="M650 380C710 340 820 390 910 355" stroke="#F7941D" stroke-width="20" stroke-linecap="round"/>
+  <circle cx="760" cy="332" r="18" fill="#73C167"/>
+  <rect x="640" y="460" width="320" height="34" rx="10" fill="#EDF4F8"/>
+  <rect x="640" y="510" width="220" height="34" rx="10" fill="#EDF4F8"/>
+  <rect x="640" y="560" width="280" height="34" rx="10" fill="#EDF4F8"/>
+  <text x="800" y="735" text-anchor="middle" fill="#001B60" font-family="Montserrat, Arial, sans-serif" font-size="34" font-weight="700">Google Wallet Pass Placeholder</text>
+  <text x="800" y="780" text-anchor="middle" fill="#334155" font-family="Montserrat, Arial, sans-serif" font-size="24">Replace with real Google Wallet membership pass screenshot</text>
+</svg>

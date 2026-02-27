@@ -1,0 +1,37 @@
+---
+import RolePage from '../../components/pages/RolePage.astro';
+---
+
+<RolePage
+  lang="en"
+  title="For communication — Rondo"
+  description="Rondo for communication: current audience lists through Laposta sync."
+  kicker="For your role"
+  roleTitle="Communication"
+  intro="Send newsletters and audience emails based on current member data. Laposta sync means less manual list management and fewer mistakes."
+  demoLabel="Look at the demo"
+  contactLabel="Contact us"
+  contactHref="/en/#contact"
+  screenshotSrc="/screenshot-teams-overzicht.webp"
+  screenshotAlt="Teams overview in Rondo Club"
+  screenshotWidth={1920}
+  screenshotHeight={1080}
+  whatHeading="What this solves"
+  bulletPoints={[
+    'Laposta mailing lists stay aligned with member changes.',
+    'Less export/import and lower risk of outdated addresses.',
+    'Faster targeting of messages to teams and groups.',
+  ]}
+  cards={[
+    { title: 'Current recipients', text: 'New members are added to the right lists and cancellations are cleaned up.' },
+    { title: 'Better segmentation', text: 'Connect communication directly to teams and relevant groups.' },
+    { title: 'Less operational noise', text: 'Fewer post-send corrections through better data consistency.' },
+  ]}
+  otherHeading="Other paths"
+  otherPrefix="Also relevant:"
+  otherAnd="and"
+  otherLinks={[
+    { href: '/en/for-secretary', label: 'For secretaries' },
+    { href: '/en/for-member-administration', label: 'For member administration' },
+  ]}
+/>

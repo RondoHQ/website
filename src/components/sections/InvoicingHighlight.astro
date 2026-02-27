@@ -39,6 +39,7 @@ const lang = Astro.props.lang || getLangFromUrl(Astro.url);
 
         <h3 class="text-2xl font-semibold text-slate-900 mb-4 mt-8">{t('invoicing.both.title', lang)}</h3>
         <ul class="space-y-3 text-slate-700">
+          <li><strong>{t('invoicing.both.dashboard', lang)}</strong><br />{t('invoicing.both.dashboard.desc', lang)}</li>
           <li><strong>{t('invoicing.both.ideal', lang)}</strong><br />{t('invoicing.both.ideal.desc', lang)}</li>
           <li><strong>{t('invoicing.both.status', lang)}</strong><br />{t('invoicing.both.status.desc', lang)}</li>
           <li><strong>{t('invoicing.both.pdf', lang)}</strong><br />{t('invoicing.both.pdf.desc', lang)}</li>

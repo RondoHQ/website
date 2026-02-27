@@ -1,0 +1,255 @@
+---
+import BaseLayout from '../../layouts/BaseLayout.astro';
+import Header from '../layout/Header.astro';
+import Footer from '../sections/Footer.astro';
+import type { Lang } from '../../i18n/utils';
+
+interface RoleCard {
+  title: string;
+  text: string;
+}
+
+interface RoleLink {
+  href: string;
+  label: string;
+}
+
+interface Props {
+  lang: Lang;
+  title: string;
+  description: string;
+  kicker: string;
+  roleTitle: string;
+  intro: string;
+  demoLabel: string;
+  contactLabel: string;
+  contactHref: string;
+  screenshotSrc: string;
+  screenshotAlt: string;
+  screenshotWidth: number;
+  screenshotHeight: number;
+  whatHeading: string;
+  bulletPoints: string[];
+  cards: RoleCard[];
+  otherHeading: string;
+  otherPrefix: string;
+  otherAnd: string;
+  otherLinks: [RoleLink, RoleLink];
+  hasExtra?: boolean;
+}
+
+const {
+  lang,
+  title,
+  description,
+  kicker,
+  roleTitle,
+  intro,
+  demoLabel,
+  contactLabel,
+  contactHref,
+  screenshotSrc,
+  screenshotAlt,
+  screenshotWidth,
+  screenshotHeight,
+  whatHeading,
+  bulletPoints,
+  cards,
+  otherHeading,
+  otherPrefix,
+  otherAnd,
+  otherLinks,
+  hasExtra = false,
+} = Astro.props;
+
+const [firstLink, secondLink] = otherLinks;
+---
+
+<BaseLayout lang={lang} title={title} description={description}>
+  <Header lang={lang} />
+  <main id="main-content" class="role-page">
+    <section class="role-hero">
+      <div class="role-container role-grid">
+        <div>
+          <p class="role-kicker">{kicker}</p>
+          <h1 class="gradient-text role-title">{roleTitle}</h1>
+          <p class="role-intro">{intro}</p>
+          <div class="role-actions">
+            <a href="https://demo.rondo.club" class="role-btn role-btn-primary">{demoLabel}</a>
+            <a href={contactHref} class="role-btn role-btn-outline">{contactLabel}</a>
+          </div>
+        </div>
+        <div class="role-shot">
+          <img src={screenshotSrc} alt={screenshotAlt} width={screenshotWidth} height={screenshotHeight} loading="eager" />
+        </div>
+      </div>
+    </section>
+
+    <section class="role-section">
+      <div class="role-container">
+        <h2 class="gradient-text role-heading">{whatHeading}</h2>
+        <ul class="role-list">
+          {bulletPoints.map(point => <li>{point}</li>)}
+        </ul>
+      </div>
+    </section>
+
+    <section class="role-section">
+      <div class="role-container role-cards">
+        {cards.map(card => (
+          <article class="role-card">
+            <h3>{card.title}</h3>
+            <p>{card.text}</p>
+          </article>
+        ))}
+      </div>
+    </section>
+
+    {hasExtra && (
+      <section class="role-section role-extra">
+        <slot />
+      </section>
+    )}
+
+    <section class="role-section">
+      <div class="role-container">
+        <h2 class="gradient-text role-heading">{otherHeading}</h2>
+        <p class="role-links">
+          {otherPrefix}{' '}
+          <a href={firstLink.href}>{firstLink.label}</a>{' '}
+          {otherAnd}{' '}
+          <a href={secondLink.href}>{secondLink.label}</a>.
+        </p>
+      </div>
+    </section>
+  </main>
+  <Footer lang={lang} />
+</BaseLayout>
+
+<style>
+  .role-page {
+    padding: 4.5rem 1rem 4rem;
+    background: linear-gradient(180deg, #FFFFFF 0%, #ECF8F6 45%, #FFFFFF 100%);
+  }
+
+  .role-container {
+    max-width: 72rem;
+    margin: 0 auto;
+  }
+
+  .role-grid {
+    display: grid;
+    gap: 2rem;
+    align-items: center;
+  }
+
+  @media (min-width: 960px) {
+    .role-grid { grid-template-columns: 1fr 1fr; }
+  }
+
+  .role-kicker {
+    font-weight: 700;
+    color: #00908B;
+    margin-bottom: 0.4rem;
+  }
+
+  .role-title {
+    font-size: clamp(2rem, 5vw, 3.5rem);
+    margin-bottom: 0.75rem;
+    line-height: 1.1;
+  }
+
+  .role-intro {
+    font-size: 1.15rem;
+    color: #475569;
+    max-width: 40rem;
+  }
+
+  .role-actions {
+    margin-top: 1.25rem;
+    display: flex;
+    gap: 0.75rem;
+    flex-wrap: wrap;
+  }
+
+  .role-btn {
+    display: inline-flex;
+    padding: 0.7rem 1rem;
+    border-radius: 0.7rem;
+    font-weight: 700;
+    text-decoration: none;
+  }
+
+  .role-btn-primary {
+    background: linear-gradient(135deg, #29A09C, #602D91);
+    color: #fff;
+  }
+
+  .role-btn-outline {
+    border: 2px solid #00908B;
+    color: #00908B;
+  }
+
+  .role-shot {
+    border-radius: 1rem;
+    overflow: hidden;
+    box-shadow: 0 18px 45px rgba(0, 27, 96, 0.2);
+  }
+
+  .role-shot img {
+    display: block;
+    width: 100%;
+    height: auto;
+  }
+
+  .role-section {
+    margin-top: 3rem;
+  }
+
+  .role-heading {
+    font-size: 2rem;
+    margin-bottom: 0.75rem;
+  }
+
+  .role-list {
+    color: #334155;
+    line-height: 1.8;
+    padding-left: 1.2rem;
+  }
+
+  .role-cards {
+    display: grid;
+    gap: 1rem;
+    grid-template-columns: 1fr;
+  }
+
+  @media (min-width: 900px) {
+    .role-cards { grid-template-columns: repeat(3, 1fr); }
+  }
+
+  .role-card {
+    background: #F2F7FA;
+    border: 1px solid #D8E3EE;
+    border-radius: 1rem;
+    padding: 1.2rem;
+  }
+
+  .role-card h3 {
+    margin-bottom: 0.4rem;
+    font-size: 1.2rem;
+  }
+
+  .role-card p {
+    color: #475569;
+  }
+
+  .role-links {
+    color: #475569;
+  }
+
+  .role-links a {
+    color: #00908B;
+    text-underline-offset: 2px;
+  }
+
+</style>

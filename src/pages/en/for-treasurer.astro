@@ -1,0 +1,41 @@
+---
+import RolePage from '../../components/pages/RolePage.astro';
+import InvoicingHighlight from '../../components/sections/InvoicingHighlight.astro';
+---
+
+<RolePage
+  lang="en"
+  title="For treasurers — Rondo"
+  description="Rondo for treasurers: dues rules, invoicing, payment status and dashboard in one workflow."
+  kicker="For your role"
+  roleTitle="Treasurer"
+  intro="Work from one financial workflow: dues rules, bulk invoicing, automatic follow-up and a dashboard showing what needs attention now."
+  demoLabel="Look at the demo"
+  contactLabel="Contact us"
+  contactHref="/en/#contact"
+  screenshotSrc="/screenshot-finance-dashboard.webp"
+  screenshotAlt="Finance dashboard in Rondo Club"
+  screenshotWidth={1600}
+  screenshotHeight={900}
+  whatHeading="What this solves"
+  bulletPoints={[
+    'Dues rules with family discounts and pro-rata without separate calculations.',
+    'Bulk invoicing and automatic reminders from the same system.',
+    'Immediate insight into outstanding amounts, recent payments and follow-up actions.',
+  ]}
+  cards={[
+    { title: 'From rule to invoice', text: 'You configure rules per team or category; Rondo generates the right invoices.' },
+    { title: 'Automatic status updates', text: 'Payment status updates after payment, including history per invoice.' },
+    { title: 'More control, fewer ad-hoc checks', text: 'The dashboard helps prioritize what needs immediate follow-up.' },
+  ]}
+  otherHeading="Other paths"
+  otherPrefix="Also relevant:"
+  otherAnd="and"
+  hasExtra={true}
+  otherLinks={[
+    { href: '/en/for-secretary', label: 'For secretaries' },
+    { href: '/en/for-gate-volunteer', label: 'For access & events' },
+  ]}
+>
+  <InvoicingHighlight lang="en" />
+</RolePage>

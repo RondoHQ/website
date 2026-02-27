@@ -1,0 +1,37 @@
+---
+import RolePage from '../../components/pages/RolePage.astro';
+---
+
+<RolePage
+  lang="en"
+  title="For board & IT — Rondo"
+  description="Rondo for board and IT: integration visibility, role access and operational continuity."
+  kicker="For your role"
+  roleTitle="Board & IT"
+  intro="Keep continuity and control with clear visibility of integrations, role-based access and operational data flows."
+  demoLabel="Look at the demo"
+  contactLabel="Contact us"
+  contactHref="/en/#contact"
+  screenshotSrc="/screenshot-commissie-overzicht.webp"
+  screenshotAlt="Overview in Rondo Club"
+  screenshotWidth={1920}
+  screenshotHeight={1080}
+  whatHeading="What this solves"
+  bulletPoints={[
+    'One source of truth across systems through Rondo Sync.',
+    'Lower operational risk during board transitions.',
+    'Clear governance around access, processes and responsibilities.',
+  ]}
+  cards={[
+    { title: 'Architecture with visibility', text: 'Sportlink, Laposta, FreeScout and optional Nikki work together through one sync layer.' },
+    { title: 'Manageable integrations', text: 'You keep track of connected systems and how changes propagate.' },
+    { title: 'Role-based access', text: 'Volunteers only see what is needed for their task.' },
+  ]}
+  otherHeading="Other paths"
+  otherPrefix="Also relevant:"
+  otherAnd="and"
+  otherLinks={[
+    { href: '/en/for-secretary', label: 'For secretaries' },
+    { href: '/en/for-member-administration', label: 'For member administration' },
+  ]}
+/>

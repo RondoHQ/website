@@ -1,0 +1,37 @@
+---
+import RolePage from '../components/pages/RolePage.astro';
+---
+
+<RolePage
+  lang="nl"
+  title="Voor bestuur & ICT — Rondo"
+  description="Rondo voor bestuur en ICT: integratie-overzicht, rolgebaseerde toegang en operationele continuïteit."
+  kicker="Voor jouw rol"
+  roleTitle="Bestuur & ICT"
+  intro="Zorg voor continuïteit en controle. Rondo geeft overzicht in integraties, roltoegang en operationele samenwerking tussen systemen."
+  demoLabel="Bekijk de demo"
+  contactLabel="Neem contact op"
+  contactHref="/#contact"
+  screenshotSrc="/screenshot-commissie-overzicht.webp"
+  screenshotAlt="Overzicht in Rondo Club"
+  screenshotWidth={1920}
+  screenshotHeight={1080}
+  whatHeading="Wat je hiermee oplost"
+  bulletPoints={[
+    'Eén bron van waarheid over meerdere systemen heen via Rondo Sync.',
+    'Minder operationeel risico bij bestuurswissels.',
+    'Heldere afspraken over toegang, processen en governance.',
+  ]}
+  cards={[
+    { title: 'Architectuur met overzicht', text: 'Integraties met Sportlink, Laposta, FreeScout en optioneel Nikki werken samen via één sync-laag.' },
+    { title: 'Integraties beheersbaar', text: 'Je houdt overzicht op welke systemen gekoppeld zijn en hoe wijzigingen doorstromen.' },
+    { title: 'Toegang op rol', text: 'Vrijwilligers zien alleen wat nodig is voor hun taak.' },
+  ]}
+  otherHeading="Andere routes"
+  otherPrefix="Ook relevant:"
+  otherAnd="en"
+  otherLinks={[
+    { href: '/voor-secretaris', label: 'Voor secretaris' },
+    { href: '/voor-ledenadministratie', label: 'Voor ledenadministratie' },
+  ]}
+/>

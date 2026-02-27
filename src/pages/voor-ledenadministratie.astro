@@ -1,0 +1,37 @@
+---
+import RolePage from '../components/pages/RolePage.astro';
+---
+
+<RolePage
+  lang="nl"
+  title="Voor ledenadministratie — Rondo"
+  description="Rondo voor ledenadministratie: actuele lidcontext, minder uitzoekwerk en betere opvolging."
+  kicker="Voor jouw rol"
+  roleTitle="Ledenadministratie"
+  intro="Behandel ledenvragen sneller met actuele gegevens op één plek. Door de sync blijven basisgegevens en context in gekoppelde systemen beter bij."
+  demoLabel="Bekijk de demo"
+  contactLabel="Neem contact op"
+  contactHref="/#contact"
+  screenshotSrc="/screenshot-persoons-detail-scherm.webp"
+  screenshotAlt="Persoonsdetail in Rondo Club"
+  screenshotWidth={1920}
+  screenshotHeight={1080}
+  whatHeading="Wat je hiermee oplost"
+  bulletPoints={[
+    'Sneller antwoord op vragen over teams, contributie en status.',
+    'Minder handmatig zoeken in losse systemen en mailboxen.',
+    'Betere overdracht tussen vrijwilligers binnen de ledenadministratie.',
+  ]}
+  cards={[
+    { title: 'Actuele context', text: 'Lidgegevens, teaminformatie en relevante historie staan bij elkaar.' },
+    { title: 'Minder handwerk', text: 'Rondo Sync helpt data tussen systemen gelijk te houden.' },
+    { title: 'Consistente opvolging', text: 'Taken en vragen blijven beter navolgbaar voor het hele team.' },
+  ]}
+  otherHeading="Andere routes"
+  otherPrefix="Ook relevant:"
+  otherAnd="en"
+  otherLinks={[
+    { href: '/voor-secretaris', label: 'Voor secretaris' },
+    { href: '/voor-communicatie', label: 'Voor communicatie' },
+  ]}
+/>

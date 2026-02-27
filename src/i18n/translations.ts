@@ -19,6 +19,7 @@ const translations = {
 
   // ─── Header / Nav ───
   'nav.product': { nl: 'Product', en: 'Product' },
+  'nav.roles': { nl: 'Voor jouw rol', en: 'By role' },
   'nav.integration': { nl: 'Integratie', en: 'Integration' },
   'nav.pricing': { nl: 'Prijzen', en: 'Pricing' },
   'nav.faq': { nl: 'FAQ', en: 'FAQ' },
@@ -30,8 +31,8 @@ const translations = {
     en: "Nobody knows which member list is the right one",
   },
   'hero.subline': {
-    nl: 'Met Rondo hoeft dat niet meer. Ledendata, contributie en facturatie in één systeem, automatisch gesynchroniseerd met Sportlink.',
-    en: "With Rondo, that's a thing of the past. Member data, dues and invoicing in one system, automatically synced with Sportlink.",
+    nl: 'Met Rondo hoeft dat niet meer. Ledendata, contributie en facturatie in één systeem, automatisch gesynchroniseerd met Sportlink. Penningmeesters krijgen direct overzicht via het finance dashboard; ledenpassen en scanner test je direct in de demo.',
+    en: "With Rondo, that's a thing of the past. Member data, dues and invoicing in one system, automatically synced with Sportlink. Treasurers get instant overview through the finance dashboard; membership passes and scanner can be tested directly in the demo.",
   },
   'hero.cta.product': {
     nl: 'Bekijk wat Rondo doet',
@@ -42,18 +43,18 @@ const translations = {
     en: 'Try the demo',
   },
   'hero.demo.hint': {
-    nl: 'Inloggen met gebruikersnaam <strong>demo</strong> en wachtwoord <strong>demo</strong>',
-    en: 'Log in with username <strong>demo</strong> and password <strong>demo</strong>',
+    nl: 'Inloggen met gebruikersnaam <strong>demo</strong> en wachtwoord <strong>demo</strong>. Demo bevat ledenbeheer, contributie, ledenpassen en scanner.',
+    en: 'Log in with username <strong>demo</strong> and password <strong>demo</strong>. Demo includes member admin, dues, membership passes and scanner.',
   },
 
   // ─── ProductStory ───
   'product.heading': {
-    nl: 'Eén systeem voor secretaris én penningmeester',
-    en: 'One system for club secretary and treasurer',
+    nl: 'Eén platform voor je hele cluborganisatie',
+    en: 'One platform for your entire club operation',
   },
   'product.subheading': {
-    nl: 'Ledenadministratie, contributie, facturatie en betalingen. Geen versnipperde Excel-bestanden, geen handmatig kopiëren tussen systemen. Met Rondo heeft iedereen altijd de juiste informatie.',
-    en: 'Member management, dues, invoicing and payments. No scattered spreadsheets, no manual copying between systems. With Rondo, everyone always has the right information.',
+    nl: 'Van secretaris en penningmeester tot ledenadministratie, communicatie en toegang: iedereen werkt met dezelfde actuele data. Geen versnipperde Excel-bestanden, geen handmatig kopiëren tussen systemen.',
+    en: 'From secretary and treasurer to member administration, communication and access: everyone works from the same current data. No scattered spreadsheets, no manual copying between systems.',
   },
   'product.card1.title': { nl: 'Een nieuw lid...', en: 'A new member...' },
   'product.card1.problem': {
@@ -97,10 +98,66 @@ const translations = {
     en: "You have a volunteer who handles background checks. Should they see everything about everyone? Or only the people they need to manage?",
   },
   'product.card5.solution': {
-    nl: 'Iedereen toegang tot wat ze moeten zien, en niet meer. Veilig, overzichtelijk, en zonder gedoe.',
-    en: "Everyone gets access to what they need, and nothing more. Secure, clear, and hassle-free.",
+    nl: 'Geef vrijwilligers precies de toegang die ze nodig hebben, bijvoorbeeld alleen VOG-beheer, contributie of teambeheer.',
+    en: 'Give volunteers exactly the access they need, for example only VOG management, dues, or team management.',
+  },
+  'product.card6.title': { nl: 'Ledenpas op je telefoon', en: 'Membership pass on your phone' },
+  'product.card6.problem': {
+    nl: 'Lidmaatschap controleren bij de poort, bardienst of evenement is vaak handwerk: lijstjes afvinken, namen zoeken, discussie aan de deur.',
+    en: 'Checking memberships at the gate, bar shift or event is often manual: ticking paper lists, searching names, and delays at the door.',
+  },
+  'product.card6.solution': {
+    nl: 'Rondo Club maakt Apple Wallet- en Google Wallet-ledenpassen. In de webapp scan je de pas en zie je direct: geldig, verlopen of onbekend.',
+    en: 'Rondo Club issues Apple Wallet and Google Wallet membership passes. In the webapp, you scan a pass and instantly see: valid, expired, or unknown.',
+  },
+  'product.card7.title': { nl: 'Penningmeester wil overzicht', en: 'Treasurer needs overview' },
+  'product.card7.problem': {
+    nl: 'Wat is betaald, wat staat open, en welke acties zijn urgent? Zonder centraal overzicht kost dat veel uitzoekwerk.',
+    en: "What's paid, what's overdue, and which actions are urgent? Without a central view, this takes too much digging.",
+  },
+  'product.card7.solution': {
+    nl: 'Het finance dashboard toont openstaand bedrag, recente betalingen en acties die nu opvolging nodig hebben.',
+    en: 'The finance dashboard shows outstanding amounts, recent payments, and actions that need follow-up now.',
   },
   'product.withRondo': { nl: 'Met Rondo:', en: 'With Rondo:' },
+
+  // ─── Role paths ───
+  'roles.heading': { nl: 'Begin bij jouw rol', en: 'Start with your role' },
+  'roles.subheading': {
+    nl: 'Kies het pad dat past bij jouw werk in de club, en zie direct wat Rondo voor jou oplost — inclusief de automatische sync op de achtergrond.',
+    en: 'Choose the path that matches your role at the club and see what Rondo solves for you right away, including automatic sync in the background.',
+  },
+  'roles.secretary.title': { nl: 'Secretaris', en: 'Secretary' },
+  'roles.secretary.text': {
+    nl: 'Van ledenmutaties en VOG-overzicht tot teams, commissies en communicatie. Minder handwerk, meer grip.',
+    en: 'From member changes and VOG status to teams, committees and communication. Less manual work, more control.',
+  },
+  'roles.treasurer.title': { nl: 'Penningmeester', en: 'Treasurer' },
+  'roles.treasurer.text': {
+    nl: 'Contributieregels, bulkfacturatie, automatische betaalstatus en finance dashboard in één workflow.',
+    en: 'Dues rules, bulk invoicing, automatic payment status and finance dashboard in one workflow.',
+  },
+  'roles.gate.title': { nl: 'Toegang & events', en: 'Access & events' },
+  'roles.gate.text': {
+    nl: 'Gebruik Apple/Google Wallet-ledenpassen en scan direct in de webapp of iemand geldig lid is.',
+    en: 'Use Apple/Google Wallet membership passes and scan instantly in the webapp to verify active membership.',
+  },
+  'roles.board.title': { nl: 'Bestuur & ICT', en: 'Board & IT' },
+  'roles.board.text': {
+    nl: 'Krijg grip op data-eigenaarschap, rollen/rechten en hoe systemen via sync samenwerken.',
+    en: 'Get control over data ownership, access roles and how systems work together through sync.',
+  },
+  'roles.support.title': { nl: 'Ledenadministratie', en: 'Member administration' },
+  'roles.support.text': {
+    nl: 'Behandel vragen over leden sneller met actuele context en minder uitzoekwerk.',
+    en: 'Handle member administration questions faster with current context and less manual lookup.',
+  },
+  'roles.communication.title': { nl: 'Communicatie', en: 'Communication' },
+  'roles.communication.text': {
+    nl: 'Verstuur beter met actuele mailinglijsten dankzij sync met Laposta en minder handmatig lijstbeheer.',
+    en: 'Send better with up-to-date mailing lists thanks to Laposta sync and less manual list management.',
+  },
+  'roles.cta': { nl: 'Zo werkt het voor jou', en: 'See your workflow' },
 
   // ─── InvoicingHighlight ───
   'invoicing.heading': {
@@ -115,7 +172,7 @@ const translations = {
   'invoicing.dues.rules': { nl: 'Contributieregels per team en categorie', en: 'Dues rules per team and category' },
   'invoicing.dues.rules.desc': { nl: 'Met automatische pro-rata en familiekorting.', en: 'With automatic pro-rata and family discounts.' },
   'invoicing.dues.bulk': { nl: 'Bulk facturatie', en: 'Bulk invoicing' },
-  'invoicing.dues.bulk.desc': { nl: 'Factureer alle leden in één keer, met één klik.', en: 'Invoice all members at once, with a single click.' },
+  'invoicing.dues.bulk.desc': { nl: 'Start één bulk-run voor alle leden die gefactureerd moeten worden; resultaat en aantallen staan direct klaar.', en: 'Start one bulk run for all members who need invoicing; result and counts are available immediately.' },
   'invoicing.dues.installments': { nl: 'Termijnbetalingen', en: 'Instalment payments' },
   'invoicing.dues.installments.desc': { nl: 'Leden kiezen zelf voor betaling in 3 of 8 termijnen via een persoonlijke betaalpagina.', en: 'Members choose to pay in 3 or 8 instalments via a personal payment page.' },
   'invoicing.dues.reminders': { nl: 'Automatische herinneringen', en: 'Automatic reminders' },
@@ -131,11 +188,16 @@ const translations = {
   'invoicing.both.ideal': { nl: 'Betalen via iDEAL (Wero)', en: 'Pay via iDEAL (Wero)' },
   'invoicing.both.ideal.desc': { nl: 'Veilig en vertrouwd, rechtstreeks via de bank.', en: 'Safe and trusted, directly through the bank.' },
   'invoicing.both.status': { nl: 'Automatische betaalstatus', en: 'Automatic payment status' },
-  'invoicing.both.status.desc': { nl: 'Bij betaling wordt de factuurstatus automatisch bijgewerkt.', en: 'Invoice status is automatically updated upon payment.' },
+  'invoicing.both.status.desc': { nl: 'Na betaling werkt Rondo de factuurstatus automatisch bij, inclusief historie per factuur.', en: 'After payment, Rondo updates invoice status automatically, including per-invoice history.' },
   'invoicing.both.pdf': { nl: 'Professionele PDF-facturen', en: 'Professional PDF invoices' },
   'invoicing.both.pdf.desc': { nl: 'Met QR-code, kortingsregels en duidelijke betaallink.', en: 'With QR code, discount rules and clear payment link.' },
   'invoicing.both.control': { nl: 'Volledige controle', en: 'Full control' },
   'invoicing.both.control.desc': { nl: 'Versturen, opnieuw versturen, markeren als betaald, PDF downloaden en historie inzien.', en: 'Send, resend, mark as paid, download PDF and view history.' },
+  'invoicing.both.dashboard': { nl: 'Finance dashboard', en: 'Finance dashboard' },
+  'invoicing.both.dashboard.desc': {
+    nl: 'Direct overzicht voor de penningmeester: openstaand bedrag, recente betalingen en acties die aandacht vragen.',
+    en: 'Direct treasurer overview: outstanding amount, recent payments, and actions that need attention.',
+  },
   'invoicing.noNikki': {
     nl: 'Geen Nikki meer nodig. Minder handmatig werk, minder fouten en sneller duidelijkheid over openstaande bedragen.',
     en: 'No more need for Nikki. Less manual work, fewer errors and faster clarity on outstanding amounts.',
@@ -145,11 +207,13 @@ const translations = {
   // ─── FeatureGallery ───
   'gallery.heading': { nl: 'Rondo in beeld', en: 'Rondo in action' },
   'gallery.subheading': {
-    nl: 'Bekijk hoe Rondo Club eruitziet. Klik op een scherm om te vergroten.',
-    en: 'See what Rondo Club looks like. Click a screen to enlarge.',
+    nl: 'Bekijk hoe Rondo Club eruitziet. Klik op een scherm om te vergroten. Ledenpassen, scanner en finance dashboard test je in de demo.',
+    en: 'See what Rondo Club looks like. Click a screen to enlarge. Membership passes, scanner and the finance dashboard can be tested in the demo.',
   },
   'gallery.tab.members': { nl: 'Leden', en: 'Members' },
   'gallery.tab.dues': { nl: 'Contributie', en: 'Dues' },
+  'gallery.tab.finance': { nl: 'Finance', en: 'Finance' },
+  'gallery.tab.access': { nl: 'Toegang', en: 'Access' },
   'gallery.tab.vog': { nl: 'VOG', en: 'VOG' },
   'gallery.tab.teams': { nl: 'Teams', en: 'Teams' },
   'gallery.tab.committees': { nl: 'Commissies', en: 'Committees' },
@@ -167,6 +231,11 @@ const translations = {
   'gallery.caption.committeeDetail': { nl: 'Commissie samenstelling en rollen', en: 'Committee composition and roles' },
   'gallery.caption.disciplinaryOverview': { nl: 'Tuchtzaken overzicht', en: 'Disciplinary cases overview' },
   'gallery.caption.disciplinaryPerson': { nl: 'Tuchtzaak detail bij persoon', en: 'Disciplinary case on member profile' },
+  'gallery.caption.financeDashboard': { nl: 'Finance dashboard overzicht', en: 'Finance dashboard overview' },
+  'gallery.caption.financeActions': { nl: 'Openstaande posten en acties voor opvolging', en: 'Outstanding items and actions for follow-up' },
+  'gallery.caption.accessApple': { nl: 'Apple Wallet ledenpas', en: 'Apple Wallet membership pass' },
+  'gallery.caption.accessGoogle': { nl: 'Google Wallet ledenpas', en: 'Google Wallet membership pass' },
+  'gallery.caption.accessScanner': { nl: 'Pas-scanner validatie in de webapp', en: 'Pass scanner validation in the webapp' },
 
   // ─── Origin ───
   'origin.heading': { nl: 'Waarom ik Rondo bouwde', en: 'Why I built Rondo' },
@@ -196,8 +265,8 @@ const translations = {
     en: '<a href="https://www.sportlink.nl/" target="_blank" rel="noopener">Sportlink Club</a> is the member administration system used by many Dutch sports federations. Rondo Sync automatically fetches the latest member data every night: new members, address changes, and cancellations.',
   },
   'integration.sync.desc': {
-    nl: 'De motor achter de schermen. Rondo Sync draait automatisch en verwerkt wijzigingen uit Sportlink en Nikki. Nieuwe leden worden aangemaakt, verhuizingen bijgewerkt, en uitschrijvingen verwerkt — in alle gekoppelde systemen tegelijk.',
-    en: 'The engine behind the scenes. Rondo Sync runs automatically and processes changes from Sportlink and Nikki. New members are created, moves are updated, and cancellations processed — across all connected systems at once.',
+    nl: 'Rondo Sync draait elke nacht en verwerkt wijzigingen uit Sportlink en Nikki: nieuwe leden, verhuizingen en uitschrijvingen in alle gekoppelde systemen.',
+    en: 'Rondo Sync runs nightly and processes changes from Sportlink and Nikki: new members, address changes, and cancellations across all connected systems.',
   },
   'integration.club.desc': {
     nl: 'Jullie eigen ledenadministratie, gebouwd op WordPress. Hier beheer je alles wat Sportlink niet kan: VOG-registraties, gezinsrelaties, contributiegroepen, en toegangsrechten per vrijwilliger. Altijd up-to-date dankzij Rondo Sync.',
@@ -208,12 +277,32 @@ const translations = {
     en: 'Email marketing that automatically keeps up. Rondo Sync keeps your mailing lists in <a href="https://laposta.nl/" target="_blank" rel="noopener">Laposta</a> in sync with your member data. New member? Automatically on the right list. Cancelled? Automatically removed.',
   },
   'integration.freescout.desc': {
-    nl: '<a href="https://freescout.net/" target="_blank" rel="noopener">FreeScout</a> is een gedeelde mailbox voor je club. Als een lid mailt, zie je direct wie het is, in welk team ze zitten, en wat de historie is. Rondo Sync zorgt dat contactgegevens altijd actueel zijn.',
-    en: '<a href="https://freescout.net/" target="_blank" rel="noopener">FreeScout</a> is a shared inbox for your club. When a member emails, you immediately see who they are, which team they\'re in, and what the history is. Rondo Sync ensures contact details are always current.',
+    nl: '<a href="https://freescout.net/" target="_blank" rel="noopener">FreeScout</a> is een gedeelde mailbox voor je club. Als een lid mailt, zie je direct lidcontext in FreeScout (wie, team en historie). Rondo Sync houdt die gegevens actueel.',
+    en: '<a href="https://freescout.net/" target="_blank" rel="noopener">FreeScout</a> is a shared inbox for your club. When a member emails, you immediately see member context in FreeScout (who, team and history). Rondo Sync keeps those details up to date.',
   },
   'integration.nikki.desc': {
     nl: 'Voor clubs die <a href="https://www.nikki.nl/" target="_blank" rel="noopener">Nikki</a> gebruiken voor contributie-inning: Rondo Sync haalt contributiedata op en koppelt deze aan de juiste leden in Rondo Club. Zo heb je overzicht over betalingen zonder handwerk.',
     en: 'For clubs using <a href="https://www.nikki.nl/" target="_blank" rel="noopener">Nikki</a> for dues collection: Rondo Sync fetches dues data and links it to the right members in Rondo Club. Giving you an overview of payments without manual work.',
+  },
+  'integration.sync.summary.title': {
+    nl: 'Wat Rondo Sync automatisch doet',
+    en: 'What Rondo Sync does automatically',
+  },
+  'integration.sync.summary.item1': {
+    nl: 'Nieuwe leden, mutaties en uitschrijvingen vanuit Sportlink verwerken.',
+    en: 'Process new members, updates and cancellations from Sportlink.',
+  },
+  'integration.sync.summary.item2': {
+    nl: 'Contactgegevens up-to-date houden in gekoppelde systemen zoals Laposta en FreeScout.',
+    en: 'Keep contact details current in connected systems like Laposta and FreeScout.',
+  },
+  'integration.sync.summary.item3': {
+    nl: 'Contributiedata uit Nikki koppelen aan de juiste personen in Rondo Club (indien gebruikt).',
+    en: 'Link dues data from Nikki to the correct people in Rondo Club (when used).',
+  },
+  'integration.sync.summary.item4': {
+    nl: 'Wijzigingen consistent doorzetten zodat teams op dezelfde waarheid werken.',
+    en: 'Propagate changes consistently so teams work from the same source of truth.',
   },
   'integration.federations': {
     nl: 'Bonden die Sportlink gebruiken',
@@ -380,6 +469,26 @@ const translations = {
   'faq.a10': {
     nl: 'Op Europese servers, in overeenstemming met de AVG. Alle diensten die we gebruiken zijn Europees. We sluiten een bewerkersovereenkomst en nemen passende technische maatregelen om je data te beschermen. Meer details staan op onze <a href="/made-in-europe">Made in Europe</a>-pagina, in ons <a href="/privacybeleid">privacybeleid</a> en onze <a href="/voorwaarden">voorwaarden</a>.',
     en: 'On European servers, in compliance with the GDPR. All services we use are European. We sign a data processing agreement and take appropriate technical measures to protect your data. More details can be found on our <a href="/en/made-in-europe">Made in Europe</a> page, in our <a href="/en/privacy">privacy policy</a> and our <a href="/en/terms">terms and conditions</a>.',
+  },
+  'faq.q11': { nl: 'Kan ik ledenpassen en scanner nu al zien?', en: 'Can I already see membership passes and scanner?' },
+  'faq.a11': {
+    nl: 'Ja. In de demo kun je Apple/Google-ledenpassen en de scannerflow direct testen met demo/demo.',
+    en: 'Yes. In the demo you can directly test Apple/Google membership passes and the scanner flow using demo/demo.',
+  },
+  'faq.q12': { nl: 'Wat zie ik in het finance dashboard?', en: 'What do I see in the finance dashboard?' },
+  'faq.a12': {
+    nl: 'Openstaand bedrag, recente betalingen en acties die opvolging nodig hebben.',
+    en: 'Outstanding amount, recent payments, and actions that need follow-up.',
+  },
+  'faq.q13': { nl: 'Hoe actueel is de demo?', en: 'How up to date is the demo?' },
+  'faq.a13': {
+    nl: 'De demo is bedoeld om functionaliteit te bekijken. Data kan afwijken van productie en wordt periodiek ververst.',
+    en: 'The demo is meant to evaluate functionality. Data can differ from production and is refreshed periodically.',
+  },
+  'faq.q14': { nl: 'Wat doet Rondo Sync precies?', en: 'What exactly does Rondo Sync do?' },
+  'faq.a14': {
+    nl: 'Rondo Sync verwerkt automatisch wijzigingen uit Sportlink (en optioneel Nikki) en zet die door naar Rondo Club en gekoppelde systemen zoals Laposta en FreeScout. Denk aan nieuwe leden, adreswijzigingen, uitschrijvingen en contributiecontext.',
+    en: 'Rondo Sync automatically processes changes from Sportlink (and optionally Nikki) and propagates them to Rondo Club and connected systems such as Laposta and FreeScout. Think new members, address changes, cancellations and dues context.',
   },
 
   // ─── ContactForm ───

@@ -1,0 +1,18 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1600" height="900" viewBox="0 0 1600 900" fill="none">
+  <rect width="1600" height="900" fill="#001B60"/>
+  <rect x="80" y="80" width="1440" height="740" rx="28" fill="#FFFFFF"/>
+  <rect x="140" y="140" width="920" height="620" rx="18" fill="#F8FBFF" stroke="#D8E3EE" stroke-width="2"/>
+  <rect x="1100" y="140" width="360" height="620" rx="18" fill="#F8FBFF" stroke="#D8E3EE" stroke-width="2"/>
+  <rect x="260" y="260" width="680" height="380" rx="18" fill="#001B60"/>
+  <rect x="330" y="330" width="140" height="140" fill="#FFFFFF"/>
+  <rect x="500" y="330" width="140" height="140" fill="#FFFFFF"/>
+  <rect x="670" y="330" width="140" height="140" fill="#FFFFFF"/>
+  <rect x="330" y="500" width="140" height="90" fill="#FFFFFF"/>
+  <rect x="500" y="500" width="140" height="90" fill="#FFFFFF"/>
+  <rect x="670" y="500" width="140" height="90" fill="#FFFFFF"/>
+  <rect x="1140" y="220" width="280" height="88" rx="14" fill="#DDF3F2"/>
+  <rect x="1140" y="340" width="280" height="88" rx="14" fill="#FCE8EF"/>
+  <rect x="1140" y="460" width="280" height="88" rx="14" fill="#F2E4FA"/>
+  <text x="800" y="760" text-anchor="middle" fill="#001B60" font-family="Montserrat, Arial, sans-serif" font-size="34" font-weight="700">Pass Scanner Placeholder</text>
+  <text x="800" y="804" text-anchor="middle" fill="#334155" font-family="Montserrat, Arial, sans-serif" font-size="24">Replace with scanner screen showing valid, expired and unknown states</text>
+</svg>

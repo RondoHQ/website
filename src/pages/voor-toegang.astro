@@ -1,0 +1,37 @@
+---
+import RolePage from '../components/pages/RolePage.astro';
+---
+
+<RolePage
+  lang="nl"
+  title="Voor toegang & events — Rondo"
+  description="Rondo voor poortvrijwilligers en eventteams: Apple/Google Wallet ledenpassen en scanner in de webapp."
+  kicker="Voor jouw rol"
+  roleTitle="Toegang & events"
+  intro="Controleer lidmaatschap snel en duidelijk. Rondo gebruikt digitale ledenpassen en een ingebouwde scanner, zodat je aan de deur direct weet waar je aan toe bent."
+  demoLabel="Bekijk de demo"
+  contactLabel="Neem contact op"
+  contactHref="/#contact"
+  screenshotSrc="/screenshot-pass-scanner.webp"
+  screenshotAlt="Pas-scanner in Rondo Club"
+  screenshotWidth={1600}
+  screenshotHeight={900}
+  whatHeading="Wat je hiermee oplost"
+  bulletPoints={[
+    'Geen papieren lijsten of handmatig zoeken naar namen bij de ingang.',
+    'Leden gebruiken hun pas in Apple Wallet of Google Wallet.',
+    'Scannerresultaat laat direct zien of een pas geldig, verlopen of onbekend is.',
+  ]}
+  cards={[
+    { title: 'Sneller doorstromen', text: 'Minder wachtrijen door snelle validatie op mobiel of laptop in de webapp.' },
+    { title: 'Duidelijke status', text: 'Vrijwilligers krijgen direct een helder resultaat in plaats van twijfelgevallen.' },
+    { title: 'Voor poort, bar en events', text: 'Dezelfde workflow werkt op verschillende plekken waar lidcontrole nodig is.' },
+  ]}
+  otherHeading="Andere routes"
+  otherPrefix="Ook relevant:"
+  otherAnd="en"
+  otherLinks={[
+    { href: '/voor-secretaris', label: 'Voor secretaris' },
+    { href: '/voor-penningmeester', label: 'Voor penningmeester' },
+  ]}
+/>

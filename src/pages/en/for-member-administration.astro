@@ -1,0 +1,37 @@
+---
+import RolePage from '../../components/pages/RolePage.astro';
+---
+
+<RolePage
+  lang="en"
+  title="For member administration — Rondo"
+  description="Rondo for member administration: current member context, less manual lookup and better follow-up."
+  kicker="For your role"
+  roleTitle="Member administration"
+  intro="Handle member questions faster with current data in one place. Sync keeps core data and context better aligned across connected systems."
+  demoLabel="Look at the demo"
+  contactLabel="Contact us"
+  contactHref="/en/#contact"
+  screenshotSrc="/screenshot-persoons-detail-scherm.webp"
+  screenshotAlt="Member profile in Rondo Club"
+  screenshotWidth={1920}
+  screenshotHeight={1080}
+  whatHeading="What this solves"
+  bulletPoints={[
+    'Faster answers on teams, dues and member status.',
+    'Less manual lookup across scattered tools and inboxes.',
+    'Better continuity when volunteers hand over responsibilities.',
+  ]}
+  cards={[
+    { title: 'Current context', text: 'Member data, team information and relevant history are in one place.' },
+    { title: 'Less manual work', text: 'Rondo Sync helps keep data aligned between systems.' },
+    { title: 'Consistent follow-up', text: 'Tasks and questions stay easier to track for the whole team.' },
+  ]}
+  otherHeading="Other paths"
+  otherPrefix="Also relevant:"
+  otherAnd="and"
+  otherLinks={[
+    { href: '/en/for-secretary', label: 'For secretaries' },
+    { href: '/en/for-communication', label: 'For communication' },
+  ]}
+/>

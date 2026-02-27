@@ -1,0 +1,75 @@
+---
+import Card from '../ui/Card.astro';
+import Button from '../ui/Button.astro';
+import type { Lang } from '../../i18n/utils';
+import { getLangFromUrl } from '../../i18n/utils';
+import { t } from '../../i18n/translations';
+
+interface Props { lang?: Lang; }
+const lang = Astro.props.lang || getLangFromUrl(Astro.url);
+
+const roleLinks = lang === 'en'
+  ? {
+      secretary: '/en/for-secretary',
+      treasurer: '/en/for-treasurer',
+      gate: '/en/for-gate-volunteer',
+      board: '/en/for-board-it',
+      support: '/en/for-member-administration',
+      communication: '/en/for-communication',
+    }
+  : {
+      secretary: '/voor-secretaris',
+      treasurer: '/voor-penningmeester',
+      gate: '/voor-toegang',
+      board: '/voor-bestuur-ict',
+      support: '/voor-ledenadministratie',
+      communication: '/voor-communicatie',
+    };
+---
+
+<section id="rollen" class="role-paths py-16">
+  <div class="max-w-7xl mx-auto px-4">
+    <div class="text-center mb-10">
+      <h2 class="text-4xl md:text-5xl font-bold gradient-text mb-4">{t('roles.heading', lang)}</h2>
+      <p class="text-xl text-slate-600 max-w-3xl mx-auto">{t('roles.subheading', lang)}</p>
+    </div>
+
+    <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+      <Card title={t('roles.secretary.title', lang)}>
+        <p class="text-slate-600 mb-6">{t('roles.secretary.text', lang)}</p>
+        <Button variant="outline" href={roleLinks.secretary}>{t('roles.cta', lang)}</Button>
+      </Card>
+
+      <Card title={t('roles.treasurer.title', lang)}>
+        <p class="text-slate-600 mb-6">{t('roles.treasurer.text', lang)}</p>
+        <Button variant="outline" href={roleLinks.treasurer}>{t('roles.cta', lang)}</Button>
+      </Card>
+
+      <Card title={t('roles.gate.title', lang)}>
+        <p class="text-slate-600 mb-6">{t('roles.gate.text', lang)}</p>
+        <Button variant="outline" href={roleLinks.gate}>{t('roles.cta', lang)}</Button>
+      </Card>
+
+      <Card title={t('roles.board.title', lang)}>
+        <p class="text-slate-600 mb-6">{t('roles.board.text', lang)}</p>
+        <Button variant="outline" href={roleLinks.board}>{t('roles.cta', lang)}</Button>
+      </Card>
+
+      <Card title={t('roles.support.title', lang)}>
+        <p class="text-slate-600 mb-6">{t('roles.support.text', lang)}</p>
+        <Button variant="outline" href={roleLinks.support}>{t('roles.cta', lang)}</Button>
+      </Card>
+
+      <Card title={t('roles.communication.title', lang)}>
+        <p class="text-slate-600 mb-6">{t('roles.communication.text', lang)}</p>
+        <Button variant="outline" href={roleLinks.communication}>{t('roles.cta', lang)}</Button>
+      </Card>
+    </div>
+  </div>
+</section>
+
+<style>
+  .role-paths {
+    background: linear-gradient(180deg, #FFFFFF 0%, #ECF8F6 48%, #FFFFFF 100%);
+  }
+</style>

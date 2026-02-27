@@ -2,8 +2,8 @@
 import BaseLayout from '../../layouts/BaseLayout.astro';
 import Header from '../../components/layout/Header.astro';
 import Hero from '../../components/sections/Hero.astro';
+import RolePaths from '../../components/sections/RolePaths.astro';
 import ProductStory from '../../components/sections/ProductStory.astro';
-import InvoicingHighlight from '../../components/sections/InvoicingHighlight.astro';
 import FeatureGallery from '../../components/sections/FeatureGallery.astro';
 import Origin from '../../components/sections/Origin.astro';
 import IntegrationDiagram from '../../components/sections/IntegrationDiagram.astro';
@@ -21,8 +21,8 @@ const lang = 'en' as const;
   <Header lang={lang} />
   <main id="main-content">
     <Hero lang={lang} />
+    <RolePaths lang={lang} />
     <ProductStory lang={lang} />
-    <InvoicingHighlight lang={lang} />
     <FeatureGallery lang={lang} />
     <Origin lang={lang} />
     <IntegrationDiagram lang={lang} />

@@ -22,6 +22,8 @@ const lang = Astro.props.lang || getLangFromUrl(Astro.url);
       <div class="tab-bar">
         <button class="tab-button active" data-category="leden" type="button">{t('gallery.tab.members', lang)}</button>
         <button class="tab-button" data-category="contributie" type="button">{t('gallery.tab.dues', lang)}</button>
+        <button class="tab-button" data-category="finance" type="button">{t('gallery.tab.finance', lang)}</button>
+        <button class="tab-button" data-category="access" type="button">{t('gallery.tab.access', lang)}</button>
         <button class="tab-button" data-category="vog" type="button">{t('gallery.tab.vog', lang)}</button>
         <button class="tab-button" data-category="teams" type="button">{t('gallery.tab.teams', lang)}</button>
         <button class="tab-button" data-category="commissies" type="button">{t('gallery.tab.committees', lang)}</button>
@@ -49,6 +51,32 @@ const lang = Astro.props.lang || getLangFromUrl(Astro.url);
         <button class="screenshot-item" data-screenshot="/screenshot-contributie-regels.webp" type="button">
           <img src="/screenshot-contributie-regels-small.webp" srcset="/screenshot-contributie-regels-small.webp 480w, /screenshot-contributie-regels-thumb.webp 960w, /screenshot-contributie-regels.webp 1920w" sizes="(max-width: 768px) 480px, 560px" width="480" height="267" alt={t('gallery.caption.duesRules', lang)} loading="lazy" />
           <p class="screenshot-caption">{t('gallery.caption.duesRules', lang)}</p>
+        </button>
+      </div>
+
+      <div class="screenshot-grid" data-category="finance" style="display: none;">
+        <button class="screenshot-item" data-screenshot="/screenshot-finance-dashboard.webp" type="button">
+          <img src="/screenshot-finance-dashboard.webp" width="1600" height="900" alt={t('gallery.caption.financeDashboard', lang)} loading="lazy" />
+          <p class="screenshot-caption">{t('gallery.caption.financeDashboard', lang)}</p>
+        </button>
+        <button class="screenshot-item" data-screenshot="/screenshot-finance-actions.webp" type="button">
+          <img src="/screenshot-finance-actions.webp" width="1600" height="900" alt={t('gallery.caption.financeActions', lang)} loading="lazy" />
+          <p class="screenshot-caption">{t('gallery.caption.financeActions', lang)}</p>
+        </button>
+      </div>
+
+      <div class="screenshot-grid" data-category="access" style="display: none;">
+        <button class="screenshot-item" data-screenshot="/screenshot-wallet-apple.webp" type="button">
+          <img src="/screenshot-wallet-apple.webp" width="1600" height="900" alt={t('gallery.caption.accessApple', lang)} loading="lazy" />
+          <p class="screenshot-caption">{t('gallery.caption.accessApple', lang)}</p>
+        </button>
+        <button class="screenshot-item" data-screenshot="/screenshot-wallet-google.webp" type="button">
+          <img src="/screenshot-wallet-google.webp" width="1600" height="900" alt={t('gallery.caption.accessGoogle', lang)} loading="lazy" />
+          <p class="screenshot-caption">{t('gallery.caption.accessGoogle', lang)}</p>
+        </button>
+        <button class="screenshot-item" data-screenshot="/screenshot-pass-scanner.webp" type="button">
+          <img src="/screenshot-pass-scanner.webp" width="1600" height="900" alt={t('gallery.caption.accessScanner', lang)} loading="lazy" />
+          <p class="screenshot-caption">{t('gallery.caption.accessScanner', lang)}</p>
         </button>
       </div>
 

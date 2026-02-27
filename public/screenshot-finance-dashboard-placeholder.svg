@@ -1,0 +1,14 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1600" height="900" viewBox="0 0 1600 900" fill="none">
+  <rect width="1600" height="900" fill="#001B60"/>
+  <rect x="60" y="60" width="1480" height="780" rx="24" fill="#F8FBFF"/>
+  <rect x="110" y="120" width="420" height="130" rx="16" fill="#DDF3F2"/>
+  <rect x="570" y="120" width="420" height="130" rx="16" fill="#F2E4FA"/>
+  <rect x="1030" y="120" width="420" height="130" rx="16" fill="#E6ECFF"/>
+  <rect x="110" y="290" width="900" height="490" rx="16" fill="#FFFFFF" stroke="#D8E3EE" stroke-width="2"/>
+  <rect x="1030" y="290" width="420" height="230" rx="16" fill="#FFFFFF" stroke="#D8E3EE" stroke-width="2"/>
+  <rect x="1030" y="550" width="420" height="230" rx="16" fill="#FFFFFF" stroke="#D8E3EE" stroke-width="2"/>
+  <path d="M180 640C290 540 390 670 500 580C590 500 690 570 790 510C860 470 900 480 940 500" stroke="#29A09C" stroke-width="16" stroke-linecap="round"/>
+  <circle cx="900" cy="500" r="18" fill="#602D91"/>
+  <text x="800" y="430" text-anchor="middle" fill="#001B60" font-family="Montserrat, Arial, sans-serif" font-size="42" font-weight="700">Finance Dashboard Screenshot Placeholder</text>
+  <text x="800" y="480" text-anchor="middle" fill="#334155" font-family="Montserrat, Arial, sans-serif" font-size="26">Replace this with the real dashboard overview screen</text>
+</svg>

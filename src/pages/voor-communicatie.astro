@@ -1,0 +1,37 @@
+---
+import RolePage from '../components/pages/RolePage.astro';
+---
+
+<RolePage
+  lang="nl"
+  title="Voor communicatie — Rondo"
+  description="Rondo voor communicatie: actuele doelgroepen en mailinglijsten dankzij sync met Laposta."
+  kicker="Voor jouw rol"
+  roleTitle="Communicatie"
+  intro="Verstuur nieuwsbrieven en doelgroepmails op basis van actuele ledendata. Met de Laposta-sync heb je minder lijstbeheer en minder fouten."
+  demoLabel="Bekijk de demo"
+  contactLabel="Neem contact op"
+  contactHref="/#contact"
+  screenshotSrc="/screenshot-teams-overzicht.webp"
+  screenshotAlt="Teamoverzicht in Rondo Club"
+  screenshotWidth={1920}
+  screenshotHeight={1080}
+  whatHeading="Wat je hiermee oplost"
+  bulletPoints={[
+    'Mailinglijsten in Laposta blijven automatisch in sync met ledenmutaties.',
+    'Minder export/import en minder risico op verouderde adressen.',
+    'Sneller gerichte communicatie naar teams en groepen.',
+  ]}
+  cards={[
+    { title: 'Actuele ontvangers', text: 'Nieuwe leden komen op de juiste lijst, uitschrijvingen worden netjes verwerkt.' },
+    { title: 'Betere segmentatie', text: 'Koppel communicatie direct aan teams en relevante groepen.' },
+    { title: 'Minder operationele ruis', text: 'Minder correcties achteraf door betere dataconsistentie.' },
+  ]}
+  otherHeading="Andere routes"
+  otherPrefix="Ook relevant:"
+  otherAnd="en"
+  otherLinks={[
+    { href: '/voor-secretaris', label: 'Voor secretaris' },
+    { href: '/voor-ledenadministratie', label: 'Voor ledenadministratie' },
+  ]}
+/>

@@ -1,0 +1,41 @@
+---
+import RolePage from '../components/pages/RolePage.astro';
+import InvoicingHighlight from '../components/sections/InvoicingHighlight.astro';
+---
+
+<RolePage
+  lang="nl"
+  title="Voor penningmeesters — Rondo"
+  description="Rondo voor penningmeesters: contributieregels, facturatie, betaalstatus en dashboard in één workflow."
+  kicker="Voor jouw rol"
+  roleTitle="Penningmeester"
+  intro="Werk met één financiële workflow: contributieregels, bulkfacturatie, automatische opvolging en een dashboard dat laat zien wat nu aandacht nodig heeft."
+  demoLabel="Bekijk de demo"
+  contactLabel="Neem contact op"
+  contactHref="/#contact"
+  screenshotSrc="/screenshot-finance-dashboard.webp"
+  screenshotAlt="Finance dashboard in Rondo Club"
+  screenshotWidth={1600}
+  screenshotHeight={900}
+  whatHeading="Wat je hiermee oplost"
+  bulletPoints={[
+    'Contributieregels met familiekorting en pro-rata zonder losse berekeningen.',
+    'Bulkfacturatie en automatische herinneringen vanuit hetzelfde systeem.',
+    'Direct inzicht in openstaand bedrag, recente betalingen en opvolgacties.',
+  ]}
+  cards={[
+    { title: 'Van regel naar factuur', text: 'Je stelt regels in per team of categorie; Rondo genereert daarna de juiste facturen.' },
+    { title: 'Automatische statusupdates', text: 'Betaalstatus wordt bijgewerkt na betaling, inclusief historie per factuur.' },
+    { title: 'Meer grip, minder ad-hoc', text: 'Het dashboard helpt je prioriteren op wat direct opgevolgd moet worden.' },
+  ]}
+  otherHeading="Andere routes"
+  otherPrefix="Ook relevant:"
+  otherAnd="en"
+  hasExtra={true}
+  otherLinks={[
+    { href: '/voor-secretaris', label: 'Voor secretaris' },
+    { href: '/voor-toegang', label: 'Voor toegang & events' },
+  ]}
+>
+  <InvoicingHighlight />
+</RolePage>

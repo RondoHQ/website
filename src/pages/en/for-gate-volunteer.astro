@@ -1,0 +1,37 @@
+---
+import RolePage from '../../components/pages/RolePage.astro';
+---
+
+<RolePage
+  lang="en"
+  title="For access & events — Rondo"
+  description="Rondo for gate volunteers and event teams: Apple/Google Wallet passes and scanner in the webapp."
+  kicker="For your role"
+  roleTitle="Access & events"
+  intro="Check membership quickly and clearly. Rondo uses digital passes and a built-in scanner, so at the gate you immediately know where things stand."
+  demoLabel="Look at the demo"
+  contactLabel="Contact us"
+  contactHref="/en/#contact"
+  screenshotSrc="/screenshot-pass-scanner.webp"
+  screenshotAlt="Pass scanner in Rondo Club"
+  screenshotWidth={1600}
+  screenshotHeight={900}
+  whatHeading="What this solves"
+  bulletPoints={[
+    'No paper lists or manual name lookups at the entrance.',
+    'Members use their pass in Apple Wallet or Google Wallet.',
+    'Scanner output immediately shows valid, expired, or unknown.',
+  ]}
+  cards={[
+    { title: 'Faster throughput', text: 'Fewer queues through rapid validation on mobile or laptop in the webapp.' },
+    { title: 'Clear status', text: 'Volunteers get immediate, clear outcomes instead of uncertainty at the door.' },
+    { title: 'Gate, bar and events', text: 'The same workflow works across all places where membership checks are needed.' },
+  ]}
+  otherHeading="Other paths"
+  otherPrefix="Also relevant:"
+  otherAnd="and"
+  otherLinks={[
+    { href: '/en/for-secretary', label: 'For secretaries' },
+    { href: '/en/for-treasurer', label: 'For treasurers' },
+  ]}
+/>
