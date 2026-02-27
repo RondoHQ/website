@@ -47,6 +47,19 @@ const lang = Astro.props.lang || getLangFromUrl(Astro.url);
       </Card>
     </div>
 
+    <figure class="testimonial-quote">
+      <blockquote>
+        "{t('business.quote.text', lang)}"
+      </blockquote>
+      <figcaption class="testimonial-author">
+        <img src="/xander-notte.webp" alt={t('business.quote.name', lang)} width="400" height="400" loading="lazy" />
+        <div>
+          <p class="testimonial-name">{t('business.quote.name', lang)}</p>
+          <p class="testimonial-role">{t('business.quote.role', lang)}</p>
+        </div>
+      </figcaption>
+    </figure>
+
     <div class="trust-bar">
       <div class="trust-item">
         <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="trust-icon">
@@ -94,6 +107,50 @@ const lang = Astro.props.lang || getLangFromUrl(Astro.url);
     background: rgba(8, 145, 178, 0.04);
     border: 1px solid rgba(8, 145, 178, 0.12);
     border-radius: 0.75rem;
+  }
+
+  .testimonial-quote {
+    margin: 2.5rem auto 0;
+    max-width: 56rem;
+    padding: 1.5rem;
+    border-radius: 1rem;
+    background: linear-gradient(160deg, rgba(113, 219, 168, 0.14) 0%, rgba(153, 51, 153, 0.08) 100%);
+    border: 1px solid rgba(0, 27, 96, 0.12);
+    box-shadow: 0 12px 30px rgba(0, 27, 96, 0.08);
+  }
+
+  .testimonial-quote blockquote {
+    margin: 0;
+    font-size: 1.125rem;
+    line-height: 1.7;
+    color: #1E293B;
+  }
+
+  .testimonial-author {
+    margin-top: 1.25rem;
+    display: flex;
+    align-items: center;
+    gap: 0.75rem;
+  }
+
+  .testimonial-author img {
+    width: 3rem;
+    height: 3rem;
+    border-radius: 9999px;
+    object-fit: cover;
+    border: 2px solid rgba(255, 255, 255, 0.9);
+  }
+
+  .testimonial-name {
+    margin: 0;
+    font-weight: 700;
+    color: #001B60;
+  }
+
+  .testimonial-role {
+    margin: 0;
+    color: #475569;
+    font-size: 0.9375rem;
   }
 
   .trust-item {

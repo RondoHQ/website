@@ -407,6 +407,12 @@ const translations = {
     nl: 'Als de secretaris stopt, hoeft de opvolger geen map met Excel-bestanden te ontcijferen. Alles staat in Rondo, gedocumenteerd en klaar voor overdracht.',
     en: "When the secretary steps down, their successor doesn't need to decipher a folder of spreadsheets. Everything is in Rondo, documented and ready for handover.",
   },
+  'business.quote.text': {
+    nl: 'Binnen AWC merken we dagelijks hoeveel druk er ligt op vrijwilligers. Met Rondo hebben we eindelijk een platform dat écht ontzorgt. Ledenadministratie, contributie-inning en financiële afstemming lopen geïntegreerd en overzichtelijk samen. Het scheelt ons uren werk en geeft ons de inzichten om als vereniging beter te sturen. Dat maakt mijn rol als Penningmeester een stuk leuker én effectiever.',
+    en: "At AWC, we see every day how much pressure volunteers are under. With Rondo, we finally have a platform that truly takes work off our hands. Member administration, dues collection and financial alignment now run in one integrated, clear flow. It saves us hours of work and gives us the insights to steer the club better. That makes my role as treasurer both more enjoyable and more effective.",
+  },
+  'business.quote.name': { nl: 'Xander Notte', en: 'Xander Notte' },
+  'business.quote.role': { nl: 'Penningmeester bij AWC', en: 'Treasurer at AWC' },
   'business.trust.data': { nl: 'Je data blijft altijd van jou', en: 'Your data always remains yours' },
   'business.trust.eu': { nl: 'Europese servers', en: 'European servers' },
   'business.trust.opensource': { nl: 'Open source, geen lock-in', en: 'Open source, no lock-in' },
