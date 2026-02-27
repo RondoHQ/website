@@ -44,9 +44,14 @@ const lang = Astro.props.lang || getLangFromUrl(Astro.url);
         <p class="text-slate-600">
           <span class="text-electric-cyan font-semibold">{t('product.withRondo', lang)}</span> {t('product.card6.solution', lang)}
         </p>
-        <button class="card-screenshot-trigger" data-screenshot="/screenshot-wallet-apple.webp" type="button" aria-label={lang === 'en' ? 'Enlarge screenshot' : 'Vergroot screenshot'}>
-          <img src="/screenshot-wallet-apple.webp" width="1600" height="900" alt={t('gallery.caption.accessApple', lang)} loading="lazy" />
-        </button>
+        <div class="card-screenshot-pair">
+          <button class="card-screenshot-trigger card-screenshot-trigger-pass" data-screenshot="/screenshot-ledenpas-apple-awc.webp" type="button" aria-label={lang === 'en' ? 'Enlarge screenshot' : 'Vergroot screenshot'}>
+            <img src="/screenshot-ledenpas-apple-awc.webp" width="1206" height="1637" alt={t('gallery.caption.accessAppleAwc', lang)} loading="lazy" />
+          </button>
+          <button class="card-screenshot-trigger card-screenshot-trigger-scanner" data-screenshot="/screenshot-ledenpas-scanner-awc.webp" type="button" aria-label={lang === 'en' ? 'Enlarge screenshot' : 'Vergroot screenshot'}>
+            <img src="/screenshot-ledenpas-scanner-awc.webp" width="1206" height="2052" alt={t('gallery.caption.accessScannerAwc', lang)} loading="lazy" />
+          </button>
+        </div>
       </Card>
 
       <Card title={t('product.card7.title', lang)}>
@@ -126,6 +131,36 @@ const lang = Astro.props.lang || getLangFromUrl(Astro.url);
     height: auto;
     display: block;
     border-radius: 0.5rem;
+  }
+
+  .card-screenshot-pair {
+    display: grid;
+    grid-template-columns: 1.18fr 0.82fr;
+    gap: 0.5rem;
+    margin-top: 1rem;
+  }
+
+  .card-screenshot-pair .card-screenshot-trigger {
+    margin-top: 0;
+    height: 100%;
+  }
+
+  .card-screenshot-pair .card-screenshot-trigger img {
+    height: 100%;
+    object-fit: cover;
+  }
+
+  .card-screenshot-trigger-pass {
+    aspect-ratio: 1206 / 1637;
+  }
+
+  .card-screenshot-trigger-scanner {
+    aspect-ratio: 1206 / 2052;
+  }
+
+  .card-screenshot-pair .card-screenshot-trigger-scanner img {
+    object-fit: contain;
+    background: #0E1A33;
   }
 
   .ps-lightbox {

@@ -62,14 +62,14 @@ const lang = Astro.props.lang || getLangFromUrl(Astro.url);
 
 <style>
   .invoicing-section .invoicing-demo-btn {
-    background: linear-gradient(135deg, #29A09C, #602D91);
-    box-shadow: 0 10px 24px rgba(0, 27, 96, 0.18), 0 4px 12px rgba(96, 45, 145, 0.16);
+    background: var(--rondo-btn-primary);
+    box-shadow: 0 10px 24px rgba(0, 27, 96, 0.18), 0 4px 12px rgba(0, 144, 139, 0.2);
   }
 
   .invoicing-section .invoicing-demo-btn:hover {
-    background: linear-gradient(135deg, #00908B, #602D91);
+    background: var(--rondo-btn-primary-hover);
     transform: translateY(-2px);
-    box-shadow: 0 14px 28px rgba(0, 27, 96, 0.2), 0 6px 14px rgba(96, 45, 145, 0.2);
+    box-shadow: 0 14px 28px rgba(0, 27, 96, 0.2), 0 6px 14px rgba(0, 144, 139, 0.24);
   }
 
   .invoicing-section .invoicing-demo-hint {

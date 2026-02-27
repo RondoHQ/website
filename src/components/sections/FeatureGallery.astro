@@ -21,6 +21,8 @@ const lang = Astro.props.lang || getLangFromUrl(Astro.url);
     <div class="tab-bar-wrapper">
       <div class="tab-bar">
         <button class="tab-button active" data-category="leden" type="button">{t('gallery.tab.members', lang)}</button>
+        <button class="tab-button" data-category="jubilarissen" type="button">{t('gallery.tab.jubilees', lang)}</button>
+        <button class="tab-button" data-category="kaderlijst" type="button">{t('gallery.tab.staffList', lang)}</button>
         <button class="tab-button" data-category="contributie" type="button">{t('gallery.tab.dues', lang)}</button>
         <button class="tab-button" data-category="finance" type="button">{t('gallery.tab.finance', lang)}</button>
         <button class="tab-button" data-category="access" type="button">{t('gallery.tab.access', lang)}</button>
@@ -43,6 +45,28 @@ const lang = Astro.props.lang || getLangFromUrl(Astro.url);
         </button>
       </div>
 
+      <div class="screenshot-grid" data-category="jubilarissen" style="display: none;">
+        <button class="screenshot-item" data-screenshot="/jubilarissen-filter.webp" type="button">
+          <img src="/jubilarissen-filter.webp" width="3456" height="1922" alt={t('gallery.caption.jubileesFilter', lang)} loading="lazy" />
+          <p class="screenshot-caption">{t('gallery.caption.jubileesFilter', lang)}</p>
+        </button>
+        <button class="screenshot-item" data-screenshot="/jubilarissen-vrijwilligers.webp" type="button">
+          <img src="/jubilarissen-vrijwilligers.webp" width="3456" height="1922" alt={t('gallery.caption.jubileesVolunteers', lang)} loading="lazy" />
+          <p class="screenshot-caption">{t('gallery.caption.jubileesVolunteers', lang)}</p>
+        </button>
+      </div>
+
+      <div class="screenshot-grid" data-category="kaderlijst" style="display: none;">
+        <button class="screenshot-item" data-screenshot="/kaderlijst.webp" type="button">
+          <img src="/kaderlijst.webp" width="3456" height="1922" alt={t('gallery.caption.staffList', lang)} loading="lazy" />
+          <p class="screenshot-caption">{t('gallery.caption.staffList', lang)}</p>
+        </button>
+        <button class="screenshot-item" data-screenshot="/kaderlijst-filter.webp" type="button">
+          <img src="/kaderlijst-filter.webp" width="3456" height="1922" alt={t('gallery.caption.staffListFilter', lang)} loading="lazy" />
+          <p class="screenshot-caption">{t('gallery.caption.staffListFilter', lang)}</p>
+        </button>
+      </div>
+
       <div class="screenshot-grid" data-category="contributie" style="display: none;">
         <button class="screenshot-item" data-screenshot="/screenshot-contributie-overzicht.webp" type="button">
           <img src="/screenshot-contributie-overzicht-small.webp" srcset="/screenshot-contributie-overzicht-small.webp 480w, /screenshot-contributie-overzicht-thumb.webp 960w, /screenshot-contributie-overzicht.webp 1920w" sizes="(max-width: 768px) 480px, 560px" width="480" height="268" alt={t('gallery.caption.duesOverview', lang)} loading="lazy" />
@@ -51,6 +75,10 @@ const lang = Astro.props.lang || getLangFromUrl(Astro.url);
         <button class="screenshot-item" data-screenshot="/screenshot-contributie-regels.webp" type="button">
           <img src="/screenshot-contributie-regels-small.webp" srcset="/screenshot-contributie-regels-small.webp 480w, /screenshot-contributie-regels-thumb.webp 960w, /screenshot-contributie-regels.webp 1920w" sizes="(max-width: 768px) 480px, 560px" width="480" height="267" alt={t('gallery.caption.duesRules', lang)} loading="lazy" />
           <p class="screenshot-caption">{t('gallery.caption.duesRules', lang)}</p>
+        </button>
+        <button class="screenshot-item" data-screenshot="/contributie-nog-te-factureren.webp" type="button">
+          <img src="/contributie-nog-te-factureren.webp" width="3456" height="1922" alt={t('gallery.caption.duesToInvoice', lang)} loading="lazy" />
+          <p class="screenshot-caption">{t('gallery.caption.duesToInvoice', lang)}</p>
         </button>
       </div>
 
@@ -63,20 +91,28 @@ const lang = Astro.props.lang || getLangFromUrl(Astro.url);
           <img src="/screenshot-finance-actions.webp" width="1600" height="900" alt={t('gallery.caption.financeActions', lang)} loading="lazy" />
           <p class="screenshot-caption">{t('gallery.caption.financeActions', lang)}</p>
         </button>
+        <button class="screenshot-item" data-screenshot="/financien-factuur-detail.webp" type="button">
+          <img src="/financien-factuur-detail.webp" width="3456" height="1922" alt={t('gallery.caption.financeInvoiceDetail', lang)} loading="lazy" />
+          <p class="screenshot-caption">{t('gallery.caption.financeInvoiceDetail', lang)}</p>
+        </button>
+        <button class="screenshot-item" data-screenshot="/financien-maak-factuur.webp" type="button">
+          <img src="/financien-maak-factuur.webp" width="3456" height="1922" alt={t('gallery.caption.financeCreateInvoice', lang)} loading="lazy" />
+          <p class="screenshot-caption">{t('gallery.caption.financeCreateInvoice', lang)}</p>
+        </button>
       </div>
 
       <div class="screenshot-grid" data-category="access" style="display: none;">
-        <button class="screenshot-item" data-screenshot="/screenshot-wallet-apple.webp" type="button">
-          <img src="/screenshot-wallet-apple.webp" width="1600" height="900" alt={t('gallery.caption.accessApple', lang)} loading="lazy" />
-          <p class="screenshot-caption">{t('gallery.caption.accessApple', lang)}</p>
+        <button class="screenshot-item" data-screenshot="/screenshot-ledenpas-apple-awc.webp" type="button">
+          <img src="/screenshot-ledenpas-apple-awc.webp" width="1206" height="1637" alt={t('gallery.caption.accessAppleAwc', lang)} loading="lazy" />
+          <p class="screenshot-caption">{t('gallery.caption.accessAppleAwc', lang)}</p>
         </button>
-        <button class="screenshot-item" data-screenshot="/screenshot-wallet-google.webp" type="button">
-          <img src="/screenshot-wallet-google.webp" width="1600" height="900" alt={t('gallery.caption.accessGoogle', lang)} loading="lazy" />
-          <p class="screenshot-caption">{t('gallery.caption.accessGoogle', lang)}</p>
+        <button class="screenshot-item" data-screenshot="/screenshot-ledenpas-google-awc.webp" type="button">
+          <img src="/screenshot-ledenpas-google-awc.webp" width="752" height="1264" alt={t('gallery.caption.accessGoogleAwc', lang)} loading="lazy" />
+          <p class="screenshot-caption">{t('gallery.caption.accessGoogleAwc', lang)}</p>
         </button>
-        <button class="screenshot-item" data-screenshot="/screenshot-pass-scanner.webp" type="button">
-          <img src="/screenshot-pass-scanner.webp" width="1600" height="900" alt={t('gallery.caption.accessScanner', lang)} loading="lazy" />
-          <p class="screenshot-caption">{t('gallery.caption.accessScanner', lang)}</p>
+        <button class="screenshot-item" data-screenshot="/screenshot-ledenpas-scanner-awc.webp" type="button">
+          <img src="/screenshot-ledenpas-scanner-awc.webp" width="1206" height="2052" alt={t('gallery.caption.accessScannerAwc', lang)} loading="lazy" />
+          <p class="screenshot-caption">{t('gallery.caption.accessScannerAwc', lang)}</p>
         </button>
       </div>
 
@@ -99,6 +135,10 @@ const lang = Astro.props.lang || getLangFromUrl(Astro.url);
         <button class="screenshot-item" data-screenshot="/screenshot-team-detail.webp" type="button">
           <img src="/screenshot-team-detail-small.webp" srcset="/screenshot-team-detail-small.webp 480w, /screenshot-team-detail-thumb.webp 960w, /screenshot-team-detail.webp 1920w" sizes="(max-width: 768px) 480px, 560px" width="480" height="268" alt={t('gallery.caption.teamDetail', lang)} loading="lazy" />
           <p class="screenshot-caption">{t('gallery.caption.teamDetail', lang)}</p>
+        </button>
+        <button class="screenshot-item" data-screenshot="/teams-filter.webp" type="button">
+          <img src="/teams-filter.webp" width="3456" height="1922" alt={t('gallery.caption.teamsFilter', lang)} loading="lazy" />
+          <p class="screenshot-caption">{t('gallery.caption.teamsFilter', lang)}</p>
         </button>
       </div>
 
@@ -211,7 +251,7 @@ const lang = Astro.props.lang || getLangFromUrl(Astro.url);
   }
 
   .tab-button.active {
-    background: #00908B;
+    background: var(--rondo-btn-primary);
     color: white;
   }
 
@@ -224,6 +264,12 @@ const lang = Astro.props.lang || getLangFromUrl(Astro.url);
   @media (min-width: 768px) {
     .screenshot-grid {
       grid-template-columns: repeat(2, 1fr);
+    }
+  }
+
+  @media (min-width: 1024px) {
+    .screenshot-grid[data-category="access"] {
+      grid-template-columns: repeat(3, minmax(0, 1fr));
     }
   }
 
@@ -250,6 +296,18 @@ const lang = Astro.props.lang || getLangFromUrl(Astro.url);
     height: auto;
     display: block;
     border-radius: 1rem 1rem 0 0;
+  }
+
+  .screenshot-grid[data-category="access"] .screenshot-item {
+    max-width: 300px;
+    justify-self: center;
+  }
+
+  .screenshot-grid[data-category="access"] .screenshot-item img {
+    height: 360px;
+    object-fit: contain;
+    background: #F4FAFF;
+    padding: 0.5rem;
   }
 
   .screenshot-caption {

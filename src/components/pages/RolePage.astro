@@ -28,6 +28,11 @@ interface Props {
   screenshotAlt: string;
   screenshotWidth: number;
   screenshotHeight: number;
+  secondaryScreenshotSrc?: string;
+  secondaryScreenshotAlt?: string;
+  secondaryScreenshotWidth?: number;
+  secondaryScreenshotHeight?: number;
+  screenshotLayout?: 'default' | 'passWide';
   whatHeading: string;
   bulletPoints: string[];
   cards: RoleCard[];
@@ -52,6 +57,11 @@ const {
   screenshotAlt,
   screenshotWidth,
   screenshotHeight,
+  secondaryScreenshotSrc,
+  secondaryScreenshotAlt,
+  secondaryScreenshotWidth,
+  secondaryScreenshotHeight,
+  screenshotLayout = 'default',
   whatHeading,
   bulletPoints,
   cards,
@@ -63,6 +73,11 @@ const {
 } = Astro.props;
 
 const [firstLink, secondLink] = otherLinks;
+const hasSecondaryScreenshot = Boolean(secondaryScreenshotSrc);
+const secondaryAlt = secondaryScreenshotAlt ?? screenshotAlt;
+const secondaryWidth = secondaryScreenshotWidth ?? screenshotWidth;
+const secondaryHeight = secondaryScreenshotHeight ?? screenshotHeight;
+const isPassWideLayout = screenshotLayout === 'passWide';
 ---
 
 <BaseLayout lang={lang} title={title} description={description}>
@@ -79,8 +94,15 @@ const [firstLink, secondLink] = otherLinks;
             <a href={contactHref} class="role-btn role-btn-outline">{contactLabel}</a>
           </div>
         </div>
-        <div class="role-shot">
-          <img src={screenshotSrc} alt={screenshotAlt} width={screenshotWidth} height={screenshotHeight} loading="eager" />
+        <div class:list={['role-shot', { 'role-shot-multi': hasSecondaryScreenshot, 'role-shot-pass-wide': hasSecondaryScreenshot && isPassWideLayout }]}>
+          {hasSecondaryScreenshot ? (
+            <div class="role-shot-grid">
+              <img src={screenshotSrc} alt={screenshotAlt} width={screenshotWidth} height={screenshotHeight} loading="eager" />
+              <img src={secondaryScreenshotSrc} alt={secondaryAlt} width={secondaryWidth} height={secondaryHeight} loading="eager" />
+            </div>
+          ) : (
+            <img src={screenshotSrc} alt={screenshotAlt} width={screenshotWidth} height={screenshotHeight} loading="eager" />
+          )}
         </div>
       </div>
     </section>
@@ -181,13 +203,13 @@ const [firstLink, secondLink] = otherLinks;
   }
 
   .role-btn-primary {
-    background: linear-gradient(135deg, #29A09C, #602D91);
+    background: var(--rondo-btn-primary);
     color: #fff;
   }
 
   .role-btn-outline {
-    border: 2px solid #00908B;
-    color: #00908B;
+    border: 2px solid var(--rondo-btn-outline);
+    color: var(--rondo-btn-outline);
   }
 
   .role-shot {
@@ -200,6 +222,40 @@ const [firstLink, secondLink] = otherLinks;
     display: block;
     width: 100%;
     height: auto;
+  }
+
+  .role-shot-multi {
+    padding: 0.5rem;
+    background: #F2F7FA;
+  }
+
+  .role-shot-grid {
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 0.5rem;
+  }
+
+  .role-shot-grid img {
+    width: 100%;
+    height: 100%;
+    aspect-ratio: 3 / 5;
+    object-fit: cover;
+    border-radius: 0.75rem;
+    box-shadow: 0 8px 24px rgba(0, 27, 96, 0.12);
+  }
+
+  .role-shot-pass-wide .role-shot-grid {
+    grid-template-columns: 1.18fr 0.82fr;
+  }
+
+  .role-shot-pass-wide .role-shot-grid img:first-child {
+    aspect-ratio: 1206 / 1637;
+  }
+
+  .role-shot-pass-wide .role-shot-grid img:last-child {
+    aspect-ratio: 1206 / 2052;
+    object-fit: contain;
+    background: #0E1A33;
   }
 
   .role-section {

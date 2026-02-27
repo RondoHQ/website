@@ -27,14 +27,14 @@ const examples = [
       <div class="text-center space-y-2">
         <p class="text-3xl">
           <span class="text-white font-bold">{t('pricing.base', lang)}</span>
-          <span class="text-cyan-100"> {t('pricing.baseSuffix', lang)}</span>
+          <span class="pricing-subtle"> {t('pricing.baseSuffix', lang)}</span>
         </p>
-        <p class="text-2xl text-cyan-100">
+        <p class="text-2xl pricing-subtle">
           <span class="text-white font-bold">{t('pricing.perMember', lang)}</span> {t('pricing.perMemberSuffix', lang)}
         </p>
       </div>
-      <p class="text-sm text-cyan-200 text-center mt-6">{t('pricing.includes', lang)}</p>
-      <p class="text-xs text-cyan-300 text-center mt-2 opacity-70">{t('pricing.note', lang)}</p>
+      <p class="text-sm pricing-soft text-center mt-6">{t('pricing.includes', lang)}</p>
+      <p class="text-xs pricing-soft text-center mt-2 opacity-80">{t('pricing.note', lang)}</p>
     </div>
 
     <div class="grid grid-cols-1 md:grid-cols-3 gap-6 mb-12">
@@ -62,7 +62,17 @@ const examples = [
 
 <style>
   .pricing-hero {
-    background: linear-gradient(135deg, #29A09C 0%, #602D91 100%);
-    box-shadow: 0 10px 40px rgba(8, 145, 178, 0.3), 0 4px 16px rgba(37, 99, 235, 0.2);
+    background:
+      radial-gradient(120% 80% at 100% 0%, rgba(113, 219, 168, 0.14) 0%, transparent 55%),
+      linear-gradient(135deg, #993399 0%, #007975 100%);
+    box-shadow: 0 10px 40px rgba(153, 51, 153, 0.2), 0 4px 16px rgba(0, 121, 117, 0.24);
+  }
+
+  .pricing-subtle {
+    color: #EAFBF4;
+  }
+
+  .pricing-soft {
+    color: #D8F7ED;
   }
 </style>

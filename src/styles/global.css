@@ -2,10 +2,29 @@
 
 @theme {
   --color-electric-cyan: #00908B;
-  --color-electric-cyan-light: #6ABAB8;
-  --color-bright-cobalt: #602D91;
+  --color-electric-cyan-light: #71DBA8;
+  --color-bright-cobalt: #993399;
   --color-deep-midnight: #001B60;
   --color-obsidian: #001B60;
+}
+
+:root {
+  --rondo-navy: #001B60;
+  --rondo-teal: #00908B;
+  --rondo-mint: #71DBA8;
+  --rondo-indigo: #993399;
+  --rondo-text-main: #001B60;
+  --rondo-text-body: #3D4E6A;
+  --rondo-border-soft: #D8E3EE;
+  --rondo-surface-soft: #EDF4F8;
+  --rondo-gradient-brand: linear-gradient(135deg, #993399 0%, #00908B 100%);
+  --rondo-btn-primary: #00908B;
+  --rondo-btn-primary-hover: #007975;
+  --rondo-btn-secondary: #71DBA8;
+  --rondo-btn-secondary-hover: #5DCC96;
+  --rondo-btn-secondary-text: #001B60;
+  --rondo-btn-outline: #00908B;
+  --rondo-icon-on-light: #001B60;
 }
 
 html {
@@ -17,12 +36,12 @@ section[id] {
 }
 
 h1, h2, h3, h4, h5, h6 {
-  font-family: 'Montserrat', system-ui, sans-serif;
+  font-family: 'Figtree', system-ui, sans-serif;
 }
 
 h3 {
   font-size: 1.5rem;
-  background: linear-gradient(135deg, #00908B 0%, #602D91 100%);
+  background: var(--rondo-gradient-brand);
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
   background-clip: text;
@@ -36,7 +55,7 @@ h3 {
 }
 
 .gradient-text {
-  background: linear-gradient(135deg, #00908B 0%, #602D91 100%);
+  background: var(--rondo-gradient-brand);
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
   background-clip: text;
@@ -52,6 +71,8 @@ a:not([class]) {
 
 body {
   font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+  color: var(--rondo-text-main);
+  background: linear-gradient(180deg, #F7FBFF 0%, #FFFFFF 100%);
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
 }
