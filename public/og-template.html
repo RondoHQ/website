@@ -1,0 +1,163 @@
+<!doctype html>
+<html lang="nl">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Rondo OG Template</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Figtree:wght@500;700;800&display=swap" rel="stylesheet" />
+    <style>
+      :root {
+        --rondo-navy: #001b60;
+        --rondo-teal: #00908b;
+        --rondo-indigo: #993399;
+        --rondo-text: #1f3559;
+      }
+
+      * { box-sizing: border-box; }
+
+      html, body {
+        margin: 0;
+        padding: 0;
+        width: 100%;
+        height: 100%;
+        font-family: "Figtree", system-ui, sans-serif;
+        background: #dfe8f1;
+      }
+
+      .stage {
+        min-height: 100%;
+        display: grid;
+        place-items: center;
+        padding: 2rem;
+      }
+
+      .og {
+        width: 1200px;
+        height: 630px;
+        overflow: hidden;
+        border-radius: 20px;
+        background: linear-gradient(180deg, #f4faff 0%, #fff6ef 100%);
+        box-shadow: 0 20px 60px rgba(0, 27, 96, 0.18);
+        position: relative;
+      }
+
+      .blob {
+        position: absolute;
+        border-radius: 999px;
+        filter: blur(28px);
+        opacity: 0.45;
+        pointer-events: none;
+      }
+
+      .blob-1 {
+        width: 360px;
+        height: 360px;
+        background: #9bc2d3;
+        left: -120px;
+        top: 120px;
+      }
+
+      .blob-2 {
+        width: 320px;
+        height: 320px;
+        background: #f995e0;
+        right: -110px;
+        top: 70px;
+      }
+
+      .blob-3 {
+        width: 260px;
+        height: 260px;
+        background: #ffe293;
+        left: 330px;
+        bottom: -120px;
+      }
+
+      .header {
+        height: 90px;
+        display: flex;
+        align-items: center;
+        padding: 0 44px;
+        border-bottom: 1px solid #d8e3ee;
+        background: rgba(255, 255, 255, 0.9);
+        position: relative;
+        z-index: 2;
+      }
+
+      .header img {
+        width: 260px;
+        height: auto;
+        display: block;
+      }
+
+      .hero {
+        display: grid;
+        grid-template-columns: 1.05fr 0.95fr;
+        gap: 28px;
+        padding: 46px 44px 40px;
+        position: relative;
+        z-index: 1;
+      }
+
+      h1 {
+        margin: 0;
+        color: var(--rondo-navy);
+        font-size: 74px;
+        line-height: 0.98;
+        letter-spacing: -0.02em;
+        max-width: 640px;
+      }
+
+      p {
+        margin: 20px 0 0;
+        font-size: 35px;
+        line-height: 1.22;
+        color: #3d4e6a;
+        max-width: 610px;
+      }
+
+      .shot-wrap {
+        align-self: center;
+        justify-self: end;
+        width: 100%;
+        max-width: 530px;
+        border-radius: 16px;
+        overflow: hidden;
+        background: #edf4f8;
+        border: 1px solid #c9d8e8;
+        box-shadow: 0 14px 30px rgba(0, 27, 96, 0.16);
+      }
+
+      .shot-wrap img {
+        display: block;
+        width: 100%;
+        height: auto;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="stage">
+      <article class="og" aria-label="Rondo social preview">
+        <div class="blob blob-1"></div>
+        <div class="blob blob-2"></div>
+        <div class="blob blob-3"></div>
+
+        <header class="header">
+          <img src="/rondo-logo-wordmark.svg" alt="Rondo" />
+        </header>
+
+        <section class="hero">
+          <div>
+            <h1>Niemand weet welke ledenlijst de juiste is</h1>
+            <p>Ledenadministratie, contributie en facturatie in één systeem.</p>
+          </div>
+          <div class="shot-wrap">
+            <img src="/screenshot-dashboard.webp" alt="Rondo dashboard" />
+          </div>
+        </section>
+      </article>
+    </div>
+  </body>
+</html>
