@@ -110,7 +110,7 @@ const translations = {
     nl: 'Rondo Club maakt Apple Wallet- en Google Wallet-ledenpassen. In de webapp scan je de pas en zie je direct: geldig, verlopen of onbekend.',
     en: 'Rondo Club issues Apple Wallet and Google Wallet membership passes. In the webapp, you scan a pass and instantly see: valid, expired, or unknown.',
   },
-  'product.card7.title': { nl: 'Penningmeester wil overzicht', en: 'Treasurer needs overview' },
+  'product.card7.title': { nl: 'De penningmeester wil overzicht', en: 'Treasurer needs overview' },
   'product.card7.problem': {
     nl: 'Wat is betaald, wat staat open, en welke acties zijn urgent? Zonder centraal overzicht kost dat veel uitzoekwerk.',
     en: "What's paid, what's overdue, and which actions are urgent? Without a central view, this takes too much digging.",
@@ -138,7 +138,7 @@ const translations = {
     nl: 'Contributieregels, bulkfacturatie, automatische betaalstatus en finance dashboard in één workflow.',
     en: 'Dues rules, bulk invoicing, automatic payment status and finance dashboard in one workflow.',
   },
-  'roles.treasurer.cta': { nl: 'Zo werkt het voor de penningmeester', en: 'See how it works for the treasurer' },
+  'roles.treasurer.cta': { nl: 'Voor de penningmeester', en: 'For the treasurer' },
   'roles.gate.title': { nl: 'Toegang & events', en: 'Access & events' },
   'roles.gate.text': {
     nl: 'Gebruik Apple/Google Wallet-ledenpassen en scan direct in de webapp of iemand geldig lid is.',
@@ -156,7 +156,7 @@ const translations = {
     nl: 'Behandel vragen over leden sneller met actuele context en minder uitzoekwerk.',
     en: 'Handle member administration questions faster with current context and less manual lookup.',
   },
-  'roles.support.cta': { nl: 'Zo werkt het voor ledenadministratie', en: 'See how it works for member administration' },
+  'roles.support.cta': { nl: 'Voor de ledenadministratie', en: 'For member administration' },
   'roles.communication.title': { nl: 'Communicatie', en: 'Communication' },
   'roles.communication.text': {
     nl: 'Verstuur beter met actuele mailinglijsten dankzij sync met Laposta en minder handmatig lijstbeheer.',
@@ -287,16 +287,16 @@ const translations = {
     en: 'Rondo Sync runs nightly and processes changes from Sportlink and Nikki: new members, address changes, and cancellations across all connected systems.',
   },
   'integration.club.desc': {
-    nl: 'Jullie eigen ledenadministratie, gebouwd op WordPress. Hier beheer je alles wat Sportlink niet kan: VOG-registraties, gezinsrelaties, contributiegroepen, en toegangsrechten per vrijwilliger. Altijd up-to-date dankzij Rondo Sync.',
-    en: "Your own member administration, built on WordPress. Here you manage everything Sportlink can't: background check records, family relationships, dues groups, and access rights per volunteer. Always up to date thanks to Rondo Sync.",
+    nl: 'Jullie eigen ledenadministratie. Hier beheer je alles wat Sportlink niet kan: VOG-registraties, gezinsrelaties, contributiegroepen, en toegangsrechten per vrijwilliger. Altijd up-to-date dankzij Rondo Sync.',
+    en: "Your own member administration. Here you manage everything Sportlink can't: background check records, family relationships, dues groups, and access rights per volunteer. Always up to date thanks to Rondo Sync.",
   },
   'integration.laposta.desc': {
     nl: 'E-mailmarketing die automatisch meebeweegt. Rondo Sync houdt je mailinglijsten in <a href="https://laposta.nl/" target="_blank" rel="noopener">Laposta</a> synchroon met je ledendata. Nieuw lid? Automatisch op de juiste lijst. Uitgeschreven? Automatisch verwijderd.',
     en: 'Email marketing that automatically keeps up. Rondo Sync keeps your mailing lists in <a href="https://laposta.nl/" target="_blank" rel="noopener">Laposta</a> in sync with your member data. New member? Automatically on the right list. Cancelled? Automatically removed.',
   },
   'integration.freescout.desc': {
-    nl: '<a href="https://freescout.net/" target="_blank" rel="noopener">FreeScout</a> is een gedeelde mailbox voor je club. Als een lid mailt, zie je direct lidcontext in FreeScout (wie, team en historie). Rondo Sync houdt die gegevens actueel.',
-    en: '<a href="https://freescout.net/" target="_blank" rel="noopener">FreeScout</a> is a shared inbox for your club. When a member emails, you immediately see member context in FreeScout (who, team and history). Rondo Sync keeps those details up to date.',
+    nl: '<a href="https://freescout.net/" target="_blank" rel="noopener">FreeScout</a> is een gedeelde mailbox voor je club. Als een lid mailt, zie je direct lidcontext in FreeScout (wie, team en historie). Rondo Sync houdt die gegevens actueel. <a href="/voor-ledenadministratie">Bekijk hoe dit werkt voor de ledenadministratie.</a>',
+    en: '<a href="https://freescout.net/" target="_blank" rel="noopener">FreeScout</a> is a shared inbox for your club. When a member emails, you immediately see member context in FreeScout (who, team and history). Rondo Sync keeps those details up to date. <a href="/en/for-member-administration">See how this works for member administration.</a>',
   },
   'integration.nikki.desc': {
     nl: 'Voor clubs die <a href="https://www.nikki.nl/" target="_blank" rel="noopener">Nikki</a> gebruiken voor contributie-inning: Rondo Sync haalt contributiedata op en koppelt deze aan de juiste leden in Rondo Club. Zo heb je overzicht over betalingen zonder handwerk.',
