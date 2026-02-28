@@ -7,15 +7,23 @@ import type { Lang } from '../../i18n/utils';
 import { getLangFromUrl } from '../../i18n/utils';
 import { t } from '../../i18n/translations';
 
-interface Props { lang?: Lang; }
+interface Props {
+  lang?: Lang;
+  showHeading?: boolean;
+}
 const lang = Astro.props.lang || getLangFromUrl(Astro.url);
+const showHeading = Astro.props.showHeading ?? true;
 ---
 
 <section id="contact" class="py-20 px-4 contact-section">
   <div class="max-w-2xl mx-auto">
     <GlassPanel class="p-8 md:p-12">
-      <h2 class="text-3xl md:text-4xl font-bold text-white mb-2">{t('contact.heading', lang)}</h2>
-      <p class="text-slate-300 mb-8">{t('contact.subheading', lang)}</p>
+      {showHeading && (
+        <>
+          <h2 class="text-3xl md:text-4xl font-bold gradient-text mb-2">{t('contact.heading', lang)}</h2>
+          <p class="text-slate-600 mb-8">{t('contact.subheading', lang)}</p>
+        </>
+      )}
 
       <form id="contact-form" method="POST" action="/api/contact" novalidate data-lang={lang}>
         <Input
@@ -182,41 +190,38 @@ form?.addEventListener('submit', async (e) => {
 .form-message-error {
   background: rgba(239, 68, 68, 0.1);
   border-color: rgba(239, 68, 68, 0.3);
-  color: #FCA5A5;
+  color: #991B1B;
 }
 
 .contact-section {
-  background: #001B60;
+  background: transparent;
 }
 
 .contact-section :global(.glass-panel) {
-  background: rgba(255, 255, 255, 0.05);
-  border-color: rgba(255, 255, 255, 0.1);
+  background: #FFFFFF;
+  border-color: #D8E3EE;
+  box-shadow: 0 18px 45px rgba(0, 27, 96, 0.12);
 }
 
 .contact-section :global(label) {
-  color: #CBD5E1 !important;
+  color: #334155 !important;
 }
 
 .contact-section :global(.input-field),
 .contact-section :global(.textarea-field) {
-  background: rgba(255, 255, 255, 0.08);
-  border-color: rgba(255, 255, 255, 0.15);
-  color: #EDF4F8;
+  background: #FFFFFF;
+  border-color: #CBD5E1;
+  color: #0F172A;
 }
 
 .contact-section :global(.input-field)::placeholder,
 .contact-section :global(.textarea-field)::placeholder {
-  color: #64748B;
+  color: #94A3B8;
 }
 
 .contact-section :global(.input-field):focus,
 .contact-section :global(.textarea-field):focus {
-  border-color: var(--rondo-btn-secondary);
-  box-shadow: 0 0 0 3px rgba(113, 219, 168, 0.2);
-}
-
-.form-message-success {
-  color: #86EFAC;
+  border-color: #00908B;
+  box-shadow: 0 0 0 3px rgba(0, 144, 139, 0.18);
 }
 </style>

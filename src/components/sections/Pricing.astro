@@ -54,7 +54,7 @@ const examples = [
     </div>
 
     <div class="text-center">
-      <Button variant="primary" href="#contact">{t('pricing.cta', lang)}</Button>
+      <Button variant="primary" href={lang === 'en' ? '/en/contact' : '/contact'}>{t('pricing.cta', lang)}</Button>
       <p class="text-sm text-slate-500 mt-6" set:html={t('pricing.openSource', lang)} />
     </div>
   </div>

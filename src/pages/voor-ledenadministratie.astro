@@ -11,7 +11,7 @@ import RolePage from '../components/pages/RolePage.astro';
   intro="Behandel ledenvragen sneller met actuele gegevens op één plek. Door de sync blijven basisgegevens en context in gekoppelde systemen beter bij."
   demoLabel="Bekijk de demo"
   contactLabel="Neem contact op"
-  contactHref="/#contact"
+  contactHref="/contact"
   screenshotSrc="/screenshot-persoons-detail-scherm.webp"
   screenshotAlt="Persoonsdetail in Rondo Club"
   screenshotWidth={1920}
@@ -27,11 +27,83 @@ import RolePage from '../components/pages/RolePage.astro';
     { title: 'Minder handwerk', text: 'Rondo Sync helpt data tussen systemen gelijk te houden.' },
     { title: 'Consistente opvolging', text: 'Taken en vragen blijven beter navolgbaar voor het hele team.' },
   ]}
-  otherHeading="Andere routes"
-  otherPrefix="Ook relevant:"
+  otherHeading="Ook interessant voor jouw rol"
+  otherPrefix="Bekijk ook:"
   otherAnd="en"
   otherLinks={[
     { href: '/voor-secretaris', label: 'Voor secretaris' },
     { href: '/voor-communicatie', label: 'Voor communicatie' },
   ]}
-/>
+  hasExtra={true}
+>
+  <div class="member-support-block role-container">
+    <div class="member-support-copy">
+      <h2 class="gradient-text member-support-heading">Gedeelde inbox zonder bottleneck</h2>
+      <p>
+        Heel veel sportclubs lopen vast op het afhandelen van e-mail: berichten komen vaak bij één persoon binnen.
+        Als die op vakantie is, blijft werk liggen.
+      </p>
+      <p>
+        FreeScout is daarvoor een ideale oplossing: een helpdesksysteem voor je sportclub.
+        Door de koppeling tussen FreeScout en Rondo Sync zie je belangrijke lidgegevens direct in FreeScout en klik je
+        meteen door naar zowel Sportlink als Rondo Club.
+      </p>
+      <p>
+        Het team van Rondo kan je helpen om FreeScout op te zetten voor je organisatie en de koppeling met Rondo te
+        regelen.
+      </p>
+    </div>
+
+    <figure class="member-support-shot">
+      <img
+        class="zoomable-screenshot"
+        src="/Screenshots/screenshot-freescout.png"
+        alt="FreeScout met gekoppelde lidcontext via Rondo Sync"
+        width="1600"
+        height="1000"
+        loading="lazy"
+      />
+    </figure>
+  </div>
+</RolePage>
+
+<style>
+  .member-support-block {
+    display: grid;
+    gap: 1.25rem;
+    max-width: 72rem;
+    margin: 0 auto;
+  }
+
+  @media (min-width: 980px) {
+    .member-support-block {
+      grid-template-columns: 1fr 1fr;
+      align-items: center;
+    }
+  }
+
+  .member-support-heading {
+    font-size: clamp(1.6rem, 2.6vw, 2.1rem);
+    margin-bottom: 0.6rem;
+  }
+
+  .member-support-copy p {
+    color: #475569;
+    line-height: 1.7;
+    margin: 0.75rem 0 0;
+  }
+
+  .member-support-shot {
+    border-radius: 1rem;
+    overflow: hidden;
+    box-shadow: 0 18px 45px rgba(0, 27, 96, 0.16);
+    border: 1px solid #D8E3EE;
+    background: #FFFFFF;
+  }
+
+  .member-support-shot img {
+    width: 100%;
+    height: auto;
+    display: block;
+  }
+</style>

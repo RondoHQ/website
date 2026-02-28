@@ -12,7 +12,7 @@ import InvoicingHighlight from '../components/sections/InvoicingHighlight.astro'
   intro="Werk met één financiële workflow: contributieregels, bulkfacturatie, automatische opvolging en een dashboard dat laat zien wat nu aandacht nodig heeft."
   demoLabel="Bekijk de demo"
   contactLabel="Neem contact op"
-  contactHref="/#contact"
+  contactHref="/contact"
   screenshotSrc="/screenshot-finance-dashboard.webp"
   screenshotAlt="Finance dashboard in Rondo Club"
   screenshotWidth={1600}
@@ -38,4 +38,256 @@ import InvoicingHighlight from '../components/sections/InvoicingHighlight.astro'
   ]}
 >
   <InvoicingHighlight />
+
+  <div class="finance-overview-block">
+    <h2 class="gradient-text finance-overview-heading">Finance dashboard en nog te factureren</h2>
+
+    <div class="finance-overview-copy">
+      <p>
+        In het finance dashboard zie je direct wat nu telt: openstaand bedrag, recente betalingen en acties die
+        opvolging nodig hebben.
+      </p>
+      <p>
+        In het overzicht <em>Nog te factureren</em> zie je precies welke leden nog niet in een factuurrun zitten.
+        Zo mis je geen facturen en houd je de facturatie door het seizoen heen voorspelbaar.
+      </p>
+    </div>
+
+    <div class="finance-overview-grid">
+      <figure class="finance-overview-shot">
+        <img
+          class="zoomable-screenshot"
+          src="/Screenshots/financien-dashboard.png"
+          alt="Finance dashboard met openstaand bedrag, recente betalingen en acties"
+          width="3456"
+          height="1922"
+          loading="lazy"
+        />
+      </figure>
+      <figure class="finance-overview-shot">
+        <img
+          class="zoomable-screenshot"
+          src="/Screenshots/contributie-nog-te-factureren.png"
+          alt="Overzicht van leden die nog te factureren zijn"
+          width="3456"
+          height="1922"
+          loading="lazy"
+        />
+      </figure>
+    </div>
+  </div>
+
+  <div class="finance-installments-block">
+    <h2 class="gradient-text finance-installments-heading">Gespreid betalen zonder hoge meerkosten</h2>
+
+    <div class="finance-installments-copy">
+      <p>
+        Niet elk lid betaalt contributie in één keer. Met Rondo bied je een persoonlijke betaalpagina waarop leden
+        kunnen kiezen voor betaling in 3 of 8 termijnen.
+        Als er in het seizoen minder termijnen over zijn, past Rondo het aantal beschikbare termijnen automatisch aan.
+      </p>
+      <p>
+        Die keuze loopt automatisch mee in dezelfde factuurworkflow, zonder hoge meerkosten voor club of lid.
+        Transactiekosten zijn daarbij per type factuur apart in te stellen.
+        Zo houd je contributie toegankelijk en blijft de penningmeester in controle.
+      </p>
+    </div>
+
+    <div class="finance-shots-grid">
+      <figure class="finance-shot finance-shot-portrait">
+        <img
+          class="zoomable-screenshot"
+          src="/Screenshots/screenshot-payment-page.png"
+          alt="Persoonlijke betaalpagina met keuze voor betaling in termijnen"
+          width="1058"
+          height="1866"
+          loading="lazy"
+        />
+      </figure>
+      <figure class="finance-shot">
+        <img
+          class="zoomable-screenshot"
+          src="/Screenshots/screenshot-invoice.png"
+          alt="Factuurdetail in Rondo Club"
+          width="1686"
+          height="2278"
+          loading="lazy"
+        />
+      </figure>
+    </div>
+  </div>
+
+  <figure class="treasurer-quote">
+    <blockquote>
+      "Binnen AWC merken we dagelijks hoeveel druk er ligt op vrijwilligers. Met Rondo hebben we eindelijk een
+      platform dat echt ontzorgt. Ledenadministratie, contributie-inning en financiële afstemming lopen geïntegreerd
+      en overzichtelijk samen. Het scheelt ons uren werk en geeft ons de inzichten om als vereniging beter te sturen.
+      Dat maakt mijn rol als penningmeester een stuk leuker en effectiever."
+    </blockquote>
+    <figcaption class="treasurer-quote-author">
+      <img src="/xander-notte.webp" alt="Xander Notte" width="400" height="400" loading="lazy" />
+      <div>
+        <p class="treasurer-quote-name">Xander Notte</p>
+        <p class="treasurer-quote-role">Penningmeester bij AWC</p>
+      </div>
+    </figcaption>
+  </figure>
 </RolePage>
+
+<style>
+  .finance-overview-block {
+    display: grid;
+    gap: 1.25rem;
+    max-width: 72rem;
+    margin: 2rem auto 0;
+  }
+
+  @media (min-width: 980px) {
+    .finance-overview-block {
+      grid-template-columns: 0.95fr 1.05fr;
+      align-items: start;
+    }
+  }
+
+  .finance-overview-heading {
+    font-size: clamp(1.6rem, 2.6vw, 2.1rem);
+    margin: 0;
+    grid-column: 1 / -1;
+  }
+
+  .finance-overview-copy p {
+    color: #475569;
+    line-height: 1.7;
+    margin: 0.75rem 0 0;
+  }
+
+  .finance-overview-grid {
+    display: grid;
+    gap: 0.85rem;
+    grid-template-columns: 1fr;
+  }
+
+  @media (min-width: 700px) {
+    .finance-overview-grid {
+      grid-template-columns: 1fr 1fr;
+      align-items: start;
+    }
+  }
+
+  .finance-overview-shot {
+    border-radius: 1rem;
+    overflow: hidden;
+    box-shadow: 0 18px 45px rgba(0, 27, 96, 0.16);
+    border: 1px solid #D8E3EE;
+    background: #FFFFFF;
+  }
+
+  .finance-overview-shot img {
+    width: 100%;
+    height: auto;
+    display: block;
+    object-fit: contain;
+  }
+
+  .finance-installments-block {
+    display: grid;
+    gap: 1.25rem;
+    max-width: 72rem;
+    margin: 2rem auto 0;
+  }
+
+  @media (min-width: 980px) {
+    .finance-installments-block {
+      grid-template-columns: 0.85fr 1.15fr;
+      align-items: start;
+    }
+  }
+
+  .finance-installments-heading {
+    font-size: clamp(1.6rem, 2.6vw, 2.1rem);
+    margin: 0;
+    grid-column: 1 / -1;
+  }
+
+  .finance-installments-copy p {
+    color: #475569;
+    line-height: 1.7;
+    margin: 0.75rem 0 0;
+  }
+
+  .finance-shots-grid {
+    display: grid;
+    gap: 0.85rem;
+    grid-template-columns: 1fr;
+  }
+
+  @media (min-width: 700px) {
+    .finance-shots-grid {
+      grid-template-columns: 0.50fr 1.0fr;
+      align-items: start;
+    }
+  }
+
+  .finance-shot {
+    border-radius: 1rem;
+    overflow: hidden;
+    box-shadow: 0 18px 45px rgba(0, 27, 96, 0.16);
+    border: 1px solid #D8E3EE;
+    background: #FFFFFF;
+  }
+
+  .finance-shot img {
+    width: 100%;
+    height: auto;
+    display: block;
+    object-fit: contain;
+  }
+
+  .finance-shot-portrait img {
+    max-height: 36rem;
+    margin: 0 auto;
+    background: #F8FAFC;
+  }
+
+  .treasurer-quote {
+    max-width: 72rem;
+    margin: 1.75rem auto 0;
+    padding: 1.4rem;
+    border-radius: 1rem;
+    border: 1px solid #D8E3EE;
+    background: #FFFFFF;
+    box-shadow: 0 12px 30px rgba(0, 27, 96, 0.08);
+  }
+
+  .treasurer-quote blockquote {
+    margin: 0;
+    font-size: 1.03rem;
+    line-height: 1.75;
+    color: #334155;
+  }
+
+  .treasurer-quote-author {
+    margin-top: 1rem;
+    display: flex;
+    gap: 0.8rem;
+    align-items: center;
+  }
+
+  .treasurer-quote-author img {
+    width: 3rem;
+    height: 3rem;
+    border-radius: 999px;
+    object-fit: cover;
+  }
+
+  .treasurer-quote-name {
+    margin: 0;
+    font-weight: 700;
+    color: #0F172A;
+  }
+
+  .treasurer-quote-role {
+    margin: 0;
+    color: #64748B;
+  }
+</style>

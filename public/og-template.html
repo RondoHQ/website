@@ -20,27 +20,33 @@
       html, body {
         margin: 0;
         padding: 0;
-        width: 100%;
-        height: 100%;
+        width: 1200px;
+        height: 675px;
+        overflow: hidden;
         font-family: "Figtree", system-ui, sans-serif;
         background: #dfe8f1;
       }
 
       .stage {
-        min-height: 100%;
+        width: 100%;
+        height: 100%;
         display: grid;
-        place-items: center;
-        padding: 2rem;
+        place-items: stretch;
+        padding: 0;
       }
 
       .og {
-        width: 1200px;
-        height: 630px;
+        width: 100%;
+        height: 100%;
         overflow: hidden;
-        border-radius: 20px;
-        background: linear-gradient(180deg, #f4faff 0%, #fff6ef 100%);
-        box-shadow: 0 20px 60px rgba(0, 27, 96, 0.18);
+        border-radius: 0;
+        background:
+          radial-gradient(520px 320px at 95% 12%, rgba(244, 154, 234, 0.33) 0%, rgba(244, 154, 234, 0) 72%),
+          radial-gradient(430px 280px at 35% 88%, rgba(255, 226, 147, 0.36) 0%, rgba(255, 226, 147, 0) 76%),
+          linear-gradient(180deg, #f4faff 0%, #fff6ef 100%);
         position: relative;
+        display: flex;
+        flex-direction: column;
       }
 
       .blob {
@@ -52,42 +58,43 @@
       }
 
       .blob-1 {
-        width: 360px;
-        height: 360px;
+        width: 320px;
+        height: 320px;
         background: #9bc2d3;
-        left: -120px;
-        top: 120px;
+        left: -140px;
+        top: 156px;
       }
 
       .blob-2 {
-        width: 320px;
-        height: 320px;
+        width: 260px;
+        height: 260px;
         background: #f995e0;
-        right: -110px;
-        top: 70px;
+        right: -120px;
+        top: 72px;
       }
 
       .blob-3 {
-        width: 260px;
-        height: 260px;
+        width: 250px;
+        height: 250px;
         background: #ffe293;
-        left: 330px;
-        bottom: -120px;
+        left: 360px;
+        bottom: -130px;
       }
 
       .header {
-        height: 90px;
+        height: 78px;
+        flex: 0 0 78px;
         display: flex;
         align-items: center;
-        padding: 0 44px;
+        padding: 0 34px;
         border-bottom: 1px solid #d8e3ee;
-        background: rgba(255, 255, 255, 0.9);
+        background: rgba(255, 255, 255, 0.94);
         position: relative;
         z-index: 2;
       }
 
       .header img {
-        width: 260px;
+        width: 232px;
         height: auto;
         display: block;
       }
@@ -95,34 +102,44 @@
       .hero {
         display: grid;
         grid-template-columns: 1.05fr 0.95fr;
-        gap: 28px;
-        padding: 46px 44px 40px;
+        gap: 26px;
+        flex: 1;
+        align-items: center;
+        padding: 18px 34px 30px;
         position: relative;
         z-index: 1;
+      }
+
+      .content {
+        max-width: 620px;
       }
 
       h1 {
         margin: 0;
         color: var(--rondo-navy);
-        font-size: 74px;
-        line-height: 0.98;
-        letter-spacing: -0.02em;
-        max-width: 640px;
+        font-size: 76px;
+        line-height: 0.94;
+        letter-spacing: -0.03em;
+        max-width: 620px;
+      }
+
+      h1 span {
+        display: block;
       }
 
       p {
-        margin: 20px 0 0;
-        font-size: 35px;
-        line-height: 1.22;
+        margin: 22px 0 0;
+        font-size: 50px;
+        line-height: 1.16;
         color: #3d4e6a;
-        max-width: 610px;
+        max-width: 600px;
       }
 
       .shot-wrap {
         align-self: center;
         justify-self: end;
         width: 100%;
-        max-width: 530px;
+        max-width: 540px;
         border-radius: 16px;
         overflow: hidden;
         background: #edf4f8;
@@ -149,9 +166,9 @@
         </header>
 
         <section class="hero">
-          <div>
-            <h1>Niemand weet welke ledenlijst de juiste is</h1>
-            <p>Ledenadministratie, contributie en facturatie in één systeem.</p>
+          <div class="content">
+            <h1><span>Eén platform voor je</span><span>clubadministratie</span></h1>
+            <p>Van ledenbeheer en contributie tot facturatie, VOG en ledenpassen.</p>
           </div>
           <div class="shot-wrap">
             <img src="/screenshot-dashboard.webp" alt="Rondo dashboard" />

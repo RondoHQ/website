@@ -78,6 +78,12 @@ const secondaryAlt = secondaryScreenshotAlt ?? screenshotAlt;
 const secondaryWidth = secondaryScreenshotWidth ?? screenshotWidth;
 const secondaryHeight = secondaryScreenshotHeight ?? screenshotHeight;
 const isPassWideLayout = screenshotLayout === 'passWide';
+const bottomCtaHeading = lang === 'en'
+  ? 'Want to discuss what Rondo can do for your club?'
+  : 'Wil je bespreken wat Rondo voor jullie club kan doen?';
+const bottomCtaText = lang === 'en'
+  ? 'Plan a short intro and we will map out the best setup for your workflow, volunteers and integrations.'
+  : 'Plan een korte kennismaking en we denken mee over de beste inrichting voor jullie workflow, vrijwilligers en koppelingen.';
 ---
 
 <BaseLayout lang={lang} title={title} description={description}>
@@ -97,11 +103,11 @@ const isPassWideLayout = screenshotLayout === 'passWide';
         <div class:list={['role-shot', { 'role-shot-multi': hasSecondaryScreenshot, 'role-shot-pass-wide': hasSecondaryScreenshot && isPassWideLayout }]}>
           {hasSecondaryScreenshot ? (
             <div class="role-shot-grid">
-              <img src={screenshotSrc} alt={screenshotAlt} width={screenshotWidth} height={screenshotHeight} loading="eager" />
-              <img src={secondaryScreenshotSrc} alt={secondaryAlt} width={secondaryWidth} height={secondaryHeight} loading="eager" />
+              <img class="zoomable-screenshot" src={screenshotSrc} alt={screenshotAlt} width={screenshotWidth} height={screenshotHeight} loading="eager" />
+              <img class="zoomable-screenshot" src={secondaryScreenshotSrc} alt={secondaryAlt} width={secondaryWidth} height={secondaryHeight} loading="eager" />
             </div>
           ) : (
-            <img src={screenshotSrc} alt={screenshotAlt} width={screenshotWidth} height={screenshotHeight} loading="eager" />
+            <img class="zoomable-screenshot" src={screenshotSrc} alt={screenshotAlt} width={screenshotWidth} height={screenshotHeight} loading="eager" />
           )}
         </div>
       </div>
@@ -144,9 +150,68 @@ const isPassWideLayout = screenshotLayout === 'passWide';
         </p>
       </div>
     </section>
+
+    <section class="role-section">
+      <div class="role-container role-bottom-cta">
+        <h2 class="gradient-text role-bottom-cta-heading">{bottomCtaHeading}</h2>
+        <p class="role-bottom-cta-text">{bottomCtaText}</p>
+        <a href={contactHref} class="role-btn role-btn-primary">{contactLabel}</a>
+      </div>
+    </section>
   </main>
+  <div class="role-lightbox" id="role-lightbox" role="dialog" aria-label={lang === 'en' ? 'Enlarged screenshot' : 'Screenshot vergroot'} aria-modal="true">
+    <button class="role-lightbox-close" id="role-lightbox-close" type="button" aria-label={lang === 'en' ? 'Close' : 'Sluiten'}>&times;</button>
+    <img src="" alt="" class="role-lightbox-img" id="role-lightbox-img" />
+  </div>
   <Footer lang={lang} />
 </BaseLayout>
+
+<script>
+  const zoomableScreens = document.querySelectorAll('.zoomable-screenshot');
+  const lightbox = document.getElementById('role-lightbox');
+  const lightboxImg = document.getElementById('role-lightbox-img');
+  const closeBtn = document.getElementById('role-lightbox-close');
+
+  const openLightbox = (img: HTMLImageElement) => {
+    if (!lightbox || !(lightboxImg instanceof HTMLImageElement)) return;
+    lightboxImg.src = img.currentSrc || img.src;
+    lightboxImg.alt = img.alt || '';
+    lightbox.classList.add('active');
+    document.body.style.overflow = 'hidden';
+  };
+
+  const closeLightbox = () => {
+    if (!lightbox || !(lightboxImg instanceof HTMLImageElement)) return;
+    lightbox.classList.remove('active');
+    lightboxImg.src = '';
+    document.body.style.overflow = '';
+  };
+
+  zoomableScreens.forEach((img) => {
+    if (!(img instanceof HTMLImageElement)) return;
+    img.tabIndex = 0;
+    img.setAttribute('role', 'button');
+    img.setAttribute('aria-label', `Open screenshot: ${img.alt || 'image'}`);
+
+    img.addEventListener('click', () => openLightbox(img));
+    img.addEventListener('keydown', (event) => {
+      if (event.key === 'Enter' || event.key === ' ') {
+        event.preventDefault();
+        openLightbox(img);
+      }
+    });
+  });
+
+  closeBtn?.addEventListener('click', closeLightbox);
+
+  lightbox?.addEventListener('click', (event) => {
+    if (event.target === lightbox) closeLightbox();
+  });
+
+  document.addEventListener('keydown', (event) => {
+    if (event.key === 'Escape' && lightbox?.classList.contains('active')) closeLightbox();
+  });
+</script>
 
 <style>
   .role-page {
@@ -224,6 +289,15 @@ const isPassWideLayout = screenshotLayout === 'passWide';
     height: auto;
   }
 
+  :global(.zoomable-screenshot) {
+    cursor: zoom-in;
+  }
+
+  :global(.zoomable-screenshot:focus-visible) {
+    outline: 3px solid #00908B;
+    outline-offset: 2px;
+  }
+
   .role-shot-multi {
     padding: 0.5rem;
     background: #F2F7FA;
@@ -270,7 +344,14 @@ const isPassWideLayout = screenshotLayout === 'passWide';
   .role-list {
     color: #334155;
     line-height: 1.8;
+    list-style: disc;
+    list-style-position: outside;
     padding-left: 1.2rem;
+    margin: 0;
+  }
+
+  .role-list li + li {
+    margin-top: 0.2rem;
   }
 
   .role-cards {
@@ -306,6 +387,67 @@ const isPassWideLayout = screenshotLayout === 'passWide';
   .role-links a {
     color: #00908B;
     text-underline-offset: 2px;
+  }
+
+  .role-bottom-cta {
+    padding: 1.3rem;
+    border-radius: 1rem;
+    border: 1px solid #D8E3EE;
+    background: #FFFFFF;
+    box-shadow: 0 10px 26px rgba(0, 27, 96, 0.08);
+  }
+
+  .role-bottom-cta-heading {
+    margin-bottom: 0.45rem;
+    font-size: clamp(1.45rem, 2.4vw, 1.9rem);
+  }
+
+  .role-bottom-cta-text {
+    color: #475569;
+    margin: 0 0 1rem;
+    max-width: 48rem;
+  }
+
+  .role-lightbox {
+    position: fixed;
+    inset: 0;
+    display: none;
+    align-items: center;
+    justify-content: center;
+    z-index: 1100;
+    background: rgba(15, 23, 42, 0.84);
+    padding: 1rem;
+  }
+
+  .role-lightbox.active {
+    display: flex;
+  }
+
+  .role-lightbox-img {
+    max-width: min(1200px, 94vw);
+    max-height: 88vh;
+    border-radius: 0.85rem;
+    box-shadow: 0 25px 70px rgba(0, 0, 0, 0.35);
+    background: #fff;
+  }
+
+  .role-lightbox-close {
+    position: absolute;
+    top: 1rem;
+    right: 1rem;
+    width: 2.5rem;
+    height: 2.5rem;
+    border: 0;
+    border-radius: 999px;
+    cursor: pointer;
+    font-size: 1.65rem;
+    line-height: 1;
+    background: rgba(255, 255, 255, 0.9);
+    color: #0F172A;
+  }
+
+  .role-lightbox-close:hover {
+    background: #FFFFFF;
   }
 
 </style>

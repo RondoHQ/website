@@ -1,0 +1,62 @@
+---
+import BaseLayout from '../layouts/BaseLayout.astro';
+import Header from '../components/layout/Header.astro';
+import ContactForm from '../components/sections/ContactForm.astro';
+import Footer from '../components/sections/Footer.astro';
+---
+
+<BaseLayout title="Contact — Rondo" description="Neem contact op met het team van Rondo.">
+  <Header />
+  <main id="main-content" class="contact-page">
+    <section class="contact-intro">
+      <div class="contact-intro-inner">
+        <p class="contact-kicker">Contact</p>
+        <h1 class="gradient-text contact-title">Neem contact op</h1>
+        <p class="contact-subtitle">
+          Vertel kort iets over je club en waar je tegenaan loopt. We reageren meestal binnen één werkdag.
+        </p>
+      </div>
+    </section>
+    <ContactForm showHeading={false} />
+  </main>
+  <Footer />
+</BaseLayout>
+
+<style>
+  .contact-page {
+    background: linear-gradient(180deg, #FFFFFF 0%, #ECF8F6 38%, #FFFFFF 100%);
+  }
+
+  .contact-intro {
+    padding: 2.2rem 1rem 0.5rem;
+  }
+
+  .contact-page :global(.contact-section) {
+    padding-top: 1.25rem;
+    padding-bottom: 4rem;
+  }
+
+  .contact-intro-inner {
+    max-width: 56rem;
+    margin: 0 auto;
+  }
+
+  .contact-kicker {
+    margin: 0 0 0.35rem;
+    font-weight: 700;
+    color: #00908B;
+  }
+
+  .contact-title {
+    margin: 0;
+    font-size: clamp(2rem, 5vw, 3.2rem);
+    line-height: 1.1;
+  }
+
+  .contact-subtitle {
+    margin: 0.85rem 0 0;
+    color: #475569;
+    font-size: 1.08rem;
+    max-width: 40rem;
+  }
+</style>

@@ -27,12 +27,12 @@ const translations = {
 
   // ─── Hero ───
   'hero.headline': {
-    nl: 'Niemand weet welke ledenlijst de juiste is',
-    en: "Nobody knows which member list is the right one",
+    nl: 'Eén platform voor je clubadministratie',
+    en: 'One platform for your club administration',
   },
   'hero.subline': {
-    nl: 'Met Rondo hoeft dat niet meer. Ledendata, contributie en facturatie in één systeem, automatisch gesynchroniseerd met Sportlink. Penningmeesters krijgen direct overzicht via het finance dashboard; ledenpassen en scanner test je direct in de demo.',
-    en: "With Rondo, that's a thing of the past. Member data, dues and invoicing in one system, automatically synced with Sportlink. Treasurers get instant overview through the finance dashboard; membership passes and scanner can be tested directly in the demo.",
+    nl: 'Van ledenbeheer en contributie tot facturatie, VOG en ledenpassen: Rondo automatiseert je clubprocessen en houdt alles synchroon met Sportlink.',
+    en: 'From member management and dues to invoicing, VOG, and membership passes: Rondo automates your club processes and keeps everything in sync with Sportlink.',
   },
   'hero.cta.product': {
     nl: 'Bekijk wat Rondo doet',
@@ -132,36 +132,41 @@ const translations = {
     nl: 'Van ledenmutaties en VOG-overzicht tot teams, commissies en communicatie. Minder handwerk, meer grip.',
     en: 'From member changes and VOG status to teams, committees and communication. Less manual work, more control.',
   },
+  'roles.secretary.cta': { nl: 'Zo werkt het voor de secretaris', en: 'See how it works for the secretary' },
   'roles.treasurer.title': { nl: 'Penningmeester', en: 'Treasurer' },
   'roles.treasurer.text': {
     nl: 'Contributieregels, bulkfacturatie, automatische betaalstatus en finance dashboard in één workflow.',
     en: 'Dues rules, bulk invoicing, automatic payment status and finance dashboard in one workflow.',
   },
+  'roles.treasurer.cta': { nl: 'Zo werkt het voor de penningmeester', en: 'See how it works for the treasurer' },
   'roles.gate.title': { nl: 'Toegang & events', en: 'Access & events' },
   'roles.gate.text': {
     nl: 'Gebruik Apple/Google Wallet-ledenpassen en scan direct in de webapp of iemand geldig lid is.',
     en: 'Use Apple/Google Wallet membership passes and scan instantly in the webapp to verify active membership.',
   },
+  'roles.gate.cta': { nl: 'Zo werkt het voor toegang & events', en: 'See how it works for access & events' },
   'roles.board.title': { nl: 'Bestuur & ICT', en: 'Board & IT' },
   'roles.board.text': {
     nl: 'Krijg grip op data-eigenaarschap, rollen/rechten en hoe systemen via sync samenwerken.',
     en: 'Get control over data ownership, access roles and how systems work together through sync.',
   },
+  'roles.board.cta': { nl: 'Zo werkt het voor bestuur & ICT', en: 'See how it works for board & IT' },
   'roles.support.title': { nl: 'Ledenadministratie', en: 'Member administration' },
   'roles.support.text': {
     nl: 'Behandel vragen over leden sneller met actuele context en minder uitzoekwerk.',
     en: 'Handle member administration questions faster with current context and less manual lookup.',
   },
+  'roles.support.cta': { nl: 'Zo werkt het voor ledenadministratie', en: 'See how it works for member administration' },
   'roles.communication.title': { nl: 'Communicatie', en: 'Communication' },
   'roles.communication.text': {
     nl: 'Verstuur beter met actuele mailinglijsten dankzij sync met Laposta en minder handmatig lijstbeheer.',
     en: 'Send better with up-to-date mailing lists thanks to Laposta sync and less manual list management.',
   },
-  'roles.cta': { nl: 'Zo werkt het voor jou', en: 'See your workflow' },
+  'roles.communication.cta': { nl: 'Zo werkt het voor communicatie', en: 'See how it works for communication' },
 
   // ─── InvoicingHighlight ───
   'invoicing.heading': {
-    nl: 'Facturatie & Betalingen — volledig geregeld',
+    nl: 'Facturatie & betalingen: volledig geregeld',
     en: 'Invoicing & Payments — fully handled',
   },
   'invoicing.subheading': {
@@ -465,8 +470,8 @@ const translations = {
   },
   'faq.q5': { nl: 'Mijn club gebruikt een ander e-mailsysteem, kan dat ook?', en: 'My club uses a different email system, can that work too?' },
   'faq.a5': {
-    nl: 'Ja, natuurlijk! Rondo is flexibel en kan in principe met elk e-mailsysteem gekoppeld worden. De koppeling moet dan wel gebouwd worden — <a href="#contact">neem contact op</a> en we bespreken de mogelijkheden.',
-    en: 'Yes, of course! Rondo is flexible and can in principle be connected to any email system. The integration would need to be built — <a href="#contact">get in touch</a> and we\'ll discuss the possibilities.',
+    nl: 'Ja, natuurlijk! Rondo is flexibel en kan in principe met elk e-mailsysteem gekoppeld worden. De koppeling moet dan wel gebouwd worden — <a href="/contact">neem contact op</a> en we bespreken de mogelijkheden.',
+    en: 'Yes, of course! Rondo is flexible and can in principle be connected to any email system. The integration would need to be built — <a href="/en/contact">get in touch</a> and we\'ll discuss the possibilities.',
   },
   'faq.q6': { nl: 'Heb je Nikki nodig?', en: 'Do you need Nikki?' },
   'faq.a6': {
