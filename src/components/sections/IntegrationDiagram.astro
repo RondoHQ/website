@@ -19,7 +19,7 @@ const lang = Astro.props.lang || getLangFromUrl(Astro.url);
     </div>
 
     <div class="diagram-container">
-      <svg viewBox="40 10 720 480" class="w-full h-auto max-w-3xl mx-auto" role="img" aria-label="Integration diagram showing data flow between systems">
+      <svg viewBox="0 0 860 460" class="w-full h-auto max-w-4xl mx-auto" role="img" aria-label="Integration diagram showing data flow between systems">
         <defs>
           <linearGradient id="node-gradient" x1="0%" y1="0%" x2="100%" y2="100%">
             <stop offset="0%" stop-color="#71DBA8" />
@@ -31,67 +31,104 @@ const lang = Astro.props.lang || getLangFromUrl(Astro.url);
           </filter>
         </defs>
 
-        <rect x="80" y="30" width="160" height="80" rx="12" class="diagram-node" />
-        <text x="160" y="75" class="diagram-text">Sportlink Club</text>
+        <!-- Nodes: top row -->
+        <rect x="30" y="30" width="160" height="80" rx="12" class="diagram-node" />
+        <text x="110" y="75" class="diagram-text">Sportlink Club</text>
 
-        <rect x="560" y="30" width="160" height="80" rx="12" class="diagram-node" />
-        <text x="640" y="75" class="diagram-text">Nikki</text>
+        <rect x="250" y="30" width="160" height="80" rx="12" class="diagram-node" />
+        <text x="330" y="75" class="diagram-text">Nikki</text>
 
-        <rect x="80" y="210" width="160" height="80" rx="12" fill="url(#node-gradient)" opacity="0.15" filter="url(#glow)" />
-        <rect x="80" y="210" width="160" height="80" rx="12" class="diagram-node-primary" />
-        <text x="160" y="255" class="diagram-text-primary">Rondo Sync</text>
+        <!-- Nodes: middle row -->
+        <rect x="100" y="190" width="160" height="80" rx="12" fill="url(#node-gradient)" opacity="0.15" filter="url(#glow)" />
+        <rect x="100" y="190" width="160" height="80" rx="12" class="diagram-node-primary" />
+        <text x="180" y="235" class="diagram-text-primary">Rondo Sync</text>
 
-        <rect x="560" y="210" width="160" height="80" rx="12" fill="url(#node-gradient)" opacity="0.15" filter="url(#glow)" />
-        <rect x="560" y="210" width="160" height="80" rx="12" class="diagram-node-primary" />
-        <text x="640" y="255" class="diagram-text-primary">Rondo Club</text>
+        <rect x="370" y="190" width="160" height="80" rx="12" fill="url(#node-gradient)" opacity="0.15" filter="url(#glow)" />
+        <rect x="370" y="190" width="160" height="80" rx="12" class="diagram-node-primary" />
+        <text x="450" y="235" class="diagram-text-primary">Rondo Club</text>
 
-        <rect x="80" y="390" width="160" height="80" rx="12" class="diagram-node" />
-        <text x="160" y="435" class="diagram-text">Laposta</text>
+        <rect x="640" y="190" width="160" height="80" rx="12" class="diagram-node" />
+        <text x="720" y="235" class="diagram-text">Mollie</text>
 
-        <rect x="560" y="390" width="160" height="80" rx="12" class="diagram-node" />
-        <text x="640" y="435" class="diagram-text">FreeScout</text>
+        <!-- Nodes: bottom row -->
+        <rect x="30" y="355" width="160" height="80" rx="12" class="diagram-node" />
+        <text x="110" y="400" class="diagram-text">Laposta</text>
 
-        <path d="M 160 110 L 160 210" class="diagram-arrow" />
+        <rect x="250" y="355" width="160" height="80" rx="12" class="diagram-node" />
+        <text x="330" y="400" class="diagram-text">FreeScout</text>
+
+        <rect x="640" y="355" width="160" height="80" rx="12" class="diagram-node" />
+        <text x="720" y="400" class="diagram-text">Lettermint</text>
+
+        <!-- Arrow: Sportlink ↔ Rondo Sync -->
+        <path d="M 110 110 L 165 190" class="diagram-arrow" />
         <circle r="4" fill="#71DBA8" opacity="0.9">
-          <animateMotion dur="2.5s" repeatCount="indefinite" path="M 160 110 L 160 210" />
+          <animateMotion dur="2.5s" repeatCount="indefinite" path="M 110 110 L 165 190" />
         </circle>
         <circle r="4" fill="#993399" opacity="0.9">
-          <animateMotion dur="3s" repeatCount="indefinite" path="M 160 210 L 160 110" />
+          <animateMotion dur="3s" repeatCount="indefinite" path="M 165 190 L 110 110" />
         </circle>
-        <text x="170" y="165" fill="#71DBA8" opacity="0.9" font-size="12" text-anchor="start">{t('integration.label.memberdata', lang)}</text>
+        <text x="115" y="155" fill="#71DBA8" opacity="0.9" font-size="12" text-anchor="start">{t('integration.label.memberdata', lang)}</text>
 
-        <path d="M 560 90 L 240 235" class="diagram-arrow" />
+        <!-- Arrow: Nikki → Rondo Sync -->
+        <path d="M 330 110 L 220 190" class="diagram-arrow" />
         <circle r="4" fill="#71DBA8" opacity="0.9">
-          <animateMotion dur="3s" repeatCount="indefinite" path="M 560 90 L 240 235" />
+          <animateMotion dur="3s" repeatCount="indefinite" path="M 330 110 L 220 190" />
         </circle>
-        <text x="420" y="165" fill="#71DBA8" opacity="0.9" font-size="12" text-anchor="start">{t('integration.label.duesdata', lang)}</text>
+        <text x="285" y="145" fill="#71DBA8" opacity="0.9" font-size="12" text-anchor="start">{t('integration.label.duesdata', lang)}</text>
 
-        <path d="M 240 250 L 560 250" class="diagram-arrow" />
+        <!-- Arrow: Rondo Sync ↔ Rondo Club -->
+        <path d="M 260 230 L 370 230" class="diagram-arrow" />
         <circle r="4" fill="#71DBA8" opacity="0.9">
-          <animateMotion dur="2s" repeatCount="indefinite" path="M 240 250 L 560 250" />
+          <animateMotion dur="2s" repeatCount="indefinite" path="M 260 230 L 370 230" />
         </circle>
         <circle r="4" fill="#71DBA8" opacity="0.9">
-          <animateMotion dur="2s" begin="1s" repeatCount="indefinite" path="M 240 250 L 560 250" />
+          <animateMotion dur="2s" begin="1s" repeatCount="indefinite" path="M 260 230 L 370 230" />
         </circle>
         <circle r="4" fill="#993399" opacity="0.9">
-          <animateMotion dur="3s" repeatCount="indefinite" path="M 560 250 L 240 250" />
+          <animateMotion dur="3s" repeatCount="indefinite" path="M 370 230 L 260 230" />
         </circle>
 
-        <path d="M 160 290 L 160 390" class="diagram-arrow" />
+        <!-- Arrow: Rondo Sync ↔ Laposta -->
+        <path d="M 165 270 L 120 355" class="diagram-arrow" />
         <circle r="4" fill="#71DBA8" opacity="0.9">
-          <animateMotion dur="2.5s" repeatCount="indefinite" path="M 160 290 L 160 390" />
-        </circle>
-        <text x="170" y="345" fill="#71DBA8" opacity="0.9" font-size="12" text-anchor="start">{t('integration.label.memberdata', lang)}</text>
-
-        <path d="M 240 270 L 560 420" class="diagram-arrow" />
-        <circle r="4" fill="#71DBA8" opacity="0.9">
-          <animateMotion dur="3.5s" repeatCount="indefinite" path="M 240 270 L 560 420" />
+          <animateMotion dur="2.5s" repeatCount="indefinite" path="M 165 270 L 120 355" />
         </circle>
         <circle r="4" fill="#993399" opacity="0.9">
-          <animateMotion dur="4s" repeatCount="indefinite" path="M 560 420 L 240 270" />
+          <animateMotion dur="3s" repeatCount="indefinite" path="M 120 355 L 165 270" />
         </circle>
-        <text x="287" y="330" fill="#71DBA8" opacity="0.9" font-size="12" text-anchor="start">{t('integration.label.memberdata', lang)}</text>
-        <text x="485" y="380" fill="#993399" opacity="0.9" font-size="12" text-anchor="start">{t('integration.label.contacts', lang)}</text>
+        <text x="120" y="318" fill="#71DBA8" opacity="0.9" font-size="12" text-anchor="start">{t('integration.label.memberdata', lang)}</text>
+
+        <!-- Arrow: Rondo Sync ↔ FreeScout -->
+        <path d="M 220 270 L 310 355" class="diagram-arrow" />
+        <circle r="4" fill="#71DBA8" opacity="0.9">
+          <animateMotion dur="3s" repeatCount="indefinite" path="M 220 270 L 310 355" />
+        </circle>
+        <circle r="4" fill="#993399" opacity="0.9">
+          <animateMotion dur="3.5s" repeatCount="indefinite" path="M 310 355 L 220 270" />
+        </circle>
+        <text x="235" y="305" fill="#71DBA8" opacity="0.9" font-size="12" text-anchor="start">{t('integration.label.memberdata', lang)}</text>
+        <text x="285" y="325" fill="#C77DFF" opacity="0.9" font-size="12" text-anchor="start">{t('integration.label.contacts', lang)}</text>
+
+        <!-- Arrow: Rondo Club ↔ Mollie -->
+        <path d="M 530 230 L 640 230" class="diagram-arrow" />
+        <circle r="4" fill="#71DBA8" opacity="0.9">
+          <animateMotion dur="2s" repeatCount="indefinite" path="M 530 230 L 640 230" />
+        </circle>
+        <circle r="4" fill="#993399" opacity="0.9">
+          <animateMotion dur="2.5s" repeatCount="indefinite" path="M 640 230 L 530 230" />
+        </circle>
+        <text x="585" y="218" fill="#71DBA8" opacity="0.9" font-size="12" text-anchor="middle">{t('integration.label.payments', lang)}</text>
+
+        <!-- Arrow: Rondo Club ↔ Lettermint -->
+        <path d="M 490 270 L 644 358" class="diagram-arrow" />
+        <circle r="4" fill="#71DBA8" opacity="0.9">
+          <animateMotion dur="3s" repeatCount="indefinite" path="M 490 270 L 644 358" />
+        </circle>
+        <circle r="4" fill="#993399" opacity="0.9">
+          <animateMotion dur="3.5s" repeatCount="indefinite" path="M 644 358 L 490 270" />
+        </circle>
+        <text x="575" y="305" fill="#71DBA8" opacity="0.9" font-size="12" text-anchor="middle">{t('integration.label.emails', lang)}</text>
       </svg>
     </div>
 
@@ -116,6 +153,14 @@ const lang = Astro.props.lang || getLangFromUrl(Astro.url);
         <div class="explanation-card">
           <h3>FreeScout</h3>
           <p set:html={t('integration.freescout.desc', lang)} />
+        </div>
+        <div class="explanation-card">
+          <h3>Mollie</h3>
+          <p set:html={t('integration.mollie.desc', lang)} />
+        </div>
+        <div class="explanation-card">
+          <h3>Lettermint</h3>
+          <p set:html={t('integration.lettermint.desc', lang)} />
         </div>
         <div class="explanation-card">
           <h3>Nikki</h3>

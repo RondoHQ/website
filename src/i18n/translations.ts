@@ -302,6 +302,14 @@ const translations = {
     nl: 'Voor clubs die <a href="https://www.nikki.nl/" target="_blank" rel="noopener">Nikki</a> gebruiken voor contributie-inning: Rondo Sync haalt contributiedata op en koppelt deze aan de juiste leden in Rondo Club. Zo heb je overzicht over betalingen zonder handwerk.',
     en: 'For clubs using <a href="https://www.nikki.nl/" target="_blank" rel="noopener">Nikki</a> for dues collection: Rondo Sync fetches dues data and links it to the right members in Rondo Club. Giving you an overview of payments without manual work.',
   },
+  'integration.lettermint.desc': {
+    nl: '<a href="https://lettermint.email/" target="_blank" rel="noopener">Lettermint</a> verzorgt de transactionele e-mails vanuit Rondo Club: facturen, VOG-herinneringen en andere geautomatiseerde berichten. Betrouwbare aflevering zonder dat je er iets voor hoeft te doen.',
+    en: '<a href="https://lettermint.email/" target="_blank" rel="noopener">Lettermint</a> handles transactional emails from Rondo Club: invoices, background check reminders, and other automated messages. Reliable delivery without any effort on your part.',
+  },
+  'integration.mollie.desc': {
+    nl: '<a href="https://www.mollie.com/" target="_blank" rel="noopener">Mollie</a> is een betaalplatform waarmee je club eenvoudig online betalingen kan ontvangen. Rondo Club koppelt betalingen automatisch aan de juiste leden, zodat je altijd overzicht hebt over contributie en andere bijdragen.',
+    en: '<a href="https://www.mollie.com/" target="_blank" rel="noopener">Mollie</a> is a payment platform that lets your club easily receive online payments. Rondo Club automatically links payments to the right members, giving you a clear overview of dues and other contributions.',
+  },
   'integration.sync.summary.title': {
     nl: 'Wat Rondo Sync automatisch doet',
     en: 'What Rondo Sync does automatically',
@@ -334,6 +342,8 @@ const translations = {
   'integration.label.memberdata': { nl: 'ledendata', en: 'member data' },
   'integration.label.duesdata': { nl: 'contributiedata', en: 'dues data' },
   'integration.label.contacts': { nl: 'contactmomenten', en: 'interactions' },
+  'integration.label.payments': { nl: 'betalingen', en: 'payments' },
+  'integration.label.emails': { nl: 'e-mails', en: 'emails' },
 
   // ─── GettingStarted ───
   'started.heading': { nl: 'Hoe begin je?', en: 'How do you get started?' },
