@@ -43,7 +43,34 @@ export async function onRequestPost(context) {
       );
     }
 
-    // 3. Rate limiting via Cloudflare KV (if bound)
+    // 3. Cloudflare Turnstile verification
+    const turnstileToken = formData.get('cf-turnstile-response');
+    if (!turnstileToken) {
+      return new Response(
+        JSON.stringify({ error: 'Beveiligingsverificatie ontbreekt. Vernieuw de pagina en probeer het opnieuw.' }),
+        { status: 400, headers: corsHeaders }
+      );
+    }
+
+    const turnstileResponse = await fetch('https://challenges.cloudflare.com/turnstile/v0/siteverify', {
+      method: 'POST',
+      headers: { 'Content-Type': 'application/json' },
+      body: JSON.stringify({
+        secret: env.TURNSTILE_SECRET_KEY,
+        response: turnstileToken,
+        remoteip: request.headers.get('CF-Connecting-IP')
+      })
+    });
+
+    const turnstileResult = await turnstileResponse.json();
+    if (!turnstileResult.success) {
+      return new Response(
+        JSON.stringify({ error: 'Beveiligingsverificatie mislukt. Probeer het opnieuw.' }),
+        { status: 400, headers: corsHeaders }
+      );
+    }
+
+    // 4. Rate limiting via Cloudflare KV (if bound)
     if (env.RATE_LIMIT) {
       const ip = request.headers.get('CF-Connecting-IP') || 'unknown';
       const key = `contact:${ip}`;

@@ -63,6 +63,7 @@ const paths = getAlternatePaths(Astro.url.pathname);
   <script type="application/ld+json" is:inline set:html={JSON.stringify(organizationSchema)} />
   <script type="application/ld+json" is:inline set:html={JSON.stringify(softwareApplicationSchema)} />
   <script type="application/ld+json" is:inline set:html={JSON.stringify(faqSchema)} />
+  <script src="https://challenges.cloudflare.com/turnstile/v0/api.js" async defer is:inline></script>
   <script defer data-domain="rondo.club" src="https://plausible.io/js/script.js" is:inline></script>
   <script is:inline>window.plausible = window.plausible || function() { (window.plausible.q = window.plausible.q || []).push(arguments) }</script>
 </head>
