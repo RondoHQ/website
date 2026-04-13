@@ -1,16 +1,20 @@
 ---
 import '../styles/global.css';
-import { SEO } from 'astro-seo';
+import Seo from '@jdevalk/astro-seo-graph/Seo.astro';
 import { getLocalizedMetadata } from '../data/siteMetadata';
-import { organizationSchema, softwareApplicationSchema, faqSchema } from '../data/structuredData';
+import { buildPageGraph } from '../data/graph';
 import type { Lang } from '../i18n/utils';
 import { getLangFromUrl, getAlternatePaths } from '../i18n/utils';
 import { t } from '../i18n/translations';
+import type { WebPageType } from './pageTypes';
 
 interface Props {
   title?: string;
   description?: string;
   lang?: Lang;
+  pageType?: WebPageType;
+  faq?: Array<{ question: string; answer: string }>;
+  noindex?: boolean;
 }
 
 const detectedLang = getLangFromUrl(Astro.url);
@@ -18,51 +22,59 @@ const lang = Astro.props.lang || detectedLang;
 const meta = getLocalizedMetadata(lang);
 const {
   title = meta.title,
-  description = meta.description
+  description = meta.description,
+  pageType = 'WebPage',
+  faq,
+  noindex = false,
 } = Astro.props;
 
 const paths = getAlternatePaths(Astro.url.pathname);
+const canonical = `https://rondo.club${Astro.url.pathname}`;
+
+const graph = buildPageGraph({
+  lang,
+  url: canonical,
+  name: title,
+  description,
+  pageType,
+  faq,
+});
 ---
 <!DOCTYPE html>
 <html lang={lang}>
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <link rel="icon" href="/favicon.ico" sizes="32x32">
-  <link rel="icon" href="/favicon-192.png" type="image/png" sizes="192x192">
-  <link rel="apple-touch-icon" href="/apple-touch-icon.png">
-  <link rel="manifest" href="/site.webmanifest">
   <meta name="theme-color" content="#9BC2D3">
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Coiny&family=Figtree:wght@600;700;800&display=swap" rel="stylesheet">
   <link rel="preconnect" href="https://plausible.io">
-  <link rel="alternate" hreflang="nl" href={`https://rondo.club${paths.nl}`} />
-  <link rel="alternate" hreflang="en" href={`https://rondo.club${paths.en}`} />
-  <link rel="alternate" hreflang="x-default" href={`https://rondo.club${paths.nl}`} />
-  <SEO
+  <Seo
     title={title}
     description={description}
-    canonical={`https://rondo.club${Astro.url.pathname}`}
-    openGraph={{
-      basic: {
-        title: title,
-        type: "website",
-        image: meta.ogImage,
-        url: meta.url
-      },
-      optional: {
-        locale: meta.locale,
-        siteName: meta.siteName
-      }
+    canonical={canonical}
+    ogType="website"
+    ogImage={meta.ogImage}
+    ogImageWidth={1200}
+    ogImageHeight={630}
+    siteName={meta.siteName}
+    locale={meta.locale}
+    twitter={{ card: 'summary_large_image' }}
+    graph={graph}
+    noindex={noindex}
+    alternates={{
+      defaultLocale: 'nl',
+      entries: [
+        { hreflang: 'nl', href: `https://rondo.club${paths.nl}` },
+        { hreflang: 'en', href: `https://rondo.club${paths.en}` },
+      ],
     }}
-    twitter={{
-      card: "summary_large_image"
-    }}
+    extraLinks={[
+      { rel: 'icon', href: '/favicon.ico', sizes: '32x32' },
+      { rel: 'icon', href: '/favicon-192.png', type: 'image/png', sizes: '192x192' },
+      { rel: 'apple-touch-icon', href: '/apple-touch-icon.png' },
+      { rel: 'manifest', href: '/site.webmanifest' },
+      { rel: 'sitemap', href: '/sitemap-index.xml' },
+    ]}
   />
-  <script type="application/ld+json" is:inline set:html={JSON.stringify(organizationSchema)} />
-  <script type="application/ld+json" is:inline set:html={JSON.stringify(softwareApplicationSchema)} />
-  <script type="application/ld+json" is:inline set:html={JSON.stringify(faqSchema)} />
   <script src="https://challenges.cloudflare.com/turnstile/v0/api.js" async defer is:inline></script>
   <script defer data-domain="rondo.club" src="https://plausible.io/js/script.js" is:inline></script>
   <script is:inline>window.plausible = window.plausible || function() { (window.plausible.q = window.plausible.q || []).push(arguments) }</script>

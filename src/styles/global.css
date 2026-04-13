@@ -1,4 +1,7 @@
 @import "tailwindcss";
+@import "@fontsource/figtree/600.css";
+@import "@fontsource/figtree/700.css";
+@import "@fontsource/figtree/800.css";
 
 @theme {
   --color-electric-cyan: #00908B;

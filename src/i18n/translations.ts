@@ -564,7 +564,7 @@ const translations = {
   },
 
   // ─── Made in Europe page ───
-  'europe.title': { nl: 'Made in Europe — Rondo', en: 'Made in Europe — Rondo' },
+  'europe.title': { nl: 'Made in Europe — Rondo', en: 'Built in Europe — Rondo' },
   'europe.description': {
     nl: 'Rondo is volledig gebouwd en gehost in Europa. Ontdek welke diensten we gebruiken en waarom dat belangrijk is.',
     en: 'Rondo is fully built and hosted in Europe. Discover which services we use and why that matters.',

@@ -2,6 +2,7 @@ import { defineConfig } from 'astro/config';
 import tailwindcss from '@tailwindcss/vite';
 import sitemap from '@astrojs/sitemap';
 import robotsTxt from 'astro-robots-txt';
+import seoGraph from '@jdevalk/astro-seo-graph/integration';
 
 export default defineConfig({
   site: 'https://rondo.club',
@@ -25,6 +26,11 @@ export default defineConfig({
           allow: '/'
         }
       ]
+    }),
+    seoGraph({
+      validateH1: true,
+      validateDuplicateMeta: true,
+      validateSchema: true,
     })
   ],
   vite: {
