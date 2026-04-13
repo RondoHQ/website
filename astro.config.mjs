@@ -36,7 +36,10 @@ export default defineConfig({
           userAgent: '*',
           allow: '/'
         }
-      ]
+      ],
+      transform(content) {
+        return `${content.trimEnd()}\nSchemamap: https://rondo.club/schemamap.xml\n`;
+      },
     }),
     seoGraph({
       validateH1: true,

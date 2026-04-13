@@ -84,9 +84,19 @@ const bottomCtaHeading = lang === 'en'
 const bottomCtaText = lang === 'en'
   ? 'Plan a short intro and we will map out the best setup for your workflow, volunteers and integrations.'
   : 'Plan een korte kennismaking en we denken mee over de beste inrichting voor jullie workflow, vrijwilligers en koppelingen.';
+
+const currentUrl = `https://rondo.club${Astro.url.pathname}`;
+const homeUrl = lang === 'en' ? 'https://rondo.club/en/' : 'https://rondo.club/';
+const homeLabel = lang === 'en' ? 'Home' : 'Home';
+const rolesLabel = lang === 'en' ? 'By role' : 'Voor jouw rol';
+const breadcrumbs = [
+  { name: homeLabel, url: homeUrl },
+  { name: rolesLabel, url: homeUrl + '#roles' },
+  { name: roleTitle, url: currentUrl },
+];
 ---
 
-<BaseLayout lang={lang} title={title} description={description}>
+<BaseLayout lang={lang} title={title} description={description} breadcrumbs={breadcrumbs}>
   <Header lang={lang} />
   <main id="main-content" class="role-page">
     <section class="role-hero">

@@ -2,7 +2,7 @@
 import '../styles/global.css';
 import Seo from '@jdevalk/astro-seo-graph/Seo.astro';
 import { getLocalizedMetadata } from '../data/siteMetadata';
-import { buildPageGraph } from '../data/graph';
+import { buildPageGraph, type BreadcrumbItem } from '../data/graph';
 import type { Lang } from '../i18n/utils';
 import { getLangFromUrl, getAlternatePaths } from '../i18n/utils';
 import { t } from '../i18n/translations';
@@ -14,6 +14,7 @@ interface Props {
   lang?: Lang;
   pageType?: WebPageType;
   faq?: Array<{ question: string; answer: string }>;
+  breadcrumbs?: BreadcrumbItem[];
   noindex?: boolean;
 }
 
@@ -25,6 +26,7 @@ const {
   description = meta.description,
   pageType = 'WebPage',
   faq,
+  breadcrumbs,
   noindex = false,
 } = Astro.props;
 
@@ -38,6 +40,7 @@ const graph = buildPageGraph({
   description,
   pageType,
   faq,
+  breadcrumbs,
 });
 ---
 <!DOCTYPE html>
@@ -68,11 +71,13 @@ const graph = buildPageGraph({
       ],
     }}
     extraLinks={[
+      { rel: 'preload', as: 'font', href: '/fonts/figtree-latin-700-normal.woff2', type: 'font/woff2', crossorigin: 'anonymous' },
       { rel: 'icon', href: '/favicon.ico', sizes: '32x32' },
       { rel: 'icon', href: '/favicon-192.png', type: 'image/png', sizes: '192x192' },
       { rel: 'apple-touch-icon', href: '/apple-touch-icon.png' },
       { rel: 'manifest', href: '/site.webmanifest' },
       { rel: 'sitemap', href: '/sitemap-index.xml' },
+      { rel: 'alternate', type: 'application/schemamap+xml', href: '/schemamap.xml', title: 'Schema map' },
     ]}
   />
   <script src="https://challenges.cloudflare.com/turnstile/v0/api.js" async defer is:inline></script>

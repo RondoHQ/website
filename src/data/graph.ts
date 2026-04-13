@@ -2,6 +2,7 @@ import {
   makeIds,
   buildWebSite,
   buildWebPage,
+  buildBreadcrumbList,
   buildPiece,
   assembleGraph,
   type GraphEntity,
@@ -16,12 +17,18 @@ export const ids = makeIds({
 });
 
 export const RONDO_ORG_ID = `${SITE_URL}/#/schema.org/Organization/rondo`;
+export const RONDO_SOFTWARE_ID = `${SITE_URL}/#/schema.org/SoftwareApplication/rondo`;
+
+export interface BreadcrumbItem {
+  name: string;
+  url: string;
+}
 
 function asEntity(value: unknown): GraphEntity {
   return value as GraphEntity;
 }
 
-function buildOrganization(): GraphEntity {
+export function buildOrganizationEntity(): GraphEntity {
   return asEntity(
     buildPiece({
       '@type': 'Organization',
@@ -40,7 +47,7 @@ function buildOrganization(): GraphEntity {
   );
 }
 
-function buildJoost(): GraphEntity {
+export function buildJoostEntity(): GraphEntity {
   return asEntity(
     buildPiece({
       '@type': 'Person',
@@ -74,11 +81,11 @@ function buildJoost(): GraphEntity {
   );
 }
 
-function buildSoftware(): GraphEntity {
+export function buildSoftwareEntity(): GraphEntity {
   return asEntity(
     buildPiece({
       '@type': 'SoftwareApplication',
-      '@id': `${SITE_URL}/#/schema.org/SoftwareApplication/rondo`,
+      '@id': RONDO_SOFTWARE_ID,
       name: 'Rondo',
       applicationCategory: 'BusinessApplication',
       operatingSystem: 'Web',
@@ -96,7 +103,7 @@ function buildSoftware(): GraphEntity {
   );
 }
 
-function buildSiteEntity(lang: Lang): GraphEntity {
+export function buildSiteEntity(lang: Lang): GraphEntity {
   return asEntity(
     buildWebSite(
       {
@@ -121,10 +128,21 @@ interface PageGraphInput {
   description?: string;
   pageType?: 'WebPage' | 'ProfilePage' | 'CollectionPage';
   faq?: Array<{ question: string; answer: string }>;
+  breadcrumbs?: BreadcrumbItem[];
 }
 
 export function buildPageGraph(input: PageGraphInput) {
-  const { lang, url, name, description, pageType = 'WebPage', faq } = input;
+  const {
+    lang,
+    url,
+    name,
+    description,
+    pageType = 'WebPage',
+    faq,
+    breadcrumbs,
+  } = input;
+
+  const hasBreadcrumbs = breadcrumbs && breadcrumbs.length > 1;
 
   const webPage = asEntity(
     buildWebPage(
@@ -135,6 +153,9 @@ export function buildPageGraph(input: PageGraphInput) {
         isPartOf: { '@id': ids.website },
         inLanguage: lang === 'en' ? 'en-GB' : 'nl-NL',
         about: { '@id': RONDO_ORG_ID },
+        copyrightHolder: { '@id': RONDO_ORG_ID },
+        copyrightYear: new Date().getFullYear(),
+        ...(hasBreadcrumbs ? { breadcrumb: { '@id': ids.breadcrumb(url) } } : {}),
       },
       ids,
       pageType,
@@ -143,11 +164,25 @@ export function buildPageGraph(input: PageGraphInput) {
 
   const entities: GraphEntity[] = [
     buildSiteEntity(lang),
-    buildOrganization(),
-    buildJoost(),
-    buildSoftware(),
+    buildOrganizationEntity(),
+    buildJoostEntity(),
+    buildSoftwareEntity(),
     webPage,
   ];
+
+  if (hasBreadcrumbs) {
+    entities.push(
+      asEntity(
+        buildBreadcrumbList(
+          {
+            url,
+            items: breadcrumbs,
+          },
+          ids,
+        ),
+      ),
+    );
+  }
 
   if (faq && faq.length > 0) {
     entities.push(

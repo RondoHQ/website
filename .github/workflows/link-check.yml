@@ -1,0 +1,25 @@
+name: Link check
+
+on:
+  push:
+    paths:
+      - 'src/pages/**'
+      - 'src/components/**'
+      - 'src/i18n/**'
+      - 'src/data/**'
+      - '*.md'
+  schedule:
+    - cron: '0 9 * * 1'
+  workflow_dispatch:
+
+jobs:
+  check:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: lycheeverse/lychee-action@v2
+        with:
+          args: --no-progress --exclude-path node_modules --exclude '^https?://localhost' './**/*.md' './**/*.astro' './**/*.ts' './**/*.html'
+          fail: true
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
