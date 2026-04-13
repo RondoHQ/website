@@ -4,6 +4,17 @@ import sitemap from '@astrojs/sitemap';
 import robotsTxt from 'astro-robots-txt';
 import seoGraph from '@jdevalk/astro-seo-graph/integration';
 
+// Only submit to IndexNow from Cloudflare Pages or when explicitly opted in,
+// so local builds don't keep pinging the endpoint.
+const isProdBuild = !!process.env.CF_PAGES || process.env.INDEXNOW === '1';
+const indexNowConfig = isProdBuild
+  ? {
+      key: '175c547dd7d29e4d6a36c4e40014aa31',
+      host: 'rondo.club',
+      siteUrl: 'https://rondo.club',
+    }
+  : undefined;
+
 export default defineConfig({
   site: 'https://rondo.club',
   i18n: {
@@ -31,6 +42,7 @@ export default defineConfig({
       validateH1: true,
       validateDuplicateMeta: true,
       validateSchema: true,
+      indexNow: indexNowConfig,
     })
   ],
   vite: {
