@@ -111,7 +111,7 @@ export function buildSiteEntity(lang: Lang): GraphEntity {
         name: 'Rondo',
         description:
           lang === 'en'
-            ? 'Member management for sports clubs.'
+            ? 'Member administration software for sports clubs.'
             : 'Ledenadministratie voor sportverenigingen.',
         publisher: { '@id': RONDO_ORG_ID },
         inLanguage: lang === 'en' ? 'en-GB' : 'nl-NL',

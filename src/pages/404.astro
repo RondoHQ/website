@@ -2,6 +2,7 @@
 import BaseLayout from '../layouts/BaseLayout.astro';
 import Header from '../components/layout/Header.astro';
 import Footer from '../components/sections/Footer.astro';
+import FuzzyRedirect from '@jdevalk/astro-seo-graph/FuzzyRedirect.astro';
 ---
 <BaseLayout title="Pagina niet gevonden — Rondo" description="Deze pagina bestaat niet meer of is verhuisd." noindex={true}>
   <Header />
@@ -15,6 +16,7 @@ import Footer from '../components/sections/Footer.astro';
       <a href="/">homepage</a> of neem <a href="/contact/">contact</a> met ons op
       als je denkt dat dit een fout is.
     </p>
+    <FuzzyRedirect suggestionText="Bedoelde je misschien" />
   </main>
   <Footer />
 </BaseLayout>
