@@ -204,5 +204,5 @@ export function buildPageGraph(input: PageGraphInput) {
     );
   }
 
-  return assembleGraph(entities);
+  return assembleGraph(entities, { warnOnDanglingReferences: true });
 }

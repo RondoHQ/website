@@ -15,7 +15,7 @@ export const GET: APIRoute = () => {
     buildSoftwareEntity(),
   ];
 
-  const graph = assembleGraph(entities);
+  const graph = assembleGraph(entities, { warnOnDanglingReferences: true });
 
   return new Response(JSON.stringify(graph, null, 2), {
     headers: {
