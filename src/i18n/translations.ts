@@ -295,8 +295,8 @@ const translations = {
     en: 'Email marketing that automatically keeps up. Rondo Sync keeps your mailing lists in <a href="https://laposta.nl/" target="_blank" rel="noopener">Laposta</a> in sync with your member data. New member? Automatically on the right list. Cancelled? Automatically removed.',
   },
   'integration.freescout.desc': {
-    nl: '<a href="https://freescout.net/" target="_blank" rel="noopener">FreeScout</a> is een gedeelde mailbox voor je club. Als een lid mailt, zie je direct lidcontext in FreeScout (wie, team en historie). Rondo Sync houdt die gegevens actueel. <a href="/voor-ledenadministratie">Bekijk hoe dit werkt voor de ledenadministratie.</a>',
-    en: '<a href="https://freescout.net/" target="_blank" rel="noopener">FreeScout</a> is a shared inbox for your club. When a member emails, you immediately see member context in FreeScout (who, team and history). Rondo Sync keeps those details up to date. <a href="/en/for-member-administration">See how this works for member administration.</a>',
+    nl: '<a href="https://freescout.net/" target="_blank" rel="noopener">FreeScout</a> is een gedeelde mailbox voor je club. Als een lid mailt, zie je direct lidcontext in FreeScout (wie, team en historie). Rondo Sync houdt die gegevens actueel. <a href="/voor-ledenadministratie/">Bekijk hoe dit werkt voor de ledenadministratie.</a>',
+    en: '<a href="https://freescout.net/" target="_blank" rel="noopener">FreeScout</a> is a shared inbox for your club. When a member emails, you immediately see member context in FreeScout (who, team and history). Rondo Sync keeps those details up to date. <a href="/en/for-member-administration/">See how this works for member administration.</a>',
   },
   'integration.nikki.desc': {
     nl: 'Voor clubs die <a href="https://www.nikki.nl/" target="_blank" rel="noopener">Nikki</a> gebruiken voor contributie-inning: Rondo Sync haalt contributiedata op en koppelt deze aan de juiste leden in Rondo Club. Zo heb je overzicht over betalingen zonder handwerk.',
@@ -433,8 +433,8 @@ const translations = {
   'business.trust.opensource': { nl: 'Open source, geen lock-in', en: 'Open source, no lock-in' },
   'business.trust.uptime': { nl: '99% uptime', en: '99% uptime' },
   'business.trust.link': {
-    nl: 'Lees onze <a href="/voorwaarden">algemene voorwaarden</a> en ons <a href="/privacybeleid">privacybeleid</a> voor alle details.',
-    en: 'Read our <a href="/en/terms">terms and conditions</a> and our <a href="/en/privacy">privacy policy</a> for all details.',
+    nl: 'Lees onze <a href="/voorwaarden/">algemene voorwaarden</a> en ons <a href="/privacybeleid/">privacybeleid</a> voor alle details.',
+    en: 'Read our <a href="/en/terms/">terms and conditions</a> and our <a href="/en/privacy/">privacy policy</a> for all details.',
   },
 
   // ─── Support ───
@@ -480,8 +480,8 @@ const translations = {
   },
   'faq.q5': { nl: 'Mijn club gebruikt een ander e-mailsysteem, kan dat ook?', en: 'My club uses a different email system, can that work too?' },
   'faq.a5': {
-    nl: 'Ja, natuurlijk! Rondo is flexibel en kan in principe met elk e-mailsysteem gekoppeld worden. De koppeling moet dan wel gebouwd worden — <a href="/contact">neem contact op</a> en we bespreken de mogelijkheden.',
-    en: 'Yes, of course! Rondo is flexible and can in principle be connected to any email system. The integration would need to be built — <a href="/en/contact">get in touch</a> and we\'ll discuss the possibilities.',
+    nl: 'Ja, natuurlijk! Rondo is flexibel en kan in principe met elk e-mailsysteem gekoppeld worden. De koppeling moet dan wel gebouwd worden — <a href="/contact/">neem contact op</a> en we bespreken de mogelijkheden.',
+    en: 'Yes, of course! Rondo is flexible and can in principle be connected to any email system. The integration would need to be built — <a href="/en/contact/">get in touch</a> and we\'ll discuss the possibilities.',
   },
   'faq.q6': { nl: 'Heb je Nikki nodig?', en: 'Do you need Nikki?' },
   'faq.a6': {
@@ -490,13 +490,13 @@ const translations = {
   },
   'faq.q7': { nl: 'Wat als we willen stoppen met Rondo?', en: 'What if we want to stop using Rondo?' },
   'faq.a7': {
-    nl: 'Dan kan dat. Je zegt op voor 1 juli en het contract loopt af op 1 augustus. Na opzegging heb je 30 dagen om al je data te exporteren. Je data is en blijft altijd van jou — zie onze <a href="/voorwaarden">algemene voorwaarden</a>.',
-    en: 'You can. Cancel before 1 July and the contract ends on 1 August. After cancellation you have 30 days to export all your data. Your data is and always remains yours — see our <a href="/en/terms">terms and conditions</a>.',
+    nl: 'Dan kan dat. Je zegt op voor 1 juli en het contract loopt af op 1 augustus. Na opzegging heb je 30 dagen om al je data te exporteren. Je data is en blijft altijd van jou — zie onze <a href="/voorwaarden/">algemene voorwaarden</a>.',
+    en: 'You can. Cancel before 1 July and the contract ends on 1 August. After cancellation you have 30 days to export all your data. Your data is and always remains yours — see our <a href="/en/terms/">terms and conditions</a>.',
   },
   'faq.q8': { nl: 'Van wie is onze ledendata?', en: 'Who owns our member data?' },
   'faq.a8': {
-    nl: 'Van jullie. Altijd. Wij gebruiken je data nooit voor eigen doeleinden en verstrekken die niet aan derden. Je kunt op elk moment een volledige export opvragen. Dit staat ook zwart op wit in onze <a href="/voorwaarden">voorwaarden</a> en de bewerkersovereenkomst die we samen tekenen.',
-    en: 'You do. Always. We never use your data for our own purposes and never share it with third parties. You can request a full export at any time. This is also stated in black and white in our <a href="/en/terms">terms</a> and the data processing agreement we sign together.',
+    nl: 'Van jullie. Altijd. Wij gebruiken je data nooit voor eigen doeleinden en verstrekken die niet aan derden. Je kunt op elk moment een volledige export opvragen. Dit staat ook zwart op wit in onze <a href="/voorwaarden/">voorwaarden</a> en de bewerkersovereenkomst die we samen tekenen.',
+    en: 'You do. Always. We never use your data for our own purposes and never share it with third parties. You can request a full export at any time. This is also stated in black and white in our <a href="/en/terms/">terms</a> and the data processing agreement we sign together.',
   },
   'faq.q9': { nl: 'Wat als Rondo stopt of de ontwikkelaar wegvalt?', en: 'What if Rondo shuts down or the developer drops out?' },
   'faq.a9': {
@@ -505,8 +505,8 @@ const translations = {
   },
   'faq.q10': { nl: 'Waar wordt onze data opgeslagen?', en: 'Where is our data stored?' },
   'faq.a10': {
-    nl: 'Op Europese servers, in overeenstemming met de AVG. Alle diensten die we gebruiken zijn Europees. We sluiten een bewerkersovereenkomst en nemen passende technische maatregelen om je data te beschermen. Meer details staan op onze <a href="/made-in-europe">Made in Europe</a>-pagina, in ons <a href="/privacybeleid">privacybeleid</a> en onze <a href="/voorwaarden">voorwaarden</a>.',
-    en: 'On European servers, in compliance with the GDPR. All services we use are European. We sign a data processing agreement and take appropriate technical measures to protect your data. More details can be found on our <a href="/en/made-in-europe">Made in Europe</a> page, in our <a href="/en/privacy">privacy policy</a> and our <a href="/en/terms">terms and conditions</a>.',
+    nl: 'Op Europese servers, in overeenstemming met de AVG. Alle diensten die we gebruiken zijn Europees. We sluiten een bewerkersovereenkomst en nemen passende technische maatregelen om je data te beschermen. Meer details staan op onze <a href="/made-in-europe/">Made in Europe</a>-pagina, in ons <a href="/privacybeleid/">privacybeleid</a> en onze <a href="/voorwaarden/">voorwaarden</a>.',
+    en: 'On European servers, in compliance with the GDPR. All services we use are European. We sign a data processing agreement and take appropriate technical measures to protect your data. More details can be found on our <a href="/en/made-in-europe/">Made in Europe</a> page, in our <a href="/en/privacy/">privacy policy</a> and our <a href="/en/terms/">terms and conditions</a>.',
   },
   'faq.q11': { nl: 'Kan ik ledenpassen en scanner nu al zien?', en: 'Can I already see membership passes and scanner?' },
   'faq.a11': {
@@ -647,8 +647,8 @@ const translations = {
   // ─── Privacy Policy page ───
   'privacy.title': { nl: 'Privacybeleid — Rondo', en: 'Privacy Policy — Rondo' },
   'privacy.description': {
-    nl: 'Het privacybeleid van rondo.club, beheerd door Emilia Projects BV.',
-    en: 'The privacy policy of rondo.club, managed by Emilia Projects BV.',
+    nl: 'Het privacybeleid van rondo.club, beheerd door Emilia Projects BV. Lees hoe wij omgaan met persoonsgegevens en ledendata.',
+    en: 'The privacy policy of rondo.club, managed by Emilia Projects BV. Read how we handle personal data and member records.',
   },
 
   // ─── Terms page ───

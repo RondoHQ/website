@@ -3,9 +3,12 @@ import BaseLayout from '../layouts/BaseLayout.astro';
 import Header from '../components/layout/Header.astro';
 import Footer from '../components/sections/Footer.astro';
 import FuzzyRedirect from '@jdevalk/astro-seo-graph/FuzzyRedirect.astro';
+
+// 404 page: noindex + intentionally short — skip the length gate
+// won't apply. FuzzyRedirect will suggest the closest real URL.
 ---
-<BaseLayout title="Pagina niet gevonden — Rondo" description="Deze pagina bestaat niet meer of is verhuisd." noindex={true}>
-  <Header />
+<BaseLayout title="Pagina niet gevonden — Rondo" description="Deze pagina bestaat niet meer of is verhuisd. Ga terug naar de homepage van Rondo of neem contact op met ons team." noindex={true}>
+  <Header hideLangSwitcher />
   <main id="main-content" class="mx-auto max-w-3xl px-6 py-24 text-center">
     <p class="text-sm font-semibold tracking-wider uppercase" style="color: var(--rondo-teal);">404</p>
     <h1 class="mt-3 text-4xl font-extrabold md:text-5xl" style="color: var(--rondo-text-main);">

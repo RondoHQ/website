@@ -63,7 +63,7 @@ const graph = buildPageGraph({
     twitter={{ card: 'summary_large_image' }}
     graph={graph}
     noindex={noindex}
-    alternates={{
+    alternates={noindex ? undefined : {
       defaultLocale: 'nl',
       entries: [
         { hreflang: 'nl', href: `https://rondo.club${paths.nl}` },

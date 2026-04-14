@@ -43,9 +43,21 @@ export default defineConfig({
     }),
     seoGraph({
       validateH1: true,
-      validateDuplicateMeta: true,
-      validateSchema: true,
+      validateUniqueMetadata: true,
+      validateImageAlt: true,
+      // Relax title min to 15 — our "Page — Rondo" brand pattern
+      // is legitimate for non-article pages. Description default stays.
+      validateMetadataLength: {
+        title: { min: 15, max: 65 },
+        description: { min: 70, max: 200 },
+      },
+      validateInternalLinks: true,
       indexNow: indexNowConfig,
+      llmsTxt: {
+        title: 'Rondo',
+        siteUrl: 'https://rondo.club',
+        summary: 'Ledenadministratie voor sportverenigingen. Member administration software for sports clubs.',
+      },
     })
   ],
   vite: {

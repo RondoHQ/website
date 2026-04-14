@@ -10,20 +10,20 @@ const lang = Astro.props.lang || getLangFromUrl(Astro.url);
 
 const roleLinks = lang === 'en'
   ? {
-      secretary: '/en/for-secretary',
-      treasurer: '/en/for-treasurer',
-      gate: '/en/for-gate-volunteer',
-      board: '/en/for-board-it',
-      support: '/en/for-member-administration',
-      communication: '/en/for-communication',
+      secretary: '/en/for-secretary/',
+      treasurer: '/en/for-treasurer/',
+      gate: '/en/for-gate-volunteer/',
+      board: '/en/for-board-it/',
+      support: '/en/for-member-administration/',
+      communication: '/en/for-communication/',
     }
   : {
-      secretary: '/voor-secretaris',
-      treasurer: '/voor-penningmeester',
-      gate: '/voor-toegang',
-      board: '/voor-bestuur-ict',
-      support: '/voor-ledenadministratie',
-      communication: '/voor-communicatie',
+      secretary: '/voor-secretaris/',
+      treasurer: '/voor-penningmeester/',
+      gate: '/voor-toegang/',
+      board: '/voor-bestuur-ict/',
+      support: '/voor-ledenadministratie/',
+      communication: '/voor-communicatie/',
     };
 ---
 
