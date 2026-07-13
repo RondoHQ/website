@@ -29,4 +29,19 @@ export const faqItemsNl = [
     answer:
       'Nee, Nikki is niet verplicht. Rondo werkt prima zonder. Sterker nog, we zijn aan het overwegen om ons eigen contributiesysteem te bouwen zodat je helemaal geen externe tool meer nodig hebt, omdat de koppeling tussen Nikki en Sportlink verre van foutloos is.',
   },
+  {
+    question: 'Kan Rondo ook bardiensten en andere vrijwilligersdiensten roosteren?',
+    answer:
+      'Ja. Je publiceert diensten per type (bar, kantine, poort, events), leden schrijven zichzelf in en krijgen automatisch herinneringen. Bezettingskalenders laten zien waar nog gaten zitten en verplichte diensten per lid worden automatisch bijgehouden.',
+  },
+  {
+    question: 'Kan ik ook sponsors beheren in Rondo?',
+    answer:
+      'Ja. Sponsors staan als bedrijven in Rondo Club, met hun contactpersonen eraan gekoppeld. Ze krijgen een digitale Businessclub-pas voor Apple of Google Wallet, en clubs die Sponsit gebruiken synchroniseren sponsors automatisch.',
+  },
+  {
+    question: 'Kunnen leden zelf inloggen?',
+    answer:
+      'Ja. Leden activeren hun account via een veilige inloglink per e-mail — geen wachtwoorden nodig. Op de Mijn gegevens-pagina zien ze hun eigen gegevens en die van hun gezin, schrijven ze zich in op diensten en uploaden ze hun VOG- of IVA-certificaat.',
+  },
 ];

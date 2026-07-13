@@ -38,6 +38,9 @@ const lang = Astro.props.lang || getLangFromUrl(Astro.url);
         <rect x="250" y="30" width="160" height="80" rx="12" class="diagram-node" />
         <text x="330" y="75" class="diagram-text">Nikki</text>
 
+        <rect x="470" y="30" width="160" height="80" rx="12" class="diagram-node" />
+        <text x="550" y="75" class="diagram-text">Sponsit</text>
+
         <!-- Nodes: middle row -->
         <rect x="100" y="190" width="160" height="80" rx="12" fill="url(#node-gradient)" opacity="0.15" filter="url(#glow)" />
         <rect x="100" y="190" width="160" height="80" rx="12" class="diagram-node-primary" />
@@ -76,6 +79,13 @@ const lang = Astro.props.lang || getLangFromUrl(Astro.url);
           <animateMotion dur="3s" repeatCount="indefinite" path="M 330 110 L 220 190" />
         </circle>
         <text x="285" y="145" fill="#71DBA8" opacity="0.9" font-size="12" text-anchor="start">{t('integration.label.duesdata', lang)}</text>
+
+        <!-- Arrow: Sponsit → Rondo Sync -->
+        <path d="M 520 110 L 255 190" class="diagram-arrow" />
+        <circle r="4" fill="#71DBA8" opacity="0.9">
+          <animateMotion dur="3.5s" repeatCount="indefinite" path="M 520 110 L 255 190" />
+        </circle>
+        <text x="440" y="145" fill="#71DBA8" opacity="0.9" font-size="12" text-anchor="start">{t('integration.label.sponsordata', lang)}</text>
 
         <!-- Arrow: Rondo Sync ↔ Rondo Club -->
         <path d="M 260 230 L 370 230" class="diagram-arrow" />
@@ -165,6 +175,10 @@ const lang = Astro.props.lang || getLangFromUrl(Astro.url);
         <div class="explanation-card">
           <h3>Nikki</h3>
           <p set:html={t('integration.nikki.desc', lang)} />
+        </div>
+        <div class="explanation-card">
+          <h3>Sponsit</h3>
+          <p set:html={t('integration.sponsit.desc', lang)} />
         </div>
       </div>
 

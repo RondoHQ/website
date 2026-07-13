@@ -119,6 +119,24 @@ const translations = {
     nl: 'Het finance dashboard toont openstaand bedrag, recente betalingen en acties die nu opvolging nodig hebben.',
     en: 'The finance dashboard shows outstanding amounts, recent payments, and actions that need follow-up now.',
   },
+  'product.card8.title': { nl: 'Wie staat er zaterdag achter de bar?', en: "Who's behind the bar on Saturday?" },
+  'product.card8.problem': {
+    nl: 'Diensten vullen betekent appjes sturen, lijstjes bijhouden en hopen dat iemand reageert. En wie zijn verplichte diensten al heeft gedraaid? Dat weet niemand precies.',
+    en: 'Filling shifts means sending group messages, keeping lists and hoping someone responds. And who has already done their required shifts? Nobody knows for sure.',
+  },
+  'product.card8.solution': {
+    nl: 'leden schrijven zichzelf in op diensten, herinneringen gaan automatisch en in de bezettingskalender zie je direct waar nog gaten zitten.',
+    en: 'members sign up for shifts themselves, reminders go out automatically, and the coverage calendar shows you instantly where gaps remain.',
+  },
+  'product.card9.title': { nl: 'Sponsors verdienen ook aandacht', en: 'Sponsors deserve attention too' },
+  'product.card9.problem': {
+    nl: 'Sponsorcontacten staan in een los Excel-bestand bij de sponsorcommissie. Wie was de contactpersoon ook alweer? En wie mag er naar binnen bij de Businessclub-avond?',
+    en: 'Sponsor contacts live in a separate spreadsheet with the sponsor committee. Who was the contact person again? And who gets in at the Businessclub evening?',
+  },
+  'product.card9.solution': {
+    nl: 'sponsors en hun contactpersonen staan in Rondo Club, krijgen een digitale Businessclub-pas en blijven automatisch actueel via de Sponsit-koppeling.',
+    en: 'sponsors and their contacts live in Rondo Club, get a digital Businessclub pass, and stay current automatically through the Sponsit integration.',
+  },
   'product.withRondo': { nl: 'Met Rondo:', en: 'With Rondo:' },
 
   // ─── Role paths ───
@@ -163,6 +181,18 @@ const translations = {
     en: 'Send better with up-to-date mailing lists thanks to Laposta sync and less manual list management.',
   },
   'roles.communication.cta': { nl: 'Zo werkt het voor communicatie', en: 'See how it works for communication' },
+  'roles.volunteers.title': { nl: 'Vrijwilligerscoördinator', en: 'Volunteer coordinator' },
+  'roles.volunteers.text': {
+    nl: 'Plan diensten, laat leden zichzelf inschrijven en houd met bezettingskalenders en herinneringen grip op het rooster.',
+    en: 'Plan shifts, let members sign up themselves and stay on top of the roster with coverage calendars and reminders.',
+  },
+  'roles.volunteers.cta': { nl: 'Voor de vrijwilligerscoördinator', en: 'For the volunteer coordinator' },
+  'roles.sponsors.title': { nl: 'Sponsorcommissie', en: 'Sponsor committee' },
+  'roles.sponsors.text': {
+    nl: 'Beheer sponsors met contactpersonen, geef ze Businessclub-passen en synchroniseer automatisch met Sponsit.',
+    en: 'Manage sponsors with their contacts, issue Businessclub passes and sync automatically with Sponsit.',
+  },
+  'roles.sponsors.cta': { nl: 'Voor de sponsorcommissie', en: 'For the sponsor committee' },
 
   // ─── InvoicingHighlight ───
   'invoicing.heading': {
@@ -198,6 +228,12 @@ const translations = {
   'invoicing.both.pdf.desc': { nl: 'Met QR-code, kortingsregels en duidelijke betaallink.', en: 'With QR code, discount rules and clear payment link.' },
   'invoicing.both.control': { nl: 'Volledige controle', en: 'Full control' },
   'invoicing.both.control.desc': { nl: 'Versturen, opnieuw versturen, markeren als betaald, PDF downloaden en historie inzien.', en: 'Send, resend, mark as paid, download PDF and view history.' },
+  'invoicing.both.scheduled': { nl: 'Geplande verzending', en: 'Scheduled sending' },
+  'invoicing.both.scheduled.desc': { nl: 'Zet conceptfacturen klaar en laat ze automatisch versturen op een datum in de toekomst.', en: 'Prepare draft invoices and have them sent automatically on a future date.' },
+  'invoicing.both.drafts': { nl: 'Slim werken met concepten', en: 'Work smart with drafts' },
+  'invoicing.both.drafts.desc': { nl: 'Kopieer een bestaande factuur naar een nieuw concept en beheer concepten in bulk.', en: 'Copy an existing invoice into a new draft and manage drafts in bulk.' },
+  'invoicing.both.credit': { nl: 'Creditfacturen', en: 'Credit invoices' },
+  'invoicing.both.credit.desc': { nl: 'Crediteer een factuur met één klik, met eigen e-mailteksten voor creditfacturen.', en: 'Credit an invoice in one click, with dedicated email templates for credit invoices.' },
   'invoicing.both.dashboard': { nl: 'Finance dashboard', en: 'Finance dashboard' },
   'invoicing.both.dashboard.desc': {
     nl: 'Direct overzicht voor de penningmeester: openstaand bedrag, recente betalingen en acties die aandacht vragen.',
@@ -225,6 +261,8 @@ const translations = {
   'gallery.tab.teams': { nl: 'Teams', en: 'Teams' },
   'gallery.tab.committees': { nl: 'Commissies', en: 'Committees' },
   'gallery.tab.disciplinary': { nl: 'Tuchtzaken', en: 'Disciplinary' },
+  'gallery.tab.shifts': { nl: 'Diensten', en: 'Shifts' },
+  'gallery.tab.sponsors': { nl: 'Sponsors', en: 'Sponsors' },
   // Screenshot captions
   'gallery.caption.memberList': { nl: 'Ledenlijst met zoeken en filteren', en: 'Member list with search and filters' },
   'gallery.caption.personDetail': { nl: 'Compleet persoonsprofiel', en: 'Complete member profile' },
@@ -254,6 +292,10 @@ const translations = {
   'gallery.caption.accessGoogleAwc': { nl: 'AWC ledenpas in Google Wallet', en: 'AWC membership pass in Google Wallet' },
   'gallery.caption.accessScannerAwc': { nl: 'AWC ledenpas scanner', en: 'AWC membership pass scanner' },
   'gallery.caption.accessScanner': { nl: 'Pas-scanner validatie in de webapp', en: 'Pass scanner validation in the webapp' },
+  'gallery.caption.shiftsOverview': { nl: 'Dienstenoverzicht met inschrijvingen', en: 'Shifts overview with signups' },
+  'gallery.caption.shiftsCalendar': { nl: 'Bezettingskalender per diensttype', en: 'Coverage calendar per shift type' },
+  'gallery.caption.sponsorsOverview': { nl: 'Sponsoroverzicht met contactpersonen', en: 'Sponsor overview with contact people' },
+  'gallery.caption.sponsorPass': { nl: 'Businessclub-pas voor sponsors', en: 'Businessclub pass for sponsors' },
 
   // ─── Origin ───
   'origin.heading': { nl: 'Waarom ik Rondo bouwde', en: 'Why I built Rondo' },
@@ -283,8 +325,8 @@ const translations = {
     en: '<a href="https://www.sportlink.nl/" target="_blank" rel="noopener">Sportlink Club</a> is the member administration system used by many Dutch sports federations. Rondo Sync automatically fetches the latest member data every night: new members, address changes, and cancellations.',
   },
   'integration.sync.desc': {
-    nl: 'Rondo Sync draait elke nacht en verwerkt wijzigingen uit Sportlink en Nikki: nieuwe leden, verhuizingen en uitschrijvingen in alle gekoppelde systemen.',
-    en: 'Rondo Sync runs nightly and processes changes from Sportlink and Nikki: new members, address changes, and cancellations across all connected systems.',
+    nl: 'Rondo Sync draait elke nacht en verwerkt wijzigingen uit Sportlink, Nikki en Sponsit: nieuwe leden, verhuizingen, uitschrijvingen en sponsorcontacten in alle gekoppelde systemen.',
+    en: 'Rondo Sync runs nightly and processes changes from Sportlink, Nikki and Sponsit: new members, address changes, cancellations and sponsor contacts across all connected systems.',
   },
   'integration.club.desc': {
     nl: 'Jullie eigen ledenadministratie. Hier beheer je alles wat Sportlink niet kan: VOG-registraties, gezinsrelaties, contributiegroepen, en toegangsrechten per vrijwilliger. Altijd up-to-date dankzij Rondo Sync.',
@@ -297,6 +339,10 @@ const translations = {
   'integration.freescout.desc': {
     nl: '<a href="https://freescout.net/" target="_blank" rel="noopener">FreeScout</a> is een gedeelde mailbox voor je club. Als een lid mailt, zie je direct lidcontext in FreeScout (wie, team en historie). Rondo Sync houdt die gegevens actueel. <a href="/voor-ledenadministratie/">Bekijk hoe dit werkt voor de ledenadministratie.</a>',
     en: '<a href="https://freescout.net/" target="_blank" rel="noopener">FreeScout</a> is a shared inbox for your club. When a member emails, you immediately see member context in FreeScout (who, team and history). Rondo Sync keeps those details up to date. <a href="/en/for-member-administration/">See how this works for member administration.</a>',
+  },
+  'integration.sponsit.desc': {
+    nl: 'Voor clubs die <a href="https://www.sponsit.nl/" target="_blank" rel="noopener">Sponsit</a> gebruiken voor sponsorwerving: Rondo Sync haalt sponsors en hun contactpersonen automatisch op, zodat je sponsoradministratie in Rondo Club altijd actueel is. <a href="/voor-sponsorcommissie/">Bekijk hoe dit werkt voor de sponsorcommissie.</a>',
+    en: 'For clubs using <a href="https://www.sponsit.nl/" target="_blank" rel="noopener">Sponsit</a> for sponsor acquisition: Rondo Sync automatically imports sponsors and their contact people, keeping your sponsor records in Rondo Club current. <a href="/en/for-sponsor-committee/">See how this works for the sponsor committee.</a>',
   },
   'integration.nikki.desc': {
     nl: 'Voor clubs die <a href="https://www.nikki.nl/" target="_blank" rel="noopener">Nikki</a> gebruiken voor contributie-inning: Rondo Sync haalt contributiedata op en koppelt deze aan de juiste leden in Rondo Club. Zo heb je overzicht over betalingen zonder handwerk.',
@@ -327,6 +373,10 @@ const translations = {
     en: 'Link dues data from Nikki to the correct people in Rondo Club (when used).',
   },
   'integration.sync.summary.item4': {
+    nl: 'Sponsors en contactpersonen uit Sponsit synchroniseren naar Rondo Club (indien gebruikt).',
+    en: 'Sync sponsors and contact people from Sponsit to Rondo Club (when used).',
+  },
+  'integration.sync.summary.item5': {
     nl: 'Wijzigingen consistent doorzetten zodat teams op dezelfde waarheid werken.',
     en: 'Propagate changes consistently so teams work from the same source of truth.',
   },
@@ -340,6 +390,7 @@ const translations = {
   },
   // SVG labels
   'integration.label.memberdata': { nl: 'ledendata', en: 'member data' },
+  'integration.label.sponsordata': { nl: 'sponsordata', en: 'sponsor data' },
   'integration.label.duesdata': { nl: 'contributiedata', en: 'dues data' },
   'integration.label.contacts': { nl: 'contactmomenten', en: 'interactions' },
   'integration.label.payments': { nl: 'betalingen', en: 'payments' },
@@ -529,6 +580,22 @@ const translations = {
     en: 'Rondo Sync automatically processes changes from Sportlink (and optionally Nikki) and propagates them to Rondo Club and connected systems such as Laposta and FreeScout. Think new members, address changes, cancellations and dues context.',
   },
 
+  'faq.q15': { nl: 'Kan Rondo ook bardiensten en andere vrijwilligersdiensten roosteren?', en: 'Can Rondo schedule bar shifts and other volunteer shifts?' },
+  'faq.a15': {
+    nl: 'Ja. Je publiceert diensten per type (bar, kantine, poort, events), leden schrijven zichzelf in en krijgen automatisch herinneringen. Bezettingskalenders laten zien waar nog gaten zitten en verplichte diensten per lid worden automatisch bijgehouden. <a href="/voor-vrijwilligerscoordinator/">Bekijk hoe dit werkt voor de vrijwilligerscoördinator.</a>',
+    en: 'Yes. You publish shifts per type (bar, canteen, gate, events), members sign up themselves and receive automatic reminders. Coverage calendars show where gaps remain, and required shifts per member are tracked automatically. <a href="/en/for-volunteer-coordinator/">See how this works for the volunteer coordinator.</a>',
+  },
+  'faq.q16': { nl: 'Kan ik ook sponsors beheren in Rondo?', en: 'Can I manage sponsors in Rondo too?' },
+  'faq.a16': {
+    nl: 'Ja. Sponsors staan als bedrijven in Rondo Club, met hun contactpersonen eraan gekoppeld. Ze krijgen een digitale Businessclub-pas voor Apple of Google Wallet, en clubs die <a href="https://www.sponsit.nl/" target="_blank" rel="noopener">Sponsit</a> gebruiken synchroniseren sponsors automatisch. <a href="/voor-sponsorcommissie/">Bekijk hoe dit werkt voor de sponsorcommissie.</a>',
+    en: 'Yes. Sponsors live in Rondo Club as companies, with their contact people linked. They get a digital Businessclub pass for Apple or Google Wallet, and clubs using <a href="https://www.sponsit.nl/" target="_blank" rel="noopener">Sponsit</a> sync sponsors automatically. <a href="/en/for-sponsor-committee/">See how this works for the sponsor committee.</a>',
+  },
+  'faq.q17': { nl: 'Kunnen leden zelf inloggen?', en: 'Can members log in themselves?' },
+  'faq.a17': {
+    nl: 'Ja. Leden activeren hun account via een veilige inloglink per e-mail — geen wachtwoorden nodig. Op de Mijn gegevens-pagina zien ze hun eigen gegevens en die van hun gezin, schrijven ze zich in op diensten en uploaden ze hun VOG- of IVA-certificaat. Ze zien alleen de onderdelen die voor hen relevant zijn.',
+    en: 'Yes. Members activate their account via a secure login link by email — no passwords needed. On the My details page they see their own and their family’s information, sign up for shifts and upload their VOG or IVA certificate. They only see the parts that are relevant to them.',
+  },
+
   // ─── ContactForm ───
   'contact.heading': { nl: 'Interesse?', en: 'Interested?' },
   'contact.subheading': {
@@ -622,6 +689,11 @@ const translations = {
   'europe.nikki.desc': {
     nl: 'Contributie-inning via Sportlink. Rondo heeft een eigen contributiesysteem, maar ondersteunt ook Nikki voor clubs die dat al gebruiken.',
     en: 'Dues collection via Sportlink. Rondo has its own dues system, but also supports Nikki for clubs already using it.',
+  },
+  'europe.sponsit.role': { nl: 'Sponsorbeheer (optioneel)', en: 'Sponsor management (optional)' },
+  'europe.sponsit.desc': {
+    nl: 'Nederlands platform voor sponsorwerving en -beheer. Rondo Sync haalt sponsors en contactpersonen automatisch op voor clubs die Sponsit gebruiken.',
+    en: 'Dutch platform for sponsor acquisition and management. Rondo Sync automatically imports sponsors and contact people for clubs using Sponsit.',
   },
   'europe.laposta.role': { nl: 'E-mailmarketing', en: 'Email marketing' },
   'europe.laposta.desc': {

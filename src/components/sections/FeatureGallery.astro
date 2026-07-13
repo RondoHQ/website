@@ -30,6 +30,8 @@ const lang = Astro.props.lang || getLangFromUrl(Astro.url);
         <button class="tab-button" data-category="teams" type="button">{t('gallery.tab.teams', lang)}</button>
         <button class="tab-button" data-category="commissies" type="button">{t('gallery.tab.committees', lang)}</button>
         <button class="tab-button" data-category="tuchtzaken" type="button">{t('gallery.tab.disciplinary', lang)}</button>
+        <button class="tab-button" data-category="diensten" type="button">{t('gallery.tab.shifts', lang)}</button>
+        <button class="tab-button" data-category="sponsors" type="button">{t('gallery.tab.sponsors', lang)}</button>
       </div>
     </div>
 
@@ -161,6 +163,21 @@ const lang = Astro.props.lang || getLangFromUrl(Astro.url);
         <button class="screenshot-item" data-screenshot="/screenshot-persoons-detail-scherm-tucht.webp" type="button">
           <img src="/screenshot-persoons-detail-scherm-tucht-small.webp" srcset="/screenshot-persoons-detail-scherm-tucht-small.webp 480w, /screenshot-persoons-detail-scherm-tucht-thumb.webp 960w, /screenshot-persoons-detail-scherm-tucht.webp 1920w" sizes="(max-width: 768px) 480px, 560px" width="480" height="268" alt={t('gallery.caption.disciplinaryPerson', lang)} loading="lazy" />
           <p class="screenshot-caption">{t('gallery.caption.disciplinaryPerson', lang)}</p>
+        </button>
+      </div>
+
+      {/* TODO: replace placeholder SVGs with real screenshots (screenshot-diensten-rooster.webp, screenshot-sponsors-overzicht.webp) */}
+      <div class="screenshot-grid" data-category="diensten" style="display: none;">
+        <button class="screenshot-item" data-screenshot="/screenshot-diensten-placeholder.svg" type="button">
+          <img src="/screenshot-diensten-placeholder.svg" width="1600" height="900" alt={t('gallery.caption.shiftsOverview', lang)} loading="lazy" />
+          <p class="screenshot-caption">{t('gallery.caption.shiftsOverview', lang)}</p>
+        </button>
+      </div>
+
+      <div class="screenshot-grid" data-category="sponsors" style="display: none;">
+        <button class="screenshot-item" data-screenshot="/screenshot-sponsors-placeholder.svg" type="button">
+          <img src="/screenshot-sponsors-placeholder.svg" width="1600" height="900" alt={t('gallery.caption.sponsorsOverview', lang)} loading="lazy" />
+          <p class="screenshot-caption">{t('gallery.caption.sponsorsOverview', lang)}</p>
         </button>
       </div>
     </div>

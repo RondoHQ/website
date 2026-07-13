@@ -1,0 +1,18 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1600" height="900" viewBox="0 0 1600 900" fill="none">
+  <rect width="1600" height="900" fill="#001B60"/>
+  <rect x="80" y="80" width="1440" height="740" rx="28" fill="#FFFFFF"/>
+  <rect x="140" y="140" width="640" height="620" rx="18" fill="#F8FBFF" stroke="#D8E3EE" stroke-width="2"/>
+  <rect x="180" y="180" width="360" height="24" rx="8" fill="#001B60"/>
+  <rect x="180" y="230" width="560" height="72" rx="12" fill="#FFFFFF" stroke="#D8E3EE" stroke-width="2"/>
+  <rect x="180" y="322" width="560" height="72" rx="12" fill="#FFFFFF" stroke="#D8E3EE" stroke-width="2"/>
+  <rect x="180" y="414" width="560" height="72" rx="12" fill="#FFFFFF" stroke="#D8E3EE" stroke-width="2"/>
+  <rect x="180" y="506" width="560" height="72" rx="12" fill="#FFFFFF" stroke="#D8E3EE" stroke-width="2"/>
+  <rect x="820" y="140" width="640" height="620" rx="18" fill="#F8FBFF" stroke="#D8E3EE" stroke-width="2"/>
+  <rect x="880" y="200" width="520" height="320" rx="24" fill="#001B60"/>
+  <rect x="920" y="240" width="180" height="48" rx="10" fill="#FFFFFF"/>
+  <rect x="920" y="320" width="440" height="20" rx="6" fill="#71DBA8"/>
+  <rect x="920" y="360" width="360" height="20" rx="6" fill="#FFFFFF" opacity="0.6"/>
+  <rect x="1240" y="420" width="120" height="72" rx="10" fill="#FFFFFF"/>
+  <text x="800" y="700" text-anchor="middle" fill="#001B60" font-family="Montserrat, Arial, sans-serif" font-size="34" font-weight="700">Sponsors Placeholder</text>
+  <text x="800" y="744" text-anchor="middle" fill="#334155" font-family="Montserrat, Arial, sans-serif" font-size="24">Replace with sponsor overview and Businessclub pass</text>
+</svg>

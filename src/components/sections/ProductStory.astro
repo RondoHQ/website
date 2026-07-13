@@ -63,6 +63,26 @@ const lang = Astro.props.lang || getLangFromUrl(Astro.url);
           <img src="/screenshot-finance-dashboard.webp" width="1600" height="900" alt={t('gallery.caption.financeDashboard', lang)} loading="lazy" />
         </button>
       </Card>
+
+      <Card title={t('product.card8.title', lang)}>
+        <p class="text-slate-500 mb-3">{t('product.card8.problem', lang)}</p>
+        <p class="text-slate-600">
+          <span class="text-electric-cyan font-semibold">{t('product.withRondo', lang)}</span> {t('product.card8.solution', lang)}
+        </p>
+        <button class="card-screenshot-trigger" data-screenshot="/screenshot-diensten-placeholder.svg" type="button" aria-label={lang === 'en' ? 'Enlarge screenshot' : 'Vergroot screenshot'}>
+          <img src="/screenshot-diensten-placeholder.svg" width="1600" height="900" alt={t('gallery.caption.shiftsOverview', lang)} loading="lazy" />
+        </button>
+      </Card>
+
+      <Card title={t('product.card9.title', lang)}>
+        <p class="text-slate-500 mb-3">{t('product.card9.problem', lang)}</p>
+        <p class="text-slate-600">
+          <span class="text-electric-cyan font-semibold">{t('product.withRondo', lang)}</span> {t('product.card9.solution', lang)}
+        </p>
+        <button class="card-screenshot-trigger" data-screenshot="/screenshot-sponsors-placeholder.svg" type="button" aria-label={lang === 'en' ? 'Enlarge screenshot' : 'Vergroot screenshot'}>
+          <img src="/screenshot-sponsors-placeholder.svg" width="1600" height="900" alt={t('gallery.caption.sponsorsOverview', lang)} loading="lazy" />
+        </button>
+      </Card>
     </div>
   </div>
 </section>

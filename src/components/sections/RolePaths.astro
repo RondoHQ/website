@@ -16,6 +16,8 @@ const roleLinks = lang === 'en'
       board: '/en/for-board-it/',
       support: '/en/for-member-administration/',
       communication: '/en/for-communication/',
+      volunteers: '/en/for-volunteer-coordinator/',
+      sponsors: '/en/for-sponsor-committee/',
     }
   : {
       secretary: '/voor-secretaris/',
@@ -24,6 +26,8 @@ const roleLinks = lang === 'en'
       board: '/voor-bestuur-ict/',
       support: '/voor-ledenadministratie/',
       communication: '/voor-communicatie/',
+      volunteers: '/voor-vrijwilligerscoordinator/',
+      sponsors: '/voor-sponsorcommissie/',
     };
 ---
 
@@ -63,6 +67,16 @@ const roleLinks = lang === 'en'
       <Card title={t('roles.communication.title', lang)}>
         <p class="text-slate-600 mb-6">{t('roles.communication.text', lang)}</p>
         <Button variant="outline" href={roleLinks.communication}>{t('roles.communication.cta', lang)}</Button>
+      </Card>
+
+      <Card title={t('roles.volunteers.title', lang)}>
+        <p class="text-slate-600 mb-6">{t('roles.volunteers.text', lang)}</p>
+        <Button variant="outline" href={roleLinks.volunteers}>{t('roles.volunteers.cta', lang)}</Button>
+      </Card>
+
+      <Card title={t('roles.sponsors.title', lang)}>
+        <p class="text-slate-600 mb-6">{t('roles.sponsors.text', lang)}</p>
+        <Button variant="outline" href={roleLinks.sponsors}>{t('roles.sponsors.cta', lang)}</Button>
       </Card>
     </div>
   </div>

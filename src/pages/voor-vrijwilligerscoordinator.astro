@@ -1,0 +1,39 @@
+---
+import RolePage from '../components/pages/RolePage.astro';
+---
+
+<RolePage
+  lang="nl"
+  title="Voor vrijwilligerscoördinatoren — Rondo"
+  description="Rondo voor vrijwilligerscoördinatoren: diensten plannen, leden schrijven zichzelf in, automatische herinneringen en altijd zicht op de bezetting."
+  kicker="Voor jouw rol"
+  roleTitle="Vrijwilligerscoördinator"
+  intro="Bardiensten, kantinediensten, verkeersregelaars: het rooster rond krijgen kost elke week tijd. Met Rondo publiceer je diensten, schrijven leden zichzelf in en zie je direct waar nog gaten vallen."
+  demoLabel="Bekijk de demo"
+  contactLabel="Neem contact op"
+  contactHref="/contact/"
+  screenshotSrc="/screenshot-diensten-placeholder.svg"
+  screenshotAlt="Dienstenoverzicht in Rondo Club"
+  screenshotWidth={1600}
+  screenshotHeight={900}
+  whatHeading="Wat je hiermee oplost"
+  bulletPoints={[
+    'Leden schrijven zichzelf in op diensten — geen appjes, belrondes of papieren lijsten meer.',
+    'Bezettingskalenders laten per diensttype direct zien welke diensten nog niet gevuld zijn.',
+    'Verplichte diensten per lid worden automatisch bijgehouden, inclusief vrijstellingen voor bijvoorbeeld commissieleden.',
+    'Automatische herinneringen vooraf, en bij afmelding binnen de afmeldtermijn krijgen de vrijwilligers van die dienst automatisch bericht.',
+    'Vrijwilligers zien wie er nog meer staat ingepland en komen via een WhatsApp-link direct met elkaar in contact.',
+  ]}
+  cards={[
+    { title: 'Zelf inschrijven', text: 'Publiceer diensten per type (bar, kantine, poort, events) en laat leden zelf een moment kiezen dat hen past.' },
+    { title: 'Zicht op de bezetting', text: 'De bezettingskalender toont per week en per diensttype wat gevuld is en waar je nog moet bijsturen.' },
+    { title: 'Minder no-shows', text: 'Herinneringen gaan automatisch de deur uit en het afmeldbeleid is instelbaar — inclusief nette berichten naar de rest van de dienst.' },
+  ]}
+  otherHeading="Andere routes"
+  otherPrefix="Ook relevant:"
+  otherAnd="en"
+  otherLinks={[
+    { href: '/voor-secretaris/', label: 'Voor secretaris' },
+    { href: '/voor-bestuur-ict/', label: 'Voor bestuur & ICT' },
+  ]}
+/>

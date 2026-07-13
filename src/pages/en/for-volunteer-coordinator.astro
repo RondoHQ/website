@@ -1,0 +1,39 @@
+---
+import RolePage from '../../components/pages/RolePage.astro';
+---
+
+<RolePage
+  lang="en"
+  title="For volunteer coordinators — Rondo"
+  description="Rondo for volunteer coordinators: plan shifts, members sign up themselves, automatic reminders and a constant view of coverage."
+  kicker="For your role"
+  roleTitle="Volunteer coordinator"
+  intro="Bar shifts, canteen duty, traffic marshals: filling the roster costs time every single week. With Rondo you publish shifts, members sign up themselves, and you instantly see where gaps remain."
+  demoLabel="Look at the demo"
+  contactLabel="Contact us"
+  contactHref="/en/contact/"
+  screenshotSrc="/screenshot-diensten-placeholder.svg"
+  screenshotAlt="Shifts overview in Rondo Club"
+  screenshotWidth={1600}
+  screenshotHeight={900}
+  whatHeading="What this solves"
+  bulletPoints={[
+    'Members sign up for shifts themselves — no more group chats, phone rounds or paper lists.',
+    'Coverage calendars show per shift type exactly which shifts are still unfilled.',
+    'Required shifts per member are tracked automatically, including exemptions for committee members, for example.',
+    'Automatic reminders beforehand, and when someone cancels within the cancellation window, the other volunteers on that shift are notified automatically.',
+    'Volunteers see who else is scheduled and connect directly through a WhatsApp link.',
+  ]}
+  cards={[
+    { title: 'Self signup', text: 'Publish shifts per type (bar, canteen, gate, events) and let members pick a slot that suits them.' },
+    { title: 'Coverage at a glance', text: 'The coverage calendar shows per week and shift type what is filled and where you still need to act.' },
+    { title: 'Fewer no-shows', text: 'Reminders go out automatically and the cancellation policy is configurable — including proper notifications to the rest of the shift.' },
+  ]}
+  otherHeading="Other paths"
+  otherPrefix="Also relevant:"
+  otherAnd="and"
+  otherLinks={[
+    { href: '/en/for-secretary/', label: 'For secretaries' },
+    { href: '/en/for-board-it/', label: 'For board & IT' },
+  ]}
+/>
