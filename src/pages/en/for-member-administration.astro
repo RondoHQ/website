@@ -20,6 +20,8 @@ import RolePage from '../../components/pages/RolePage.astro';
   bulletPoints={[
     'Faster answers on teams, dues and member status.',
     'Less manual lookup across scattered tools and inboxes.',
+    'Combine characteristics such as member status, KNVB status, parent or guardian, volunteer, sponsor contact and contact to find precisely the right records.',
+    'Merge duplicate profiles from the person page with a deliberate choice of the surviving profile and each conflicting value.',
     'The data quality screen shows which members are missing an email address or other details, including CSV export for targeted follow-up.',
     'Companies and external contact people are managed in the same place as your members.',
     'Better continuity when volunteers hand over responsibilities.',
@@ -27,7 +29,7 @@ import RolePage from '../../components/pages/RolePage.astro';
   cards={[
     { title: 'Current context', text: 'Member data, team information and relevant history are in one place.' },
     { title: 'Less manual work', text: 'Rondo Sync helps keep data aligned between systems.' },
-    { title: 'Consistent follow-up', text: 'Tasks and questions stay easier to track for the whole team.' },
+    { title: 'Controlled merging', text: 'Rondo fills empty fields, moves linked records and lets you resolve differences before sending the duplicate profile to the bin.' },
   ]}
   otherHeading="Also relevant for your role"
   otherPrefix="See also:"
@@ -38,6 +40,47 @@ import RolePage from '../../components/pages/RolePage.astro';
   ]}
   hasExtra={true}
 >
+  <div class="member-quality-block role-container">
+    <div class="member-quality-copy">
+      <h2 class="gradient-text member-support-heading">Resolve duplicate profiles with control</h2>
+      <p>
+        Select several characteristics at once. Rondo only shows records that match every selected characteristic;
+        parent or guardian status is derived from current family relations.
+      </p>
+      <p>
+        Open a person and find the duplicate profile by name, email address, KNVB ID or profile number. You choose
+        which profile survives. Empty fields and list values are combined automatically, while conflicting values
+        require an explicit choice.
+      </p>
+      <p>
+        Different stable external IDs or two linked accounts block the action. Relations, shifts, tasks,
+        disciplinary cases, invoices, clothing issues, timeline comments, attachments and a linked account move to
+        the surviving profile. The duplicate goes to the bin with an audit reference.
+      </p>
+      <figure class="member-quality-shot member-merge-shot">
+        <img
+          class="zoomable-screenshot"
+          src="/screenshot-personen-samenvoegen.jpg"
+          alt="Start of the controlled person merge dialog"
+          width="768"
+          height="223"
+          loading="lazy"
+        />
+      </figure>
+    </div>
+
+    <figure class="member-quality-shot member-filter-shot">
+      <img
+        class="zoomable-screenshot"
+        src="/screenshot-relaties-kenmerkenfilter.jpg"
+        alt="Characteristics filter for member status, KNVB status and overlapping roles"
+        width="575"
+        height="930"
+        loading="lazy"
+      />
+    </figure>
+  </div>
+
   <div class="member-support-block role-container">
     <div class="member-support-copy">
       <h2 class="gradient-text member-support-heading">Shared inbox without bottlenecks</h2>
@@ -69,6 +112,7 @@ import RolePage from '../../components/pages/RolePage.astro';
 </RolePage>
 
 <style>
+  .member-quality-block,
   .member-support-block {
     display: grid;
     gap: 1.25rem;
@@ -77,10 +121,12 @@ import RolePage from '../../components/pages/RolePage.astro';
   }
 
   @media (min-width: 980px) {
+    .member-quality-block,
     .member-support-block {
       grid-template-columns: 1fr 1fr;
-      align-items: center;
     }
+
+    .member-support-block { align-items: center; }
   }
 
   .member-support-heading {
@@ -88,12 +134,14 @@ import RolePage from '../../components/pages/RolePage.astro';
     margin-bottom: 0.6rem;
   }
 
+  .member-quality-copy p,
   .member-support-copy p {
     color: #475569;
     line-height: 1.7;
     margin: 0.75rem 0 0;
   }
 
+  .member-quality-shot,
   .member-support-shot {
     border-radius: 1rem;
     overflow: hidden;
@@ -102,9 +150,17 @@ import RolePage from '../../components/pages/RolePage.astro';
     background: #FFFFFF;
   }
 
+  .member-quality-shot img,
   .member-support-shot img {
     width: 100%;
     height: auto;
     display: block;
+  }
+
+  .member-merge-shot { margin-top: 1.25rem; }
+
+  .member-filter-shot {
+    max-width: 30rem;
+    justify-self: center;
   }
 </style>

@@ -115,7 +115,7 @@ Backlog generated from `capabilities.csv` and `website-coverage-matrix.csv`.
 
 ## P1 backlog
 
-1. Add guided person merging and overlapping-characteristic filters to the member-administration role page (`CAP-037`).
+1. Add guided person merging and overlapping-characteristic filters to the member-administration role page (`CAP-037`). **Implemented 2026-08-28; controlled before/after scenario proof remains open.**
 2. Extend access copy with pass choice and revocation after lifecycle proof; publish match statistics only after the real-match field test (`CAP-038`, `CAP-039`).
 3. Expand IVA/Social Hygiene evidence and sponsor management beyond the P0 summaries (`CAP-040`, `CAP-041`).
 4. Prepare room-reservation/presentation copy, but keep it unpublished while production is `admin_only` (`CAP-036`).
