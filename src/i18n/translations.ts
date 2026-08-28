@@ -435,8 +435,8 @@ const translations = {
     en: 'Rondo is part of Your.Online and is made available through sponsorship.',
   },
   'sponsorship.exchange': {
-    nl: 'Voor het gebruik en beheer van Rondo betaalt je club geen licentiekosten. In ruil daarvoor vragen we de club om één van de labels van Your.Online te sponsoren.',
-    en: 'Your club pays no licence fees for the use and management of Rondo. In return, we ask the club to sponsor one of the Your.Online brands.',
+    nl: 'Voor het gebruik en beheer van Rondo betaalt je club geen licentiekosten. In ruil daarvoor vragen we de club om één van de labels van Your.Online als sponsor van de club op te nemen. De voorwaarden daarvoor spreken we samen af.',
+    en: 'Your club pays no licence fees for the use and management of Rondo. In return, we ask the club to list one of the Your.Online brands as a club sponsor. We agree the terms together.',
   },
   'sponsorship.thirdParty': {
     nl: 'Rondo is daardoor niet volledig kosteloos. Kosten van externe diensten, zoals transactiekosten van Mollie en kosten voor e-mailverzending, zijn voor rekening van de club. Hosting van FreeScout is ook niet inbegrepen.',
