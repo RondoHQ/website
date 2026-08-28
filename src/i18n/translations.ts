@@ -134,8 +134,8 @@ const translations = {
     en: 'Sponsor contacts live in a separate spreadsheet with the sponsor committee. Who was the contact person again? And who gets in at the Businessclub evening?',
   },
   'product.card9.solution': {
-    nl: 'sponsors en hun contactpersonen staan in Rondo Club, krijgen een digitale Businessclub-pas en blijven automatisch actueel via de Sponsit-koppeling.',
-    en: 'sponsors and their contacts live in Rondo Club, get a digital Businessclub pass, and stay current automatically through the Sponsit integration.',
+    nl: 'organisaties en persoonlijke sponsors staan met hun contactrelaties, logo’s en passen in Rondo Club; je bepaalt ook hun zichtbaarheid op Club TV.',
+    en: 'organisations and personal sponsors live in Rondo Club with their contact relations, logos and passes; you also control their Club TV visibility.',
   },
   'product.card10.title': { nl: 'Toernooien zonder losse formulieren', en: 'Tournaments without separate forms' },
   'product.card10.problem': {
@@ -209,8 +209,8 @@ const translations = {
   'roles.volunteers.cta': { nl: 'Voor de vrijwilligerscoördinator', en: 'For the volunteer coordinator' },
   'roles.sponsors.title': { nl: 'Sponsorcommissie', en: 'Sponsor committee' },
   'roles.sponsors.text': {
-    nl: 'Beheer sponsors met contactpersonen, geef ze Businessclub-passen en synchroniseer automatisch met Sponsit.',
-    en: 'Manage sponsors with their contacts, issue Businessclub passes and sync automatically with Sponsit.',
+    nl: 'Beheer organisaties en persoonlijke sponsors, logo’s, contactrelaties, passen en zichtbaarheid op Club TV.',
+    en: 'Manage organisations and personal sponsors, logos, contact relations, passes and Club TV visibility.',
   },
   'roles.sponsors.cta': { nl: 'Voor de sponsorcommissie', en: 'For the sponsor committee' },
   'roles.tournaments.title': { nl: 'Toernooicoördinator', en: 'Tournament coordinator' },
@@ -326,7 +326,9 @@ const translations = {
   'gallery.caption.accessScanner': { nl: 'Pas-scanner validatie in de webapp', en: 'Pass scanner validation in the webapp' },
   'gallery.caption.shiftsOverview': { nl: 'Seizoensplanning met bezetting per dag', en: 'Season planning with daily coverage' },
   'gallery.caption.shiftsCalendar': { nl: 'Bezettingskalender per diensttype', en: 'Coverage calendar per shift type' },
-  'gallery.caption.sponsorsOverview': { nl: 'Sponsoroverzicht met contactpersonen', en: 'Sponsor overview with contact people' },
+  'gallery.caption.sponsorsOverview': { nl: 'Organisatiesponsors met logo, rol en Club TV-status', en: 'Organisation sponsors with logo, role and Club TV status' },
+  'gallery.caption.sponsorsPeople': { nl: 'Persoonlijke sponsors als afzonderlijk sponsortype', en: 'Personal sponsors as a separate sponsor type' },
+  'gallery.caption.sponsorLogoClubTv': { nl: 'Logo en zichtbaarheid op Club TV instellen', en: 'Set a logo and Club TV visibility' },
   'gallery.caption.sponsorPass': { nl: 'Businessclub-pas voor sponsors', en: 'Businessclub pass for sponsors' },
 
   // ─── Origin ───
@@ -615,8 +617,8 @@ const translations = {
   },
   'faq.q16': { nl: 'Kan ik ook sponsors beheren in Rondo?', en: 'Can I manage sponsors in Rondo too?' },
   'faq.a16': {
-    nl: 'Ja. Sponsors staan als bedrijven in Rondo Club, met hun contactpersonen eraan gekoppeld. Ze krijgen een digitale Businessclub-pas voor Apple of Google Wallet, en clubs die <a href="https://www.sponsit.nl/" target="_blank" rel="noopener">Sponsit</a> gebruiken synchroniseren sponsors automatisch. <a href="/voor-sponsorcommissie/">Bekijk hoe dit werkt voor de sponsorcommissie.</a>',
-    en: 'Yes. Sponsors live in Rondo Club as companies, with their contact people linked. They get a digital Businessclub pass for Apple or Google Wallet, and clubs using <a href="https://www.sponsit.nl/" target="_blank" rel="noopener">Sponsit</a> sync sponsors automatically. <a href="/en/for-sponsor-committee/">See how this works for the sponsor committee.</a>',
+    nl: 'Ja. Rondo ondersteunt organisaties en persoonlijke sponsors, gekoppelde contactpersonen, sponsor- en Businessclub-passen, logo’s en zichtbaarheid op Club TV. Een sponsorcontact kan alleen het logo van de eigen organisatie bijwerken. Clubs die <a href="https://www.sponsit.nl/" target="_blank" rel="noopener">Sponsit</a> gebruiken kunnen organisaties, contacten en logo’s synchroniseren. <a href="/voor-sponsorcommissie/">Bekijk hoe dit werkt voor de sponsorcommissie.</a>',
+    en: 'Yes. Rondo supports organisations and personal sponsors, linked contacts, sponsor and Businessclub passes, logos and Club TV visibility. A sponsor contact can only update their own organisation’s logo. Clubs using <a href="https://www.sponsit.nl/" target="_blank" rel="noopener">Sponsit</a> can sync organisations, contacts and logos. <a href="/en/for-sponsor-committee/">See how this works for the sponsor committee.</a>',
   },
   'faq.q17': { nl: 'Kunnen leden zelf inloggen?', en: 'Can members log in themselves?' },
   'faq.a17': {

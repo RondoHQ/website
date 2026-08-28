@@ -37,7 +37,7 @@ export const faqItemsNl = [
   {
     question: 'Kan ik ook sponsors beheren in Rondo?',
     answer:
-      'Ja. Sponsors staan als bedrijven in Rondo Club, met hun contactpersonen eraan gekoppeld. Ze krijgen een digitale Businessclub-pas voor Apple of Google Wallet, en clubs die Sponsit gebruiken synchroniseren sponsors automatisch.',
+      'Ja. Rondo ondersteunt organisaties en persoonlijke sponsors, gekoppelde contactpersonen, sponsor- en Businessclub-passen, logo’s en zichtbaarheid op Club TV. Een sponsorcontact kan alleen het logo van de eigen organisatie bijwerken. Clubs die Sponsit gebruiken kunnen organisaties, contacten en logo’s synchroniseren.',
   },
   {
     question: 'Kunnen leden zelf inloggen?',

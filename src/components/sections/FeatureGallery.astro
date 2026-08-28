@@ -166,7 +166,6 @@ const lang = Astro.props.lang || getLangFromUrl(Astro.url);
         </button>
       </div>
 
-      {/* TODO: replace the sponsor placeholder with a real screenshot (screenshot-sponsors-overzicht.webp) */}
       <div class="screenshot-grid" data-category="diensten" style="display: none;">
         <button class="screenshot-item" data-screenshot="/screenshot-vrijwilligers-planning.jpg" type="button">
           <img src="/screenshot-vrijwilligers-planning.jpg" width="1926" height="1147" alt={t('gallery.caption.shiftsOverview', lang)} loading="lazy" />
@@ -175,9 +174,17 @@ const lang = Astro.props.lang || getLangFromUrl(Astro.url);
       </div>
 
       <div class="screenshot-grid" data-category="sponsors" style="display: none;">
-        <button class="screenshot-item" data-screenshot="/screenshot-sponsors-placeholder.svg" type="button">
-          <img src="/screenshot-sponsors-placeholder.svg" width="1600" height="900" alt={t('gallery.caption.sponsorsOverview', lang)} loading="lazy" />
+        <button class="screenshot-item" data-screenshot="/screenshot-sponsors-organisaties.jpg" type="button">
+          <img src="/screenshot-sponsors-organisaties.jpg" width="1100" height="830" alt={t('gallery.caption.sponsorsOverview', lang)} loading="lazy" />
           <p class="screenshot-caption">{t('gallery.caption.sponsorsOverview', lang)}</p>
+        </button>
+        <button class="screenshot-item" data-screenshot="/screenshot-sponsors-personen.jpg" type="button">
+          <img src="/screenshot-sponsors-personen.jpg" width="1100" height="830" alt={t('gallery.caption.sponsorsPeople', lang)} loading="lazy" />
+          <p class="screenshot-caption">{t('gallery.caption.sponsorsPeople', lang)}</p>
+        </button>
+        <button class="screenshot-item" data-screenshot="/screenshot-sponsor-logo-club-tv.jpg" type="button">
+          <img src="/screenshot-sponsor-logo-club-tv.jpg" width="615" height="715" alt={t('gallery.caption.sponsorLogoClubTv', lang)} loading="lazy" />
+          <p class="screenshot-caption">{t('gallery.caption.sponsorLogoClubTv', lang)}</p>
         </button>
       </div>
     </div>

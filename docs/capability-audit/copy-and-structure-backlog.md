@@ -97,9 +97,11 @@ Backlog generated from `capabilities.csv` and `website-coverage-matrix.csv`.
 
 ### P0-6: Replace remaining sponsor proof placeholders
 
+**Status:** implemented on 2026-08-28; operational scenario proof remains in the P1 evidence backlog.
+
 **Outcome:** existing sponsor claims use current product evidence.
 
-1. Replace `/screenshot-sponsors-placeholder.svg` on the homepage and sponsor role page.
+1. Use current sponsor screenshots on the homepage and sponsor role page.
 2. Show company and personal sponsors, contact relations and logo state.
 3. Add logo import/self-service and Club TV visibility without exposing contact details.
 

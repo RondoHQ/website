@@ -5,28 +5,35 @@ import RolePage from '../../components/pages/RolePage.astro';
 <RolePage
   lang="en"
   title="For the sponsor committee — Rondo"
-  description="Rondo for sponsor committees: sponsors and their contacts in one place, digital Businessclub passes and automatic sync with Sponsit."
+  description="Rondo for sponsor committees: organisations and personal sponsors, contacts, logos, digital passes and Club TV visibility."
   kicker="For your role"
   roleTitle="Sponsor committee"
-  intro="Sponsors deserve the same care as members. In Rondo you manage sponsors with their contact people, give them a digital Businessclub pass, and their details stay current automatically through the Sponsit integration."
+  intro="Sponsors deserve the same care as members. In Rondo you manage organisations and personal sponsors, link contacts, issue digital passes and decide which sponsors appear on Club TV."
   demoLabel="Look at the demo"
   contactLabel="Contact us"
   contactHref="/en/contact/"
-  screenshotSrc="/screenshot-sponsors-placeholder.svg"
-  screenshotAlt="Sponsor management in Rondo Club"
-  screenshotWidth={1600}
-  screenshotHeight={900}
+  screenshotSrc="/screenshot-sponsors-organisaties.jpg"
+  screenshotAlt="Organisation sponsor overview with logo, sponsor role and Club TV status"
+  screenshotWidth={1100}
+  screenshotHeight={830}
+  secondaryScreenshotSrc="/screenshot-sponsor-logo-club-tv.jpg"
+  secondaryScreenshotAlt="Setting a sponsor logo and Club TV visibility"
+  secondaryScreenshotWidth={615}
+  secondaryScreenshotHeight={715}
+  screenshotLayout="landscapePair"
   whatHeading="What this solves"
   bulletPoints={[
-    'Sponsors live in Rondo as companies, with their contact people linked — no more separate spreadsheet.',
-    'Sponsors get a digital pass for Apple Wallet or Google Wallet, carrying your Businessclub logo.',
-    'When you scan a sponsor pass, you immediately see the company — handy at the door of a Businessclub evening.',
-    'Using Sponsit for sponsor acquisition? Rondo Sync automatically imports sponsors and contacts, so your records stay correct.',
+    'Manage organisations and personal sponsors as separate types, each with its own sponsor role and status.',
+    'Link contacts to an organisation and decide which sponsor pass each contact can use.',
+    'Rondo Sync can import organisations, contacts and protected logos from Sponsit without overwriting a manually added logo.',
+    'An activated sponsor contact can only add or replace the logo of their own sponsor organisation in My details.',
+    'Club TV only shows active sponsors with a logo set to Sometimes, Often or Always; Do not show keeps them off screen.',
+    'Digital sponsor and Businessclub passes are available for Apple Wallet and Google Wallet.',
   ]}
   cards={[
-    { title: 'Sponsors as relations', text: 'Companies and contact people in one place, managed with the same care as your member records.' },
-    { title: 'Businessclub passes', text: 'Digital passes in your Businessclub branding, with different variants for different sponsor packages.' },
-    { title: 'Sponsit integration', text: 'Sponsors you manage in Sponsit automatically appear in Rondo. Enter once, current everywhere.' },
+    { title: 'One sponsor record', text: 'Organisations, personal sponsors and linked contacts stay together, without creating fake companies for personal sponsors.' },
+    { title: 'Clear logo permissions', text: 'Administrators manage sponsor fields and imports; a sponsor contact can only update their own organisation’s logo.' },
+    { title: 'Passes and Club TV', text: 'Issue the right Wallet pass and control how often each active sponsor logo appears on Club TV.' },
   ]}
   otherHeading="Other paths"
   otherPrefix="Also relevant:"
