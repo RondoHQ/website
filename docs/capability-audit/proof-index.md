@@ -41,7 +41,7 @@ Status legend: `todo` | `captured` | `verified`
 | CAP-033 Sportlink reverse sync | `proofs/CAP-033-sportlink-reverse-sync.png` |  | todo | Successful and Action needed log states |
 | CAP-034 Volunteer season planning | `proofs/CAP-034-volunteer-season-planning.mp4` |  | todo | Both season halves, assignment and signup overview |
 | CAP-035 Volunteer statistics | `proofs/CAP-035-volunteer-statistics.png` |  | todo | Reconcile dashboard KPIs with source shifts |
-| CAP-036 Room reservations | `proofs/CAP-036-room-reservations.mp4` |  | todo | Pilot only: authorization, conflict and presentation handoff |
+| CAP-036 Room reservations | `proofs/CAP-036-room-reservations.md` |  | captured | Automated boundaries and admin-only production state verified; intended-role and physical-screen pilots remain open |
 | CAP-037 Person merge | `proofs/CAP-037-person-merge.mp4` |  | todo | Preserve roles, relationships and history |
 | CAP-038 Pass lifecycle | `proofs/CAP-038-pass-lifecycle.md` |  | captured | Automated lifecycle and live role-choice verified; real-device Wallet addition and revoked scan remain open |
 | CAP-039 Access statistics | `proofs/CAP-039-access-statistics.mp4` |  | todo | Real home-match field test; do not publish before verified |
