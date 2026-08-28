@@ -21,7 +21,7 @@ const translations = {
   'nav.product': { nl: 'Product', en: 'Product' },
   'nav.roles': { nl: 'Voor jouw rol', en: 'By role' },
   'nav.integration': { nl: 'Integratie', en: 'Integration' },
-  'nav.pricing': { nl: 'Prijzen', en: 'Pricing' },
+  'nav.costs': { nl: 'Kosten', en: 'Costs' },
   'nav.faq': { nl: 'FAQ', en: 'FAQ' },
   'nav.contact': { nl: 'Contact', en: 'Contact' },
 
@@ -428,29 +428,25 @@ const translations = {
     en: 'From day one, Rondo syncs automatically. Your member data is up to date everywhere, without manual work.',
   },
 
-  // ─── Pricing ───
-  'pricing.heading': { nl: 'Transparante prijzen', en: 'Transparent pricing' },
-  'pricing.subheading': { nl: 'Alles inbegrepen, geen verrassingen', en: 'Everything included, no surprises' },
-  'pricing.formula': { nl: 'Eén formule voor alles', en: 'One formula for everything' },
-  'pricing.base': { nl: '€250 per jaar', en: '€250 per year' },
-  'pricing.baseSuffix': { nl: 'basis', en: 'base' },
-  'pricing.perMember': { nl: '+ €0,50', en: '+ €0.50' },
-  'pricing.perMemberSuffix': { nl: 'per lid per jaar', en: 'per member per year' },
-  'pricing.includes': {
-    nl: 'Inclusief Rondo Club, Rondo Sync, hosting en support',
-    en: 'Including Rondo Club, Rondo Sync, hosting and support',
+  // ─── Sponsorship and costs ───
+  'sponsorship.heading': { nl: 'Geen licentiekosten voor je club', en: 'No licence fees for your club' },
+  'sponsorship.subheading': {
+    nl: 'Rondo is onderdeel van Your.Online en wordt via sponsoring beschikbaar gemaakt.',
+    en: 'Rondo is part of Your.Online and is made available through sponsorship.',
   },
-  'pricing.note': {
-    nl: 'Jaarlijkse facturatie, ledental op peildatum 1 september. Prijzen excl. btw.',
-    en: 'Annual billing, member count as of 1 September. Prices excl. VAT.',
+  'sponsorship.exchange': {
+    nl: 'Voor het gebruik en beheer van Rondo betaalt je club geen licentiekosten. In ruil daarvoor vragen we de club om één van de labels van Your.Online te sponsoren.',
+    en: 'Your club pays no licence fees for the use and management of Rondo. In return, we ask the club to sponsor one of the Your.Online brands.',
   },
-  'pricing.members': { nl: 'leden', en: 'members' },
-  'pricing.perYear': { nl: '/jaar', en: '/year' },
-  'pricing.cta': { nl: 'Neem contact op', en: 'Get in touch' },
-  'pricing.openSource': {
-    nl: 'Rondo is <a href="https://github.com/rondohq" target="_blank" rel="noopener" class="text-electric-cyan hover:text-slate-900 transition-colors underline underline-offset-2">open source</a> — je kunt alles ook zelf hosten. Je betaalt voor hosting, beheer en support. Geen vendor lock-in: je data is altijd van jou, en de software is vrij beschikbaar.',
-    en: 'Rondo is <a href="https://github.com/rondohq" target="_blank" rel="noopener" class="text-electric-cyan hover:text-slate-900 transition-colors underline underline-offset-2">open source</a> — you can self-host everything. You pay for hosting, management and support. No vendor lock-in: your data is always yours, and the software is freely available.',
+  'sponsorship.thirdParty': {
+    nl: 'Rondo is daardoor niet volledig kosteloos. Kosten van externe diensten, zoals transactiekosten van Mollie en kosten voor e-mailverzending, zijn voor rekening van de club. Hosting van FreeScout is ook niet inbegrepen.',
+    en: 'Rondo is therefore not entirely free of charge. Third-party costs, such as Mollie transaction fees and email delivery costs, remain the club’s responsibility. FreeScout hosting is not included either.',
   },
+  'sponsorship.goal': {
+    nl: 'Ons uitgangspunt is om de totale kosten voor de club altijd zo laag mogelijk te houden.',
+    en: 'Our goal is always to keep the club’s total costs as low as possible.',
+  },
+  'sponsorship.cta': { nl: 'Bespreek de mogelijkheden', en: 'Discuss the options' },
 
   // ─── BusinessCase ───
   'business.heading': { nl: 'Wat het je club oplevert', en: 'What it delivers for your club' },

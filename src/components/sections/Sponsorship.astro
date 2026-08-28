@@ -1,0 +1,42 @@
+---
+import Button from '../ui/Button.astro';
+import type { Lang } from '../../i18n/utils';
+import { getLangFromUrl } from '../../i18n/utils';
+import { t } from '../../i18n/translations';
+
+interface Props { lang?: Lang; }
+const lang = Astro.props.lang || getLangFromUrl(Astro.url);
+---
+
+<section id="kosten" class="py-20 sponsorship-section">
+  <div class="max-w-7xl mx-auto px-4">
+    <div class="text-center mb-12">
+      <h2 class="text-4xl md:text-5xl font-bold gradient-text mb-4">{t('sponsorship.heading', lang)}</h2>
+      <p class="text-xl text-slate-600">{t('sponsorship.subheading', lang)}</p>
+    </div>
+
+    <div class="sponsorship-panel max-w-3xl mx-auto p-8 md:p-10 rounded-2xl">
+      <div class="space-y-5 text-lg text-slate-700">
+        <p>{t('sponsorship.exchange', lang)}</p>
+        <p>{t('sponsorship.thirdParty', lang)}</p>
+        <p class="font-semibold text-slate-900">{t('sponsorship.goal', lang)}</p>
+      </div>
+
+      <div class="text-center mt-8">
+        <Button variant="primary" href={lang === 'en' ? '/en/contact/' : '/contact/'}>{t('sponsorship.cta', lang)}</Button>
+      </div>
+    </div>
+  </div>
+</section>
+
+<style>
+  .sponsorship-section {
+    background: linear-gradient(180deg, #FFFFFF 0%, #ECF8F6 50%, #FFFFFF 100%);
+  }
+
+  .sponsorship-panel {
+    background: #FFFFFF;
+    border: 1px solid rgba(0, 121, 117, 0.18);
+    box-shadow: 0 12px 36px rgba(0, 27, 96, 0.1);
+  }
+</style>
