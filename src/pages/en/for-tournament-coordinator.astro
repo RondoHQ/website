@@ -1,0 +1,39 @@
+---
+import RolePage from '../../components/pages/RolePage.astro';
+---
+
+<RolePage
+  lang="en"
+  title="For tournament coordinators — Rondo"
+  description="Invite current team staff, collect player counts and contact details, and track every registration before the deadline."
+  kicker="For your role"
+  roleTitle="Tournament coordinator"
+  intro="Separate emails, forms, and spreadsheets quickly make tournament registration hard to follow. With Rondo, you invite current staff per team and track every team from one overview."
+  demoLabel="Look at the demo"
+  contactLabel="Contact us"
+  contactHref="/en/contact/"
+  screenshotSrc="/screenshot-toernooien-overzicht.jpg"
+  screenshotAlt="Tournament overview with deadline and registration counts"
+  screenshotWidth={1450}
+  screenshotHeight={360}
+  whatHeading="What this solves"
+  bulletPoints={[
+    'Record the organiser, locations, match dates, internal and external deadlines, age groups, fees, and playing formats.',
+    'Select Rondo teams and invite current staff members with a Rondo account; they share one registration task per team.',
+    'Staff members work in the same draft and register one or more tournament teams, player counts, and one shared contact.',
+    'Track each Rondo team’s status, registered teams, players, contact, invited staff, and calculated amount.',
+    'Extend the internal deadline when a team needs more time.',
+  ]}
+  cards={[
+    { title: 'Invite from current teams', text: 'Rondo uses the current team and staff roster, so you do not need to maintain a separate mailing list.' },
+    { title: 'One shared registration', text: 'Invited staff members share the same draft and see the latest saved version.' },
+    { title: 'Progress per team', text: 'See who has registered, how many teams and players were submitted, and the resulting amount.' },
+  ]}
+  otherHeading="Other paths"
+  otherPrefix="Also relevant:"
+  otherAnd="and"
+  otherLinks={[
+    { href: '/en/for-volunteer-coordinator/', label: 'For volunteer coordinators' },
+    { href: '/en/for-secretary/', label: 'For secretaries' },
+  ]}
+/>

@@ -26,7 +26,7 @@ Backlog generated from `capabilities.csv` and `website-coverage-matrix.csv`.
 - NL and EN express the same commercial conditions.
 - Existing legal pages remain aligned with the homepage.
 
-### P0-2: Publish Tournament content
+### P0-2: Publish Tournament content — implemented 2026-08-28, validation pending
 
 **Outcome:** visitors can understand the tournament workflow and the responsible role.
 

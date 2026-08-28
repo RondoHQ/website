@@ -137,6 +137,16 @@ const translations = {
     nl: 'sponsors en hun contactpersonen staan in Rondo Club, krijgen een digitale Businessclub-pas en blijven automatisch actueel via de Sponsit-koppeling.',
     en: 'sponsors and their contacts live in Rondo Club, get a digital Businessclub pass, and stay current automatically through the Sponsit integration.',
   },
+  'product.card10.title': { nl: 'Toernooien zonder losse formulieren', en: 'Tournaments without separate forms' },
+  'product.card10.problem': {
+    nl: 'Ieder team apart mailen, spelersaantallen uit formulieren halen en in een spreadsheet bijhouden wie al heeft gereageerd.',
+    en: 'Emailing every team separately, copying player counts from forms, and tracking responses in a spreadsheet.',
+  },
+  'product.card10.solution': {
+    nl: 'nodig het actuele kader per team uit, verzamel één gedeelde inschrijving en volg teams, spelers en bedragen tot de deadline.',
+    en: 'invite current staff per team, collect one shared registration, and track teams, players, and amounts until the deadline.',
+  },
+  'product.card10.cta': { nl: 'Voor de toernooicoördinator', en: 'For the tournament coordinator' },
   'product.withRondo': { nl: 'Met Rondo:', en: 'With Rondo:' },
 
   // ─── Role paths ───
@@ -193,6 +203,12 @@ const translations = {
     en: 'Manage sponsors with their contacts, issue Businessclub passes and sync automatically with Sponsit.',
   },
   'roles.sponsors.cta': { nl: 'Voor de sponsorcommissie', en: 'For the sponsor committee' },
+  'roles.tournaments.title': { nl: 'Toernooicoördinator', en: 'Tournament coordinator' },
+  'roles.tournaments.text': {
+    nl: 'Nodig actueel teamkader uit, verzamel complete inschrijvingen en volg de voortgang tot de deadline.',
+    en: 'Invite current team staff, collect complete registrations, and track progress until the deadline.',
+  },
+  'roles.tournaments.cta': { nl: 'Voor de toernooicoördinator', en: 'For the tournament coordinator' },
 
   // ─── InvoicingHighlight ───
   'invoicing.heading': {

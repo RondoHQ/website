@@ -1,0 +1,39 @@
+---
+import RolePage from '../components/pages/RolePage.astro';
+---
+
+<RolePage
+  lang="nl"
+  title="Voor toernooicoördinatoren — Rondo"
+  description="Nodig actueel teamkader uit, verzamel spelersaantallen en contactgegevens en volg elke inschrijving tot de deadline."
+  kicker="Voor jouw rol"
+  roleTitle="Toernooicoördinator"
+  intro="Losse mails, formulieren en spreadsheets maken een toernooi-inschrijving snel onoverzichtelijk. Met Rondo nodig je het actuele kader per team uit en volg je vanuit één overzicht welke teams klaar zijn."
+  demoLabel="Bekijk de demo"
+  contactLabel="Neem contact op"
+  contactHref="/contact/"
+  screenshotSrc="/screenshot-toernooien-overzicht.jpg"
+  screenshotAlt="Toernooioverzicht met deadline en inschrijfaantallen"
+  screenshotWidth={1450}
+  screenshotHeight={360}
+  whatHeading="Wat je hiermee oplost"
+  bulletPoints={[
+    'Leg organisator, locaties, speeldatums, interne en externe deadline, leeftijdsgroepen, tarieven en spelvormen vast.',
+    'Selecteer Rondo-teams en nodig de actuele kaderleden met een Rondo-account uit; zij ontvangen samen één inschrijfopdracht per team.',
+    'Kaderleden werken in hetzelfde concept en registreren één of meer toernooiteams, spelersaantallen en een gedeelde contactpersoon.',
+    'Volg per Rondo-team de status, ingeschreven teams, spelers, contactpersoon, uitgenodigd kader en het berekende bedrag.',
+    'Verleng de interne deadline wanneer een team meer tijd nodig heeft.',
+  ]}
+  cards={[
+    { title: 'Uitnodigen vanuit actuele teams', text: 'Rondo gebruikt de huidige team- en kaderbezetting, zodat je geen losse verzendlijst hoeft bij te houden.' },
+    { title: 'Samen één inschrijving', text: 'Uitgenodigde kaderleden delen hetzelfde concept en zien elkaars laatst opgeslagen versie.' },
+    { title: 'Voortgang per team', text: 'Je ziet direct wie is ingeschreven, hoeveel teams en spelers zijn aangemeld en welk bedrag daarbij hoort.' },
+  ]}
+  otherHeading="Andere routes"
+  otherPrefix="Ook relevant:"
+  otherAnd="en"
+  otherLinks={[
+    { href: '/voor-vrijwilligerscoordinator/', label: 'Voor vrijwilligerscoördinatoren' },
+    { href: '/voor-secretaris/', label: 'Voor secretarissen' },
+  ]}
+/>

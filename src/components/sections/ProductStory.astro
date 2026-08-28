@@ -83,6 +83,19 @@ const lang = Astro.props.lang || getLangFromUrl(Astro.url);
           <img src="/screenshot-sponsors-placeholder.svg" width="1600" height="900" alt={t('gallery.caption.sponsorsOverview', lang)} loading="lazy" />
         </button>
       </Card>
+
+      <Card title={t('product.card10.title', lang)}>
+        <p class="text-slate-500 mb-3">{t('product.card10.problem', lang)}</p>
+        <p class="text-slate-600">
+          <span class="text-electric-cyan font-semibold">{t('product.withRondo', lang)}</span> {t('product.card10.solution', lang)}
+        </p>
+        <a class="card-detail-link" href={lang === 'en' ? '/en/for-tournament-coordinator/' : '/voor-toernooicoordinator/'}>
+          {t('product.card10.cta', lang)}
+        </a>
+        <button class="card-screenshot-trigger" data-screenshot="/screenshot-toernooien-overzicht.jpg" type="button" aria-label={lang === 'en' ? 'Enlarge screenshot' : 'Vergroot screenshot'}>
+          <img src="/screenshot-toernooien-overzicht.jpg" width="1450" height="360" alt={lang === 'en' ? 'Tournament overview with deadline and registration counts' : 'Toernooioverzicht met deadline en inschrijfaantallen'} loading="lazy" />
+        </button>
+      </Card>
     </div>
   </div>
 </section>
@@ -139,6 +152,21 @@ const lang = Astro.props.lang || getLangFromUrl(Astro.url);
     transition: transform 0.2s ease, box-shadow 0.2s ease;
     display: block;
     background: #F2F7FA;
+  }
+
+  .card-detail-link {
+    display: inline-flex;
+    margin-top: 0.9rem;
+    color: #001B60;
+    font-weight: 700;
+    text-decoration: underline;
+    text-decoration-color: #71DBA8;
+    text-decoration-thickness: 2px;
+    text-underline-offset: 0.2rem;
+  }
+
+  .card-detail-link:hover {
+    color: #00908B;
   }
 
   .card-screenshot-trigger:hover {

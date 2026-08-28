@@ -23,6 +23,7 @@ const slugMap: Record<string, string> = {
   '/voor-communicatie': '/for-communication',
   '/voor-vrijwilligerscoordinator': '/for-volunteer-coordinator',
   '/voor-sponsorcommissie': '/for-sponsor-committee',
+  '/voor-toernooicoordinator': '/for-tournament-coordinator',
 };
 const reverseSlugMap: Record<string, string> = Object.fromEntries(
   Object.entries(slugMap).map(([k, v]) => [v, k])
