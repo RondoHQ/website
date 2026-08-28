@@ -523,8 +523,8 @@ const translations = {
   'support.subheading': { nl: 'Geen ticketnummers, geen wachtrijen', en: 'No ticket numbers, no queues' },
   'support.direct.title': { nl: 'Direct contact', en: 'Direct contact' },
   'support.direct.text': {
-    nl: 'Via e-mail of het ingebouwde feedbacksysteem in Rondo Club. Je praat met iemand die het systeem daadwerkelijk gebouwd heeft.',
-    en: "Via email or the built-in feedback system in Rondo Club. You talk to someone who actually built the system.",
+    nl: 'Iedere ingelogde gebruiker kan vanuit Rondo Club een idee of probleem melden; de huidige pagina wordt automatisch toegevoegd. We nemen de melding in behandeling. Zodra die is opgelost of afgewezen, is een toelichting verplicht en ontvangt de melder één e-mail met de uitkomst.',
+    en: 'Every signed-in user can report an idea or problem from Rondo Club; the current page is included automatically. We review the report. Once it is resolved or declined, an explanation is required and the reporter receives one email with the outcome.',
   },
   'support.response.title': { nl: 'Reactie binnen 24-48 uur', en: 'Response within 24-48 hours' },
   'support.response.text': {
