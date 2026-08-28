@@ -32,7 +32,7 @@ interface Props {
   secondaryScreenshotAlt?: string;
   secondaryScreenshotWidth?: number;
   secondaryScreenshotHeight?: number;
-  screenshotLayout?: 'default' | 'passWide';
+  screenshotLayout?: 'default' | 'passWide' | 'landscapePair';
   whatHeading: string;
   bulletPoints: string[];
   cards: RoleCard[];
@@ -78,6 +78,7 @@ const secondaryAlt = secondaryScreenshotAlt ?? screenshotAlt;
 const secondaryWidth = secondaryScreenshotWidth ?? screenshotWidth;
 const secondaryHeight = secondaryScreenshotHeight ?? screenshotHeight;
 const isPassWideLayout = screenshotLayout === 'passWide';
+const isLandscapePairLayout = screenshotLayout === 'landscapePair';
 const bottomCtaHeading = lang === 'en'
   ? 'Want to discuss what Rondo can do for your club?'
   : 'Wil je bespreken wat Rondo voor jullie club kan doen?';
@@ -110,7 +111,11 @@ const breadcrumbs = [
             <a href={contactHref} class="role-btn role-btn-outline">{contactLabel}</a>
           </div>
         </div>
-        <div class:list={['role-shot', { 'role-shot-multi': hasSecondaryScreenshot, 'role-shot-pass-wide': hasSecondaryScreenshot && isPassWideLayout }]}>
+        <div class:list={['role-shot', {
+          'role-shot-multi': hasSecondaryScreenshot,
+          'role-shot-pass-wide': hasSecondaryScreenshot && isPassWideLayout,
+          'role-shot-landscape-pair': hasSecondaryScreenshot && isLandscapePairLayout,
+        }]}>
           {hasSecondaryScreenshot ? (
             <div class="role-shot-grid">
               <img class="zoomable-screenshot" src={screenshotSrc} alt={screenshotAlt} width={screenshotWidth} height={screenshotHeight} loading="eager" />
@@ -340,6 +345,13 @@ const breadcrumbs = [
     aspect-ratio: 1206 / 2052;
     object-fit: contain;
     background: #0E1A33;
+  }
+
+  .role-shot-landscape-pair .role-shot-grid img {
+    height: auto;
+    aspect-ratio: auto;
+    object-fit: contain;
+    align-self: center;
   }
 
   .role-section {
