@@ -42,6 +42,6 @@ export const faqItemsNl = [
   {
     question: 'Kunnen leden zelf inloggen?',
     answer:
-      'Ja. Leden activeren hun account via een veilige inloglink per e-mail — geen wachtwoorden nodig. Op de Mijn gegevens-pagina zien ze hun eigen gegevens en die van hun gezin, schrijven ze zich in op diensten en uploaden ze hun VOG- of IVA-certificaat.',
+      'Ja. Leden activeren hun account via e-mail en kunnen daarna in Mijn gegevens hun eigen e-mailadressen, telefoonnummers en het woonadres van hun gezin aanpassen. Ouders kunnen e-mailadressen en telefoonnummers van hun eigen kinderen onder 18 wijzigen; een andere ouder of verzorger is alleen-lezen. Nieuwe e-mailadressen worden eerst geverifieerd. Toegestane wijzigingen gaan gecontroleerd naar Sportlink en kunnen daar tot een half uur op verwerking wachten. Beschikbare passen voeg je direct toe aan Apple Wallet of Google Wallet.',
   },
 ];

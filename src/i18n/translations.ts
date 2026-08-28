@@ -353,16 +353,16 @@ const translations = {
     en: 'Rondo connects your systems so data is correct everywhere',
   },
   'integration.sportlink.desc': {
-    nl: '<a href="https://www.sportlink.nl/" target="_blank" rel="noopener">Sportlink Club</a> is het ledenadministratiesysteem dat veel sportbonden gebruiken. Rondo Sync haalt elke nacht automatisch de nieuwste ledendata op: nieuwe leden, adreswijzigingen, en uitschrijvingen.',
-    en: '<a href="https://www.sportlink.nl/" target="_blank" rel="noopener">Sportlink Club</a> is the member administration system used by many Dutch sports federations. Rondo Sync automatically fetches the latest member data every night: new members, address changes, and cancellations.',
+    nl: '<a href="https://www.sportlink.nl/" target="_blank" rel="noopener">Sportlink Club</a> is het ledenadministratiesysteem dat veel sportbonden gebruiken. Rondo Sync haalt elke nacht automatisch de nieuwste ledendata op. Toegestane wijzigingen aan contact- en adresgegevens uit Rondo Club gaan gecontroleerd terug naar Sportlink; niet ieder Rondo-veld hoort daar thuis.',
+    en: '<a href="https://www.sportlink.nl/" target="_blank" rel="noopener">Sportlink Club</a> is the member administration system used by many Dutch sports federations. Rondo Sync automatically fetches the latest member data every night. Allowed contact and address changes from Rondo Club are returned to Sportlink in a controlled flow; not every Rondo field belongs there.',
   },
   'integration.sync.desc': {
-    nl: 'Rondo Sync draait elke nacht en verwerkt wijzigingen uit Sportlink, Nikki en Sponsit: nieuwe leden, verhuizingen, uitschrijvingen en sponsorcontacten in alle gekoppelde systemen.',
-    en: 'Rondo Sync runs nightly and processes changes from Sportlink, Nikki and Sponsit: new members, address changes, cancellations and sponsor contacts across all connected systems.',
+    nl: 'Rondo Sync verwerkt inkomende wijzigingen uit Sportlink, Nikki en Sponsit en koppelt toegestane contact- en adreswijzigingen terug naar Sportlink. Het wijzigingslog bewaart elke wijziging 24 maanden en toont of die wacht, is gesynchroniseerd, alleen in Rondo hoort of handmatige actie nodig heeft. Verwerking door Sportlink kan tot een half uur duren.',
+    en: 'Rondo Sync processes incoming changes from Sportlink, Nikki and Sponsit and returns allowed contact and address changes to Sportlink. The change log keeps each change for 24 months and shows whether it is waiting, synchronized, Rondo-only or needs manual action. Processing by Sportlink can take up to half an hour.',
   },
   'integration.club.desc': {
-    nl: 'Jullie eigen ledenadministratie. Hier beheer je alles wat Sportlink niet kan: VOG-registraties, gezinsrelaties, contributiegroepen, en toegangsrechten per vrijwilliger. Altijd up-to-date dankzij Rondo Sync.',
-    en: "Your own member administration. Here you manage everything Sportlink can't: background check records, family relationships, dues groups, and access rights per volunteer. Always up to date thanks to Rondo Sync.",
+    nl: 'Jullie eigen ledenadministratie. Leden houden in Mijn gegevens toegestane contact- en adresgegevens bij en voegen beschikbare passen direct toe aan Apple Wallet of Google Wallet. De club beheert hier ook VOG-registraties, gezinsrelaties, contributiegroepen en toegangsrechten.',
+    en: 'Your own member administration. In My details, members keep allowed contact and address details current and add available passes directly to Apple Wallet or Google Wallet. The club also manages background check records, family relationships, dues groups and access rights here.',
   },
   'integration.laposta.desc': {
     nl: 'E-mailmarketing die automatisch meebeweegt. Rondo Sync houdt je mailinglijsten in <a href="https://laposta.nl/" target="_blank" rel="noopener">Laposta</a> synchroon met je ledendata. Nieuw lid? Automatisch op de juiste lijst. Uitgeschreven? Automatisch verwijderd.',
@@ -409,8 +409,8 @@ const translations = {
     en: 'Sync sponsors and contact people from Sponsit to Rondo Club (when used).',
   },
   'integration.sync.summary.item5': {
-    nl: 'Wijzigingen consistent doorzetten zodat teams op dezelfde waarheid werken.',
-    en: 'Propagate changes consistently so teams work from the same source of truth.',
+    nl: 'Toegestane wijzigingen uit Mijn gegevens gecontroleerd terugzetten in Sportlink, met een zichtbare status voor de ledenadministratie.',
+    en: 'Return allowed changes from My details to Sportlink in a controlled flow, with a visible status for member administrators.',
   },
   'integration.federations': {
     nl: 'Bonden die Sportlink gebruiken',
@@ -604,8 +604,8 @@ const translations = {
   },
   'faq.q14': { nl: 'Wat doet Rondo Sync precies?', en: 'What exactly does Rondo Sync do?' },
   'faq.a14': {
-    nl: 'Rondo Sync verwerkt automatisch wijzigingen uit Sportlink (en optioneel Nikki) en zet die door naar Rondo Club en gekoppelde systemen zoals Laposta en FreeScout. Denk aan nieuwe leden, adreswijzigingen, uitschrijvingen en contributiecontext.',
-    en: 'Rondo Sync automatically processes changes from Sportlink (and optionally Nikki) and propagates them to Rondo Club and connected systems such as Laposta and FreeScout. Think new members, address changes, cancellations and dues context.',
+    nl: 'Rondo Sync verwerkt automatisch wijzigingen uit Sportlink (en optioneel Nikki) en zet die door naar Rondo Club en gekoppelde systemen zoals Laposta en FreeScout. Toegestane contact- en adreswijzigingen uit Rondo Club gaan gecontroleerd terug naar Sportlink. Het wijzigingslog bewaart elke wijziging 24 maanden en toont of die wacht, is gesynchroniseerd, alleen in Rondo hoort of actie nodig heeft.',
+    en: 'Rondo Sync automatically processes changes from Sportlink (and optionally Nikki) and propagates them to Rondo Club and connected systems such as Laposta and FreeScout. Allowed contact and address changes from Rondo Club are returned to Sportlink in a controlled flow. The change log keeps each change for 24 months and shows whether it is waiting, synchronized, Rondo-only or needs action.',
   },
 
   'faq.q15': { nl: 'Kan Rondo ook bardiensten en andere vrijwilligersdiensten roosteren?', en: 'Can Rondo schedule bar shifts and other volunteer shifts?' },
@@ -620,8 +620,8 @@ const translations = {
   },
   'faq.q17': { nl: 'Kunnen leden zelf inloggen?', en: 'Can members log in themselves?' },
   'faq.a17': {
-    nl: 'Ja. Leden activeren hun account via een veilige inloglink per e-mail — geen wachtwoorden nodig. Op de Mijn gegevens-pagina zien ze hun eigen gegevens en die van hun gezin, schrijven ze zich in op diensten en uploaden ze hun VOG- of IVA-certificaat. Ze zien alleen de onderdelen die voor hen relevant zijn.',
-    en: 'Yes. Members activate their account via a secure login link by email — no passwords needed. On the My details page they see their own and their family’s information, sign up for shifts and upload their VOG or IVA certificate. They only see the parts that are relevant to them.',
+    nl: 'Ja. Leden activeren hun account via e-mail en kunnen daarna in Mijn gegevens hun eigen e-mailadressen, telefoonnummers en het woonadres van hun gezin aanpassen. Ouders kunnen e-mailadressen en telefoonnummers van hun eigen kinderen onder 18 wijzigen; een andere ouder of verzorger is alleen-lezen. Nieuwe e-mailadressen worden eerst geverifieerd. Toegestane wijzigingen gaan gecontroleerd naar Sportlink en kunnen daar tot een half uur op verwerking wachten. Beschikbare passen voeg je direct toe aan Apple Wallet of Google Wallet.',
+    en: 'Yes. Members activate their account by email and can then edit their own email addresses, phone numbers and household address in My details. Parents can edit the email addresses and phone numbers of their own children under 18; another parent or guardian is read-only. New email addresses are verified first. Allowed changes are sent to Sportlink in a controlled flow and can take up to half an hour to process there. Available passes can be added directly to Apple Wallet or Google Wallet.',
   },
 
   // ─── ContactForm ───

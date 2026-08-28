@@ -60,7 +60,7 @@ Backlog generated from `capabilities.csv` and `website-coverage-matrix.csv`.
 - Claims match a verified playlist-to-display flow.
 - Public screenshots contain no player credentials or private sponsor contacts.
 
-### P0-4: Update member self-service and Sportlink sync copy
+### P0-4: Update member self-service and Sportlink sync copy — implemented 2026-08-28, product-flow validation pending
 
 **Outcome:** the site no longer presents Mijn gegevens as view-only or Sportlink as one-way only.
 
