@@ -166,10 +166,10 @@ const lang = Astro.props.lang || getLangFromUrl(Astro.url);
         </button>
       </div>
 
-      {/* TODO: replace placeholder SVGs with real screenshots (screenshot-diensten-rooster.webp, screenshot-sponsors-overzicht.webp) */}
+      {/* TODO: replace the sponsor placeholder with a real screenshot (screenshot-sponsors-overzicht.webp) */}
       <div class="screenshot-grid" data-category="diensten" style="display: none;">
-        <button class="screenshot-item" data-screenshot="/screenshot-diensten-placeholder.svg" type="button">
-          <img src="/screenshot-diensten-placeholder.svg" width="1600" height="900" alt={t('gallery.caption.shiftsOverview', lang)} loading="lazy" />
+        <button class="screenshot-item" data-screenshot="/screenshot-vrijwilligers-planning.jpg" type="button">
+          <img src="/screenshot-vrijwilligers-planning.jpg" width="1926" height="1147" alt={t('gallery.caption.shiftsOverview', lang)} loading="lazy" />
           <p class="screenshot-caption">{t('gallery.caption.shiftsOverview', lang)}</p>
         </button>
       </div>

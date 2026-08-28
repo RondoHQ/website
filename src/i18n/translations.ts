@@ -125,8 +125,8 @@ const translations = {
     en: 'Filling shifts means sending group messages, keeping lists and hoping someone responds. And who has already done their required shifts? Nobody knows for sure.',
   },
   'product.card8.solution': {
-    nl: 'leden schrijven zichzelf in op diensten, herinneringen gaan automatisch en in de bezettingskalender zie je direct waar nog gaten zitten.',
-    en: 'members sign up for shifts themselves, reminders go out automatically, and the coverage calendar shows you instantly where gaps remain.',
+    nl: 'plan het hele seizoen, open zelfinschrijving per seizoenshelft, deel leden rechtstreeks in en stuur bij op bezetting, plichtsvoortgang en komende tekorten.',
+    en: 'plan the entire season, open self-signup separately for each half, assign members directly and adjust based on coverage, obligation progress and upcoming shortages.',
   },
   'product.card9.title': { nl: 'Sponsors verdienen ook aandacht', en: 'Sponsors deserve attention too' },
   'product.card9.problem': {
@@ -203,8 +203,8 @@ const translations = {
   'roles.communication.cta': { nl: 'Zo werkt het voor communicatie', en: 'See how it works for communication' },
   'roles.volunteers.title': { nl: 'Vrijwilligerscoördinator', en: 'Volunteer coordinator' },
   'roles.volunteers.text': {
-    nl: 'Plan diensten, laat leden zichzelf inschrijven en houd met bezettingskalenders en herinneringen grip op het rooster.',
-    en: 'Plan shifts, let members sign up themselves and stay on top of the roster with coverage calendars and reminders.',
+    nl: 'Plan het seizoen in helften, deel leden in en stuur bij met het aanmeldingenoverzicht, de bezettingskalender en actuele statistieken.',
+    en: 'Plan the season in two halves, assign members and adjust using the signup overview, coverage calendar and current statistics.',
   },
   'roles.volunteers.cta': { nl: 'Voor de vrijwilligerscoördinator', en: 'For the volunteer coordinator' },
   'roles.sponsors.title': { nl: 'Sponsorcommissie', en: 'Sponsor committee' },
@@ -324,7 +324,7 @@ const translations = {
   'gallery.caption.accessGoogleAwc': { nl: 'AWC ledenpas in Google Wallet', en: 'AWC membership pass in Google Wallet' },
   'gallery.caption.accessScannerAwc': { nl: 'AWC ledenpas scanner', en: 'AWC membership pass scanner' },
   'gallery.caption.accessScanner': { nl: 'Pas-scanner validatie in de webapp', en: 'Pass scanner validation in the webapp' },
-  'gallery.caption.shiftsOverview': { nl: 'Dienstenoverzicht met inschrijvingen', en: 'Shifts overview with signups' },
+  'gallery.caption.shiftsOverview': { nl: 'Seizoensplanning met bezetting per dag', en: 'Season planning with daily coverage' },
   'gallery.caption.shiftsCalendar': { nl: 'Bezettingskalender per diensttype', en: 'Coverage calendar per shift type' },
   'gallery.caption.sponsorsOverview': { nl: 'Sponsoroverzicht met contactpersonen', en: 'Sponsor overview with contact people' },
   'gallery.caption.sponsorPass': { nl: 'Businessclub-pas voor sponsors', en: 'Businessclub pass for sponsors' },
@@ -610,8 +610,8 @@ const translations = {
 
   'faq.q15': { nl: 'Kan Rondo ook bardiensten en andere vrijwilligersdiensten roosteren?', en: 'Can Rondo schedule bar shifts and other volunteer shifts?' },
   'faq.a15': {
-    nl: 'Ja. Je publiceert diensten per type (bar, kantine, poort, events), leden schrijven zichzelf in en krijgen automatisch herinneringen. Bezettingskalenders laten zien waar nog gaten zitten en verplichte diensten per lid worden automatisch bijgehouden. <a href="/voor-vrijwilligerscoordinator/">Bekijk hoe dit werkt voor de vrijwilligerscoördinator.</a>',
-    en: 'Yes. You publish shifts per type (bar, canteen, gate, events), members sign up themselves and receive automatic reminders. Coverage calendars show where gaps remain, and required shifts per member are tracked automatically. <a href="/en/for-volunteer-coordinator/">See how this works for the volunteer coordinator.</a>',
+    nl: 'Ja. Je plant het hele seizoen vooruit en opent de zelfinschrijving per seizoenshelft. Leden kiezen zelf een dienst of de coördinator deelt iemand rechtstreeks in. Het volledige aanmeldingenoverzicht, de bezettingskalender en het statistiekendashboard tonen per seizoen de voortgang en komende tekorten. Vrijwilligers kunnen hun eigen planning downloaden naar hun agenda. <a href="/voor-vrijwilligerscoordinator/">Bekijk hoe dit werkt voor de vrijwilligerscoördinator.</a>',
+    en: 'Yes. You plan the entire season ahead and open self-signup separately for each half. Members choose a shift or the coordinator assigns someone directly. The complete signup overview, coverage calendar and statistics dashboard show progress and upcoming shortages per season. Volunteers can download their own schedule to their calendar. <a href="/en/for-volunteer-coordinator/">See how this works for the volunteer coordinator.</a>',
   },
   'faq.q16': { nl: 'Kan ik ook sponsors beheren in Rondo?', en: 'Can I manage sponsors in Rondo too?' },
   'faq.a16': {

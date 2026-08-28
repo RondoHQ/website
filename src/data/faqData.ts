@@ -32,7 +32,7 @@ export const faqItemsNl = [
   {
     question: 'Kan Rondo ook bardiensten en andere vrijwilligersdiensten roosteren?',
     answer:
-      'Ja. Je publiceert diensten per type (bar, kantine, poort, events), leden schrijven zichzelf in en krijgen automatisch herinneringen. Bezettingskalenders laten zien waar nog gaten zitten en verplichte diensten per lid worden automatisch bijgehouden.',
+      'Ja. Je plant het hele seizoen vooruit en opent de zelfinschrijving per seizoenshelft. Leden kiezen zelf een dienst of de coördinator deelt iemand rechtstreeks in. Het volledige aanmeldingenoverzicht, de bezettingskalender en het statistiekendashboard tonen per seizoen de voortgang en komende tekorten. Vrijwilligers kunnen hun eigen planning downloaden naar hun agenda.',
   },
   {
     question: 'Kan ik ook sponsors beheren in Rondo?',

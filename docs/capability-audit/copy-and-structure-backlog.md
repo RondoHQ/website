@@ -78,14 +78,14 @@ Backlog generated from `capabilities.csv` and `website-coverage-matrix.csv`.
 - No claim suggests that every field is editable or instantly processed.
 - NL and EN use the same boundaries.
 
-### P0-5: Expand the volunteer-coordinator story
+### P0-5: Expand the volunteer-coordinator story — implemented 2026-08-28, product-flow validation pending
 
 **Outcome:** the role page reflects the current season-management workflow.
 
 1. Add whole-season planning in halves, direct member assignment and the full signup overview.
 2. Add calendar download and the statistics-dashboard outcomes.
 3. Explain automatic IVA verification separately from manual approval.
-4. Replace `/screenshot-diensten-placeholder.svg` with real planning and dashboard screenshots.
+4. Use real, privacy-safe planning and dashboard screenshots.
 
 **Maps to:** `CAP-034`, `CAP-035`, `CAP-041`.
 
