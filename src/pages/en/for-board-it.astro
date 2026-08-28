@@ -25,6 +25,8 @@ import RolePage from '../../components/pages/RolePage.astro';
     'Sensitive fields are protected separately: finance data for finance roles, support data for member administration and sponsor data for sponsor management.',
     'Financial access is split into read-only and manage; free-form notes are limited to administrators, member administration and finance roles.',
     'Rooms, Clothing and Club TV can be off, available to administrators only or fully enabled for each club.',
+    'Authenticated integrations can use three read-only actions through WordPress REST or MCP: search accessible records, retrieve one record and request the visible field schema.',
+    'These integrations reuse existing Rondo permissions: a user or connected application only sees accessible people, teams, committees and fields.',
     'Clear governance around access, processes and responsibilities.',
   ]}
   cards={[
