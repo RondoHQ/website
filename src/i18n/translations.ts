@@ -522,8 +522,8 @@ const translations = {
   },
   'faq.q4': { nl: 'Is Rondo open source?', en: 'Is Rondo open source?' },
   'faq.a4': {
-    nl: 'Ja! Zowel <a href="https://github.com/rondohq" target="_blank" rel="noopener">Rondo Club als Rondo Sync</a> zijn open source. Je kunt alles zelf hosten als je dat wilt. Ons betaalde aanbod is voor clubs die geen gedoe willen met servers, updates en onderhoud — wij regelen dat voor je.',
-    en: 'Yes! Both <a href="https://github.com/rondohq" target="_blank" rel="noopener">Rondo Club and Rondo Sync</a> are open source. You can self-host everything if you want. Our paid offering is for clubs that don\'t want to deal with servers, updates and maintenance — we handle that for you.',
+    nl: 'Ja! Zowel <a href="https://github.com/rondohq" target="_blank" rel="noopener">Rondo Club als Rondo Sync</a> zijn open source. Je kunt alles zelf hosten als je dat wilt. Voor het gebruik en beheer van Rondo rekenen we geen licentiekosten. In ruil daarvoor vragen we de club om één van de labels van Your.Online als sponsor van de club op te nemen. De voorwaarden daarvoor spreken we samen af. Kosten van externe diensten en FreeScout-hosting zijn niet inbegrepen.',
+    en: 'Yes! Both <a href="https://github.com/rondohq" target="_blank" rel="noopener">Rondo Club and Rondo Sync</a> are open source. You can self-host everything if you want. We charge no licence fees for the use and management of Rondo. In return, the club lists one of the Your.Online brands as a sponsor; we agree the terms together. Third-party service costs and FreeScout hosting are not included.',
   },
   'faq.q5': { nl: 'Mijn club gebruikt een ander e-mailsysteem, kan dat ook?', en: 'My club uses a different email system, can that work too?' },
   'faq.a5': {

@@ -69,13 +69,6 @@ h3 {
   background-clip: text;
 }
 
-.pricing-hero h3 {
-  background: none;
-  -webkit-background-clip: unset;
-  -webkit-text-fill-color: white;
-  background-clip: unset;
-}
-
 .gradient-text {
   background: var(--rondo-gradient-brand);
   -webkit-background-clip: text;

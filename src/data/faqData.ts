@@ -17,7 +17,7 @@ export const faqItemsNl = [
   {
     question: 'Is Rondo open source?',
     answer:
-      'Ja! Zowel Rondo Club als Rondo Sync zijn open source. Je kunt alles zelf hosten als je dat wilt. Ons betaalde aanbod is voor clubs die geen gedoe willen met servers, updates en onderhoud — wij regelen dat voor je.',
+      'Ja! Zowel Rondo Club als Rondo Sync zijn open source. Je kunt alles zelf hosten als je dat wilt. Voor het gebruik en beheer van Rondo rekenen we geen licentiekosten. In ruil daarvoor vragen we de club om één van de labels van Your.Online als sponsor van de club op te nemen. De voorwaarden daarvoor spreken we samen af. Kosten van externe diensten en FreeScout-hosting zijn niet inbegrepen.',
   },
   {
     question: 'Mijn club gebruikt een ander e-mailsysteem, kan dat ook?',

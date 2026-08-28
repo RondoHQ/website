@@ -26,7 +26,7 @@
 "CAP-025","/","Hero + ProductStory + FeatureGallery","clear","explicit-placeholder","/screenshot-pass-scanner.webp","hero.subline","Replace placeholder asset with real scanner validation states."
 "CAP-026","/","BusinessCase + FAQ","clear","none","","business.trust.data","Add export-format proof snippet (fields, format, turnaround) near FAQ."
 "CAP-027","/made-in-europe + /privacybeleid","clear","none","","made-in-europe page content","Keep claim text-only; add dated infra evidence link in docs, not homepage screenshots."
-"CAP-028","/made-in-europe + /faq","Made in Europe + FAQ","clear","none","","opensource mentions","Remove the stale Pricing reference; keep the claim text-only and add direct repo links and release-tag references."
+"CAP-028","/made-in-europe + /faq","Made in Europe + FAQ","clear","none","","opensource mentions","Keep the claim text-only and add direct repo links and release-tag references."
 "CAP-029","/","Hero + InvoicingHighlight","clear","none","","hero.demo.hint","Keep demo CTA; add one explicit line defining demo scope and freshness."
 "CAP-030","none","none","missing","none","","none","Create NL/EN tournament product content and a tournament-coordinator role page; show invitation, registration and progress states."
 "CAP-031","none","none","missing","none","","none","Create NL/EN Club TV product content and a Club TV editor role page; market content, matchday information, playlists and sponsors, not player maintenance internals."

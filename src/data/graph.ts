@@ -94,11 +94,6 @@ export function buildSoftwareEntity(): GraphEntity {
       url: SITE_URL,
       author: { '@id': RONDO_ORG_ID },
       publisher: { '@id': RONDO_ORG_ID },
-      offers: {
-        '@type': 'Offer',
-        price: '250',
-        priceCurrency: 'EUR',
-      },
     }),
   );
 }

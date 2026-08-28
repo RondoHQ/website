@@ -12,17 +12,17 @@ Backlog generated from `capabilities.csv` and `website-coverage-matrix.csv`.
 
 ## P0 implementation backlog
 
-### P0-1: Repair commercial-model consistency
+### P0-1: Repair commercial-model consistency — completed 2026-08-28
 
 **Outcome:** every NL/EN page describes the sponsorship model consistently.
 
 1. Replace the FAQ wording that still calls Rondo a paid offer.
-2. Remove all remaining `/prijzen`, `Pricing` and price-comparison references from audit files, navigation assumptions and copy.
+2. Remove remaining current-copy references to the former price page and price-comparison model.
 3. Use the current sponsorship terms: no Rondo licence fee, agreed Your.Online label sponsorship, third-party usage costs and no included FreeScout hosting.
 
 **Acceptance criteria**
 
-- Repository search finds no public claim that Rondo has a paid plan or Pricing page.
+- Repository search finds no public claim that Rondo has a paid plan or former price page.
 - NL and EN express the same commercial conditions.
 - Existing legal pages remain aligned with the homepage.
 

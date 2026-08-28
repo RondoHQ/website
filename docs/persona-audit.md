@@ -1,7 +1,7 @@
 # Website Audit per Persona
 
 Audit of the rondo.club homepage against each buyer persona's needs.
-The page sections in order: Hero, ProductStory, FeatureGallery, Origin, IntegrationDiagram, GettingStarted, Pricing, BusinessCase, Support, FAQ, ContactForm, Footer.
+The page sections in order: Hero, ProductStory, FeatureGallery, Origin, IntegrationDiagram, GettingStarted, Sponsorship, BusinessCase, Support, FAQ, ContactForm, Footer.
 
 ---
 
@@ -48,7 +48,7 @@ Trust information exists but is scattered and buried deep. A chair scanning the 
 | No social proof | High | No testimonials, no "used by X clubs", no case study. The only proof is "AWC gebruikt het dagelijks" buried in the Origin paragraph. One concrete line like "Sinds 2023 in gebruik bij AWC Wijchen (500+ leden)" would help enormously. |
 | KvK only in footer | Medium | The company identity (Emilia Projects BV, KvK 89067959) is credibility a chair actively looks for, but it's in the tiniest footer text. Surface it in the trust bar or Origin section. |
 | "bewerkersovereenkomst" isn't prominent | Medium | It's mentioned in step 2 of GettingStarted and FAQ, but the chair wants to see it as a headline trust signal, not find it by accident. |
-| No contract period summary | Medium | The FAQ says "opzeggen voor 1 juli", but a chair wants a clear, visible "Maandelijks opzegbaar" or "Jaarcontract, opzegbaar voor 1 juli" somewhere prominent. |
+| Sponsorship conditions are club-specific | Medium | The model is clear, but the exact label, visibility and duration are agreed with each club. Show that the written agreement records these terms. |
 | "Open source" needs more explanation | Low | The chair may not know what open source means for their risk. The FAQ explains it well, but inline on the page it's just a label. |
 
 ### Verdict: Weak. The information exists but is buried. The chair scans quickly and won't find what they need.
@@ -57,27 +57,24 @@ Trust information exists but is scattered and buried deep. A chair scanning the 
 
 ## 3. De Penningmeester (budget gatekeeper)
 
-Pricing is clear, but ROI framing and contract terms could be stronger.
+The sponsorship model is clear, but the exact agreement and expected third-party usage costs still require a conversation.
 
 ### What works
 
-- **Pricing section** — dead simple formula (€250 + €0.50/lid), three concrete examples (250/500/1000 leden).
-- **"Alles inbegrepen, geen verrassingen"** — good reassurance.
+- **Sponsorship section** — states that Rondo has no licence fee and explains the Your.Online label sponsorship in return.
+- **Third-party costs are explicit** — Mollie transactions, email delivery and FreeScout hosting are named as separate costs.
 - **BusinessCase** "100+ uur per jaar bespaard" — ROI framing present.
-- **FAQ** on stopping and data ownership — exit terms exist.
-- **Invoice details** — "Jaarlijkse facturatie, ledental op peildatum 1 september, excl. btw" is precise.
+- **FAQ and terms** explain open-source self-hosting, data ownership and the commercial arrangement.
 
 ### Gaps
 
 | Gap | Severity | Notes |
 |-----|----------|-------|
-| No explicit cost-vs-savings comparison | Medium | "100+ uur bespaard" is good but not connected to the price. For a 500-member club: €500/year ÷ 100 hours = €5/hour. That's a compelling number to state explicitly. |
-| Contract period not on pricing page | Medium | It's in the FAQ only. The penningmeester wants to see "jaarcontract" or "maandelijks opzegbaar" right next to the price. |
-| Payment method unclear | Low | How does the club pay? Invoice? Automatische incasso? Important for a treasurer to know. |
-| No "what's NOT included" clarity | Low | Does the club need Laposta separately? FreeScout hosting? What are the real total costs? |
-| Price comparison to alternatives missing | Low | Even a simple "vergelijk: een secretaris die 2 uur per week besteedt aan handmatig werk kost de club meer dan Rondo" would help. |
+| Exact sponsorship commitment is not illustrated | Medium | Give one non-binding example of the decisions recorded in the agreement: label, placement, duration and evaluation moment. |
+| Third-party costs are not quantified | Low | The site correctly names the cost categories, but a treasurer may still want indicative links or examples for Mollie, email and FreeScout hosting. |
+| Savings are not connected to operational costs | Low | "100+ uur bespaard" is useful; one example could show how the remaining third-party costs compare with saved volunteer time. |
 
-### Verdict: Adequate. Pricing is clear, but the penningmeester has to hunt for contract terms and do their own ROI math.
+### Verdict: Strong. The model and exclusions are clear; only the club-specific sponsorship terms and indicative third-party costs remain to discuss.
 
 ---
 
@@ -112,7 +109,7 @@ The integration diagram is good, but technical depth is thin.
 
 - **IntegrationDiagram** — animated SVG showing the data flow between all systems, with explanation cards per system.
 - **Origin** — "ervaren developer en internet ondernemer" establishes credibility (though underplays Joost's background significantly).
-- **Open source** mentioned in pricing, FAQ, and footer with GitHub link.
+- **Open source** mentioned in Sponsorship, FAQ, and footer with GitHub link.
 - **FAQ** on data storage ("Europese servers, AVG") and developer risk ("code is vrij beschikbaar").
 
 ### Gaps
@@ -137,9 +134,9 @@ The integration diagram is good, but technical depth is thin.
 | **High** | Trust signals buried too deep | Voorzitter, Penningmeester | Add a compact trust bar higher on the page (after Hero or ProductStory). Include: KvK, bewerkersovereenkomst, EU hosting, data ownership, open source. |
 | **High** | No social proof | Voorzitter, all others | Add at minimum "In gebruik bij AWC Wijchen (500+ leden) sinds 2023" prominently. A one-line quote from a real user would be even better. |
 | **High** | No direct path for VOG searchers | VOG-verantwoordelijke | Either add "VOG" to the nav, create a #vog anchor, or build a dedicated /vog landing page. |
-| **Medium** | "Forward to board" flow missing | Secretaris | Help the secretary champion Rondo: a CTA or shareable summary with trust signals + pricing for board members. |
-| **Medium** | Contract terms scattered | Penningmeester, Voorzitter | Surface key terms (contract period, cancellation, data export) alongside or near pricing — not just in FAQ. |
-| **Medium** | ROI not made explicit | Penningmeester | Connect hours saved to cost: "For a 500-member club, Rondo costs less than €10 per week." |
+| **Medium** | "Forward to board" flow missing | Secretaris | Help the secretary champion Rondo with a shareable summary of trust signals, sponsorship and expected third-party costs. |
+| **Medium** | Sponsorship example missing | Penningmeester, Voorzitter | Show which terms are agreed without presenting one fixed arrangement as universal. |
+| **Low** | Operational-cost context is limited | Penningmeester | Connect saved volunteer time to the separate third-party cost categories without claiming a fixed total. |
 | **Medium** | Joost's credibility underplayed | Techneut, Voorzitter | "Founder of Yoast SEO" is a trust signal that works for both technical and business audiences. Currently it's completely absent. |
 | **Low** | Technical depth lacking | Techneut | Add a brief "Technisch" section or FAQ entries about stack, security measures, sync mechanism. |
-| **Low** | Laposta/FreeScout costs unclear | Penningmeester | Clarify that Laposta is free up to 2000 addresses (mentioned in FAQ but not near pricing) and that FreeScout hosting is separate. |
+| **Low** | Third-party prices require external lookup | Penningmeester | Link to current provider information where useful; keep Rondo copy limited to which costs are included or excluded. |

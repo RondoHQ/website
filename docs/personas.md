@@ -26,7 +26,7 @@ The website needs to serve all five personas, but the Secretaris is the front do
 - Immediate recognition of their pain ("yes, this is exactly my problem")
 - Clear explanation of what Rondo does and how it works
 - Screenshots/demo so they can visualize the solution
-- Ammunition to pitch to the board (trust signals, pricing, terms)
+- Ammunition to pitch to the board (trust signals, sponsorship model, terms)
 - Easy way to try it (demo) or get in touch
 
 **Key question:** "Does this actually solve my daily admin headache?"
@@ -60,22 +60,21 @@ The website needs to serve all five personas, but the Secretaris is the front do
 
 **Role:** Club treasurer, manages finances and approves expenditures.
 
-**How they arrive:** Forwarded the link after the board discusses Rondo. Scrolls straight to pricing.
+**How they arrive:** Forwarded the link after the board discusses Rondo. Scrolls straight to the sponsorship and costs section.
 
 **Pain points:**
 - Every euro spent on tools is a euro not spent on the sport
 - Needs to fit purchases into annual budget and present to ALV
 - Wary of hidden costs, price increases, or long lock-in periods
-- Needs to understand value vs. "we just keep using Excel for free"
+- Needs to understand the sponsorship commitment and remaining costs versus keeping manual processes
 
 **What they need from the website:**
-- Clear, simple pricing (no surprises)
-- What's included and what isn't
-- Payment terms (monthly? annually? invoice?)
-- Contract period and cancellation terms
+- Clear sponsorship terms without hidden licence fees
+- What's included and which third-party costs remain with the club
+- How the label, placement, duration and evaluation moment are agreed
 - ROI framing: how much volunteer time does this save?
 
-**Key question:** "What does it cost, and is it worth it?"
+**Key question:** "What do we commit to, which external costs remain, and is it worth it?"
 
 ---
 
