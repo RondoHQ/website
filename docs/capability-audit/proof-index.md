@@ -51,5 +51,5 @@ Status legend: `todo` | `captured` | `verified`
 | CAP-043 Feedback lifecycle | `proofs/CAP-043-feedback-lifecycle.mp4` |  | todo | Submission plus resolved and declined notifications |
 | CAP-044 Granular access | `proofs/CAP-044-granular-access.csv` |  | todo | Role, field, route, REST and feature-toggle matrix |
 | CAP-045 Abilities and MCP | `proofs/CAP-045-abilities-mcp.json` |  | todo | Schemas plus allowed and denied authenticated queries |
-| CAP-046 Invoice expired state | `proofs/CAP-046-invoice-expired.png` |  | todo | Reminder, payment link, dashboard and history effects |
-| CAP-047 Deceased-person safety | `proofs/CAP-047-deceased-safety.png` |  | todo | Read-only record and all communication exclusions |
+| CAP-046 Invoice expired state | `proofs/CAP-046-invoice-expired.md` |  | captured | Automated status, audit, reminder and payment-route effects verified; real Mollie sandbox and browser checks remain open |
+| CAP-047 Deceased-person safety | `proofs/CAP-047-deceased-safety.md` |  | captured | Historical lookup, communication exclusion and volunteer ineligibility verified; privacy-safe authenticated screenshot remains open |

@@ -127,7 +127,7 @@ Backlog generated from `capabilities.csv` and `website-coverage-matrix.csv`.
 2. Explain the complete feedback lifecycle in support copy (`CAP-043`). **Implemented 2026-08-28 in the NL/EN support card; controlled resolved and declined submissions remain product-proof follow-up.**
 3. Add concrete role, field-scope and configurable-feature examples to board/ICT copy (`CAP-044`). **Implemented 2026-08-28 in the NL/EN board and IT role pages and homepage role-access example; the full permission matrix remains product-proof follow-up.**
 4. Add read-only authenticated Abilities/MCP information only for board/ICT audiences (`CAP-045`). **Implemented 2026-08-28 in the NL/EN board and IT role pages; schema capture and multi-role execution remain product-proof follow-up.**
-5. Add invoice-expiration and deceased-person safety details after their validation flows pass (`CAP-046`, `CAP-047`).
+5. Add invoice-expiration and deceased-person safety details after their validation flows pass (`CAP-046`, `CAP-047`). **Implemented 2026-08-28 in the NL/EN treasurer and secretary role pages after 5 invoice lifecycle tests and 2 deceased-person safety tests passed; real Mollie sandbox and privacy-safe screenshot checks remain product-proof follow-up.**
 6. Add evidence freshness tags, a release checklist gate and explicit product/marketing ownership to the audit process.
 
 ## Information architecture recommendations
