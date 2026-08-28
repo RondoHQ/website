@@ -43,7 +43,7 @@ Status legend: `todo` | `captured` | `verified`
 | CAP-035 Volunteer statistics | `proofs/CAP-035-volunteer-statistics.png` |  | todo | Reconcile dashboard KPIs with source shifts |
 | CAP-036 Room reservations | `proofs/CAP-036-room-reservations.mp4` |  | todo | Pilot only: authorization, conflict and presentation handoff |
 | CAP-037 Person merge | `proofs/CAP-037-person-merge.mp4` |  | todo | Preserve roles, relationships and history |
-| CAP-038 Pass lifecycle | `proofs/CAP-038-pass-lifecycle.mp4` |  | todo | Multiple pass rights and permanent revocation |
+| CAP-038 Pass lifecycle | `proofs/CAP-038-pass-lifecycle.md` |  | captured | Automated lifecycle and live role-choice verified; real-device Wallet addition and revoked scan remain open |
 | CAP-039 Access statistics | `proofs/CAP-039-access-statistics.mp4` |  | todo | Real home-match field test; do not publish before verified |
 | CAP-040 Sponsor management | `proofs/CAP-040-sponsor-management.mp4` |  | todo | Company/person, logo, activation and Club TV priority |
 | CAP-041 IVA verification | `proofs/CAP-041-iva-verification.mp4` |  | todo | Official, alternative and invalid evidence states |

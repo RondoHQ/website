@@ -24,14 +24,17 @@ import RolePage from '../components/pages/RolePage.astro';
   whatHeading="Wat je hiermee oplost"
   bulletPoints={[
     'Geen papieren lijsten of handmatig zoeken naar namen bij de ingang.',
-    'Leden gebruiken hun pas in Apple Wallet of Google Wallet.',
-    'Scannerresultaat laat direct zien of een pas geldig, verlopen of onbekend is.',
+    'Leden voegen hun beschikbare pas vanuit Mijn gegevens toe aan Apple Wallet of Google Wallet.',
+    'Heeft iemand meerdere actuele rollen, dan kiest die persoon precies welke rol op de pas komt.',
+    'Een sponsorcontact dat ook lid is en een actuele vrijwilligersfunctie heeft, kan kiezen tussen de sponsorpas en een AWC-pas met die functie.',
+    'Bij iedere scan controleert Rondo online het exacte pastype, het actuele pasrecht en de pasversie.',
+    'Verandert een relevant lid- of sponsorpasrecht, dan blijven eerder uitgegeven QR-codes ingetrokken; na heractivatie is een nieuwe pas nodig.',
     'Ook sponsors krijgen een pas: bij het scannen zie je direct het bedrijf, handig bij Businessclub-avonden.',
   ]}
   cards={[
     { title: 'Sneller doorstromen', text: 'Minder wachtrijen door snelle validatie op mobiel of laptop in de webapp.' },
-    { title: 'Duidelijke status', text: 'Vrijwilligers krijgen direct een helder resultaat in plaats van twijfelgevallen.' },
-    { title: 'Voor poort, bar en events', text: 'Dezelfde workflow werkt op verschillende plekken waar lidcontrole nodig is.' },
+    { title: 'De juiste pas', text: 'Leden met meerdere actuele rollen kiezen de pas die bij het gebruiksmoment past.' },
+    { title: 'Actuele geldigheid', text: 'De scanner controleert de huidige rechten en accepteert een oude, ingetrokken QR-code niet opnieuw.' },
   ]}
   otherHeading="Andere routes"
   otherPrefix="Ook relevant:"
@@ -40,4 +43,72 @@ import RolePage from '../components/pages/RolePage.astro';
     { href: '/voor-sponsorcommissie/', label: 'Voor de sponsorcommissie' },
     { href: '/voor-penningmeester/', label: 'Voor penningmeester' },
   ]}
-/>
+  hasExtra={true}
+>
+  <div class="pass-lifecycle-block role-container">
+    <div class="pass-lifecycle-copy">
+      <h2 class="gradient-text pass-lifecycle-heading">De juiste pas, met actuele geldigheid</h2>
+      <p>
+        In Mijn gegevens kiest een lid met meerdere actuele rollen eerst welke pas aan Apple Wallet of Google Wallet
+        wordt toegevoegd. Voor een sponsorcontact met daarnaast een regulier lidmaatschap en een actuele functie kan
+        dat de sponsorpas of een AWC-pas met die functie zijn.
+      </p>
+      <p>
+        De QR-code legt het gekozen pastype vast. De scanner controleert daarna online of dat exacte recht nog actief
+        is en of de pasversie nog klopt. Bij een relevante wijziging worden oudere QR-codes blijvend ongeldig; opnieuw
+        activeren herstelt de oude code niet.
+      </p>
+    </div>
+    <figure class="pass-lifecycle-shot">
+      <img
+        class="zoomable-screenshot"
+        src="/screenshot-lidpas-rolkeuze.jpg"
+        alt="Keuze uit actuele rollen voordat een ledenpas aan de Wallet wordt toegevoegd"
+        width="384"
+        height="606"
+        loading="lazy"
+      />
+    </figure>
+  </div>
+</RolePage>
+
+<style>
+  .pass-lifecycle-block {
+    display: grid;
+    gap: 1.5rem;
+    max-width: 72rem;
+    margin: 0 auto;
+    align-items: center;
+  }
+
+  @media (min-width: 900px) {
+    .pass-lifecycle-block { grid-template-columns: 1fr 0.72fr; }
+  }
+
+  .pass-lifecycle-heading {
+    font-size: clamp(1.6rem, 2.6vw, 2.1rem);
+    margin-bottom: 0.6rem;
+  }
+
+  .pass-lifecycle-copy p {
+    color: #475569;
+    line-height: 1.7;
+    margin: 0.75rem 0 0;
+  }
+
+  .pass-lifecycle-shot {
+    max-width: 24rem;
+    justify-self: center;
+    border: 1px solid #D8E3EE;
+    border-radius: 1rem;
+    overflow: hidden;
+    background: #FFFFFF;
+    box-shadow: 0 18px 45px rgba(0, 27, 96, 0.16);
+  }
+
+  .pass-lifecycle-shot img {
+    width: 100%;
+    height: auto;
+    display: block;
+  }
+</style>

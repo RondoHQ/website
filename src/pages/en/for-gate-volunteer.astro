@@ -12,21 +12,29 @@ import RolePage from '../../components/pages/RolePage.astro';
   demoLabel="Look at the demo"
   contactLabel="Contact us"
   contactHref="/en/contact/"
-  screenshotSrc="/screenshot-pass-scanner.webp"
-  screenshotAlt="Pass scanner in Rondo Club"
-  screenshotWidth={1600}
-  screenshotHeight={900}
+  screenshotSrc="/screenshot-ledenpas-apple-awc.webp"
+  screenshotAlt="AWC membership pass in Apple Wallet"
+  screenshotWidth={1206}
+  screenshotHeight={1637}
+  secondaryScreenshotSrc="/screenshot-ledenpas-scanner-awc.webp"
+  secondaryScreenshotAlt="AWC membership pass scanner"
+  secondaryScreenshotWidth={1206}
+  secondaryScreenshotHeight={2052}
+  screenshotLayout="passWide"
   whatHeading="What this solves"
   bulletPoints={[
     'No paper lists or manual name lookups at the entrance.',
-    'Members use their pass in Apple Wallet or Google Wallet.',
-    'Scanner output immediately shows valid, expired, or unknown.',
+    'Members add their available pass to Apple Wallet or Google Wallet directly from My details.',
+    'When someone has several current roles, they choose exactly which role appears on the pass.',
+    'A sponsor contact who is also a member with a current volunteer role can choose between the sponsor pass and an AWC pass carrying that role.',
+    'Every scan checks the exact pass type, current entitlement and pass version online.',
+    'When a relevant member or sponsor-pass entitlement changes, previously issued QR codes remain revoked; reactivation requires a new pass.',
     'Sponsors get a pass too: scanning shows the company right away — handy at Businessclub evenings.',
   ]}
   cards={[
     { title: 'Faster throughput', text: 'Fewer queues through rapid validation on mobile or laptop in the webapp.' },
-    { title: 'Clear status', text: 'Volunteers get immediate, clear outcomes instead of uncertainty at the door.' },
-    { title: 'Gate, bar and events', text: 'The same workflow works across all places where membership checks are needed.' },
+    { title: 'The right pass', text: 'Members with several current roles choose the pass that fits the occasion.' },
+    { title: 'Current validity', text: 'The scanner checks current entitlements and never accepts an old revoked QR code again.' },
   ]}
   otherHeading="Other paths"
   otherPrefix="Also relevant:"
@@ -35,4 +43,72 @@ import RolePage from '../../components/pages/RolePage.astro';
     { href: '/en/for-sponsor-committee/', label: 'For the sponsor committee' },
     { href: '/en/for-treasurer/', label: 'For treasurers' },
   ]}
-/>
+  hasExtra={true}
+>
+  <div class="pass-lifecycle-block role-container">
+    <div class="pass-lifecycle-copy">
+      <h2 class="gradient-text pass-lifecycle-heading">The right pass, with current validity</h2>
+      <p>
+        In My details, a member with several current roles first chooses which pass to add to Apple Wallet or Google
+        Wallet. A sponsor contact who also has regular membership and a current role can choose the sponsor pass or
+        an AWC pass carrying that role.
+      </p>
+      <p>
+        The QR code records the selected pass type. At every scan, Rondo checks online whether that exact entitlement
+        is still active and whether the pass version is current. A relevant change permanently invalidates older QR
+        codes; reactivation does not restore an old code.
+      </p>
+    </div>
+    <figure class="pass-lifecycle-shot">
+      <img
+        class="zoomable-screenshot"
+        src="/screenshot-lidpas-rolkeuze.jpg"
+        alt="Choosing from current roles before adding a membership pass to Wallet"
+        width="384"
+        height="606"
+        loading="lazy"
+      />
+    </figure>
+  </div>
+</RolePage>
+
+<style>
+  .pass-lifecycle-block {
+    display: grid;
+    gap: 1.5rem;
+    max-width: 72rem;
+    margin: 0 auto;
+    align-items: center;
+  }
+
+  @media (min-width: 900px) {
+    .pass-lifecycle-block { grid-template-columns: 1fr 0.72fr; }
+  }
+
+  .pass-lifecycle-heading {
+    font-size: clamp(1.6rem, 2.6vw, 2.1rem);
+    margin-bottom: 0.6rem;
+  }
+
+  .pass-lifecycle-copy p {
+    color: #475569;
+    line-height: 1.7;
+    margin: 0.75rem 0 0;
+  }
+
+  .pass-lifecycle-shot {
+    max-width: 24rem;
+    justify-self: center;
+    border: 1px solid #D8E3EE;
+    border-radius: 1rem;
+    overflow: hidden;
+    background: #FFFFFF;
+    box-shadow: 0 18px 45px rgba(0, 27, 96, 0.16);
+  }
+
+  .pass-lifecycle-shot img {
+    width: 100%;
+    height: auto;
+    display: block;
+  }
+</style>
