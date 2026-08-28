@@ -471,8 +471,8 @@ const translations = {
     en: 'Your club pays no licence fees for the use and management of Rondo. In return, we ask the club to list one of the Your.Online brands as a club sponsor. We agree the terms together.',
   },
   'sponsorship.thirdParty': {
-    nl: 'Rondo is daardoor niet volledig kosteloos. Kosten van externe diensten, zoals transactiekosten van Mollie en kosten voor e-mailverzending, zijn voor rekening van de club. Hosting van FreeScout is ook niet inbegrepen.',
-    en: 'Rondo is therefore not entirely free of charge. Third-party costs, such as Mollie transaction fees and email delivery costs, remain the club’s responsibility. FreeScout hosting is not included either.',
+    nl: 'Rondo is daardoor niet volledig kosteloos. Kosten van externe diensten, zoals transactiekosten van Mollie en kosten voor e-mailverzending, zijn voor rekening van de club. Hosting van FreeScout is ook niet inbegrepen. Voor Club TV geldt daarnaast eenmalig ongeveer €200 per aan te sluiten tv.',
+    en: 'Rondo is therefore not entirely free of charge. Third-party costs, such as Mollie transaction fees and email delivery costs, remain the club’s responsibility. FreeScout hosting is not included either. Club TV also has a one-time additional cost of approximately €200 per TV to be connected.',
   },
   'sponsorship.goal': {
     nl: 'Ons uitgangspunt is om de totale kosten voor de club altijd zo laag mogelijk te houden.',
@@ -554,8 +554,8 @@ const translations = {
   },
   'faq.q4': { nl: 'Is Rondo open source?', en: 'Is Rondo open source?' },
   'faq.a4': {
-    nl: 'Ja! Zowel <a href="https://github.com/rondohq" target="_blank" rel="noopener">Rondo Club als Rondo Sync</a> zijn open source. Je kunt alles zelf hosten als je dat wilt. Voor het gebruik en beheer van Rondo rekenen we geen licentiekosten. In ruil daarvoor vragen we de club om één van de labels van Your.Online als sponsor van de club op te nemen. De voorwaarden daarvoor spreken we samen af. Kosten van externe diensten en FreeScout-hosting zijn niet inbegrepen.',
-    en: 'Yes! Both <a href="https://github.com/rondohq" target="_blank" rel="noopener">Rondo Club and Rondo Sync</a> are open source. You can self-host everything if you want. We charge no licence fees for the use and management of Rondo. In return, the club lists one of the Your.Online brands as a sponsor; we agree the terms together. Third-party service costs and FreeScout hosting are not included.',
+    nl: 'Ja! Zowel <a href="https://github.com/rondohq" target="_blank" rel="noopener">Rondo Club als Rondo Sync</a> zijn open source. Je kunt alles zelf hosten als je dat wilt. Voor het gebruik en beheer van Rondo rekenen we geen licentiekosten. In ruil daarvoor vragen we de club om één van de labels van Your.Online als sponsor van de club op te nemen. De voorwaarden daarvoor spreken we samen af. Kosten van externe diensten en FreeScout-hosting zijn niet inbegrepen. Voor Club TV geldt daarnaast eenmalig ongeveer €200 per aan te sluiten tv.',
+    en: 'Yes! Both <a href="https://github.com/rondohq" target="_blank" rel="noopener">Rondo Club and Rondo Sync</a> are open source. You can self-host everything if you want. We charge no licence fees for the use and management of Rondo. In return, the club lists one of the Your.Online brands as a sponsor; we agree the terms together. Third-party service costs and FreeScout hosting are not included. Club TV also has a one-time additional cost of approximately €200 per TV to be connected.',
   },
   'faq.q5': { nl: 'Mijn club gebruikt een ander e-mailsysteem, kan dat ook?', en: 'My club uses a different email system, can that work too?' },
   'faq.a5': {
