@@ -128,7 +128,7 @@ Backlog generated from `capabilities.csv` and `website-coverage-matrix.csv`.
 3. Add concrete role, field-scope and configurable-feature examples to board/ICT copy (`CAP-044`). **Implemented 2026-08-28 in the NL/EN board and IT role pages and homepage role-access example; the full permission matrix remains product-proof follow-up.**
 4. Add read-only authenticated Abilities/MCP information only for board/ICT audiences (`CAP-045`). **Implemented 2026-08-28 in the NL/EN board and IT role pages; schema capture and multi-role execution remain product-proof follow-up.**
 5. Add invoice-expiration and deceased-person safety details after their validation flows pass (`CAP-046`, `CAP-047`). **Implemented 2026-08-28 in the NL/EN treasurer and secretary role pages after 5 invoice lifecycle tests and 2 deceased-person safety tests passed; real Mollie sandbox and privacy-safe screenshot checks remain product-proof follow-up.**
-6. Add evidence freshness tags, a release checklist gate and explicit product/marketing ownership to the audit process.
+6. Add evidence freshness tags, a release checklist gate and explicit product/marketing ownership to the audit process. **Implemented 2026-08-28 in the audit runbook, proof index and reusable release checklist; current evidence is tagged for review by 2026-11-26.**
 
 ## Information architecture recommendations
 
@@ -142,6 +142,8 @@ Backlog generated from `capabilities.csv` and `website-coverage-matrix.csv`.
 
 An item is done only when:
 1. Capability row exists and status is `verified`.
-2. Proof file is linked in `proof-index.md`.
+2. Proof file is linked in `proof-index.md`, names a product-evidence owner and has a `current` freshness tag.
 3. Coverage row is `clear` in `website-coverage-matrix.csv`.
-4. Copy has been reviewed for NL + EN consistency.
+4. Product owner confirms behavior, audience and caveats.
+5. Website/marketing owner confirms claim scope, NL/EN consistency and privacy-safe assets.
+6. Release owner completes `release-checklist.md` with no blocking item left open.
