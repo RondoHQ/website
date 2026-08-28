@@ -19,6 +19,7 @@ const roleLinks = lang === 'en'
       volunteers: '/en/for-volunteer-coordinator/',
       sponsors: '/en/for-sponsor-committee/',
       tournaments: '/en/for-tournament-coordinator/',
+      clubTv: '/en/for-club-tv-editor/',
     }
   : {
       secretary: '/voor-secretaris/',
@@ -30,6 +31,7 @@ const roleLinks = lang === 'en'
       volunteers: '/voor-vrijwilligerscoordinator/',
       sponsors: '/voor-sponsorcommissie/',
       tournaments: '/voor-toernooicoordinator/',
+      clubTv: '/voor-club-tv-redacteur/',
     };
 ---
 
@@ -84,6 +86,11 @@ const roleLinks = lang === 'en'
       <Card title={t('roles.tournaments.title', lang)}>
         <p class="text-slate-600 mb-6">{t('roles.tournaments.text', lang)}</p>
         <Button variant="outline" href={roleLinks.tournaments}>{t('roles.tournaments.cta', lang)}</Button>
+      </Card>
+
+      <Card title={t('roles.clubTv.title', lang)}>
+        <p class="text-slate-600 mb-6">{t('roles.clubTv.text', lang)}</p>
+        <Button variant="outline" href={roleLinks.clubTv}>{t('roles.clubTv.cta', lang)}</Button>
       </Card>
     </div>
   </div>

@@ -1,0 +1,39 @@
+---
+import RolePage from '../../components/pages/RolePage.astro';
+---
+
+<RolePage
+  lang="en"
+  title="Club TV for editors — Rondo"
+  description="Schedule matchday information, announcements, media, and sponsor rotation in playlists, then preview the clubhouse screen in your browser."
+  kicker="For your role"
+  roleTitle="Club TV editor"
+  intro="Keeping a clubhouse screen current otherwise means separate exports, presentations, and manual updates. Rondo combines Sportlink matchday information with your own announcements, media, and sponsors in scheduled playlists."
+  demoLabel="Look at the demo"
+  contactLabel="Contact us"
+  contactHref="/en/contact/"
+  screenshotSrc="/screenshot-club-tv-preview.jpg"
+  screenshotAlt="Club TV preview with matchday information and sponsor rotation"
+  screenshotWidth={2167}
+  screenshotHeight={1147}
+  whatHeading="What this solves"
+  bulletPoints={[
+    'Create announcements, images, silent videos, and dynamic screens for matches, cancellations, results, and a welcome screen.',
+    'Show the current Sportlink programme with times, teams, pitches, and dressing rooms in a readable screen layout.',
+    'Build playlists with a fixed order, individual duration, frequency, and schedules by date, day, and time.',
+    'Include active sponsors with a logo; Rondo rotates them according to their configured visibility.',
+    'Open the browser preview to check the complete playlist before it appears on the clubhouse screen.',
+  ]}
+  cards={[
+    { title: 'Current matchday', text: 'Fixtures, pitches, dressing rooms, cancellations, and results come together in a recognisable club screen.' },
+    { title: 'Content on your schedule', text: 'Put announcements and media in the right order and decide when and how long they appear.' },
+    { title: 'Sponsors on screen', text: 'Use configured sponsor visibility to rotate active sponsors with a logo through the screen layout.' },
+  ]}
+  otherHeading="Other paths"
+  otherPrefix="Also relevant:"
+  otherAnd="and"
+  otherLinks={[
+    { href: '/en/for-sponsor-committee/', label: 'For the sponsor committee' },
+    { href: '/en/for-communication/', label: 'For communication' },
+  ]}
+/>

@@ -43,7 +43,7 @@ Backlog generated from `capabilities.csv` and `website-coverage-matrix.csv`.
 - Claims match the completed Flow 6 evidence.
 - Screenshot contains no personal data.
 
-### P0-3: Publish Club TV content
+### P0-3: Publish Club TV content — implemented 2026-08-28, physical display proof pending
 
 **Outcome:** Club TV is visible as a major Rondo product area.
 

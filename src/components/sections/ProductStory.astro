@@ -96,6 +96,19 @@ const lang = Astro.props.lang || getLangFromUrl(Astro.url);
           <img src="/screenshot-toernooien-overzicht.jpg" width="1450" height="360" alt={lang === 'en' ? 'Tournament overview with deadline and registration counts' : 'Toernooioverzicht met deadline en inschrijfaantallen'} loading="lazy" />
         </button>
       </Card>
+
+      <Card title={t('product.card11.title', lang)}>
+        <p class="text-slate-500 mb-3">{t('product.card11.problem', lang)}</p>
+        <p class="text-slate-600">
+          <span class="text-electric-cyan font-semibold">{t('product.withRondo', lang)}</span> {t('product.card11.solution', lang)}
+        </p>
+        <a class="card-detail-link" href={lang === 'en' ? '/en/for-club-tv-editor/' : '/voor-club-tv-redacteur/'}>
+          {t('product.card11.cta', lang)}
+        </a>
+        <button class="card-screenshot-trigger" data-screenshot="/screenshot-club-tv-preview.jpg" type="button" aria-label={lang === 'en' ? 'Enlarge screenshot' : 'Vergroot screenshot'}>
+          <img src="/screenshot-club-tv-preview.jpg" width="2167" height="1147" alt={lang === 'en' ? 'Club TV preview with matchday information and sponsor rotation' : 'Club TV-preview met wedstrijdinformatie en sponsorrotatie'} loading="lazy" />
+        </button>
+      </Card>
     </div>
   </div>
 </section>

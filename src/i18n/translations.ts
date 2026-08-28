@@ -147,6 +147,16 @@ const translations = {
     en: 'invite current staff per team, collect one shared registration, and track teams, players, and amounts until the deadline.',
   },
   'product.card10.cta': { nl: 'Voor de toernooicoördinator', en: 'For the tournament coordinator' },
+  'product.card11.title': { nl: 'Eén actueel scherm in het clubhuis', en: 'One current clubhouse screen' },
+  'product.card11.problem': {
+    nl: 'Wedstrijdinformatie, mededelingen en sponsorlogo’s uit losse presentaties halen kost tijd en raakt snel achterhaald.',
+    en: 'Building matchday information, announcements, and sponsor logos from separate presentations takes time and quickly becomes outdated.',
+  },
+  'product.card11.solution': {
+    nl: 'combineer actuele Sportlink-informatie met eigen content, geplande afspeellijsten en sponsorrotatie en controleer het resultaat vooraf in je browser.',
+    en: 'combine current Sportlink information with your own content, scheduled playlists, and sponsor rotation, then preview the result in your browser.',
+  },
+  'product.card11.cta': { nl: 'Voor de Club TV-redacteur', en: 'For the Club TV editor' },
   'product.withRondo': { nl: 'Met Rondo:', en: 'With Rondo:' },
 
   // ─── Role paths ───
@@ -209,6 +219,12 @@ const translations = {
     en: 'Invite current team staff, collect complete registrations, and track progress until the deadline.',
   },
   'roles.tournaments.cta': { nl: 'Voor de toernooicoördinator', en: 'For the tournament coordinator' },
+  'roles.clubTv.title': { nl: 'Club TV-redacteur', en: 'Club TV editor' },
+  'roles.clubTv.text': {
+    nl: 'Combineer wedstrijdinformatie, mededelingen, media en sponsors in geplande afspeellijsten voor het clubscherm.',
+    en: 'Combine matchday information, announcements, media, and sponsors in scheduled playlists for the clubhouse screen.',
+  },
+  'roles.clubTv.cta': { nl: 'Voor de Club TV-redacteur', en: 'For the Club TV editor' },
 
   // ─── InvoicingHighlight ───
   'invoicing.heading': {
