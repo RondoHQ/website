@@ -119,7 +119,7 @@ Backlog generated from `capabilities.csv` and `website-coverage-matrix.csv`.
 2. Extend access copy with pass choice and revocation after lifecycle proof; publish match statistics only after the real-match field test (`CAP-038`, `CAP-039`). **CAP-038 implemented 2026-08-28 after live role-choice verification and 14 lifecycle tests; CAP-039 remains unpublished pending the real-match field test.**
 3. Expand IVA/Social Hygiene evidence and sponsor management beyond the P0 summaries (`CAP-040`, `CAP-041`). **Implemented 2026-08-28 after 27 sponsor tests, 24 IVA tests and authenticated production checks; the controlled upload matrix and real-screen Club TV rotation remain operational follow-up.**
 4. Prepare room-reservation/presentation copy, but keep it unpublished while production is `admin_only` (`CAP-036`). **Implemented 2026-08-28 as an NL/EN draft with a six-step publication gate; production remains verified `admin_only`, so no public route was added.**
-5. Retain the earlier sync, VOG and finance evidence work for `CAP-001` through `CAP-027`.
+5. Retain the earlier sync, VOG and finance evidence work for `CAP-001` through `CAP-027`. **Completed 2026-08-28: all 27 capability and coverage rows, public evidence assets and current copy mappings were retained; CAP-027’s shifted coverage columns were corrected without upgrading any outstanding proof status.**
 
 ## P2 backlog
 

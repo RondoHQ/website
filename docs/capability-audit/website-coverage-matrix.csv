@@ -25,7 +25,7 @@
 "CAP-024","/","Hero + ProductStory + FeatureGallery","clear","explicit-placeholder","/screenshot-wallet-google.webp","product.card6.solution","Replace placeholder asset with a real Google Wallet pass screenshot."
 "CAP-025","/","Hero + ProductStory + FeatureGallery","clear","explicit-placeholder","/screenshot-pass-scanner.webp","hero.subline","Replace placeholder asset with real scanner validation states."
 "CAP-026","/","BusinessCase + FAQ","clear","none","","business.trust.data","Add export-format proof snippet (fields, format, turnaround) near FAQ."
-"CAP-027","/made-in-europe + /privacybeleid","clear","none","","made-in-europe page content","Keep claim text-only; add dated infra evidence link in docs, not homepage screenshots."
+"CAP-027","/made-in-europe + /privacybeleid","dedicated trust pages","clear","none","","made-in-europe page content; privacy policy infrastructure and processors","Keep claim text-only; add dated infra evidence link in docs, not homepage screenshots."
 "CAP-028","/made-in-europe + /faq","Made in Europe + FAQ","clear","none","","opensource mentions","Keep the claim text-only and add direct repo links and release-tag references."
 "CAP-029","/","Hero + InvoicingHighlight","clear","none","","hero.demo.hint","Keep demo CTA; add one explicit line defining demo scope and freshness."
 "CAP-030","/ + /voor-toernooicoordinator + /en/for-tournament-coordinator","ProductStory + tournament coordinator role page","clear","explicit","/screenshot-toernooien-overzicht.jpg","product.card10; role pages","Keep claims aligned with the controlled end-to-end flow; replace or add proof if the registration workflow changes."
