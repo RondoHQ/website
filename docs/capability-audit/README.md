@@ -12,6 +12,14 @@ This folder is the working set for a repeatable **product capability audit** and
 - `screenshot-capture-list.md`: concrete screenshot filenames and capture targets.
 - `copy-and-structure-backlog.md`: prioritized website copy and structure changes.
 
+## Current audit baseline
+
+- Product history reviewed through `rondo-club` commit `6c13ab69` (2026-08-27).
+- Production navigation and read-only screens checked on 2026-08-28 against Rondo Club `35.10.10`.
+- Newly identified capabilities start at `CAP-030`.
+- A live screen check confirms that a route exists and renders; it does not replace the end-to-end proof required to mark a capability `verified`.
+- Rooms are currently `admin_only` in production and remain `internal` until the feature is enabled for its intended users.
+
 ## Suggested cadence
 
 1. Run persona flows in the live app (or staging).
@@ -26,3 +34,10 @@ This folder is the working set for a repeatable **product capability audit** and
 - `verified`: tested end-to-end with fresh proof.
 - `not-verified`: claim exists but failed or could not be validated.
 - `internal`: exists but not intended for public marketing.
+
+## Website coverage model
+
+- `clear`: the website describes the current capability accurately.
+- `partial`: the website mentions the area but omits material current behavior.
+- `missing`: the capability is not covered on the website.
+- `internal`: do not market this as generally available yet.

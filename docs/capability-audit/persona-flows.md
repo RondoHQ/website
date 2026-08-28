@@ -119,3 +119,144 @@ Use these flows to validate what Rondo Club can actually do today.
 
 **Pass criteria**
 - Claims around ownership, hosting, and openness are materially true and current.
+
+---
+
+## Flow 6: Tournament Coordinator + Team Manager
+
+**Goal:** confirm the complete invitation and registration workflow.
+
+**Capabilities:** `CAP-030`
+
+1. Create a tournament with a deadline and pricing rules.
+2. Invite the current staff of one test team.
+3. Open the invitation as the team manager and submit team, player-count and contact details.
+4. Confirm the coordinator overview updates its progress and amount.
+5. Extend the deadline and verify the manager can see the change.
+
+**Evidence to capture**
+- Tournament setup and invitation
+- Manager registration flow
+- Coordinator progress before and after submission
+
+**Pass criteria**
+- Team staff and progress are based on current Rondo team data.
+- The coordinator can see a complete registration without a separate spreadsheet.
+
+---
+
+## Flow 7: Club TV Editor
+
+**Goal:** validate the public marketing scope of Club TV.
+
+**Capabilities:** `CAP-031`, `CAP-040`
+
+1. Create one announcement, one image and one Sportlink matchday scene.
+2. Build a scheduled playlist and assign it to a test display.
+3. Configure sponsor visibility with two different priorities.
+4. Verify the browser preview and the physical display.
+5. Confirm the display returns to its playlist after a temporary override.
+
+**Evidence to capture**
+- Content and playlist editor
+- Browser preview
+- Physical screen photo
+- Sponsor rotation across multiple cycles
+
+**Pass criteria**
+- Public match information contains no private fields.
+- Timing, scheduling and sponsor rotation match the saved configuration.
+
+---
+
+## Flow 8: Member/Parent Self-service + Member Administrator
+
+**Goal:** validate editable household data and controlled Sportlink return flow.
+
+**Capabilities:** `CAP-032`, `CAP-033`, `CAP-038`, `CAP-042`
+
+1. Activate an existing member and a parent/guardian account.
+2. Change an allowed email, phone and household address.
+3. Edit one minor child's allowed contact fields and verify another parent's read-only boundary.
+4. Verify email confirmation and the resulting Sportlink/change-log states.
+5. Open each eligible Wallet pass and permanently revoke one test pass.
+
+**Evidence to capture**
+- Activation and household cards
+- Edit and email-verification states
+- Change log with successful and Action needed examples
+- Wallet choice and revoked scan result
+
+**Pass criteria**
+- Users can only edit data within their household authorization scope.
+- Rondo makes delayed or failed Sportlink processing visible to administrators.
+
+---
+
+## Flow 9: Volunteer Coordinator (season operations)
+
+**Goal:** validate planning, assignment and statistics as one coordinator workflow.
+
+**Capabilities:** `CAP-034`, `CAP-035`, `CAP-041`
+
+1. Plan both halves of a test season and publish the first half.
+2. Assign one member directly and inspect the sortable signup overview.
+3. Download the calendar feed and verify the assigned shift.
+4. Reconcile dashboard occupancy, obligation progress and one upcoming shortage.
+5. Upload official IVA, Social Hygiene and invalid test evidence and verify each state.
+
+**Evidence to capture**
+- Season planning and member assignment
+- Signup overview and calendar event
+- Statistics dashboard with reconciliation sheet
+- IVA evidence states
+
+**Pass criteria**
+- Planning changes are reflected consistently in signups, calendars and statistics.
+- Qualification states distinguish automatic verification from manual review.
+
+---
+
+## Flow 10: Member Administration (data quality and safety)
+
+**Goal:** validate sensitive record maintenance without losing history or causing communication errors.
+
+**Capabilities:** `CAP-037`, `CAP-047`
+
+1. Filter a test dataset by overlapping person characteristics.
+2. Merge a duplicate household member with roles and relationships.
+3. Compare the resulting profile and related records with the pre-merge export.
+4. Mark a test person as deceased through the source-data path.
+5. Verify read-only behavior and exclusion from every automated communication path.
+
+**Evidence to capture**
+- Filter result and merge review
+- Before/after relationship export
+- Deceased record state
+- Communication exclusion log
+
+**Pass criteria**
+- Merge retains required roles, relationships and history.
+- Deceased-person safety applies centrally, not only in one user interface.
+
+---
+
+## Flow 11: Board/ICT + Treasurer Hardening
+
+**Goal:** validate lower-priority interoperability, permissions and finance exception claims.
+
+**Capabilities:** `CAP-044`, `CAP-045`, `CAP-046`
+
+1. Exercise representative accounts against field scopes, routes and REST endpoints.
+2. Test Ruimtes, Kleding and Club TV in off, admin-only and on states.
+3. Discover and execute the read-only Abilities/MCP schemas with allowed and denied accounts.
+4. Mark a test invoice expired and inspect reminders, payment link, dashboard and history.
+
+**Evidence to capture**
+- Permission and feature-toggle matrix
+- Abilities schemas and authorization responses
+- Expired invoice lifecycle screenshots
+
+**Pass criteria**
+- UI visibility and server authorization agree.
+- An expired invoice no longer behaves like an ordinarily collectible invoice.
