@@ -125,7 +125,7 @@ Backlog generated from `capabilities.csv` and `website-coverage-matrix.csv`.
 
 1. Add account activation, guardian linking and optional PWA installation detail (`CAP-042`). **Implemented 2026-08-28 in the NL/EN FAQ and secretary role pages; mobile and desktop activation/install scenarios remain product-proof follow-up.**
 2. Explain the complete feedback lifecycle in support copy (`CAP-043`). **Implemented 2026-08-28 in the NL/EN support card; controlled resolved and declined submissions remain product-proof follow-up.**
-3. Add concrete role, field-scope and configurable-feature examples to board/ICT copy (`CAP-044`).
+3. Add concrete role, field-scope and configurable-feature examples to board/ICT copy (`CAP-044`). **Implemented 2026-08-28 in the NL/EN board and IT role pages and homepage role-access example; the full permission matrix remains product-proof follow-up.**
 4. Add read-only authenticated Abilities/MCP information only for board/ICT audiences (`CAP-045`).
 5. Add invoice-expiration and deceased-person safety details after their validation flows pass (`CAP-046`, `CAP-047`).
 6. Add evidence freshness tags, a release checklist gate and explicit product/marketing ownership to the audit process.

@@ -21,13 +21,16 @@ import RolePage from '../../components/pages/RolePage.astro';
     'One source of truth across systems through Rondo Sync.',
     'Lower operational risk during board transitions.',
     'Every member can get their own account: they only see the parts that are relevant to them.',
-    'Permissions are fine-grained: financial access, for example, is split into read and manage.',
+    'Specialist roles grant only the access needed, for example for VOG management, sponsor management or a staff roster.',
+    'Sensitive fields are protected separately: finance data for finance roles, support data for member administration and sponsor data for sponsor management.',
+    'Financial access is split into read-only and manage; free-form notes are limited to administrators, member administration and finance roles.',
+    'Rooms, Clothing and Club TV can be off, available to administrators only or fully enabled for each club.',
     'Clear governance around access, processes and responsibilities.',
   ]}
   cards={[
     { title: 'Architecture with visibility', text: 'Sportlink, Laposta, FreeScout and optional Nikki and Sponsit work together through one sync layer.' },
     { title: 'Manageable integrations', text: 'You keep track of connected systems and how changes propagate.' },
-    { title: 'Role-based access', text: 'Volunteers and members only see what is needed for their task — from VOG management to read-only finance.' },
+    { title: 'Role-based access', text: 'Rondo enforces role access across navigation, pages and data requests, so a hidden section also remains technically protected.' },
   ]}
   otherHeading="Other paths"
   otherPrefix="Also relevant:"

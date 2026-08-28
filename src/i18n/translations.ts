@@ -98,8 +98,8 @@ const translations = {
     en: "You have a volunteer who handles background checks. Should they see everything about everyone? Or only the people they need to manage?",
   },
   'product.card5.solution': {
-    nl: 'Geef vrijwilligers precies de toegang die ze nodig hebben, bijvoorbeeld alleen VOG-beheer, contributie of teambeheer.',
-    en: 'Give volunteers exactly the access they need, for example only VOG management, dues, or team management.',
+    nl: 'Geef vrijwilligers precies de toegang die ze nodig hebben, bijvoorbeeld voor VOG-beheer, sponsorgegevens of alleen-lezen financiën.',
+    en: 'Give volunteers exactly the access they need, for example for VOG management, sponsor data or read-only finance.',
   },
   'product.card6.title': { nl: 'Ledenpas op je telefoon', en: 'Membership pass on your phone' },
   'product.card6.problem': {
