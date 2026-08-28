@@ -43,4 +43,68 @@ import RolePage from '../../components/pages/RolePage.astro';
     { href: '/en/for-secretary/', label: 'For secretaries' },
     { href: '/en/for-board-it/', label: 'For board & IT' },
   ]}
-/>
+  hasExtra={true}
+>
+  <div class="iva-evidence role-container">
+    <div class="iva-evidence-copy">
+      <h2 class="gradient-text iva-evidence-heading">Automatic where possible, reviewed where necessary</h2>
+      <p>
+        Rondo recognizes supported official IVA PDFs from NOC*NSF and VrijwilligerswerkNL. Automatic approval only
+        follows when the name matches the member and the completion date is no more than two years old. An unknown
+        format, different name or older date safely enters manual review.
+      </p>
+      <p>
+        Photos, screenshots and Social Hygiene diplomas are always checked by an authorized reviewer. They receive one
+        direct review link; after approval, the evidence remains valid without an invented expiry date and the member
+        is notified that bar shifts are available.
+      </p>
+    </div>
+    <figure class="iva-evidence-shot">
+      <img
+        class="zoomable-screenshot"
+        src="/screenshot-iva-sociale-hygiene.jpg"
+        alt="IVA certificate and Social Hygiene diploma management with status and review"
+        width="1926"
+        height="350"
+        loading="lazy"
+      />
+    </figure>
+  </div>
+</RolePage>
+
+<style>
+  .iva-evidence {
+    max-width: 72rem;
+    margin: 0 auto;
+  }
+
+  .iva-evidence-copy {
+    max-width: 54rem;
+    margin-bottom: 1.5rem;
+  }
+
+  .iva-evidence-heading {
+    font-size: clamp(1.6rem, 2.6vw, 2.1rem);
+    margin-bottom: 0.6rem;
+  }
+
+  .iva-evidence-copy p {
+    color: #475569;
+    line-height: 1.7;
+    margin: 0.75rem 0 0;
+  }
+
+  .iva-evidence-shot {
+    border: 1px solid #D8E3EE;
+    border-radius: 1rem;
+    overflow: hidden;
+    background: #FFFFFF;
+    box-shadow: 0 18px 45px rgba(0, 27, 96, 0.16);
+  }
+
+  .iva-evidence-shot img {
+    width: 100%;
+    height: auto;
+    display: block;
+  }
+</style>

@@ -42,4 +42,69 @@ import RolePage from '../../components/pages/RolePage.astro';
     { href: '/en/for-gate-volunteer/', label: 'For access & events' },
     { href: '/en/for-communication/', label: 'For communication' },
   ]}
-/>
+  hasExtra={true}
+>
+  <div class="sponsor-evidence role-container">
+    <div class="sponsor-evidence-copy">
+      <h2 class="gradient-text sponsor-evidence-heading">From sponsor record to safe visibility</h2>
+      <p>
+        An organisation can have several contacts; a personal sponsor remains one sponsor record linked to one person.
+        Archiving a sponsor removes the sponsor-pass entitlement without deleting the person profile.
+      </p>
+      <p>
+        Sponsor contacts can only replace their own organisation’s logo. Club TV then requires an active sponsor, a
+        logo and a Sometimes, Often or Always setting. Rondo limits Always to six active sponsors with logos, keeping
+        the rotation manageable.
+      </p>
+    </div>
+    <figure class="sponsor-evidence-shot">
+      <img
+        class="zoomable-screenshot"
+        src="/screenshot-sponsors-personen.jpg"
+        alt="Personal sponsor overview with sponsor role, logo and Club TV status"
+        width="1100"
+        height="830"
+        loading="lazy"
+      />
+    </figure>
+  </div>
+</RolePage>
+
+<style>
+  .sponsor-evidence {
+    display: grid;
+    gap: 1.5rem;
+    max-width: 72rem;
+    margin: 0 auto;
+    align-items: center;
+  }
+
+  @media (min-width: 900px) {
+    .sponsor-evidence { grid-template-columns: 0.9fr 1.1fr; }
+  }
+
+  .sponsor-evidence-heading {
+    font-size: clamp(1.6rem, 2.6vw, 2.1rem);
+    margin-bottom: 0.6rem;
+  }
+
+  .sponsor-evidence-copy p {
+    color: #475569;
+    line-height: 1.7;
+    margin: 0.75rem 0 0;
+  }
+
+  .sponsor-evidence-shot {
+    border: 1px solid #D8E3EE;
+    border-radius: 1rem;
+    overflow: hidden;
+    background: #FFFFFF;
+    box-shadow: 0 18px 45px rgba(0, 27, 96, 0.16);
+  }
+
+  .sponsor-evidence-shot img {
+    width: 100%;
+    height: auto;
+    display: block;
+  }
+</style>

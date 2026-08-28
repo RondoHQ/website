@@ -42,4 +42,70 @@ import RolePage from '../components/pages/RolePage.astro';
     { href: '/voor-toegang/', label: 'Voor toegang & events' },
     { href: '/voor-communicatie/', label: 'Voor communicatie' },
   ]}
-/>
+  hasExtra={true}
+>
+  <div class="sponsor-evidence role-container">
+    <div class="sponsor-evidence-copy">
+      <h2 class="gradient-text sponsor-evidence-heading">Van sponsorrecord tot veilige zichtbaarheid</h2>
+      <p>
+        Een organisatie kan meerdere contactpersonen hebben; een persoonlijke sponsor blijft één sponsorrecord dat aan
+        één persoon is gekoppeld. Archiveer je een sponsor, dan vervalt het sponsorpasrecht zonder het persoonsprofiel
+        te verwijderen.
+      </p>
+      <p>
+        Sponsorcontacten kunnen alleen het logo van hun eigen organisatie vervangen. Voor Club TV telt vervolgens de
+        combinatie van een actieve sponsor, een logo en de keuze Soms, Vaak of Altijd. Rondo begrenst Altijd tot zes
+        actieve sponsors met logo, zodat de rotatie beheersbaar blijft.
+      </p>
+    </div>
+    <figure class="sponsor-evidence-shot">
+      <img
+        class="zoomable-screenshot"
+        src="/screenshot-sponsors-personen.jpg"
+        alt="Overzicht van persoonlijke sponsors met sponsorrol, logo en Club TV-status"
+        width="1100"
+        height="830"
+        loading="lazy"
+      />
+    </figure>
+  </div>
+</RolePage>
+
+<style>
+  .sponsor-evidence {
+    display: grid;
+    gap: 1.5rem;
+    max-width: 72rem;
+    margin: 0 auto;
+    align-items: center;
+  }
+
+  @media (min-width: 900px) {
+    .sponsor-evidence { grid-template-columns: 0.9fr 1.1fr; }
+  }
+
+  .sponsor-evidence-heading {
+    font-size: clamp(1.6rem, 2.6vw, 2.1rem);
+    margin-bottom: 0.6rem;
+  }
+
+  .sponsor-evidence-copy p {
+    color: #475569;
+    line-height: 1.7;
+    margin: 0.75rem 0 0;
+  }
+
+  .sponsor-evidence-shot {
+    border: 1px solid #D8E3EE;
+    border-radius: 1rem;
+    overflow: hidden;
+    background: #FFFFFF;
+    box-shadow: 0 18px 45px rgba(0, 27, 96, 0.16);
+  }
+
+  .sponsor-evidence-shot img {
+    width: 100%;
+    height: auto;
+    display: block;
+  }
+</style>

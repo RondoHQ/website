@@ -45,8 +45,8 @@ Status legend: `todo` | `captured` | `verified`
 | CAP-037 Person merge | `proofs/CAP-037-person-merge.mp4` |  | todo | Preserve roles, relationships and history |
 | CAP-038 Pass lifecycle | `proofs/CAP-038-pass-lifecycle.md` |  | captured | Automated lifecycle and live role-choice verified; real-device Wallet addition and revoked scan remain open |
 | CAP-039 Access statistics | `proofs/CAP-039-access-statistics.mp4` |  | todo | Real home-match field test; do not publish before verified |
-| CAP-040 Sponsor management | `proofs/CAP-040-sponsor-management.mp4` |  | todo | Company/person, logo, activation and Club TV priority |
-| CAP-041 IVA verification | `proofs/CAP-041-iva-verification.mp4` |  | todo | Official, alternative and invalid evidence states |
+| CAP-040 Sponsor management | `proofs/CAP-040-sponsor-management.md` |  | captured | Automated record, logo, pass and safe Club TV boundaries; real-screen rotation remains open |
+| CAP-041 IVA verification | `proofs/CAP-041-iva-verification.md` |  | captured | Recognition, review and validity tested; controlled upload matrix remains open |
 | CAP-042 Activation and PWA | `proofs/CAP-042-activation-pwa.mp4` |  | todo | Member, guardian and sponsor activation on mobile/desktop |
 | CAP-043 Feedback lifecycle | `proofs/CAP-043-feedback-lifecycle.mp4` |  | todo | Submission plus resolved and declined notifications |
 | CAP-044 Granular access | `proofs/CAP-044-granular-access.csv` |  | todo | Role, field, route, REST and feature-toggle matrix |
