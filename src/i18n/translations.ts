@@ -31,8 +31,8 @@ const translations = {
     en: 'One platform for your club administration',
   },
   'hero.subline': {
-    nl: 'Van ledenbeheer en contributie tot facturatie, VOG en ledenpassen: Rondo automatiseert je clubprocessen en houdt alles synchroon met Sportlink.',
-    en: 'From member management and dues to invoicing, VOG, and membership passes: Rondo automates your club processes and keeps everything in sync with Sportlink.',
+    nl: 'Van ledenbeheer en contributie tot facturatie, VOG en digitale lidmaatschapspassen: Rondo automatiseert je clubprocessen en houdt alles synchroon met Sportlink.',
+    en: 'From member management and dues to invoicing, VOG, and digital membership passes: Rondo automates your club processes and keeps everything in sync with Sportlink.',
   },
   'hero.cta.product': {
     nl: 'Bekijk wat Rondo doet',
@@ -43,8 +43,8 @@ const translations = {
     en: 'Try the demo',
   },
   'hero.demo.hint': {
-    nl: 'Inloggen met gebruikersnaam <strong>demo</strong> en wachtwoord <strong>demo</strong>. Demo bevat ledenbeheer, contributie, ledenpassen en scanner.',
-    en: 'Log in with username <strong>demo</strong> and password <strong>demo</strong>. Demo includes member admin, dues, membership passes and scanner.',
+    nl: 'Inloggen met gebruikersnaam <strong>demo</strong> en wachtwoord <strong>demo</strong>. Demo bevat ledenbeheer, contributie, digitale lidmaatschapspassen en scanner.',
+    en: 'Log in with username <strong>demo</strong> and password <strong>demo</strong>. Demo includes member admin, dues, digital membership passes and scanner.',
   },
 
   // ─── ProductStory ───
@@ -101,14 +101,14 @@ const translations = {
     nl: 'Geef vrijwilligers precies de toegang die ze nodig hebben, bijvoorbeeld voor VOG-beheer, sponsorgegevens of alleen-lezen financiën.',
     en: 'Give volunteers exactly the access they need, for example for VOG management, sponsor data or read-only finance.',
   },
-  'product.card6.title': { nl: 'Ledenpas op je telefoon', en: 'Membership pass on your phone' },
+  'product.card6.title': { nl: 'Digitale lidmaatschapspas op je telefoon', en: 'Digital membership pass on your phone' },
   'product.card6.problem': {
     nl: 'Lidmaatschap controleren bij de poort, bardienst of evenement is vaak handwerk: lijstjes afvinken, namen zoeken, discussie aan de deur.',
     en: 'Checking memberships at the gate, bar shift or event is often manual: ticking paper lists, searching names, and delays at the door.',
   },
   'product.card6.solution': {
-    nl: 'Rondo Club maakt Apple Wallet- en Google Wallet-ledenpassen. In de webapp scan je de pas en zie je direct: geldig, verlopen of onbekend.',
-    en: 'Rondo Club issues Apple Wallet and Google Wallet membership passes. In the webapp, you scan a pass and instantly see: valid, expired, or unknown.',
+    nl: 'Rondo Club maakt digitale lidmaatschapspassen voor Apple Wallet en Google Wallet. In de webapp scan je de pas en zie je direct: geldig, verlopen of onbekend.',
+    en: 'Rondo Club issues digital membership passes for Apple Wallet and Google Wallet. In the webapp, you scan a pass and instantly see: valid, expired, or unknown.',
   },
   'product.card7.title': { nl: 'De penningmeester wil overzicht', en: 'Treasurer needs overview' },
   'product.card7.problem': {
@@ -179,8 +179,8 @@ const translations = {
   'roles.treasurer.cta': { nl: 'Voor de penningmeester', en: 'For the treasurer' },
   'roles.gate.title': { nl: 'Toegang & events', en: 'Access & events' },
   'roles.gate.text': {
-    nl: 'Gebruik Apple/Google Wallet-ledenpassen en scan direct in de webapp of iemand geldig lid is.',
-    en: 'Use Apple/Google Wallet membership passes and scan instantly in the webapp to verify active membership.',
+    nl: 'Gebruik digitale lidmaatschapspassen voor Apple Wallet en Google Wallet en scan direct in de webapp of iemand geldig lid is.',
+    en: 'Use digital membership passes for Apple Wallet and Google Wallet and scan instantly in the webapp to verify active membership.',
   },
   'roles.gate.cta': { nl: 'Zo werkt het voor toegang & events', en: 'See how it works for access & events' },
   'roles.board.title': { nl: 'Bestuur & ICT', en: 'Board & IT' },
@@ -280,8 +280,8 @@ const translations = {
   // ─── FeatureGallery ───
   'gallery.heading': { nl: 'Rondo in beeld', en: 'Rondo in action' },
   'gallery.subheading': {
-    nl: 'Bekijk hoe Rondo Club eruitziet. Klik op een scherm om te vergroten. Ledenpassen, scanner en finance dashboard test je in de demo.',
-    en: 'See what Rondo Club looks like. Click a screen to enlarge. Membership passes, scanner and the finance dashboard can be tested in the demo.',
+    nl: 'Bekijk hoe Rondo Club eruitziet. Klik op een scherm om te vergroten. Digitale lidmaatschapspassen, scanner en finance dashboard test je in de demo.',
+    en: 'See what Rondo Club looks like. Click a screen to enlarge. Digital membership passes, scanner and the finance dashboard can be tested in the demo.',
   },
   'gallery.tab.members': { nl: 'Leden', en: 'Members' },
   'gallery.tab.jubilees': { nl: 'Jubilarissen', en: 'Jubilees' },
@@ -318,11 +318,11 @@ const translations = {
   'gallery.caption.financeActions': { nl: 'Openstaande posten en acties voor opvolging', en: 'Outstanding items and actions for follow-up' },
   'gallery.caption.financeInvoiceDetail': { nl: 'Factuurdetail in financiën', en: 'Invoice details in finance' },
   'gallery.caption.financeCreateInvoice': { nl: 'Nieuwe factuur aanmaken', en: 'Create a new invoice' },
-  'gallery.caption.accessApple': { nl: 'Apple Wallet ledenpas', en: 'Apple Wallet membership pass' },
-  'gallery.caption.accessGoogle': { nl: 'Google Wallet ledenpas', en: 'Google Wallet membership pass' },
-  'gallery.caption.accessAppleAwc': { nl: 'AWC ledenpas in Apple Wallet', en: 'AWC membership pass in Apple Wallet' },
-  'gallery.caption.accessGoogleAwc': { nl: 'AWC ledenpas in Google Wallet', en: 'AWC membership pass in Google Wallet' },
-  'gallery.caption.accessScannerAwc': { nl: 'AWC ledenpas scanner', en: 'AWC membership pass scanner' },
+  'gallery.caption.accessApple': { nl: 'Digitale lidmaatschapspas in Apple Wallet', en: 'Digital membership pass in Apple Wallet' },
+  'gallery.caption.accessGoogle': { nl: 'Digitale lidmaatschapspas in Google Wallet', en: 'Digital membership pass in Google Wallet' },
+  'gallery.caption.accessAppleAwc': { nl: 'Digitale AWC-lidmaatschapspas in Apple Wallet', en: 'Digital AWC membership pass in Apple Wallet' },
+  'gallery.caption.accessGoogleAwc': { nl: 'Digitale AWC-lidmaatschapspas in Google Wallet', en: 'Digital AWC membership pass in Google Wallet' },
+  'gallery.caption.accessScannerAwc': { nl: 'Scanner voor de digitale AWC-lidmaatschapspas', en: 'Scanner for the digital AWC membership pass' },
   'gallery.caption.accessScanner': { nl: 'Pas-scanner validatie in de webapp', en: 'Pass scanner validation in the webapp' },
   'gallery.caption.shiftsOverview': { nl: 'Seizoensplanning met bezetting per dag', en: 'Season planning with daily coverage' },
   'gallery.caption.shiftsCalendar': { nl: 'Bezettingskalender per diensttype', en: 'Coverage calendar per shift type' },
@@ -363,8 +363,8 @@ const translations = {
     en: 'Rondo Sync processes incoming changes from Sportlink, Nikki and Sponsit and returns allowed contact and address changes to Sportlink. The change log keeps each change for 24 months and shows whether it is waiting, synchronized, Rondo-only or needs manual action. Processing by Sportlink can take up to half an hour.',
   },
   'integration.club.desc': {
-    nl: 'Jullie eigen ledenadministratie. Leden houden in Mijn gegevens toegestane contact- en adresgegevens bij en voegen beschikbare passen direct toe aan Apple Wallet of Google Wallet. De club beheert hier ook VOG-registraties, gezinsrelaties, contributiegroepen en toegangsrechten.',
-    en: 'Your own member administration. In My details, members keep allowed contact and address details current and add available passes directly to Apple Wallet or Google Wallet. The club also manages background check records, family relationships, dues groups and access rights here.',
+    nl: 'Jullie eigen ledenadministratie. Leden houden in Mijn gegevens toegestane contact- en adresgegevens bij en voegen beschikbare digitale lidmaatschapspassen direct toe aan Apple Wallet of Google Wallet. De club beheert hier ook VOG-registraties, gezinsrelaties, contributiegroepen en toegangsrechten.',
+    en: 'Your own member administration. In My details, members keep allowed contact and address details current and add available digital membership passes directly to Apple Wallet or Google Wallet. The club also manages background check records, family relationships, dues groups and access rights here.',
   },
   'integration.laposta.desc': {
     nl: 'E-mailmarketing die automatisch meebeweegt. Rondo Sync houdt je mailinglijsten in <a href="https://laposta.nl/" target="_blank" rel="noopener">Laposta</a> synchroon met je ledendata. Nieuw lid? Automatisch op de juiste lijst. Uitgeschreven? Automatisch verwijderd.',
@@ -589,10 +589,10 @@ const translations = {
     nl: 'Op Europese servers, in overeenstemming met de AVG. Alle diensten die we gebruiken zijn Europees. We sluiten een bewerkersovereenkomst en nemen passende technische maatregelen om je data te beschermen. Meer details staan op onze <a href="/made-in-europe/">Made in Europe</a>-pagina, in ons <a href="/privacybeleid/">privacybeleid</a> en onze <a href="/voorwaarden/">voorwaarden</a>.',
     en: 'On European servers, in compliance with the GDPR. All services we use are European. We sign a data processing agreement and take appropriate technical measures to protect your data. More details can be found on our <a href="/en/made-in-europe/">Made in Europe</a> page, in our <a href="/en/privacy/">privacy policy</a> and our <a href="/en/terms/">terms and conditions</a>.',
   },
-  'faq.q11': { nl: 'Kan ik ledenpassen en scanner nu al zien?', en: 'Can I already see membership passes and scanner?' },
+  'faq.q11': { nl: 'Kan ik digitale lidmaatschapspassen en de scanner nu al zien?', en: 'Can I already see digital membership passes and the scanner?' },
   'faq.a11': {
-    nl: 'Ja. In de demo kun je Apple/Google-ledenpassen en de scannerflow direct testen met demo/demo.',
-    en: 'Yes. In the demo you can directly test Apple/Google membership passes and the scanner flow using demo/demo.',
+    nl: 'Ja. In de demo kun je digitale lidmaatschapspassen voor Apple Wallet en Google Wallet en de scannerflow direct testen met demo/demo.',
+    en: 'Yes. In the demo you can directly test digital membership passes for Apple Wallet and Google Wallet and the scanner flow using demo/demo.',
   },
   'faq.q12': { nl: 'Wat zie ik in het finance dashboard?', en: 'What do I see in the finance dashboard?' },
   'faq.a12': {
@@ -622,8 +622,8 @@ const translations = {
   },
   'faq.q17': { nl: 'Kunnen leden zelf inloggen?', en: 'Can members log in themselves?' },
   'faq.a17': {
-    nl: 'Ja. Via het inlogformulier ontvangt een lid of ouder een eenmalige link per e-mail. Bij een gedeeld e-mailadres binnen een gezin kiest de gebruiker eerst de juiste persoon; Rondo koppelt een ouder of verzorger waar mogelijk meteen aan het eigen profiel. Inloggen kan met zo’n e-maillink of met een zelfgekozen wachtwoord. Na het inloggen kan de clubversie optioneel via App installeren op een geschikt apparaat worden gezet; Rondo toont geen automatische installatiepop-up. In Mijn gegevens passen leden hun eigen e-mailadressen, telefoonnummers en het woonadres van hun gezin aan. Ouders kunnen e-mailadressen en telefoonnummers van hun eigen kinderen onder 18 wijzigen; een andere ouder of verzorger is alleen-lezen. Nieuwe e-mailadressen worden eerst geverifieerd. Toegestane wijzigingen gaan gecontroleerd naar Sportlink en kunnen daar tot een half uur op verwerking wachten. Beschikbare passen voeg je direct toe aan Apple Wallet of Google Wallet.',
-    en: 'Yes. Through the login form, a member or parent receives a one-time link by email. When a family shares an email address, the user first chooses the right person; wherever possible, Rondo links a parent or guardian directly to their own profile. They can log in with an email link or a password they set themselves. After logging in, users can optionally add the club version to a suitable device through Install app; Rondo does not show an automatic installation pop-up. In My details, members can edit their own email addresses, phone numbers and household address. Parents can edit the email addresses and phone numbers of their own children under 18; another parent or guardian is read-only. New email addresses are verified first. Allowed changes are sent to Sportlink in a controlled flow and can take up to half an hour to process there. Available passes can be added directly to Apple Wallet or Google Wallet.',
+    nl: 'Ja. Via het inlogformulier ontvangt een lid of ouder een eenmalige link per e-mail. Bij een gedeeld e-mailadres binnen een gezin kiest de gebruiker eerst de juiste persoon; Rondo koppelt een ouder of verzorger waar mogelijk meteen aan het eigen profiel. Inloggen kan met zo’n e-maillink of met een zelfgekozen wachtwoord. Na het inloggen kan de clubversie optioneel via App installeren op een geschikt apparaat worden gezet; Rondo toont geen automatische installatiepop-up. In Mijn gegevens passen leden hun eigen e-mailadressen, telefoonnummers en het woonadres van hun gezin aan. Ouders kunnen e-mailadressen en telefoonnummers van hun eigen kinderen onder 18 wijzigen; een andere ouder of verzorger is alleen-lezen. Nieuwe e-mailadressen worden eerst geverifieerd. Toegestane wijzigingen gaan gecontroleerd naar Sportlink en kunnen daar tot een half uur op verwerking wachten. Beschikbare digitale lidmaatschapspassen voeg je direct toe aan Apple Wallet of Google Wallet.',
+    en: 'Yes. Through the login form, a member or parent receives a one-time link by email. When a family shares an email address, the user first chooses the right person; wherever possible, Rondo links a parent or guardian directly to their own profile. They can log in with an email link or a password they set themselves. After logging in, users can optionally add the club version to a suitable device through Install app; Rondo does not show an automatic installation pop-up. In My details, members can edit their own email addresses, phone numbers and household address. Parents can edit the email addresses and phone numbers of their own children under 18; another parent or guardian is read-only. New email addresses are verified first. Allowed changes are sent to Sportlink in a controlled flow and can take up to half an hour to process there. Available digital membership passes can be added directly to Apple Wallet or Google Wallet.',
   },
 
   // ─── ContactForm ───
