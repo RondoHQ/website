@@ -266,12 +266,12 @@ const lang = Astro.props.lang || getLangFromUrl(Astro.url);
     border: none;
     cursor: pointer;
     transition: all 0.2s;
-    background: #EDF4F8;
+    background: var(--rondo-surface-soft);
     color: #475569;
   }
 
   .tab-button:hover {
-    background: #D8E3EE;
+    background: var(--rondo-border-soft);
   }
 
   .tab-button.active {

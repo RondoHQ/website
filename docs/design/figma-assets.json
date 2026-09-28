@@ -1,0 +1,60 @@
+{
+  "fileKey": "vdG39pyXrS4SFjHyiEfJuz",
+  "frame": "4031:955",
+  "assets": [
+    {
+      "file": "public/design/check.svg",
+      "figmaNode": "4031:978",
+      "bytes": 1196,
+      "sha256": "16c46cf89072af9aee9f6c6318c09eb6c5c75c1f1b3512731a926e83e4554ed7"
+    },
+    {
+      "file": "public/design/committees.png",
+      "figmaNode": "4031:994",
+      "bytes": 304966,
+      "sha256": "90043e05997492f23a7d01e91e479e6e4604ed6e6739392cd1cb955f873fc740"
+    },
+    {
+      "file": "public/design/hero-background.svg",
+      "figmaNode": "4031:976",
+      "bytes": 248,
+      "sha256": "47976c535ce9406f2b708838ca49eca5c2b4f45a3fec1779b4b1efb06c8c797e"
+    },
+    {
+      "file": "public/design/logo-icon.svg",
+      "figmaNode": "4031:1044",
+      "bytes": 4801,
+      "sha256": "3d3b3adb21014761b3ef9b3757ee2184abc1a4d5452200c48e11871e8b83f689"
+    },
+    {
+      "file": "public/design/logo-wordmark.svg",
+      "figmaNode": "4031:1056",
+      "bytes": 5707,
+      "sha256": "07bfeba15e6620c4b5ff75647fb4fa8fda3cda57494ef8d962658097fa7ea595"
+    },
+    {
+      "file": "public/design/person-detail.png",
+      "figmaNode": "4031:961 and 4031:967",
+      "bytes": 188266,
+      "sha256": "774ad314f2804b027bf1de0890a3a6abbb88a02df8fccb65cdcecb2d50ffe1e6"
+    },
+    {
+      "file": "public/design/shape-green.svg",
+      "figmaNode": "4031:958",
+      "bytes": 786,
+      "sha256": "783780b2f9b48881b8ddb7657f7f20f0fd71ce35e881e9b614ed14badda1fbc6"
+    },
+    {
+      "file": "public/design/shape-orange.svg",
+      "figmaNode": "4031:975",
+      "bytes": 790,
+      "sha256": "5e6fa680f652aa1eaa808b79626196523471f261feb180b38a8f88b3aca2fb3d"
+    },
+    {
+      "file": "public/design/shape-purple.svg",
+      "figmaNode": "4031:981",
+      "bytes": 781,
+      "sha256": "d72efff3476d2dbf8abe8f358d801b990e280b8d94f8584d4fa326918eed57ef"
+    }
+  ]
+}

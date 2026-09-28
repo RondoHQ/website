@@ -1,0 +1,489 @@
+{
+  "schemaVersion": 2,
+  "generatedAt": "2026-09-28T10:52:38.195778+00:00",
+  "title": "Design System: Rondo marketing website",
+  "extensions": {
+    "colorMeta": {
+      "hero-teal": {
+        "role": "primary",
+        "displayName": "Hero teal",
+        "canonical": "#008480",
+        "tonalRamp": [
+          "oklch(15.00% 0.09534 191.03)",
+          "oklch(26.43% 0.09534 191.03)",
+          "oklch(37.86% 0.09534 191.03)",
+          "oklch(49.29% 0.09534 191.03)",
+          "oklch(60.71% 0.09534 191.03)",
+          "oklch(72.14% 0.09534 191.03)",
+          "oklch(83.57% 0.09534 191.03)",
+          "oklch(95.00% 0.09534 191.03)"
+        ]
+      },
+      "heading-navy": {
+        "role": "primary",
+        "displayName": "Heading navy",
+        "canonical": "#172A72",
+        "tonalRamp": [
+          "oklch(15.00% 0.12628 267.31)",
+          "oklch(26.43% 0.12628 267.31)",
+          "oklch(37.86% 0.12628 267.31)",
+          "oklch(49.29% 0.12628 267.31)",
+          "oklch(60.71% 0.12628 267.31)",
+          "oklch(72.14% 0.12628 267.31)",
+          "oklch(83.57% 0.12628 267.31)",
+          "oklch(95.00% 0.12628 267.31)"
+        ]
+      },
+      "navy": {
+        "role": "neutral",
+        "displayName": "Navy",
+        "canonical": "#001153",
+        "tonalRamp": [
+          "oklch(15.00% 0.12069 263.49)",
+          "oklch(26.43% 0.12069 263.49)",
+          "oklch(37.86% 0.12069 263.49)",
+          "oklch(49.29% 0.12069 263.49)",
+          "oklch(60.71% 0.12069 263.49)",
+          "oklch(72.14% 0.12069 263.49)",
+          "oklch(83.57% 0.12069 263.49)",
+          "oklch(95.00% 0.12069 263.49)"
+        ]
+      },
+      "teal": {
+        "role": "secondary",
+        "displayName": "Teal",
+        "canonical": "#00908B",
+        "tonalRamp": [
+          "oklch(15.00% 0.10169 190.46)",
+          "oklch(26.43% 0.10169 190.46)",
+          "oklch(37.86% 0.10169 190.46)",
+          "oklch(49.29% 0.10169 190.46)",
+          "oklch(60.71% 0.10169 190.46)",
+          "oklch(72.14% 0.10169 190.46)",
+          "oklch(83.57% 0.10169 190.46)",
+          "oklch(95.00% 0.10169 190.46)"
+        ]
+      },
+      "mint": {
+        "role": "secondary",
+        "displayName": "Mint",
+        "canonical": "#71DBA8",
+        "tonalRamp": [
+          "oklch(15.00% 0.12375 160.95)",
+          "oklch(26.43% 0.12375 160.95)",
+          "oklch(37.86% 0.12375 160.95)",
+          "oklch(49.29% 0.12375 160.95)",
+          "oklch(60.71% 0.12375 160.95)",
+          "oklch(72.14% 0.12375 160.95)",
+          "oklch(83.57% 0.12375 160.95)",
+          "oklch(95.00% 0.12375 160.95)"
+        ]
+      },
+      "purple": {
+        "role": "secondary",
+        "displayName": "Purple",
+        "canonical": "#993399",
+        "tonalRamp": [
+          "oklch(15.00% 0.18113 327.84)",
+          "oklch(26.43% 0.18113 327.84)",
+          "oklch(37.86% 0.18113 327.84)",
+          "oklch(49.29% 0.18113 327.84)",
+          "oklch(60.71% 0.18113 327.84)",
+          "oklch(72.14% 0.18113 327.84)",
+          "oklch(83.57% 0.18113 327.84)",
+          "oklch(95.00% 0.18113 327.84)"
+        ]
+      },
+      "cta-purple": {
+        "role": "primary",
+        "displayName": "Cta purple",
+        "canonical": "#8F0488",
+        "tonalRamp": [
+          "oklch(15.00% 0.20305 330.97)",
+          "oklch(26.43% 0.20305 330.97)",
+          "oklch(37.86% 0.20305 330.97)",
+          "oklch(49.29% 0.20305 330.97)",
+          "oklch(60.71% 0.20305 330.97)",
+          "oklch(72.14% 0.20305 330.97)",
+          "oklch(83.57% 0.20305 330.97)",
+          "oklch(95.00% 0.20305 330.97)"
+        ]
+      },
+      "cta-purple-hover": {
+        "role": "primary",
+        "displayName": "Cta purple hover",
+        "canonical": "#74056F",
+        "tonalRamp": [
+          "oklch(15.00% 0.17369 330.59)",
+          "oklch(26.43% 0.17369 330.59)",
+          "oklch(37.86% 0.17369 330.59)",
+          "oklch(49.29% 0.17369 330.59)",
+          "oklch(60.71% 0.17369 330.59)",
+          "oklch(72.14% 0.17369 330.59)",
+          "oklch(83.57% 0.17369 330.59)",
+          "oklch(95.00% 0.17369 330.59)"
+        ]
+      },
+      "secondary-hover": {
+        "role": "secondary",
+        "displayName": "Secondary hover",
+        "canonical": "#5DCC96",
+        "tonalRamp": [
+          "oklch(15.00% 0.12951 159.86)",
+          "oklch(26.43% 0.12951 159.86)",
+          "oklch(37.86% 0.12951 159.86)",
+          "oklch(49.29% 0.12951 159.86)",
+          "oklch(60.71% 0.12951 159.86)",
+          "oklch(72.14% 0.12951 159.86)",
+          "oklch(83.57% 0.12951 159.86)",
+          "oklch(95.00% 0.12951 159.86)"
+        ]
+      },
+      "surface-header": {
+        "role": "neutral",
+        "displayName": "Surface header",
+        "canonical": "#F8FDF6",
+        "tonalRamp": [
+          "oklch(15.00% 0.01058 136.56)",
+          "oklch(26.43% 0.01058 136.56)",
+          "oklch(37.86% 0.01058 136.56)",
+          "oklch(49.29% 0.01058 136.56)",
+          "oklch(60.71% 0.01058 136.56)",
+          "oklch(72.14% 0.01058 136.56)",
+          "oklch(83.57% 0.01058 136.56)",
+          "oklch(95.00% 0.01058 136.56)"
+        ]
+      },
+      "surface-mint": {
+        "role": "neutral",
+        "displayName": "Surface mint",
+        "canonical": "#F2F9F9",
+        "tonalRamp": [
+          "oklch(15.00% 0.00741 197.03)",
+          "oklch(26.43% 0.00741 197.03)",
+          "oklch(37.86% 0.00741 197.03)",
+          "oklch(49.29% 0.00741 197.03)",
+          "oklch(60.71% 0.00741 197.03)",
+          "oklch(72.14% 0.00741 197.03)",
+          "oklch(83.57% 0.00741 197.03)",
+          "oklch(95.00% 0.00741 197.03)"
+        ]
+      },
+      "surface-lilac": {
+        "role": "neutral",
+        "displayName": "Surface lilac",
+        "canonical": "#F4F7FD",
+        "tonalRamp": [
+          "oklch(15.00% 0.00862 264.52)",
+          "oklch(26.43% 0.00862 264.52)",
+          "oklch(37.86% 0.00862 264.52)",
+          "oklch(49.29% 0.00862 264.52)",
+          "oklch(60.71% 0.00862 264.52)",
+          "oklch(72.14% 0.00862 264.52)",
+          "oklch(83.57% 0.00862 264.52)",
+          "oklch(95.00% 0.00862 264.52)"
+        ]
+      },
+      "white": {
+        "role": "neutral",
+        "displayName": "White",
+        "canonical": "#FFFFFF",
+        "tonalRamp": [
+          "oklch(15.00% 0.00000 0.00)",
+          "oklch(26.43% 0.00000 0.00)",
+          "oklch(37.86% 0.00000 0.00)",
+          "oklch(49.29% 0.00000 0.00)",
+          "oklch(60.71% 0.00000 0.00)",
+          "oklch(72.14% 0.00000 0.00)",
+          "oklch(83.57% 0.00000 0.00)",
+          "oklch(95.00% 0.00000 0.00)"
+        ]
+      },
+      "body-slate": {
+        "role": "neutral",
+        "displayName": "Body slate",
+        "canonical": "#334155",
+        "tonalRamp": [
+          "oklch(15.00% 0.03916 257.29)",
+          "oklch(26.43% 0.03916 257.29)",
+          "oklch(37.86% 0.03916 257.29)",
+          "oklch(49.29% 0.03916 257.29)",
+          "oklch(60.71% 0.03916 257.29)",
+          "oklch(72.14% 0.03916 257.29)",
+          "oklch(83.57% 0.03916 257.29)",
+          "oklch(95.00% 0.03916 257.29)"
+        ]
+      },
+      "muted-slate": {
+        "role": "neutral",
+        "displayName": "Muted slate",
+        "canonical": "#475569",
+        "tonalRamp": [
+          "oklch(15.00% 0.03745 257.28)",
+          "oklch(26.43% 0.03745 257.28)",
+          "oklch(37.86% 0.03745 257.28)",
+          "oklch(49.29% 0.03745 257.28)",
+          "oklch(60.71% 0.03745 257.28)",
+          "oklch(72.14% 0.03745 257.28)",
+          "oklch(83.57% 0.03745 257.28)",
+          "oklch(95.00% 0.03745 257.28)"
+        ]
+      },
+      "border-soft": {
+        "role": "neutral",
+        "displayName": "Border soft",
+        "canonical": "#CBD5E1",
+        "tonalRamp": [
+          "oklch(15.00% 0.01985 252.89)",
+          "oklch(26.43% 0.01985 252.89)",
+          "oklch(37.86% 0.01985 252.89)",
+          "oklch(49.29% 0.01985 252.89)",
+          "oklch(60.71% 0.01985 252.89)",
+          "oklch(72.14% 0.01985 252.89)",
+          "oklch(83.57% 0.01985 252.89)",
+          "oklch(95.00% 0.01985 252.89)"
+        ]
+      },
+      "placeholder": {
+        "role": "neutral",
+        "displayName": "Placeholder",
+        "canonical": "#94A3B8",
+        "tonalRamp": [
+          "oklch(15.00% 0.03511 256.79)",
+          "oklch(26.43% 0.03511 256.79)",
+          "oklch(37.86% 0.03511 256.79)",
+          "oklch(49.29% 0.03511 256.79)",
+          "oklch(60.71% 0.03511 256.79)",
+          "oklch(72.14% 0.03511 256.79)",
+          "oklch(83.57% 0.03511 256.79)",
+          "oklch(95.00% 0.03511 256.79)"
+        ]
+      },
+      "selection": {
+        "role": "neutral",
+        "displayName": "Selection",
+        "canonical": "#DDEFE9",
+        "tonalRamp": [
+          "oklch(15.00% 0.02063 173.93)",
+          "oklch(26.43% 0.02063 173.93)",
+          "oklch(37.86% 0.02063 173.93)",
+          "oklch(49.29% 0.02063 173.93)",
+          "oklch(60.71% 0.02063 173.93)",
+          "oklch(72.14% 0.02063 173.93)",
+          "oklch(83.57% 0.02063 173.93)",
+          "oklch(95.00% 0.02063 173.93)"
+        ]
+      }
+    },
+    "typographyMeta": {
+      "display": {
+        "displayName": "Homepage display",
+        "purpose": "White homepage hero headline; responsive values are documented in DESIGN.md."
+      },
+      "headline": {
+        "displayName": "Section headline",
+        "purpose": "Primary homepage section introductions."
+      },
+      "title": {
+        "displayName": "Role card title",
+        "purpose": "Teal homepage role-card headings."
+      },
+      "story-title": {
+        "displayName": "Story title",
+        "purpose": "Purple product-story headings."
+      },
+      "body": {
+        "displayName": "Body",
+        "purpose": "Default site-wide text."
+      },
+      "hero-subline": {
+        "displayName": "Hero subline",
+        "purpose": "Bold white homepage supporting copy."
+      },
+      "button": {
+        "displayName": "Button",
+        "purpose": "Shared pill actions."
+      }
+    },
+    "gradients": [
+      {
+        "name": "card-green",
+        "value": "linear-gradient(90deg, #66D64C, #119B8F)"
+      },
+      {
+        "name": "card-violet",
+        "value": "linear-gradient(90deg, #993399, #FF6277)"
+      },
+      {
+        "name": "card-orange",
+        "value": "linear-gradient(90deg, #F1762B, #FFC60B)"
+      }
+    ],
+    "shadows": [
+      {
+        "name": "screenshot-and-scrolled-header",
+        "value": "-4px -2px 10px #0000000F, 6px 6px 16px #00000014",
+        "purpose": "Shared screenshot frame and sticky header shadow."
+      },
+      {
+        "name": "panel",
+        "value": "0 4px 16px rgba(0, 0, 0, 0.06)",
+        "purpose": "Base GlassPanel shadow."
+      },
+      {
+        "name": "contact-panel",
+        "value": "0 18px 45px rgba(0, 27, 96, 0.12)",
+        "purpose": "Contact form contextual panel override."
+      },
+      {
+        "name": "contact-focus-ring",
+        "value": "0 0 0 3px rgba(0, 144, 139, 0.18)",
+        "purpose": "Contact field focus feedback."
+      }
+    ],
+    "motion": [
+      {
+        "name": "control-transition",
+        "value": "200ms",
+        "purpose": "Button, field, and disclosure state transitions."
+      },
+      {
+        "name": "reduced-motion",
+        "value": "0.01ms",
+        "purpose": "Global reduced-motion animation and transition override; scroll behavior becomes auto."
+      }
+    ],
+    "breakpoints": [
+      {
+        "name": "logo-compact-max",
+        "value": "380px"
+      },
+      {
+        "name": "homepage-single-column-max",
+        "value": "600px"
+      },
+      {
+        "name": "supporting-sections-max",
+        "value": "768px"
+      },
+      {
+        "name": "homepage-hero-story-stack-max",
+        "value": "900px"
+      },
+      {
+        "name": "role-detail-hero-columns-min",
+        "value": "960px"
+      },
+      {
+        "name": "mobile-navigation-and-two-role-columns-max",
+        "value": "1100px"
+      },
+      {
+        "name": "homepage-display-reduction-max",
+        "value": "1200px"
+      },
+      {
+        "name": "header-gutters-max",
+        "value": "1320px"
+      }
+    ]
+  },
+  "components": [
+    {
+      "name": "Primary button",
+      "kind": "button",
+      "refersTo": "button-primary",
+      "description": "Shared primary pill action from Button.astro.",
+      "html": "<button type=\"button\" class=\"ds-button-primary\">Bekijk Rondo</button>",
+      "css": ".ds-button-primary{display:inline-flex;align-items:center;justify-content:center;padding:12px 24px;border-radius:9999px;font-family:var(--font-sans,'Figtree',system-ui,sans-serif);font-size:18px;font-weight:600;line-height:1.3;text-align:center;max-width:100%;cursor:pointer;transition:color .2s,background-color .2s,border-color .2s;background:var(--rondo-btn-primary,#8F0488);color:white;border:none;}.ds-button-primary:hover{background:var(--rondo-btn-primary-hover,#74056F);}.ds-button-primary:focus-visible{outline:3px solid var(--rondo-indigo,#993399);outline-offset:4px;}"
+    },
+    {
+      "name": "Secondary button",
+      "kind": "button",
+      "refersTo": "button-secondary",
+      "description": "Shared secondary pill action from Button.astro.",
+      "html": "<button type=\"button\" class=\"ds-button-secondary\">Bekijk Rondo</button>",
+      "css": ".ds-button-secondary{display:inline-flex;align-items:center;justify-content:center;padding:12px 24px;border-radius:9999px;font-family:var(--font-sans,'Figtree',system-ui,sans-serif);font-size:18px;font-weight:600;line-height:1.3;text-align:center;max-width:100%;cursor:pointer;transition:color .2s,background-color .2s,border-color .2s;background:var(--rondo-btn-secondary,#71DBA8);color:var(--rondo-navy,#001153);border:none;}.ds-button-secondary:hover{background:var(--rondo-btn-secondary-hover,#5DCC96);}.ds-button-secondary:focus-visible{outline:3px solid var(--rondo-indigo,#993399);outline-offset:4px;}"
+    },
+    {
+      "name": "Outline button",
+      "kind": "button",
+      "refersTo": "button-outline",
+      "description": "Shared outline pill action from Button.astro.",
+      "html": "<button type=\"button\" class=\"ds-button-outline\">Bekijk Rondo</button>",
+      "css": ".ds-button-outline{display:inline-flex;align-items:center;justify-content:center;padding:12px 24px;border-radius:9999px;font-family:var(--font-sans,'Figtree',system-ui,sans-serif);font-size:18px;font-weight:600;line-height:1.3;text-align:center;max-width:100%;cursor:pointer;transition:color .2s,background-color .2s,border-color .2s;background:transparent;color:var(--rondo-btn-outline,#993399);border:1px solid var(--rondo-btn-outline,#993399);}.ds-button-outline:hover{background:#9933990D;}.ds-button-outline:focus-visible{outline:3px solid var(--rondo-indigo,#993399);outline-offset:4px;}"
+    },
+    {
+      "name": "Glass button",
+      "kind": "button",
+      "refersTo": "button-glass",
+      "description": "Shared glass pill action from Button.astro.",
+      "html": "<button type=\"button\" class=\"ds-button-glass\">Bekijk Rondo</button>",
+      "css": ".ds-button-glass{display:inline-flex;align-items:center;justify-content:center;padding:12px 24px;border-radius:9999px;font-family:var(--font-sans,'Figtree',system-ui,sans-serif);font-size:18px;font-weight:600;line-height:1.3;text-align:center;max-width:100%;cursor:pointer;transition:color .2s,background-color .2s,border-color .2s;background:var(--rondo-surface-soft,#F2F9F9);color:var(--rondo-text-body,#334155);border:1px solid var(--rondo-border-soft,#CBD5E1);}.ds-button-glass:hover{background:#DDEFE9;}.ds-button-glass:focus-visible{outline:3px solid var(--rondo-indigo,#993399);outline-offset:4px;}"
+    },
+    {
+      "name": "Contact field",
+      "kind": "input",
+      "refersTo": "input",
+      "description": "The shared field with its current ContactForm focus override.",
+      "html": "<label class=\"ds-field-label\" for=\"ds-name\">Naam</label><input class=\"ds-field\" id=\"ds-name\" type=\"text\" placeholder=\"Je naam\" />",
+      "css": ".ds-field-label{display:block;font:500 14px Figtree,system-ui,sans-serif;color:var(--rondo-text-body,#334155);margin-bottom:4px}.ds-field{width:100%;background:white;border:1px solid var(--rondo-border-soft,#CBD5E1);border-radius:8px;padding:12px 16px;font:16px Figtree,system-ui,sans-serif;color:#0F172A;transition:all .2s ease;outline:none}.ds-field::placeholder{color:#94A3B8}.ds-field:focus{border-color:var(--rondo-teal,#00908B);box-shadow:0 0 0 3px rgba(0,144,139,.18)}"
+    },
+    {
+      "name": "Role card",
+      "kind": "card",
+      "refersTo": "role-card",
+      "description": "Homepage mint role card with gradient top strip and bottom corner rounding.",
+      "html": "<article class=\"ds-role-card\"><h3>Secretaris</h3><p>Alle clubinformatie overzichtelijk bij elkaar.</p><a href=\"#roles\" class=\"ds-card-action\">Bekijk deze rol</a></article>",
+      "css": ".ds-role-card{position:relative;overflow:hidden;background:var(--rondo-surface-soft,#F2F9F9);padding:2.35rem 1.5rem 1.5rem;border-radius:0 0 20px 20px;font:18px/1.3 Figtree,system-ui,sans-serif;color:var(--rondo-text-body,#334155)}.ds-role-card::before{content:\"\";position:absolute;inset:0 0 auto;height:6px;background:var(--rondo-gradient-green,linear-gradient(90deg,#66D64C,#119B8F))}.ds-role-card h3{font-size:24px;line-height:1.1;color:var(--rondo-teal-dark,#008480);margin:0 0 12px;font-weight:700}.ds-role-card p{margin:0 0 20px}.ds-card-action{display:inline-flex;align-items:center;justify-content:center;padding:12px 24px;border-radius:9999px;font-family:var(--font-sans,'Figtree',system-ui,sans-serif);font-size:18px;font-weight:600;line-height:1.3;text-align:center;max-width:100%;cursor:pointer;transition:color .2s,background-color .2s,border-color .2s;border:1px solid var(--rondo-btn-outline,#993399);color:var(--rondo-btn-outline,#993399);text-decoration:none}.ds-card-action:hover{background:#9933990D}.ds-card-action:focus-visible{outline:3px solid var(--rondo-indigo,#993399);outline-offset:4px;}"
+    },
+    {
+      "name": "Header navigation",
+      "kind": "nav",
+      "refersTo": "header",
+      "description": "Pale navigation surface with slate links and purple active language.",
+      "html": "<nav class=\"ds-nav\" aria-label=\"Hoofdnavigatie\"><a class=\"ds-nav-link\" href=\"#product\">Product</a><a class=\"ds-nav-link\" href=\"#rollen\">Voor jouw rol</a><span class=\"ds-languages\"><a class=\"ds-language ds-active\" href=\"#nl\" aria-current=\"page\">NL</a><a class=\"ds-language\" href=\"#en\">EN</a></span></nav>",
+      "css": ".ds-nav{display:flex;align-items:center;flex-wrap:wrap;gap:6px;padding:16px;background:var(--rondo-surface-header,#F8FDF6);font-family:Figtree,system-ui,sans-serif}.ds-nav-link{padding:8px 12px;font-size:18px;line-height:1.2;color:#334155;text-decoration:none}.ds-languages{display:flex;border-left:1px solid #CBD5E1;padding-left:4px;min-height:42px}.ds-language{padding:12px;font-size:15px;color:#334155;text-decoration:none}.ds-language.ds-active{color:var(--rondo-indigo,#993399);font-weight:600}.ds-nav a:hover{color:var(--rondo-indigo,#993399)}.ds-nav a:focus-visible{outline:3px solid var(--rondo-indigo,#993399);outline-offset:4px;}"
+    },
+    {
+      "name": "Product story panel",
+      "kind": "card",
+      "description": "White bordered panel on a lilac section; purple story title and teal solution label.",
+      "html": "<section class=\"ds-story\"><h3>Overzicht voor je club</h3><p>Productinformatie in een heldere, rustige leesvolgorde.</p><h4>Zo helpt Rondo</h4></section>",
+      "css": ".ds-story{background:white;border:1px solid var(--rondo-border-soft,#CBD5E1);border-radius:20px;padding:31px 39px;font:18px/1.4 Figtree,system-ui,sans-serif;color:var(--rondo-text-body,#334155)}.ds-story h3{font-size:36px;font-weight:700;line-height:1.2;color:var(--rondo-indigo,#993399);margin:0 0 9px}.ds-story h4{font-size:18px;font-weight:700;line-height:1;color:var(--rondo-teal-dark,#008480);margin:28px 0 6px}"
+    },
+    {
+      "name": "FAQ disclosure",
+      "kind": "custom",
+      "description": "Native details and summary with a teal plus/minus indicator.",
+      "html": "<details class=\"ds-faq\"><summary>Hoe werkt Rondo?</summary><p>Bekijk de productinformatie en de mogelijkheden voor jouw rol.</p></details>",
+      "css": ".ds-faq{border:1px solid rgba(0,0,0,.08);border-radius:12px;overflow:hidden;background:rgba(0,0,0,.01);font-family:Figtree,system-ui,sans-serif}.ds-faq summary{display:flex;align-items:center;justify-content:space-between;gap:16px;padding:20px 24px;color:var(--rondo-navy,#001153);font-size:18px;font-weight:700;cursor:pointer;list-style:none}.ds-faq summary::-webkit-details-marker{display:none}.ds-faq summary::after{content:\"+\";font-size:24px;color:var(--rondo-teal,#00908B);transition:transform .2s ease}.ds-faq[open] summary::after{content:\"-\"}.ds-faq summary:focus-visible{outline:3px solid var(--rondo-indigo,#993399);outline-offset:4px;}.ds-faq p{padding:0 24px 20px;color:#475569;line-height:1.6}"
+    }
+  ],
+  "narrative": {
+    "northStar": "The approved Rondo Figma reference",
+    "overview": "The approved Rondo homepage frame is the visual authority: confident Figtree typography, a teal hero, purple pill actions, pale surfaces, and colorful exported artwork. These choices support the existing sports-club product and its Dutch and English content.\n\nThis document records the implemented system, not a new creative proposal. The homepage header, hero, role cards, and product-story treatment follow the supplied reference; the role detail, contact, legal, Europe, and error pages apply the same identity to their existing layouts. Those secondary compositions are implementation extrapolations, not additional supplied Figma frames.",
+    "keyCharacteristics": [
+      "Figtree for headings, body copy, controls, and navigation.",
+      "White headline and supporting copy on the teal homepage hero.",
+      "Navy section headings, purple actions, and teal card headings.",
+      "Flat mint cards with colored top accents; white story panels on lilac.",
+      "Local original identity artwork and real product screenshots."
+    ],
+    "rules": [],
+    "dos": [
+      "Do use the approved local logo and artwork exports without redrawing them.",
+      "Do keep the same visual tokens and components across Dutch and English.",
+      "Do preserve existing role routes, current wording, commercial terms, and product screenshots when applying this style.",
+      "Do keep mobile decoration at the outer edge so white hero text stays on teal.",
+      "Do preserve keyboard focus, screenshot enlargement, form feedback, and reduced-motion behavior."
+    ],
+    "donts": [
+      "Don't treat older Figma wording or role counts as authority to remove current content.",
+      "Don't turn the homepage hero composition into a requirement for every secondary page.",
+      "Don't replace the supplied artwork with approximate gradients or newly generated shapes.",
+      "Don't add another heading font or restore gradient-filled heading text.",
+      "Don't claim secondary page layouts were supplied by Figma; they are consistent extensions of its identity."
+    ]
+  }
+}

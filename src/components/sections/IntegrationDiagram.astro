@@ -203,7 +203,7 @@ const lang = Astro.props.lang || getLangFromUrl(Astro.url);
 
 <style>
   .diagram-container {
-    background: #001B60;
+    background: var(--rondo-navy);
     border-radius: 1.5rem;
     padding: 2.5rem 2rem;
     box-shadow: 0 20px 60px rgba(0, 0, 0, 0.15);
@@ -254,7 +254,7 @@ const lang = Astro.props.lang || getLangFromUrl(Astro.url);
   }
 
   .diagram-text-primary {
-    fill: #EDF4F8;
+    fill: var(--rondo-surface-soft);
     font-size: 16px;
     font-weight: 700;
     text-anchor: middle;
@@ -324,7 +324,7 @@ const lang = Astro.props.lang || getLangFromUrl(Astro.url);
     font-family: 'Figtree', sans-serif;
     font-weight: 700;
     font-size: 1.25rem;
-    color: #001B60;
+    color: var(--rondo-navy);
     margin-bottom: 0.5rem;
   }
 

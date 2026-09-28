@@ -7,43 +7,14 @@ interface Props {
 const { title, class: className = '' } = Astro.props;
 ---
 
-<div class={`card p-6 md:p-8 ${className}`}>
-  {title && <h3 class="font-semibold mb-4">{title}</h3>}
+<div class={`card ${className}`}>
+  {title && <h3 class="font-bold mb-3">{title}</h3>}
   <slot />
 </div>
 
 <style>
-  .card {
-    background: #F2F7FA;
-    border: 1px solid #D8E3EE;
-    border-top: 3px solid transparent;
-    border-image: linear-gradient(to right, #71DBA8, #993399) 1;
-    border-image-slice: 1 0 0 0;
-    box-shadow: 0 4px 16px rgba(0, 0, 0, 0.06);
-    border-radius: 1rem;
-    overflow: hidden;
-    position: relative;
-    transition: background 0.2s ease, box-shadow 0.2s ease;
-  }
-
-  /* border-image breaks border-radius, so use a pseudo-element for the gradient top */
-  .card {
-    border-image: none;
-    border-top: none;
-  }
-
-  .card::before {
-    content: '';
-    position: absolute;
-    top: 0;
-    left: 0;
-    right: 0;
-    height: 3px;
-    background: linear-gradient(to right, #71DBA8, #993399);
-  }
-
-  .card:hover {
-    background: #EDF4F8;
-    box-shadow: 0 8px 24px rgba(0, 0, 0, 0.08);
-  }
+  .card { background: var(--rondo-surface-soft); padding: 2.35rem 1.5rem 1.5rem; border-radius: 0 0 1.25rem 1.25rem; position: relative; overflow: hidden; }
+  .card::before { content: ''; position: absolute; inset: 0 0 auto; height: 6px; background: var(--rondo-gradient-green); }
+  .card:nth-child(3n + 2)::before { background: var(--rondo-gradient-violet); }
+  .card:nth-child(3n)::before { background: var(--rondo-gradient-orange); }
 </style>

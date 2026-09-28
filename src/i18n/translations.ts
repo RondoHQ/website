@@ -21,7 +21,7 @@ const translations = {
   'nav.product': { nl: 'Product', en: 'Product' },
   'nav.roles': { nl: 'Voor jouw rol', en: 'By role' },
   'nav.integration': { nl: 'Integratie', en: 'Integration' },
-  'nav.costs': { nl: 'Kosten', en: 'Costs' },
+  'nav.costs': { nl: 'Prijzen', en: 'Pricing' },
   'nav.faq': { nl: 'FAQ', en: 'FAQ' },
   'nav.contact': { nl: 'Contact', en: 'Contact' },
 
@@ -39,8 +39,8 @@ const translations = {
     en: 'See what Rondo does',
   },
   'hero.cta.demo': {
-    nl: 'Probeer de demo',
-    en: 'Try the demo',
+    nl: 'Bekijk de demo',
+    en: 'View the demo',
   },
   'hero.demo.hint': {
     nl: 'Inloggen met gebruikersnaam <strong>demo</strong> en wachtwoord <strong>demo</strong>. Demo bevat ledenbeheer, contributie, digitale lidmaatschapspassen en scanner.',

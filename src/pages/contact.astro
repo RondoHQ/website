@@ -10,7 +10,6 @@ import Footer from '../components/sections/Footer.astro';
   <main id="main-content" class="contact-page">
     <section class="contact-intro">
       <div class="contact-intro-inner">
-        <p class="contact-kicker">Contact</p>
         <h1 class="gradient-text contact-title">Neem contact op</h1>
         <p class="contact-subtitle">
           Vertel kort iets over je club en waar je tegenaan loopt. We reageren meestal binnen één werkdag.
@@ -24,11 +23,11 @@ import Footer from '../components/sections/Footer.astro';
 
 <style>
   .contact-page {
-    background: linear-gradient(180deg, #FFFFFF 0%, #ECF8F6 38%, #FFFFFF 100%);
+    background: var(--rondo-surface-lilac);
   }
 
   .contact-intro {
-    padding: 2.2rem 1rem 0.5rem;
+    padding: 4rem 1.5rem 1rem;
   }
 
   .contact-page :global(.contact-section) {
@@ -41,13 +40,9 @@ import Footer from '../components/sections/Footer.astro';
     margin: 0 auto;
   }
 
-  .contact-kicker {
-    margin: 0 0 0.35rem;
-    font-weight: 700;
-    color: #00908B;
-  }
 
   .contact-title {
+    font-weight: 700;
     margin: 0;
     font-size: clamp(2rem, 5vw, 3.2rem);
     line-height: 1.1;

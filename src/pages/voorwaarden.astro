@@ -108,7 +108,7 @@ import Footer from '../components/sections/Footer.astro';
 <style>
   .terms-page {
     padding: 6rem 1rem 4rem;
-    background: linear-gradient(180deg, #FFFFFF 0%, #ECF8F6 50%, #FFFFFF 100%);
+    background: var(--rondo-surface-lilac);
   }
 
   .content {
@@ -116,7 +116,7 @@ import Footer from '../components/sections/Footer.astro';
     margin: 0 auto;
     line-height: 1.75;
     background: #FFFFFF;
-    border: 1px solid #D8E3EE;
+    border: 1px solid var(--rondo-border-soft);
     border-radius: 1rem;
     padding: 2rem;
   }
@@ -126,10 +126,7 @@ import Footer from '../components/sections/Footer.astro';
     font-weight: 700;
     font-size: 2.5rem;
     margin-bottom: 0.5rem;
-    background: linear-gradient(135deg, #993399 0%, #00908B 100%);
-    -webkit-background-clip: text;
-    -webkit-text-fill-color: transparent;
-    background-clip: text;
+    color: var(--rondo-heading);
   }
 
   .last-updated {
@@ -144,10 +141,7 @@ import Footer from '../components/sections/Footer.astro';
     font-size: 1.5rem;
     margin-top: 2.5rem;
     margin-bottom: 1rem;
-    background: linear-gradient(135deg, #993399 0%, #00908B 100%);
-    -webkit-background-clip: text;
-    -webkit-text-fill-color: transparent;
-    background-clip: text;
+    color: var(--rondo-heading);
   }
 
   p {
@@ -178,7 +172,7 @@ import Footer from '../components/sections/Footer.astro';
   }
 
   a:hover {
-    color: #001B60;
+    color: var(--rondo-navy);
   }
 
   @media (max-width: 640px) {
