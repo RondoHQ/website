@@ -1,4 +1,5 @@
 ---
+import SectionArtwork from '../ui/SectionArtwork.astro';
 import Card from '../ui/Card.astro';
 import type { Lang } from '../../i18n/utils';
 import { getLangFromUrl } from '../../i18n/utils';
@@ -9,7 +10,7 @@ const lang = Astro.props.lang || getLangFromUrl(Astro.url);
 ---
 
 <section id="product" class="product-section">
-  <img class="product-art" width="471.342" height="480" src="/design/shape-green.svg" alt="" aria-hidden="true" />
+  <SectionArtwork variant="green" />
   <div class="rondo-container product-container">
     <div class="rondo-section-intro product-intro">
       <h2 >
@@ -153,7 +154,6 @@ const lang = Astro.props.lang || getLangFromUrl(Astro.url);
 
 <style>
   .product-section { padding: 50px 0 84px; background: var(--rondo-surface-lilac); border-top: 1px solid var(--rondo-border-soft); position: relative; overflow: clip; }
-  .product-art { position: absolute; top: 160px; left: calc(50% + 516px); max-width: none; pointer-events: none; }
   .product-container { position: relative; }
   .product-intro { margin-bottom: 40px; }
   .story-rows { display: grid; gap: 32px; }
@@ -172,7 +172,6 @@ const lang = Astro.props.lang || getLangFromUrl(Astro.url);
     .story-row { grid-template-columns: 1fr; padding: 24px; }
     .story-row:nth-child(even) .story-image { order: 0; }
     .story-copy h3 { font-size: 30px; }
-    .product-art { left: 80%; }
   }
 
   .card-screenshot-trigger {

@@ -1,4 +1,5 @@
 ---
+import SectionArtwork from '../ui/SectionArtwork.astro';
 import Card from '../ui/Card.astro';
 import Button from '../ui/Button.astro';
 import type { Lang } from '../../i18n/utils';
@@ -36,7 +37,7 @@ const roleLinks = lang === 'en'
 ---
 
 <section id="rollen" class="role-paths">
-  <img class="role-art" width="511" height="520" src="/design/shape-orange.svg" alt="" aria-hidden="true" />
+  <SectionArtwork variant="orange" />
   <div class="rondo-container role-container">
     <div class="rondo-section-intro role-intro">
       <h2 >{t('roles.heading', lang)}</h2>
@@ -99,7 +100,6 @@ const roleLinks = lang === 'en'
 
 <style>
   .role-paths { position: relative; overflow: clip; background: white; padding: 64px 0 80px; }
-  .role-art { position: absolute; top: -110px; left: calc(50% - 1005px); max-width: none; pointer-events: none; }
   .role-container { position: relative; }
   .role-intro { margin-bottom: 50px; }
   .role-grid { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 32px; }
@@ -112,6 +112,5 @@ const roleLinks = lang === 'en'
     .role-paths { padding: 48px 0; }
     .role-intro { margin-bottom: 32px; }
     .role-grid { grid-template-columns: 1fr; gap: 24px; }
-    .role-art { left: -420px; opacity: .35; }
   }
 </style>

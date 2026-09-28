@@ -1,5 +1,6 @@
 ---
 import BaseLayout from '../../layouts/BaseLayout.astro';
+import SectionArtwork from '../ui/SectionArtwork.astro';
 import Header from '../layout/Header.astro';
 import Footer from '../sections/Footer.astro';
 import type { Lang } from '../../i18n/utils';
@@ -126,7 +127,8 @@ const breadcrumbs = [
       </div>
     </section>
 
-    <section class="role-section">
+    <section class="role-section role-benefits">
+      <SectionArtwork variant="orange" />
       <div class="role-container">
         <h2 class="gradient-text role-heading">{whatHeading}</h2>
         <ul class="role-list">
@@ -226,6 +228,8 @@ const breadcrumbs = [
 </script>
 
 <style>
+  .role-benefits { position: relative; overflow: clip; }
+  .role-benefits > .role-container { position: relative; }
   .role-hero { background: var(--rondo-teal-dark) url('/design/shape-purple.svg') no-repeat calc(100% + 300px) -180px; padding: 64px 0; }
   .role-hero .role-title, .role-hero .role-intro, .role-hero .role-btn-outline { color: white; }
   .role-title { font-weight: 700; }

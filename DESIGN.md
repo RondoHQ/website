@@ -183,7 +183,7 @@ The “glass” button and panel names remain compatibility labels in code; thei
 
 ## Shapes
 
-Actions are pills. Homepage role cards have square top corners and rounded bottom corners, capped with a 6px gradient strip cycling green, violet, and orange. Role-detail cards use the same bottom-corner shape with a solid teal top border. Story panels round all four corners. Inputs use smaller rounded corners; screenshots and ordinary panels use the panel radius. Decorative SVGs may be clipped at section edges but must not obscure text.
+Actions are pills. Homepage role cards have square top corners and rounded bottom corners, capped with a 6px gradient strip cycling green, violet, and orange. Role-detail cards use the same bottom-corner shape with a solid teal top border. Story panels round all four corners. Inputs use smaller rounded corners; screenshots and ordinary panels use the panel radius. Decorative SVGs may be clipped at section edges but must not obscure text. The shared `SectionArtwork` component repeats the orange left-edge shape on roles, the screenshot gallery, and the benefits section of every role page, and the green right-edge shape on product stories and integrations; the latter pair shares the pale lilac surface.
 
 ## Components
 

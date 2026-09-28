@@ -1,4 +1,5 @@
 ---
+import SectionArtwork from '../ui/SectionArtwork.astro';
 import type { Lang } from '../../i18n/utils';
 import { getLangFromUrl } from '../../i18n/utils';
 import { t } from '../../i18n/translations';
@@ -7,8 +8,9 @@ interface Props { lang?: Lang; }
 const lang = Astro.props.lang || getLangFromUrl(Astro.url);
 ---
 
-<section id="integratie" class="pt-10 pb-20">
-  <div class="max-w-5xl mx-auto px-4 mobile-px">
+<section id="integratie" class="integration-section pt-10 pb-20">
+  <SectionArtwork variant="green" />
+  <div class="max-w-5xl mx-auto px-4 mobile-px relative">
     <div class="text-center mb-12">
       <h2 class="text-4xl md:text-5xl font-bold gradient-text mb-4">
         {t('integration.heading', lang)}
@@ -202,6 +204,7 @@ const lang = Astro.props.lang || getLangFromUrl(Astro.url);
 </section>
 
 <style>
+  .integration-section { position: relative; overflow: clip; background: var(--rondo-surface-lilac); border-top: 1px solid var(--rondo-border-soft); }
   .diagram-container {
     background: var(--rondo-navy);
     border-radius: 1.5rem;
