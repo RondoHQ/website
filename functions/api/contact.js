@@ -1,3 +1,5 @@
+import { captureException } from '@sentry/cloudflare';
+
 // CORS preflight handler
 export async function onRequestOptions() {
   return new Response(null, {
@@ -14,6 +16,7 @@ export async function onRequestOptions() {
 // Form submission handler
 export async function onRequestPost(context) {
   const { request, env } = context;
+  let stage = 'form-data';
 
   const corsHeaders = {
     'Content-Type': 'application/json',
@@ -52,6 +55,7 @@ export async function onRequestPost(context) {
       );
     }
 
+    stage = 'turnstile';
     const turnstileResponse = await fetch('https://challenges.cloudflare.com/turnstile/v0/siteverify', {
       method: 'POST',
       headers: { 'Content-Type': 'application/json' },
@@ -62,8 +66,14 @@ export async function onRequestPost(context) {
       })
     });
 
+    if (!turnstileResponse.ok) {
+      throw new Error('Turnstile service failed');
+    }
     const turnstileResult = await turnstileResponse.json();
     if (!turnstileResult.success) {
+      if (turnstileResult['error-codes']?.some(code => ['missing-input-secret', 'invalid-input-secret', 'internal-error'].includes(code))) {
+        captureException(new Error('Turnstile configuration or service failed'), { tags: { stage } });
+      }
       return new Response(
         JSON.stringify({ error: 'Beveiligingsverificatie mislukt. Probeer het opnieuw.' }),
         { status: 400, headers: corsHeaders }
@@ -71,6 +81,7 @@ export async function onRequestPost(context) {
     }
 
     // 4. Rate limiting via Cloudflare KV (if bound)
+    stage = 'rate-limit';
     if (env.RATE_LIMIT) {
       const ip = request.headers.get('CF-Connecting-IP') || 'unknown';
       const key = `contact:${ip}`;
@@ -85,6 +96,7 @@ export async function onRequestPost(context) {
     }
 
     // Extract and trim fields
+    stage = 'form-data';
     const data = {
       name: formData.get('name')?.trim() || '',
       email: formData.get('email')?.trim() || '',
@@ -143,6 +155,7 @@ export async function onRequestPost(context) {
     const emailBody = lines.join('\n');
 
     // Send via Lettermint
+    stage = 'email';
     const response = await fetch('https://api.lettermint.co/v1/send', {
       method: 'POST',
       headers: {
@@ -159,8 +172,8 @@ export async function onRequestPost(context) {
     });
 
     if (!response.ok) {
-      const error = await response.text();
-      console.error('Lettermint API error:', error);
+      captureException(new Error('Lettermint service failed'), { tags: { stage } });
+      console.error('Lettermint API error:', response.status);
       return new Response(
         JSON.stringify({ error: 'Er ging iets mis bij het verzenden. Probeer het later opnieuw.' }),
         { status: 500, headers: corsHeaders }
@@ -176,7 +189,15 @@ export async function onRequestPost(context) {
     );
 
   } catch (err) {
-    console.error('Form submission error:', err?.message || err);
+    // Malformed form requests are client errors, not operational failures.
+    if (stage === 'form-data' && err instanceof TypeError) {
+      return new Response(
+        JSON.stringify({ error: 'Ongeldig formulier. Vernieuw de pagina en probeer het opnieuw.' }),
+        { status: 400, headers: corsHeaders }
+      );
+    }
+    captureException(err, { tags: { stage } });
+    console.error('Form submission error at stage:', stage);
     return new Response(
       JSON.stringify({ error: 'Er ging iets mis. Probeer het later opnieuw.' }),
       { status: 500, headers: corsHeaders }

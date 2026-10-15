@@ -1,14 +1,16 @@
 {
   "name": "rondo-website",
   "type": "module",
-  "version": "0.1.0",
+  "version": "0.2.0",
   "scripts": {
     "dev": "astro dev",
     "start": "astro dev",
     "build": "astro check && astro build",
     "preview": "astro preview",
     "deploy": "npm run build && npx wrangler pages deploy --branch=main",
-    "astro": "astro"
+    "astro": "astro",
+    "test": "node --experimental-test-module-mocks --test tests/*.test.mjs",
+    "build:functions": "wrangler pages functions build --outdir=.wrangler/functions --compatibility-date=2024-12-01 --compatibility-flags=nodejs_compat"
   },
   "engines": {
     "node": ">=22.16.0"
@@ -17,6 +19,8 @@
     "@astrojs/sitemap": "^3.7.0",
     "@jdevalk/astro-seo-graph": "^1.1.1",
     "@jdevalk/seo-graph-core": "^0.6.1",
+    "@sentry/browser": "^11.7.0",
+    "@sentry/cloudflare": "^11.7.0",
     "@tailwindcss/vite": "^4.0.0",
     "astro": "^5.17.0",
     "astro-robots-txt": "^1.0.0",
@@ -24,7 +28,9 @@
   },
   "devDependencies": {
     "@astrojs/check": "^0.9.0",
+    "@cloudflare/workers-types": "^5.20261015.1",
     "schema-dts": "^1.1.5",
-    "typescript": "^5.7.0"
+    "typescript": "^5.7.0",
+    "wrangler": "^4.151.0"
   }
 }

@@ -91,6 +91,7 @@ const showHeading = Astro.props.showHeading ?? true;
 </section>
 
 <script>
+import { reportContactError } from '../../lib/error-monitoring';
 const form = document.getElementById('contact-form') as HTMLFormElement | null;
 const messageDiv = document.getElementById('form-message');
 const submitButton = form?.querySelector('button[type="submit"]') as HTMLButtonElement | undefined;
@@ -160,6 +161,7 @@ form?.addEventListener('submit', async (e) => {
       showMessage(result.error || msg('error'), true);
     }
   } catch (err) {
+    reportContactError();
     showMessage(msg('errorRetry'), true);
   } finally {
     resetButton();
