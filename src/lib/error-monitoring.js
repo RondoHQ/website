@@ -5,6 +5,7 @@ import { isProductionHost, monitoringDsn, monitoringRelease, sanitizeErrorEvent 
 if (isProductionHost(window.location.hostname)) {
   init({
     dsn: monitoringDsn,
+    tunnel: '/api/diagnostics',
     release: monitoringRelease,
     environment: 'production',
     sendDefaultPii: false,

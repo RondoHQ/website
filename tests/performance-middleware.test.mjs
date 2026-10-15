@@ -22,3 +22,9 @@ test('normal contact transaction is filtered and consumes one budget unit', asyn
   assert.equal(write[1], '4');
   assert.equal(write[2].expirationTtl, 172800);
 });
+test('diagnostics transport bypasses monitoring to avoid recursive transactions and contact budget use', () => {
+  let called = 0;
+  const result = options({ request: new Request('https://rondo.club/api/diagnostics', { method: 'POST' }), env: {}, next: () => { called++; return 'unmonitored'; } });
+  assert.equal(result, 'unmonitored');
+  assert.equal(called, 1);
+});

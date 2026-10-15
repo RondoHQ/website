@@ -1,5 +1,11 @@
 # Changelog
 
+## [0.5.0] - 2026-10-15
+
+### Added
+
+- Same-origin GlitchTip transport for browser errors and performance, restricted to the configured project with payload limits, soft rate limits, and no forwarded browser credentials.
+
 ## [0.4.2] - 2026-10-15
 
 ### Fixed

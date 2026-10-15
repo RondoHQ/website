@@ -3,7 +3,7 @@ import { isProductionHost, monitoringDsn, monitoringRelease, sanitizeErrorEvent 
 import { sanitizeTransaction } from '../../src/lib/performance-monitoring.js';
 
 // Per-request state stays in the options closure; the shared KV provides a daily budget.
-export const onRequest = sentryPagesPlugin(context => ({
+const monitoredRequest = sentryPagesPlugin(context => ({
   dsn: context.env.GLITCHTIP_DSN || monitoringDsn,
   enabled: isProductionHost(new URL(context.request.url).hostname) || Boolean(context.env.GLITCHTIP_DSN),
   release: monitoringRelease,
@@ -30,3 +30,7 @@ export const onRequest = sentryPagesPlugin(context => ({
     } catch { return null; }
   },
 }));
+
+// A tunnel must not generate another event about its own ingestion request.
+export const onRequest = context => new URL(context.request.url).pathname.replace(/\/+$/, '') === '/api/diagnostics'
+  ? context.next() : monitoredRequest(context);
