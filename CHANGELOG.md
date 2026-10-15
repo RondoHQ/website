@@ -1,5 +1,10 @@
 # Changelog
 
+## [0.3.1] - 2026-10-15
+
+### Fixed
+- Keep monitoring configuration compatible with the Cloudflare Pages Functions bundler.
+
 ## [0.3.0] - 2026-10-15
 
 ### Changed

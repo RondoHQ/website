@@ -1,6 +1,12 @@
 import { test, mock, afterEach } from 'node:test';
 import assert from 'node:assert/strict';
-import { sanitizeErrorEvent, isProductionHost } from '../src/lib/error-monitoring-config.js';
+import { readFileSync } from 'node:fs';
+import { sanitizeErrorEvent, isProductionHost, monitoringRelease } from '../src/lib/error-monitoring-config.js';
+
+test('monitoring release matches the published package version', () => {
+  const { version } = JSON.parse(readFileSync(new URL('../package.json', import.meta.url), 'utf8'));
+  assert.equal(monitoringRelease, `rondo-website@${version}`);
+});
 
 const captured = [];
 mock.module('@sentry/cloudflare', { namedExports: {
