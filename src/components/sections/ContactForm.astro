@@ -90,6 +90,8 @@ const showHeading = Astro.props.showHeading ?? true;
   </div>
 </section>
 
+<script src="https://challenges.cloudflare.com/turnstile/v0/api.js" async defer is:inline></script>
+
 <script>
 import { reportContactError } from '../../lib/error-monitoring';
 const form = document.getElementById('contact-form') as HTMLFormElement | null;

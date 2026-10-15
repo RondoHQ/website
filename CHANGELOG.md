@@ -1,5 +1,12 @@
 # Changelog
 
+## [0.4.2] - 2026-10-15
+
+### Fixed
+
+- Load Turnstile only on pages containing the contact form.
+- Fetch the product screenshot lightbox image only when opened.
+
 ## [0.4.1] - 2026-10-15
 
 ### Fixed

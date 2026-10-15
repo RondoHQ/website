@@ -116,7 +116,7 @@ const lang = Astro.props.lang || getLangFromUrl(Astro.url);
 <!-- Lightbox for card screenshots -->
 <div class="ps-lightbox" id="ps-lightbox" role="dialog" aria-label={lang === 'en' ? 'Enlarged screenshot' : 'Screenshot vergroot'} aria-modal="true">
   <button class="ps-lightbox-close" id="ps-lightbox-close" type="button" aria-label={lang === 'en' ? 'Close' : 'Sluiten'}>&times;</button>
-  <img src="/design/person-detail.png" alt="" class="ps-lightbox-img" id="ps-lightbox-img" />
+  <img alt="" class="ps-lightbox-img" id="ps-lightbox-img" />
 </div>
 
 <script>
