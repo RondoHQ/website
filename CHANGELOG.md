@@ -1,5 +1,10 @@
 # Changelog
 
+## [0.2.1] - 2026-10-15
+
+### Fixed
+- Refresh the one-time Turnstile token after failed contact requests so visitors can retry without reloading.
+
 ## [0.2.0] - 2026-10-15
 
 ### Added

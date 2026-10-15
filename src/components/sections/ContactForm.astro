@@ -156,7 +156,6 @@ form?.addEventListener('submit', async (e) => {
       });
       showMessage(result.message || msg('success'), false);
       form.reset();
-      if (typeof (window as any).turnstile !== 'undefined') (window as any).turnstile.reset();
     } else {
       showMessage(result.error || msg('error'), true);
     }
@@ -165,6 +164,9 @@ form?.addEventListener('submit', async (e) => {
     showMessage(msg('errorRetry'), true);
   } finally {
     resetButton();
+    // Siteverify consumes tokens even when email delivery fails afterwards.
+    // Refresh after every request so visitors can retry without reloading.
+    if (typeof (window as any).turnstile !== 'undefined') (window as any).turnstile.reset();
   }
 
   function showMessage(text: string, isError: boolean): void {
