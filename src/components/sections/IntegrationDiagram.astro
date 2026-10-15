@@ -1,4 +1,5 @@
 ---
+import SectionArtwork from '../ui/SectionArtwork.astro';
 import type { Lang } from '../../i18n/utils';
 import { getLangFromUrl } from '../../i18n/utils';
 import { t } from '../../i18n/translations';
@@ -7,8 +8,9 @@ interface Props { lang?: Lang; }
 const lang = Astro.props.lang || getLangFromUrl(Astro.url);
 ---
 
-<section id="integratie" class="pt-10 pb-20">
-  <div class="max-w-5xl mx-auto px-4 mobile-px">
+<section id="integratie" class="integration-section pt-10 pb-20">
+  <SectionArtwork variant="green" />
+  <div class="max-w-5xl mx-auto px-4 mobile-px relative">
     <div class="text-center mb-12">
       <h2 class="text-4xl md:text-5xl font-bold gradient-text mb-4">
         {t('integration.heading', lang)}
@@ -202,8 +204,9 @@ const lang = Astro.props.lang || getLangFromUrl(Astro.url);
 </section>
 
 <style>
+  .integration-section { position: relative; overflow: clip; background: var(--rondo-surface-lilac); border-top: 1px solid var(--rondo-border-soft); }
   .diagram-container {
-    background: #001B60;
+    background: var(--rondo-navy);
     border-radius: 1.5rem;
     padding: 2.5rem 2rem;
     box-shadow: 0 20px 60px rgba(0, 0, 0, 0.15);
@@ -254,7 +257,7 @@ const lang = Astro.props.lang || getLangFromUrl(Astro.url);
   }
 
   .diagram-text-primary {
-    fill: #EDF4F8;
+    fill: var(--rondo-surface-soft);
     font-size: 16px;
     font-weight: 700;
     text-anchor: middle;
@@ -324,7 +327,7 @@ const lang = Astro.props.lang || getLangFromUrl(Astro.url);
     font-family: 'Figtree', sans-serif;
     font-weight: 700;
     font-size: 1.25rem;
-    color: #001B60;
+    color: var(--rondo-navy);
     margin-bottom: 0.5rem;
   }
 

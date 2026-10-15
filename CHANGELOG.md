@@ -1,5 +1,10 @@
 # Changelog
 
+## [0.3.0] - 2026-10-15
+
+### Changed
+- Restore the approved Figma design and updated demo screenshots on the main branch, retaining GlitchTip monitoring and contact form retry handling.
+
 ## [0.2.1] - 2026-10-15
 
 ### Fixed

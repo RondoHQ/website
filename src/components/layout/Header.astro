@@ -26,15 +26,15 @@ const navItems = [
 <header class="header">
   <nav class="nav-container">
     <a href={`${prefix}/`} class="logo-link">
-      <img src="/rondo-logo.svg" alt="" aria-hidden="true" class="logo-icon" width="500" height="500" loading="eager" fetchpriority="high" />
-      <img src="/rondo-wordmark.svg" alt="Rondo" class="logo-wordmark" width="728" height="255" loading="eager" fetchpriority="high" />
+      <img src="/design/logo-icon.svg" alt="" aria-hidden="true" class="logo-icon" width="62.8677" height="64" loading="eager" fetchpriority="high" />
+      <img src="/design/logo-wordmark.svg" alt="Rondo" class="logo-wordmark" width="182.424" height="36.2824" loading="eager" fetchpriority="high" />
     </a>
-    <button class="hamburger" aria-label="Menu" aria-expanded="false">
+    <button class="hamburger" aria-label="Menu" aria-expanded="false" aria-controls="site-navigation">
       <span class="hamburger-line"></span>
       <span class="hamburger-line"></span>
       <span class="hamburger-line"></span>
     </button>
-    <div class="nav-links">
+    <div class="nav-links" id="site-navigation">
       {navItems.map(item => (
         <a href={item.href} class="nav-link">{item.label}</a>
       ))}
@@ -76,221 +76,44 @@ const navItems = [
     });
   });
 
+  document.addEventListener('keydown', (event) => {
+    if (event.key === 'Escape' && navLinks?.classList.contains('open')) {
+      navLinks.classList.remove('open');
+      hamburger?.setAttribute('aria-expanded', 'false');
+      (hamburger as HTMLButtonElement)?.focus();
+    }
+  });
+
   window.addEventListener('scroll', onScroll, { passive: true });
   onScroll();
 </script>
 
 <style>
-  .header {
-    position: sticky;
-    top: 0;
-    z-index: 50;
-    overflow: visible;
-    background: rgba(255, 255, 255, 0.82);
-    backdrop-filter: blur(10px);
-    -webkit-backdrop-filter: blur(10px);
-    border-bottom: 1px solid rgba(0, 27, 96, 0.12);
+  .header { position: sticky; top: 0; z-index: 50; background: var(--rondo-surface-header); }
+  .header.scrolled { box-shadow: -4px -2px 10px #0000000F, 6px 6px 16px #00000014; }
+  .nav-container { max-width: var(--rondo-content-width); margin: auto; min-height: 96px; display: flex; align-items: center; justify-content: space-between; gap: 2rem; }
+  .logo-link { display: flex; align-items: center; gap: 10px; flex-shrink: 0; text-decoration: none; }
+  .logo-icon, .logo-wordmark { display: block; max-width: none; }
+  .nav-links { display: flex; gap: 6px; align-items: center; }
+  .nav-link { padding: 8px 12px; color: #334155; font-size: 18px; line-height: 1.2; text-decoration: none; }
+  .nav-link:hover, .lang-link:hover { color: var(--rondo-indigo); }
+  .lang-switcher { display: flex; align-items: center; border-left: 1px solid #CBD5E1; padding-left: 4px; min-height: 42px; }
+  .lang-link { padding: 12px; font-size: 15px; color: #334155; text-decoration: none; }
+  .lang-link.active { color: var(--rondo-indigo); font-weight: 600; }
+  .lang-sep { color: #94A3B8; font-size: 12px; }
+  .hamburger { display: none; border: 0; background: none; padding: 12px; cursor: pointer; }
+  .hamburger-line { display: block; width: 24px; height: 2px; margin: 5px 0; background: var(--rondo-navy); }
+  .hamburger[aria-expanded='true'] .hamburger-line:first-child { transform: translateY(7px) rotate(45deg); }
+  .hamburger[aria-expanded='true'] .hamburger-line:nth-child(2) { opacity: 0; }
+  .hamburger[aria-expanded='true'] .hamburger-line:last-child { transform: translateY(-7px) rotate(-45deg); }
+  @media (max-width: 1320px) { .nav-container { margin-inline: 24px; } }
+  @media (max-width: 1100px) {
+    .nav-container { min-height: 88px; margin-inline: 20px; }
+    .hamburger { display: block; }
+    .nav-links { display: none; position: absolute; inset: 100% 0 auto; background: var(--rondo-surface-header); border-bottom: 1px solid var(--rondo-border-soft); padding: 16px 20px; }
+    .nav-links.open { display: flex; flex-direction: column; align-items: stretch; }
+    .nav-link { padding: 12px; }
+    .lang-switcher { border-left: 0; border-top: 1px solid var(--rondo-border-soft); }
   }
-
-  .nav-container {
-    max-width: 80rem;
-    margin: 0 auto;
-    padding: 0.75rem 1rem;
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-  }
-
-  .logo-link {
-    display: flex;
-    align-items: center;
-    gap: 0.75rem;
-    text-decoration: none;
-  }
-
-  .logo-wordmark {
-    height: 3.9rem;
-    width: auto;
-    position: relative;
-    top: 0.05rem;
-    transition: height 0.3s ease, top 0.3s ease;
-  }
-
-  .logo-icon {
-    height: 9.1rem;
-    width: auto;
-    position: relative;
-    z-index: 51;
-    margin-top: -0.3rem;
-    margin-bottom: -5.1rem;
-    filter: drop-shadow(0 4px 12px rgba(0, 0, 0, 0.3));
-    transition: height 0.3s ease, margin 0.3s ease, filter 0.3s ease;
-  }
-
-  .header.scrolled .logo-icon {
-    height: 3.9rem;
-    margin-top: -0.15rem;
-    margin-bottom: -0.3rem;
-    filter: drop-shadow(0 2px 4px rgba(0, 0, 0, 0.2));
-  }
-
-  .hamburger {
-    display: none;
-    background: none;
-    border: none;
-    cursor: pointer;
-    padding: 0.5rem;
-    z-index: 52;
-  }
-
-  .hamburger-line {
-    display: block;
-    width: 1.5rem;
-    height: 2px;
-    background: #001B60;
-    margin: 5px 0;
-    transition: transform 0.3s ease, opacity 0.3s ease;
-  }
-
-  .hamburger[aria-expanded="true"] .hamburger-line:nth-child(1) {
-    transform: translateY(7px) rotate(45deg);
-  }
-
-  .hamburger[aria-expanded="true"] .hamburger-line:nth-child(2) {
-    opacity: 0;
-  }
-
-  .hamburger[aria-expanded="true"] .hamburger-line:nth-child(3) {
-    transform: translateY(-7px) rotate(-45deg);
-  }
-
-  .nav-links {
-    display: flex;
-    gap: 2rem;
-    align-items: center;
-  }
-
-  .nav-link {
-    color: #001B60;
-    font-weight: 500;
-    transition: color 0.2s ease-in-out;
-    text-decoration: none;
-  }
-
-  .nav-link:hover {
-    color: #00908B;
-  }
-
-  .lang-switcher {
-    display: flex;
-    align-items: center;
-    gap: 0.375rem;
-    margin-left: 0.5rem;
-    padding-left: 1.5rem;
-    border-left: 1px solid rgba(0, 0, 0, 0.12);
-  }
-
-  .lang-link {
-    color: #6F84A8;
-    font-size: 0.8125rem;
-    font-weight: 600;
-    text-decoration: none;
-    transition: color 0.2s;
-  }
-
-  .lang-link:hover {
-    color: #00908B;
-  }
-
-  .lang-link.active {
-    color: #00908B;
-  }
-
-  .lang-sep {
-    color: #B9CCE2;
-    font-size: 0.75rem;
-  }
-
-  /* Mobile */
-  @media (max-width: 768px) {
-    .header {
-      backdrop-filter: blur(6px);
-      -webkit-backdrop-filter: blur(6px);
-    }
-
-    .hamburger {
-      display: block;
-    }
-
-    .nav-links {
-      display: none;
-      position: absolute;
-      top: 100%;
-      left: 0;
-      right: 0;
-      flex-direction: column;
-      background: rgba(255, 248, 241, 0.97);
-      padding: 1rem;
-      gap: 0;
-      border-bottom: 1px solid rgba(0, 0, 0, 0.08);
-    }
-
-    .nav-links.open {
-      display: flex;
-    }
-
-    .nav-link {
-      padding: 0.75rem 1rem;
-      font-size: 1rem;
-      width: 100%;
-    }
-
-    .lang-switcher {
-      border-left: none;
-      border-top: 1px solid rgba(0, 0, 0, 0.08);
-      padding-left: 0;
-      padding-top: 0.75rem;
-      margin-left: 0;
-      margin-top: 0.5rem;
-      justify-content: center;
-    }
-
-    .logo-icon {
-      height: 10rem;
-      margin-top: -0.5rem;
-      margin-bottom: -5rem;
-    }
-
-    .logo-wordmark {
-      height: 2.8rem;
-      top: 0.02rem;
-    }
-
-    .header.scrolled .logo-icon {
-      height: 3rem;
-      margin-top: -0.15rem;
-      margin-bottom: -0.3rem;
-    }
-  }
-
-  @media (prefers-reduced-transparency: reduce) {
-    .header {
-      backdrop-filter: none;
-      -webkit-backdrop-filter: none;
-      background: rgba(255, 255, 255, 0.98);
-    }
-  }
-
-  @media (prefers-reduced-motion: reduce) {
-    .logo-wordmark,
-    .logo-icon {
-      transition: none;
-    }
-  }
-
-  @supports not (backdrop-filter: blur(10px)) {
-    .header {
-      background: rgba(255, 255, 255, 0.98);
-    }
-  }
+  @media (max-width: 380px) { .logo-link { transform: scale(.85); transform-origin: left center; margin-right: -38px; } }
 </style>

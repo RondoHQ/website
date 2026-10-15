@@ -152,7 +152,7 @@ import Footer from '../components/sections/Footer.astro';
 <style>
   .europe-page {
     padding: 6rem 1rem 4rem;
-    background: linear-gradient(180deg, #FFFFFF 0%, #ECF8F6 50%, #FFFFFF 100%);
+    background: var(--rondo-surface-lilac);
   }
 
   .container {
@@ -160,7 +160,7 @@ import Footer from '../components/sections/Footer.astro';
     margin: 0 auto;
     padding: 2rem 1.5rem;
     background: #FFFFFF;
-    border: 1px solid #D8E3EE;
+    border: 1px solid var(--rondo-border-soft);
     border-radius: 1rem;
   }
 
@@ -180,10 +180,7 @@ import Footer from '../components/sections/Footer.astro';
     font-family: 'Figtree', sans-serif;
     font-size: 2.5rem;
     font-weight: 700;
-    background: linear-gradient(135deg, #993399 0%, #00908B 100%);
-    -webkit-background-clip: text;
-    -webkit-text-fill-color: transparent;
-    background-clip: text;
+    color: var(--rondo-heading);
     margin: 0 0 1rem;
   }
 
@@ -199,10 +196,7 @@ import Footer from '../components/sections/Footer.astro';
     font-family: 'Figtree', sans-serif;
     font-size: 1.5rem;
     font-weight: 700;
-    background: linear-gradient(135deg, #993399 0%, #00908B 100%);
-    -webkit-background-clip: text;
-    -webkit-text-fill-color: transparent;
-    background-clip: text;
+    color: var(--rondo-heading);
     margin: 0 0 1rem;
   }
 
@@ -230,8 +224,8 @@ import Footer from '../components/sections/Footer.astro';
   }
 
   .service-card {
-    background: #F2F7FA;
-    border: 1px solid #D8E3EE;
+    background: var(--rondo-surface-soft);
+    border: 1px solid var(--rondo-border-soft);
     border-radius: 0.75rem;
     padding: 1.5rem;
   }
@@ -250,7 +244,7 @@ import Footer from '../components/sections/Footer.astro';
   h3 {
     font-size: 1.125rem;
     font-weight: 600;
-    color: #001B60;
+    color: var(--rondo-navy);
     margin: 0;
   }
 
@@ -275,7 +269,7 @@ import Footer from '../components/sections/Footer.astro';
   }
 
   .service-link:hover {
-    color: #001B60;
+    color: var(--rondo-navy);
   }
 
   a {
@@ -285,6 +279,6 @@ import Footer from '../components/sections/Footer.astro';
   }
 
   a:hover {
-    color: #001B60;
+    color: var(--rondo-navy);
   }
 </style>

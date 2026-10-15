@@ -1,4 +1,5 @@
 ---
+import SectionArtwork from '../ui/SectionArtwork.astro';
 import Card from '../ui/Card.astro';
 import type { Lang } from '../../i18n/utils';
 import { getLangFromUrl } from '../../i18n/utils';
@@ -8,37 +9,36 @@ interface Props { lang?: Lang; }
 const lang = Astro.props.lang || getLangFromUrl(Astro.url);
 ---
 
-<section id="product" class="py-20">
-  <div class="max-w-7xl mx-auto px-4">
-    <div class="text-center mb-16">
-      <h2 class="text-4xl md:text-5xl font-bold gradient-text mb-4">
+<section id="product" class="product-section">
+  <SectionArtwork variant="green" />
+  <div class="rondo-container product-container">
+    <div class="rondo-section-intro product-intro">
+      <h2 >
         {t('product.heading', lang)}
       </h2>
-      <p class="text-xl text-slate-600 max-w-3xl mx-auto">
+      <p >
         {t('product.subheading', lang)}
       </p>
     </div>
 
-    <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
-      <Card title={t('product.card1.title', lang)}>
-        <p class="text-slate-500 mb-3">{t('product.card1.problem', lang)}</p>
-        <p class="text-slate-600">
-          <span class="text-electric-cyan font-semibold">{t('product.withRondo', lang)}</span> {t('product.card1.solution', lang)}
-        </p>
-        <button class="card-screenshot-trigger" data-screenshot="/screenshot-persoons-detail-scherm.webp" type="button" aria-label={lang === 'en' ? 'Enlarge screenshot' : 'Vergroot screenshot'}>
-          <img src="/screenshot-persoons-detail-scherm-small.webp" srcset="/screenshot-persoons-detail-scherm-small.webp 480w, /screenshot-persoons-detail-scherm-thumb.webp 960w, /screenshot-persoons-detail-scherm.webp 1920w" sizes="(max-width: 768px) 380px, 280px" width="480" height="268" alt={t('gallery.caption.personDetail', lang)} loading="lazy" />
-        </button>
-      </Card>
-
-      <Card title={t('product.card2.title', lang)}>
-        <p class="text-slate-500 mb-3">{t('product.card2.problem', lang)}</p>
-        <p class="text-slate-600">
-          <span class="text-electric-cyan font-semibold">{t('product.withRondo', lang)}</span> {t('product.card2.solution', lang)}
-        </p>
-        <button class="card-screenshot-trigger" data-screenshot="/screenshot-vog-overzicht.webp" type="button" aria-label={lang === 'en' ? 'Enlarge screenshot' : 'Vergroot screenshot'}>
-          <img src="/screenshot-vog-overzicht-small.webp" srcset="/screenshot-vog-overzicht-small.webp 480w, /screenshot-vog-overzicht-thumb.webp 960w, /screenshot-vog-overzicht.webp 1920w" sizes="(max-width: 768px) 380px, 280px" width="480" height="268" alt={t('gallery.caption.vogOverview', lang)} loading="lazy" />
-        </button>
-      </Card>
+    <div class="story-rows">
+      {[1, 2].map(number => (
+        <article class="story-row">
+          <button class="card-screenshot-trigger story-image" data-screenshot="/design/person-detail.png" type="button" aria-label={lang === 'en' ? 'Enlarge screenshot' : 'Vergroot screenshot'}>
+            <img src="/design/person-detail.png" alt={t('gallery.caption.personDetail', lang)} width="568" height="316" loading="lazy" />
+          </button>
+          <div class="story-copy">
+            <h3>{t(number === 1 ? 'product.card1.title' : 'product.card2.title', lang)}</h3>
+            <p>{t(number === 1 ? 'product.card1.problem' : 'product.card2.problem', lang)}</p>
+            <div class="story-solution">
+              <h4><img src="/design/check.svg" alt="" />{t('product.withRondo', lang).replace(/:$/, '')}</h4>
+              <p>{t(number === 1 ? 'product.card1.solution' : 'product.card2.solution', lang)}</p>
+            </div>
+          </div>
+        </article>
+      ))}
+    </div>
+    <div class="grid grid-cols-1 md:grid-cols-2 gap-8 product-more">
       <Card title={t('product.card6.title', lang)}>
         <p class="text-slate-500 mb-3">{t('product.card6.problem', lang)}</p>
         <p class="text-slate-600">
@@ -60,7 +60,7 @@ const lang = Astro.props.lang || getLangFromUrl(Astro.url);
           <span class="text-electric-cyan font-semibold">{t('product.withRondo', lang)}</span> {t('product.card7.solution', lang)}
         </p>
         <button class="card-screenshot-trigger" data-screenshot="/screenshot-finance-dashboard.webp" type="button" aria-label={lang === 'en' ? 'Enlarge screenshot' : 'Vergroot screenshot'}>
-          <img src="/screenshot-finance-dashboard.webp" width="1600" height="900" alt={t('gallery.caption.financeDashboard', lang)} loading="lazy" />
+          <img src="/screenshot-finance-dashboard.webp" width="3456" height="1922" alt={t('gallery.caption.financeDashboard', lang)} loading="lazy" />
         </button>
       </Card>
 
@@ -116,7 +116,7 @@ const lang = Astro.props.lang || getLangFromUrl(Astro.url);
 <!-- Lightbox for card screenshots -->
 <div class="ps-lightbox" id="ps-lightbox" role="dialog" aria-label={lang === 'en' ? 'Enlarged screenshot' : 'Screenshot vergroot'} aria-modal="true">
   <button class="ps-lightbox-close" id="ps-lightbox-close" type="button" aria-label={lang === 'en' ? 'Close' : 'Sluiten'}>&times;</button>
-  <img src="" alt="" class="ps-lightbox-img" id="ps-lightbox-img" />
+  <img src="/design/person-detail.png" alt="" class="ps-lightbox-img" id="ps-lightbox-img" />
 </div>
 
 <script>
@@ -153,6 +153,27 @@ const lang = Astro.props.lang || getLangFromUrl(Astro.url);
 </script>
 
 <style>
+  .product-section { padding: 50px 0 84px; background: var(--rondo-surface-lilac); border-top: 1px solid var(--rondo-border-soft); position: relative; overflow: clip; }
+  .product-container { position: relative; }
+  .product-intro { margin-bottom: 40px; }
+  .story-rows { display: grid; gap: 32px; }
+  .story-row { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 32px; padding: 31px 39px; background: white; border: 1px solid var(--rondo-border-soft); border-radius: 20px; align-items: start; }
+  .story-row:nth-child(even) .story-image { order: 2; }
+  .story-copy h3 { color: var(--rondo-indigo); font-size: 36px; line-height: 1.2; font-weight: 700; margin-bottom: 9px; }
+  .story-copy p { color: var(--rondo-text-body); font-size: 18px; line-height: 1.4; }
+  .story-solution { margin-top: 28px; }
+  .story-solution h4 { display: flex; gap: 6px; align-items: center; color: var(--rondo-teal-dark); font-size: 18px; font-weight: 700; line-height: 1; margin-bottom: 6px; }
+  .story-solution h4 img { max-width: none; }
+  .story-row .story-image { margin: 0; border: 1px solid var(--rondo-border-soft); box-shadow: none; }
+  .story-image img { aspect-ratio: 568 / 316; object-fit: cover; }
+  .product-more { margin-top: 64px; }
+  @media (min-width: 1200px) { .story-row { min-height: 380px; } }
+  @media (max-width: 900px) {
+    .story-row { grid-template-columns: 1fr; padding: 24px; }
+    .story-row:nth-child(even) .story-image { order: 0; }
+    .story-copy h3 { font-size: 30px; }
+  }
+
   .card-screenshot-trigger {
     border: none;
     padding: 0;
@@ -164,13 +185,13 @@ const lang = Astro.props.lang || getLangFromUrl(Astro.url);
     box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
     transition: transform 0.2s ease, box-shadow 0.2s ease;
     display: block;
-    background: #F2F7FA;
+    background: var(--rondo-surface-soft);
   }
 
   .card-detail-link {
     display: inline-flex;
     margin-top: 0.9rem;
-    color: #001B60;
+    color: var(--rondo-navy);
     font-weight: 700;
     text-decoration: underline;
     text-decoration-color: #71DBA8;

@@ -1,4 +1,5 @@
 ---
+import SectionArtwork from '../ui/SectionArtwork.astro';
 import type { Lang } from '../../i18n/utils';
 import { getLangFromUrl } from '../../i18n/utils';
 import { t } from '../../i18n/translations';
@@ -7,8 +8,9 @@ interface Props { lang?: Lang; }
 const lang = Astro.props.lang || getLangFromUrl(Astro.url);
 ---
 
-<section id="features" class="py-20 bg-slate-50">
-  <div class="max-w-7xl mx-auto px-4">
+<section id="features" class="gallery-section py-20">
+  <SectionArtwork variant="orange" />
+  <div class="max-w-7xl mx-auto px-4 relative">
     <div class="text-center mb-12">
       <h2 class="text-4xl md:text-5xl font-bold gradient-text mb-4">
         {t('gallery.heading', lang)}
@@ -86,11 +88,11 @@ const lang = Astro.props.lang || getLangFromUrl(Astro.url);
 
       <div class="screenshot-grid" data-category="finance" style="display: none;">
         <button class="screenshot-item" data-screenshot="/screenshot-finance-dashboard.webp" type="button">
-          <img src="/screenshot-finance-dashboard.webp" width="1600" height="900" alt={t('gallery.caption.financeDashboard', lang)} loading="lazy" />
+          <img src="/screenshot-finance-dashboard.webp" width="3456" height="1922" alt={t('gallery.caption.financeDashboard', lang)} loading="lazy" />
           <p class="screenshot-caption">{t('gallery.caption.financeDashboard', lang)}</p>
         </button>
         <button class="screenshot-item" data-screenshot="/screenshot-finance-actions.webp" type="button">
-          <img src="/screenshot-finance-actions.webp" width="1600" height="900" alt={t('gallery.caption.financeActions', lang)} loading="lazy" />
+          <img src="/screenshot-finance-actions.webp" width="3456" height="1922" alt={t('gallery.caption.financeActions', lang)} loading="lazy" />
           <p class="screenshot-caption">{t('gallery.caption.financeActions', lang)}</p>
         </button>
         <button class="screenshot-item" data-screenshot="/financien-factuur-detail.webp" type="button">
@@ -244,6 +246,7 @@ const lang = Astro.props.lang || getLangFromUrl(Astro.url);
 </script>
 
 <style>
+  .gallery-section { position: relative; overflow: clip; background: white; }
   .tab-bar-wrapper {
     overflow-x: auto;
     -webkit-overflow-scrolling: touch;
@@ -266,12 +269,12 @@ const lang = Astro.props.lang || getLangFromUrl(Astro.url);
     border: none;
     cursor: pointer;
     transition: all 0.2s;
-    background: #EDF4F8;
+    background: var(--rondo-surface-soft);
     color: #475569;
   }
 
   .tab-button:hover {
-    background: #D8E3EE;
+    background: var(--rondo-border-soft);
   }
 
   .tab-button.active {

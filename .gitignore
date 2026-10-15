@@ -28,3 +28,6 @@ pnpm-debug.log*
 *.swp
 *.swo
 *~
+
+# Local visual review captures
+.impeccable/review/

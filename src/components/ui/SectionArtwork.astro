@@ -1,0 +1,22 @@
+---
+interface Props { variant: 'orange' | 'green'; }
+const { variant } = Astro.props;
+const orange = variant === 'orange';
+---
+
+<img
+  class:list={['section-art', variant]}
+  src={`/design/shape-${variant}.svg`}
+  width={orange ? 511 : 471.342}
+  height={orange ? 520 : 480}
+  alt=""
+  aria-hidden="true"
+/>
+
+<style>
+  .section-art { position: absolute; max-width: none; pointer-events: none; }
+  .orange { top: -110px; left: calc(50% - 1005px); }
+  .green { top: 160px; left: calc(50% + 516px); }
+  @media (max-width: 900px) { .green { left: 80%; } }
+  @media (max-width: 600px) { .orange { left: -420px; opacity: .35; } }
+</style>

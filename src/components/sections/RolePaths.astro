@@ -1,4 +1,5 @@
 ---
+import SectionArtwork from '../ui/SectionArtwork.astro';
 import Card from '../ui/Card.astro';
 import Button from '../ui/Button.astro';
 import type { Lang } from '../../i18n/utils';
@@ -35,60 +36,61 @@ const roleLinks = lang === 'en'
     };
 ---
 
-<section id="rollen" class="role-paths py-16">
-  <div class="max-w-7xl mx-auto px-4">
-    <div class="text-center mb-10">
-      <h2 class="text-4xl md:text-5xl font-bold gradient-text mb-4">{t('roles.heading', lang)}</h2>
-      <p class="text-xl text-slate-600 max-w-3xl mx-auto">{t('roles.subheading', lang)}</p>
+<section id="rollen" class="role-paths">
+  <SectionArtwork variant="orange" />
+  <div class="rondo-container role-container">
+    <div class="rondo-section-intro role-intro">
+      <h2 >{t('roles.heading', lang)}</h2>
+      <p >{t('roles.subheading', lang)}</p>
     </div>
 
-    <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
-      <Card title={t('roles.secretary.title', lang)}>
+    <div class="role-grid">
+      <Card class="role-card" title={t('roles.secretary.title', lang)}>
         <p class="text-slate-600 mb-6">{t('roles.secretary.text', lang)}</p>
         <Button variant="outline" href={roleLinks.secretary}>{t('roles.secretary.cta', lang)}</Button>
       </Card>
 
-      <Card title={t('roles.treasurer.title', lang)}>
+      <Card class="role-card" title={t('roles.treasurer.title', lang)}>
         <p class="text-slate-600 mb-6">{t('roles.treasurer.text', lang)}</p>
         <Button variant="outline" href={roleLinks.treasurer}>{t('roles.treasurer.cta', lang)}</Button>
       </Card>
 
-      <Card title={t('roles.gate.title', lang)}>
+      <Card class="role-card" title={t('roles.gate.title', lang)}>
         <p class="text-slate-600 mb-6">{t('roles.gate.text', lang)}</p>
         <Button variant="outline" href={roleLinks.gate}>{t('roles.gate.cta', lang)}</Button>
       </Card>
 
-      <Card title={t('roles.board.title', lang)}>
+      <Card class="role-card" title={t('roles.board.title', lang)}>
         <p class="text-slate-600 mb-6">{t('roles.board.text', lang)}</p>
         <Button variant="outline" href={roleLinks.board}>{t('roles.board.cta', lang)}</Button>
       </Card>
 
-      <Card title={t('roles.support.title', lang)}>
+      <Card class="role-card" title={t('roles.support.title', lang)}>
         <p class="text-slate-600 mb-6">{t('roles.support.text', lang)}</p>
         <Button variant="outline" href={roleLinks.support}>{t('roles.support.cta', lang)}</Button>
       </Card>
 
-      <Card title={t('roles.communication.title', lang)}>
+      <Card class="role-card" title={t('roles.communication.title', lang)}>
         <p class="text-slate-600 mb-6">{t('roles.communication.text', lang)}</p>
         <Button variant="outline" href={roleLinks.communication}>{t('roles.communication.cta', lang)}</Button>
       </Card>
 
-      <Card title={t('roles.volunteers.title', lang)}>
+      <Card class="role-card" title={t('roles.volunteers.title', lang)}>
         <p class="text-slate-600 mb-6">{t('roles.volunteers.text', lang)}</p>
         <Button variant="outline" href={roleLinks.volunteers}>{t('roles.volunteers.cta', lang)}</Button>
       </Card>
 
-      <Card title={t('roles.sponsors.title', lang)}>
+      <Card class="role-card" title={t('roles.sponsors.title', lang)}>
         <p class="text-slate-600 mb-6">{t('roles.sponsors.text', lang)}</p>
         <Button variant="outline" href={roleLinks.sponsors}>{t('roles.sponsors.cta', lang)}</Button>
       </Card>
 
-      <Card title={t('roles.tournaments.title', lang)}>
+      <Card class="role-card" title={t('roles.tournaments.title', lang)}>
         <p class="text-slate-600 mb-6">{t('roles.tournaments.text', lang)}</p>
         <Button variant="outline" href={roleLinks.tournaments}>{t('roles.tournaments.cta', lang)}</Button>
       </Card>
 
-      <Card title={t('roles.clubTv.title', lang)}>
+      <Card class="role-card" title={t('roles.clubTv.title', lang)}>
         <p class="text-slate-600 mb-6">{t('roles.clubTv.text', lang)}</p>
         <Button variant="outline" href={roleLinks.clubTv}>{t('roles.clubTv.cta', lang)}</Button>
       </Card>
@@ -97,7 +99,18 @@ const roleLinks = lang === 'en'
 </section>
 
 <style>
-  .role-paths {
-    background: linear-gradient(180deg, #FFFFFF 0%, #ECF8F6 48%, #FFFFFF 100%);
+  .role-paths { position: relative; overflow: clip; background: white; padding: 64px 0 80px; }
+  .role-container { position: relative; }
+  .role-intro { margin-bottom: 50px; }
+  .role-grid { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 32px; }
+  .role-grid :global(.role-card) { min-height: 240px; display: flex; flex-direction: column; align-items: start; }
+  .role-grid :global(.role-card h3) { line-height: 1.1; }
+  .role-grid :global(.role-card p) { color: var(--rondo-text-body); font-size: 18px; line-height: 1.3; margin-bottom: 20px; }
+  .role-grid :global(.role-card a) { margin-top: auto; }
+  @media (max-width: 1100px) { .role-grid { grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 24px; } }
+  @media (max-width: 600px) {
+    .role-paths { padding: 48px 0; }
+    .role-intro { margin-bottom: 32px; }
+    .role-grid { grid-template-columns: 1fr; gap: 24px; }
   }
 </style>

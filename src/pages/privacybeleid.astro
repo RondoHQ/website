@@ -133,7 +133,7 @@ import Footer from '../components/sections/Footer.astro';
 <style>
   .privacy-page {
     padding: 6rem 1rem 4rem;
-    background: linear-gradient(180deg, #FFFFFF 0%, #ECF8F6 50%, #FFFFFF 100%);
+    background: var(--rondo-surface-lilac);
   }
 
   .content {
@@ -141,7 +141,7 @@ import Footer from '../components/sections/Footer.astro';
     margin: 0 auto;
     line-height: 1.75;
     background: #FFFFFF;
-    border: 1px solid #D8E3EE;
+    border: 1px solid var(--rondo-border-soft);
     border-radius: 1rem;
     padding: 2rem;
   }
@@ -151,10 +151,7 @@ import Footer from '../components/sections/Footer.astro';
     font-weight: 700;
     font-size: 2.5rem;
     margin-bottom: 0.5rem;
-    background: linear-gradient(135deg, #993399 0%, #00908B 100%);
-    -webkit-background-clip: text;
-    -webkit-text-fill-color: transparent;
-    background-clip: text;
+    color: var(--rondo-heading);
   }
 
   .last-updated {
@@ -169,10 +166,7 @@ import Footer from '../components/sections/Footer.astro';
     font-size: 1.5rem;
     margin-top: 2.5rem;
     margin-bottom: 1rem;
-    background: linear-gradient(135deg, #993399 0%, #00908B 100%);
-    -webkit-background-clip: text;
-    -webkit-text-fill-color: transparent;
-    background-clip: text;
+    color: var(--rondo-heading);
   }
 
   h3 {
@@ -181,7 +175,7 @@ import Footer from '../components/sections/Footer.astro';
     font-size: 1.125rem;
     margin-top: 1.5rem;
     margin-bottom: 0.75rem;
-    color: #001B60;
+    color: var(--rondo-navy);
     background: none;
     -webkit-text-fill-color: initial;
   }
@@ -196,9 +190,9 @@ import Footer from '../components/sections/Footer.astro';
     color: #475569;
     margin-bottom: 1rem;
     padding: 1rem 1.5rem;
-    background: #F2F7FA;
+    background: var(--rondo-surface-soft);
     border-radius: 0.5rem;
-    border: 1px solid #D8E3EE;
+    border: 1px solid var(--rondo-border-soft);
   }
 
   ul {
@@ -224,7 +218,7 @@ import Footer from '../components/sections/Footer.astro';
   }
 
   a:hover {
-    color: #001B60;
+    color: var(--rondo-navy);
   }
 
   table {
@@ -237,16 +231,16 @@ import Footer from '../components/sections/Footer.astro';
   th {
     text-align: left;
     padding: 0.75rem 1rem;
-    background: #F2F7FA;
-    color: #001B60;
+    background: var(--rondo-surface-soft);
+    color: var(--rondo-navy);
     font-weight: 700;
-    border-bottom: 1px solid #D8E3EE;
+    border-bottom: 1px solid var(--rondo-border-soft);
   }
 
   td {
     padding: 0.75rem 1rem;
     color: #475569;
-    border-bottom: 1px solid #D8E3EE;
+    border-bottom: 1px solid var(--rondo-border-soft);
   }
 
   @media (max-width: 640px) {

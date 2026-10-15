@@ -1,5 +1,6 @@
 ---
 import BaseLayout from '../../layouts/BaseLayout.astro';
+import SectionArtwork from '../ui/SectionArtwork.astro';
 import Header from '../layout/Header.astro';
 import Footer from '../sections/Footer.astro';
 import type { Lang } from '../../i18n/utils';
@@ -47,7 +48,6 @@ const {
   lang,
   title,
   description,
-  kicker,
   roleTitle,
   intro,
   demoLabel,
@@ -103,7 +103,6 @@ const breadcrumbs = [
     <section class="role-hero">
       <div class="role-container role-grid">
         <div>
-          <p class="role-kicker">{kicker}</p>
           <h1 class="gradient-text role-title">{roleTitle}</h1>
           <p class="role-intro">{intro}</p>
           <div class="role-actions">
@@ -128,55 +127,58 @@ const breadcrumbs = [
       </div>
     </section>
 
-    <section class="role-section">
-      <div class="role-container">
-        <h2 class="gradient-text role-heading">{whatHeading}</h2>
-        <ul class="role-list">
-          {bulletPoints.map(point => <li>{point}</li>)}
-        </ul>
-      </div>
-    </section>
-
-    <section class="role-section">
-      <div class="role-container role-cards">
-        {cards.map(card => (
-          <article class="role-card">
-            <h3>{card.title}</h3>
-            <p>{card.text}</p>
-          </article>
-        ))}
-      </div>
-    </section>
-
-    {hasExtra && (
-      <section class="role-section role-extra">
-        <slot />
+    <div class="role-body">
+      <SectionArtwork variant="orange" />
+      <section class="role-section role-benefits">
+        <div class="role-container">
+          <h2 class="gradient-text role-heading">{whatHeading}</h2>
+          <ul class="role-list">
+            {bulletPoints.map(point => <li>{point}</li>)}
+          </ul>
+        </div>
       </section>
-    )}
 
-    <section class="role-section">
-      <div class="role-container">
-        <h2 class="gradient-text role-heading">{otherHeading}</h2>
-        <p class="role-links">
-          {otherPrefix}{' '}
-          <a href={firstLink.href}>{firstLink.label}</a>{' '}
-          {otherAnd}{' '}
-          <a href={secondLink.href}>{secondLink.label}</a>.
-        </p>
-      </div>
-    </section>
+      <section class="role-section">
+        <div class="role-container role-cards">
+          {cards.map(card => (
+            <article class="role-card">
+              <h3>{card.title}</h3>
+              <p>{card.text}</p>
+            </article>
+          ))}
+        </div>
+      </section>
 
-    <section class="role-section">
-      <div class="role-container role-bottom-cta">
-        <h2 class="gradient-text role-bottom-cta-heading">{bottomCtaHeading}</h2>
-        <p class="role-bottom-cta-text">{bottomCtaText}</p>
-        <a href={contactHref} class="role-btn role-btn-primary">{contactLabel}</a>
-      </div>
-    </section>
+      {hasExtra && (
+        <section class="role-section role-extra">
+          <slot />
+        </section>
+      )}
+
+      <section class="role-section">
+        <div class="role-container">
+          <h2 class="gradient-text role-heading">{otherHeading}</h2>
+          <p class="role-links">
+            {otherPrefix}{' '}
+            <a href={firstLink.href}>{firstLink.label}</a>{' '}
+            {otherAnd}{' '}
+            <a href={secondLink.href}>{secondLink.label}</a>.
+          </p>
+        </div>
+      </section>
+
+      <section class="role-section">
+        <div class="role-container role-bottom-cta">
+          <h2 class="gradient-text role-bottom-cta-heading">{bottomCtaHeading}</h2>
+          <p class="role-bottom-cta-text">{bottomCtaText}</p>
+          <a href={contactHref} class="role-btn role-btn-primary">{contactLabel}</a>
+        </div>
+      </section>
+    </div>
   </main>
   <div class="role-lightbox" id="role-lightbox" role="dialog" aria-label={lang === 'en' ? 'Enlarged screenshot' : 'Screenshot vergroot'} aria-modal="true">
     <button class="role-lightbox-close" id="role-lightbox-close" type="button" aria-label={lang === 'en' ? 'Close' : 'Sluiten'}>&times;</button>
-    <img src="" alt="" class="role-lightbox-img" id="role-lightbox-img" />
+    <img src={screenshotSrc} alt="" class="role-lightbox-img" id="role-lightbox-img" />
   </div>
   <Footer lang={lang} />
 </BaseLayout>
@@ -198,7 +200,6 @@ const breadcrumbs = [
   const closeLightbox = () => {
     if (!lightbox || !(lightboxImg instanceof HTMLImageElement)) return;
     lightbox.classList.remove('active');
-    lightboxImg.src = '';
     document.body.style.overflow = '';
   };
 
@@ -229,13 +230,25 @@ const breadcrumbs = [
 </script>
 
 <style>
+  .role-body { position: relative; overflow: clip; padding-bottom: 4rem; }
+  .role-body > .role-section { position: relative; }
+  .role-section.role-benefits { margin-top: 0; padding-top: 3rem; }
+  .role-hero { background: var(--rondo-teal-dark) url('/design/shape-purple.svg') no-repeat calc(100% + 300px) -180px; padding: 64px 0; }
+  .role-hero .role-title, .role-hero .role-intro, .role-hero .role-btn-outline { color: white; }
+  .role-title { font-weight: 700; }
+  .role-cards .role-card { border: none; border-top: 6px solid var(--rondo-teal); border-radius: 0 0 20px 20px; background: var(--rondo-surface-soft); padding: 28px 24px; }
+  .role-card h3 { font-weight: 700; }
+  @media (max-width: 959px) { .role-hero { background-position: calc(100% + 470px) -180px; } }
+  @media (max-width: 600px) { .role-hero { padding: 40px 0; } .role-container { width: calc(100% - 2.5rem); } }
+
   .role-page {
-    padding: 4.5rem 1rem 4rem;
-    background: linear-gradient(180deg, #FFFFFF 0%, #ECF8F6 45%, #FFFFFF 100%);
+    padding: 0;
+    background: white;
   }
 
   .role-container {
-    max-width: 72rem;
+    max-width: var(--rondo-content-width);
+    width: calc(100% - 3rem);
     margin: 0 auto;
   }
 
@@ -249,11 +262,6 @@ const breadcrumbs = [
     .role-grid { grid-template-columns: 1fr 1fr; }
   }
 
-  .role-kicker {
-    font-weight: 700;
-    color: #00908B;
-    margin-bottom: 0.4rem;
-  }
 
   .role-title {
     font-size: clamp(2rem, 5vw, 3.5rem);
@@ -276,8 +284,8 @@ const breadcrumbs = [
 
   .role-btn {
     display: inline-flex;
-    padding: 0.7rem 1rem;
-    border-radius: 0.7rem;
+    padding: 12px 24px;
+    border-radius: 999px;
     font-weight: 700;
     text-decoration: none;
   }
@@ -288,14 +296,14 @@ const breadcrumbs = [
   }
 
   .role-btn-outline {
-    border: 2px solid var(--rondo-btn-outline);
+    border: 1px solid currentColor;
     color: var(--rondo-btn-outline);
   }
 
   .role-shot {
     border-radius: 1rem;
     overflow: hidden;
-    box-shadow: 0 18px 45px rgba(0, 27, 96, 0.2);
+    box-shadow: -4px -2px 10px #0000000F, 6px 6px 16px #00000014;
   }
 
   .role-shot img {
@@ -315,7 +323,7 @@ const breadcrumbs = [
 
   .role-shot-multi {
     padding: 0.5rem;
-    background: #F2F7FA;
+    background: var(--rondo-surface-soft);
   }
 
   .role-shot-grid {
@@ -359,6 +367,7 @@ const breadcrumbs = [
   }
 
   .role-heading {
+    font-weight: 700;
     font-size: 2rem;
     margin-bottom: 0.75rem;
   }
@@ -387,8 +396,8 @@ const breadcrumbs = [
   }
 
   .role-card {
-    background: #F2F7FA;
-    border: 1px solid #D8E3EE;
+    background: var(--rondo-surface-soft);
+    border: 1px solid var(--rondo-border-soft);
     border-radius: 1rem;
     padding: 1.2rem;
   }
@@ -414,7 +423,7 @@ const breadcrumbs = [
   .role-bottom-cta {
     padding: 1.3rem;
     border-radius: 1rem;
-    border: 1px solid #D8E3EE;
+    border: 1px solid var(--rondo-border-soft);
     background: #FFFFFF;
     box-shadow: 0 10px 26px rgba(0, 27, 96, 0.08);
   }

@@ -96,7 +96,8 @@ const graph = buildPageGraph({
 <style>
 .skip-link {
   position: absolute;
-  top: -40px;
+  top: 0;
+  transform: translateY(-100%);
   left: 0;
   background: var(--rondo-btn-primary);
   color: white;
@@ -107,6 +108,6 @@ const graph = buildPageGraph({
   transition: top 0.2s;
 }
 .skip-link:focus {
-  top: 0;
+  transform: translateY(0);
 }
 </style>
