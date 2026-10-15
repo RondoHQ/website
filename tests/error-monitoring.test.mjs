@@ -10,6 +10,7 @@ test('monitoring release matches the published package version', () => {
 
 const captured = [];
 mock.module('@sentry/cloudflare', { namedExports: {
+  startSpan: (_options, callback) => callback(),
   captureException: (error, context) => captured.push({ error, context }),
 } });
 const { onRequestPost } = await import('../functions/api/contact.js');

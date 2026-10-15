@@ -31,3 +31,11 @@ public/           # Static assets
 
 - **Never deploy unless explicitly asked.** Only run `npm run deploy` when the user says to deploy.
 - **Always commit your work.** Before ending a conversation, commit all changes with a clear commit message.
+
+## Performance monitoring
+
+Browser tracing samples 10% of pages; disable at build time with
+`PUBLIC_GLITCHTIP_PERFORMANCE=false`. Contact tracing uses the dedicated PERFORMANCE_BUDGET
+KV binding for a soft 1,000/day budget and fails closed if KV is unavailable;
+`GLITCHTIP_PERFORMANCE=false` disables it at runtime. Separate transaction filters
+remove form data and URL parameters. Keep the fixed Turnstile/email span labels.

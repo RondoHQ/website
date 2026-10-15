@@ -3,3 +3,7 @@ name = 'rondohq-website'
 pages_build_output_dir = "dist"
 compatibility_date = "2024-12-01"
 compatibility_flags = ["nodejs_compat"]
+
+[[kv_namespaces]]
+binding = "PERFORMANCE_BUDGET"
+id = "2cde0e64699f4df5bcdbcecd7f66ba36"

@@ -1,4 +1,4 @@
-import { captureException } from '@sentry/cloudflare';
+import { captureException, startSpan } from '@sentry/cloudflare';
 
 // CORS preflight handler
 export async function onRequestOptions() {
@@ -56,7 +56,7 @@ export async function onRequestPost(context) {
     }
 
     stage = 'turnstile';
-    const turnstileResponse = await fetch('https://challenges.cloudflare.com/turnstile/v0/siteverify', {
+    const turnstileResponse = await startSpan({ name: '/api/contact/turnstile', op: 'http.client' }, () => fetch('https://challenges.cloudflare.com/turnstile/v0/siteverify', {
       method: 'POST',
       headers: { 'Content-Type': 'application/json' },
       body: JSON.stringify({
@@ -64,7 +64,7 @@ export async function onRequestPost(context) {
         response: turnstileToken,
         remoteip: request.headers.get('CF-Connecting-IP')
       })
-    });
+    }));
 
     if (!turnstileResponse.ok) {
       throw new Error('Turnstile service failed');
@@ -156,7 +156,7 @@ export async function onRequestPost(context) {
 
     // Send via Lettermint
     stage = 'email';
-    const response = await fetch('https://api.lettermint.co/v1/send', {
+    const response = await startSpan({ name: '/api/contact/email', op: 'http.client' }, () => fetch('https://api.lettermint.co/v1/send', {
       method: 'POST',
       headers: {
         'Content-Type': 'application/json',
@@ -169,7 +169,7 @@ export async function onRequestPost(context) {
         text: emailBody,
         reply_to: [data.email]
       })
-    });
+    }));
 
     if (!response.ok) {
       captureException(new Error('Lettermint service failed'), { tags: { stage } });

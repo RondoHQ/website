@@ -2,7 +2,7 @@
 export const monitoringDsn = 'https://c21a19c2aa4c42dbb6f0952a940c9d13@errors.rondo.club/5';
 // Keep in sync with package.json (enforced by tests). Pages' bundled Wrangler
 // cannot parse JSON import attributes, so this module uses plain JavaScript.
-export const monitoringRelease = 'rondo-website@0.3.1';
+export const monitoringRelease = 'rondo-website@0.4.0';
 export const isProductionHost = (hostname) => ['rondo.club', 'www.rondo.club'].includes(hostname);
 
 const stages = new Set(['form-data', 'turnstile', 'rate-limit', 'email', 'contact-browser']);
