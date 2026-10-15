@@ -1,5 +1,11 @@
 # Changelog
 
+## [0.4.1] - 2026-10-15
+
+### Fixed
+
+- Preserve all published page names when grouping performance measurements.
+
 ## [0.4.0] - 2026-10-15
 
 ### Added
